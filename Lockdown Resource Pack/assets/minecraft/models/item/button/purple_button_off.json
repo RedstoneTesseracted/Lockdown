@@ -1,0 +1,7 @@
+{
+    "parent": "item/button/button_off",
+    "textures": {
+        "base": "minecraft:block/white_concrete",
+        "button": "minecraft:block/purple_concrete"
+    }
+}

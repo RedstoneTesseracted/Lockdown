@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:birch_button",
+			"nbt": "{CustomModelData:10004}"
+		},
+		"frame":"task",
+		"title":"Keycard Reader",
+		"description":"Craft a wireless keycard reader.  Outputs a wireless signal when powered.",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "lockdown:lockdown/encoder",
+	"criteria":{
+		"keycard_reader":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:birch_button",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:3}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

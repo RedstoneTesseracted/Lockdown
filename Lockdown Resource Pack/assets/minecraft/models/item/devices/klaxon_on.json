@@ -1,0 +1,6 @@
+{
+    "parent": "block/generic_all",
+    "textures": {
+        "all": "block/klaxon_on"
+    }
+}

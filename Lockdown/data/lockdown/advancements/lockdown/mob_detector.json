@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:gray_glazed_terracotta",
+			"nbt": "{CustomModelData:10002}"
+		},
+		"frame":"task",
+		"title":"Mob Detector",
+		"description":"The mob detector outputs a redstone signal when it detects a mob within a five-block radius.",
+		"show_toast": true,
+		"announce_to_chat":true
+	},
+	"parent": "lockdown:lockdown/secure_recipe_book",
+	"criteria":{
+		"mob_detector":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:gray_glazed_terracotta",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:9}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

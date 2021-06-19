@@ -1,0 +1,7 @@
+{
+    "parent": "item/alarm/alarm_light",
+    "textures": {
+        "glass": "minecraft:block/pink_stained_glass",
+        "source": "minecraft:block/pink_concrete"
+    }
+}

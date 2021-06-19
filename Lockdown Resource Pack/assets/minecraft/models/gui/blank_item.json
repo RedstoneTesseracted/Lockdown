@@ -1,0 +1,17 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/rabbit_foot"
+    },
+	"display": {
+		"thirdperson_righthand": {
+			"scale":[0.0, 0.0, 0.0]
+		},
+		"gui": {
+            "scale":[0.0, 0.0, 0.0]
+		},
+		"ground": {
+            "scale":[0.0, 0.0, 0.0]
+		}
+	}
+}

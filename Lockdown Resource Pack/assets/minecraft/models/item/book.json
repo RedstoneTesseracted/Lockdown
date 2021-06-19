@@ -1,0 +1,24 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/book"
+    },
+    "overrides": [
+        {"predicate": {"custom_model_data": 10000}, "model": "item/keycard"},
+        {"predicate": {"custom_model_data": 10001}, "model": "gui/recipe_book"},
+        {"predicate": {"custom_model_data": 10002}, "model": "gui/pages/encoding_station"},
+        {"predicate": {"custom_model_data": 10003}, "model": "gui/pages/keycard_reader"},
+        {"predicate": {"custom_model_data": 10004}, "model": "gui/pages/keycard"},
+        {"predicate": {"custom_model_data": 10005}, "model": "gui/pages/alarm"},
+        {"predicate": {"custom_model_data": 10006}, "model": "gui/pages/big_button"},
+        {"predicate": {"custom_model_data": 10007}, "model": "gui/pages/defense_drone"},
+        {"predicate": {"custom_model_data": 10008}, "model": "gui/pages/player_detector"},
+        {"predicate": {"custom_model_data": 10009}, "model": "gui/pages/mob_detector"},
+        {"predicate": {"custom_model_data": 10010}, "model": "gui/pages/klaxon"},
+        {"predicate": {"custom_model_data": 10011}, "model": "gui/pages/laser_projector"},
+        {"predicate": {"custom_model_data": 10012}, "model": "gui/pages/redstone_transmitter"},
+        {"predicate": {"custom_model_data": 10013}, "model": "gui/pages/redstone_receiver"},
+        {"predicate": {"custom_model_data": 10014}, "model": "gui/pages/force_field_projector"},
+        {"predicate": {"custom_model_data": 10015}, "model": "gui/pages/laser_turret"}
+    ]
+}

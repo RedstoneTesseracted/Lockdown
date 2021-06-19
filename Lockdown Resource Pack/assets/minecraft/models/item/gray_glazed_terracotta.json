@@ -1,0 +1,21 @@
+{
+    "parent": "block/gray_glazed_terracotta",
+    "overrides": [
+        {"predicate": {"custom_model_data": 10000}, "model": "item/devices/player_detector_off"},
+        {"predicate": {"custom_model_data": 10001}, "model": "item/devices/player_detector_on"},
+        {"predicate": {"custom_model_data": 10002}, "model": "item/devices/entity_detector_off"},
+        {"predicate": {"custom_model_data": 10003}, "model": "item/devices/entity_detector_on"},
+        {"predicate": {"custom_model_data": 10004}, "model": "item/devices/klaxon_off"},
+        {"predicate": {"custom_model_data": 10005}, "model": "item/devices/klaxon_on"},
+        {"predicate": {"custom_model_data": 10006}, "model": "item/devices/laser_projector_off"},
+        {"predicate": {"custom_model_data": 10007}, "model": "item/devices/laser_projector_on"},
+        {"predicate": {"custom_model_data": 10008}, "model": "item/devices/transmitter_off"},
+        {"predicate": {"custom_model_data": 10009}, "model": "item/devices/transmitter_on"},
+        {"predicate": {"custom_model_data": 10010}, "model": "item/devices/receiver_off"},
+        {"predicate": {"custom_model_data": 10011}, "model": "item/devices/receiver_on"},
+        {"predicate": {"custom_model_data": 10012}, "model": "item/devices/force_field_projector_off"},
+        {"predicate": {"custom_model_data": 10013}, "model": "item/devices/force_field_projector_on"},
+        {"predicate": {"custom_model_data": 10014}, "model": "item/devices/encoding_station"},
+        {"predicate": {"custom_model_data": 10015}, "model": "item/devices/secure_crafting_table"}
+    ]
+}

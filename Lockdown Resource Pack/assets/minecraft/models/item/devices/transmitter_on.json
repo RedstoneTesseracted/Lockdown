@@ -1,0 +1,7 @@
+{
+    "parent": "block/generic_column",
+    "textures": {
+        "end": "block/transmitter_top_on",
+		"side": "block/transmitter_side_on"
+    }
+}

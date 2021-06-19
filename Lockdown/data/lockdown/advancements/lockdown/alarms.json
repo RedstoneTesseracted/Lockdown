@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:birch_button",
+			"nbt": "{CustomModelData:10056}"
+		},
+		"frame":"task",
+		"title":"Weewoo!",
+		"description":"Craft a wireless alarm light.  Powered with a wireless signal.",
+		"show_toast": true,
+		"announce_to_chat":true
+	},
+	"parent": "lockdown:lockdown/encoder",
+	"criteria":{
+		"alarms":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:birch_button",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:5}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

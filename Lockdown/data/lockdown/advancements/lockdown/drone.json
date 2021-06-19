@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:birch_button",
+			"nbt": "{CustomModelData:10006}"
+		},
+		"frame":"task",
+		"title":"Our Robot Overlords",
+		"description":"Craft a defense drone to patrol the area",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "lockdown:lockdown/encoder",
+	"criteria":{
+		"drone":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:birch_button",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:7}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

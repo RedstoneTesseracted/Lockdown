@@ -1,0 +1,6 @@
+{
+    "parent": "item/glows/glow",
+    "textures": {
+        "glow": "minecraft:block/white_glow"
+    }
+}

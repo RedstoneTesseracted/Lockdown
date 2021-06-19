@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:gray_glazed_terracotta",
+			"nbt": "{CustomModelData:10004}"
+		},
+		"frame":"task",
+		"title":"AWOOGAA!",
+		"description":"When powered, the klaxon will audibly remind you of the impending disaster.",
+		"show_toast": true,
+		"announce_to_chat":true
+	},
+	"parent": "lockdown:lockdown/secure_recipe_book",
+	"criteria":{
+		"klaxon":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:gray_glazed_terracotta",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:10}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/iron_ingot",
+        "slot1": "item/redstone",
+        "slot2": "item/iron_ingot",
+        "slot3": "item/beef",
+        "slot4": "item/ender_eye",
+        "slot5": "item/rotten_flesh",
+        "slot6": "item/iron_ingot",
+        "slot7": "item/redstone",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/mob_detector"
+    }
+}

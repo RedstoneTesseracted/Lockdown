@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/iron_ingot",
+        "slot1": "item/ender_eye",
+        "slot2": "item/iron_ingot",
+        "slot3": "gui/block/orange_concrete",
+        "slot4": "gui/block/observer",
+        "slot5": "gui/block/orange_concrete",
+        "slot6": "item/iron_ingot",
+        "slot7": "item/redstone",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/redstone_receiver"
+    }
+}

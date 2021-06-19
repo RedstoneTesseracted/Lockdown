@@ -1,0 +1,11 @@
+{
+    "parent": "block/generic_cube",
+    "textures": {
+        "up": "block/force_field_projector_off",
+		"north": "block/force_field_projector_side_off",
+		"east": "block/force_field_projector_side_off",
+		"south": "block/force_field_projector_side_off",
+		"west": "block/force_field_projector_side_off",
+		"down": "block/force_field_projector_side_off"
+    }
+}

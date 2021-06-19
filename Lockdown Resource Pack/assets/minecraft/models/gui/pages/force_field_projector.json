@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/diamond",
+        "slot1": "block/blue_stained_glass",
+        "slot2": "item/diamond",
+        "slot3": "item/iron_ingot",
+        "slot4": "item/end_crystal",
+        "slot5": "item/iron_ingot",
+        "slot6": "item/diamond",
+        "slot7": "item/chorus_fruit",
+        "slot8": "item/diamond",
+        "slot_out": "gui/device/force_field_projector"
+    }
+}

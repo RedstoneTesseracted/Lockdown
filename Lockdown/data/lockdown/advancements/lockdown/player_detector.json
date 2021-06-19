@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:gray_glazed_terracotta",
+			"nbt": "{CustomModelData:10000}"
+		},
+		"frame":"task",
+		"title":"Player Detector",
+		"description":"The player detector outputs a redstone signal if a player is within a five-block radius",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "lockdown:lockdown/secure_recipe_book",
+	"criteria":{
+		"player_detector":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:gray_glazed_terracotta",
+						"nbt": "{LockdownItem:1b,LockdownData:{id:8}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

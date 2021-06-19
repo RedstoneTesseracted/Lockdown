@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/iron_ingot",
+        "slot1": "item/ender_eye",
+        "slot2": "item/iron_ingot",
+        "slot3": "gui/block/obsidian",
+        "slot4": "item/dragon_breath",
+        "slot5": "gui/block/obsidian",
+        "slot6": "item/iron_ingot",
+        "slot7": "gui/block/dispenser",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/defense_drone"
+    }
+}

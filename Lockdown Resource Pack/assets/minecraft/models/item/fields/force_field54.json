@@ -1,0 +1,41 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "field": "block/force_field"
+    },
+    "elements": [
+        {
+            "from": [0, -16, -16.0],
+            "to": [16, 22.4, 32.0],
+            "faces": {
+                "down": {
+                    "texture": "#field", "uv": [0, 0, 3.2, 12.8],
+                    "cullface": "down"
+                },
+                "up": {
+                    "texture": "#field", "uv": [0, 0, 3.2, 16.0],
+                    "cullface": "up"
+                },
+                "north": {
+                    "texture": "#field", "uv": [0, 0, 3.2, 12.8],
+                    "cullface": "north"
+                },
+                "south": {
+                    "texture": "#field", "uv": [0, 0, 3.2, 12.8],
+                    "cullface": "south"
+                },
+                "west": {
+                    "texture": "#field", "uv": [0, 0, 16.0, 12.8],
+                    "cullface": "west"
+                },
+                "east": {
+                    "texture": "#field", "uv": [0, 0, 16.0, 12.8],
+                    "cullface": "east"
+                }
+            }
+        }
+    ],
+    "display": {
+        "head": {"rotation": [0, -90, 0], "translation": [0, 21.5, 0], "scale": [2.3, 3.84, 3.84]}
+    }
+}

@@ -1,0 +1,18 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:iron_bars"
+		},
+		"frame":"task",
+		"title":"Lockdown",
+		"description":"Welcome to Lockdown, the datapack for all your security needs!",
+		"background":"minecraft:textures/gui/advancements/backgrounds/iron_block.png",
+		"show_toast": true,
+		"announce_to_chat":true
+	},
+	"criteria":{
+		"start":{
+			"trigger":"minecraft:impossible"
+		}
+	}
+}

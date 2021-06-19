@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:book",
+			"nbt": "{CustomModelData:10001}"
+		},
+		"frame":"task",
+		"title":"Secure Recipe Book",
+		"description": ["",{"text":"Securely view recipes using a secure recipe book.\n"},{"text":"Crafting Recipe:","underlined":"true","color":"blue"},{"text":"\nBCB\nCDC\nBCB","font":"items","color":"white"}],
+		"show_toast": true,
+		"announce_to_chat":true
+	},
+	"parent": "lockdown:lockdown/secure_crafter",
+	"criteria":{
+		"":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:book",
+						"nbt": "{LockdownRecipeBook:1b}"
+					}
+				
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "item/button/button_on",
+    "textures": {
+        "base": "minecraft:block/white_concrete",
+        "button": "minecraft:block/bright_light_blue"
+    }
+}

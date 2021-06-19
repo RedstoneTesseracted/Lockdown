@@ -1,0 +1,11 @@
+{
+    "parent": "block/generic_cube",
+    "textures": {
+        "up": "block/laser_side_on",
+		"north": "block/laser_side_on2",
+		"east": "block/laser_front_on",
+		"south": "block/laser_side_on",
+		"west": "block/laser_back",
+		"down": "block/laser_side_on"
+    }
+}
