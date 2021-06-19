@@ -1,5 +1,4 @@
 # Custom block placing-related commands
-function lockdown:reset_item_data
 execute as @a[nbt={SelectedItem:{tag:{LockdownItem:1b}}}] run function lockdown:get_item_data
 execute as @a[scores={ld_place_button=1..}] run function lockdown:place_block/birch_button_root
 execute as @a[scores={ld_place_block=1..}] run function lockdown:place_block/gray_terracotta_root
@@ -39,3 +38,4 @@ execute as @a[scores={ld_craft_book=1..}] if data entity @s Inventory[{id:"minec
 # Reset some scores
 execute at @a[scores={ld_use_noteblock=1..}] as @e[type=minecraft:armor_stand,tag=ld_force_field,limit=1,sort=nearest,distance=..5] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/outline
 scoreboard players set @a ld_use_noteblock 0
+execute as @a[nbt=!{SelectedItem:{tag:{LockdownItem:1b}}}] run function lockdown:reset_item_data

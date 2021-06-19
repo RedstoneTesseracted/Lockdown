@@ -1,0 +1,27 @@
+{
+	"parent": "lockdown:hidden/root",
+	"criteria":{
+		"pufferfish_recipe_book":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:pufferfish_spawn_egg"
+					}
+				],
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"ld_craft_book": 0
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards":{
+		"function": "lockdown:creative_warn"
+	}
+}

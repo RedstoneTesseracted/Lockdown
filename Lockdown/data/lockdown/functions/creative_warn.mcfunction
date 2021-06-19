@@ -1,0 +1,3 @@
+# Warn the player that a Lockdown item obtained from the creative inventory will not function as such.  The message does not need to be shown twice
+# Note: This has been disabled for lack of necessity
+#execute unless entity @s[advancements={lockdown:hidden/creative_warning=true,lockdown:hidden/creative_warning2=true}] run tellraw @s {"text":"Note: So that the polar bear and pufferfish spawn eggs retain their original purpose, a secure crafting table/recipe book obtained from the creative inventory will not function.\nPlease craft the secure crafting table/recipe book if you wish to use them as such.","italic":"false","color":"gray"}
