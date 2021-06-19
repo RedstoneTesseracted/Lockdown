@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "gui/no_item",
+        "slot1": "block/redstone_torch",
+        "slot2": "gui/no_item",
+        "slot3": "item/ender_eye",
+        "slot4": "item/iron_ingot",
+        "slot5": "item/comparator",
+        "slot6": "item/iron_ingot",
+        "slot7": "gui/block/iron_block",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/drone_control_tower"
+    }
+}

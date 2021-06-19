@@ -25,6 +25,8 @@ scoreboard objectives add ld_version dummy
 scoreboard objectives add ld_uuid1 dummy
 scoreboard objectives add ld_target_uuid1 dummy
 
+scoreboard objectives add ld_temp_channel dummy
+
 # Storage container setup
 data merge storage lockdown:temp {Items:[]}
 
@@ -32,4 +34,8 @@ data merge storage lockdown:temp {Items:[]}
 gamerule commandBlockOutput false
 
 # Declare data pack version
-execute unless score $ld_version ld_version matches -2147483648.. run scoreboard players set $ld_version ld_version 1
+execute unless score $ld_version ld_version matches -2147483648.. run scoreboard players set $ld_version ld_version 2
+
+# Upgrade data pack
+# Ver 1→2
+execute if score $ld_version ld_version matches 1 run scoreboard players set $ld_version ld_version 2

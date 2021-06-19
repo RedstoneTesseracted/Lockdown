@@ -5,6 +5,7 @@
 	"minecraft:void_air",
 	"minecraft:water",
 	"minecraft:lava",
+	"#minecraft:fire",
 	"minecraft:lever",
 	"#minecraft:pressure_plates",
 	"#minecraft:buttons",
@@ -13,6 +14,7 @@
 	"#minecraft:saplings",
 	"#minecraft:rails",
 	"minecraft:ladder",
+	"minecraft:light",
 	"minecraft:torch",
 	"minecraft:soul_torch",
 	"minecraft:stone_button",
@@ -58,6 +60,12 @@
 	"minecraft:weeping_vines",
 	"minecraft:twisting_vines",
 	"minecraft:light_weighted_pressure_plate",
-	"minecraft:heavy_weighted_pressure_plate"
+	"minecraft:heavy_weighted_pressure_plate",
+	"#minecraft:candles",
+	"minecraft:small_amethyst_bud",
+	"minecraft:medium_amethyst_bud",
+	"minecraft:large_amethyst_bud",
+	"minecraft:amethyst_cluster",
+	"minecraft:pointed_dripstone"
    ]
 }

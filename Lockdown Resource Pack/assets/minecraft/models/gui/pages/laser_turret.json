@@ -4,7 +4,7 @@
         "slot0": "gui/block/obsidian",
         "slot1": "gui/block/iron_block",
         "slot2": "item/ender_eye",
-        "slot3": "gui/block/diamond_block",
+        "slot3": "item/diamond",
         "slot4": "item/dragon_breath",
         "slot5": "gui/block/dispenser",
         "slot6": "gui/block/obsidian",

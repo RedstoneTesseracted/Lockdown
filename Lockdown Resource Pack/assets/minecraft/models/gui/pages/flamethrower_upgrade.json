@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/iron_ingot",
+        "slot1": "item/fire_charge",
+        "slot2": "item/iron_ingot",
+        "slot3": "item/fire_charge",
+        "slot4": "item/flint_and_steel",
+        "slot5": "item/fire_charge",
+        "slot6": "item/iron_ingot",
+        "slot7": "item/fire_charge",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/flamethrower_upgrade"
+    }
+}

@@ -22,25 +22,27 @@ execute unless block ~ ~ ~ minecraft:barrel{Items:[{Slot:26b,tag:{LockdownDelete
 execute unless block ~ ~ ~ minecraft:barrel{Items:[{Slot:23b,tag:{LockdownDelete:2b}}]} run function lockdown:devices/crafter/craft_item
 
 # Place the correct items back in the gui
-replaceitem block ~ ~ ~ container.0 minecraft:rabbit_foot{CustomModelData:10062,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.4 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.5 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.6 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.7 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.8 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.9 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.13 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.14 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.15 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.17 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.18 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.22 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.23 minecraft:rabbit_foot{CustomModelData:10060,display:{Name:'{"text":"Craft","color":"green","italic":"false"}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.24 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.25 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
-replaceitem block ~ ~ ~ container.26 minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.0 with minecraft:rabbit_foot{CustomModelData:10062,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.4 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.5 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.6 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.7 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.8 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.9 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.13 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.14 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.15 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.17 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.18 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.22 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.23 with minecraft:rabbit_foot{CustomModelData:10060,display:{Name:'{"text":"Craft","color":"green","italic":"false"}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.24 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.25 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
+item replace block ~ ~ ~ container.26 with minecraft:rabbit_foot{CustomModelData:10061,display:{Name:'{"text":""}'},LockdownDelete:2b}
 
 # Run the generic item ejector if any unauthorized items were inserted into the inventory
 execute store result score $ld_result ld_result run data get storage lockdown:temp Items
 execute if score $ld_result ld_result matches 1.. run function lockdown:devices/generic_eject_item
 
+# Remove the "reset gui" indicator
+tag @s remove ld_reset_gui

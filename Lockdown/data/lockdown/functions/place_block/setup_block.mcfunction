@@ -38,6 +38,7 @@ execute if score @s ld_id matches 14 run tag @e[type=minecraft:armor_stand,limit
 execute if score @s ld_id matches 15 run tag @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=ld_new_block] add ld_turret
 execute if score @s ld_id matches 16 run tag @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=ld_new_block] add ld_encoder
 execute if score @s ld_id matches 17 run tag @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=ld_new_block] add ld_crafter
+execute if score @s ld_id matches 19 run tag @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=ld_new_block] add ld_control_tower
 
 # Apply block-specific setup
 execute if block ~ ~ ~ minecraft:birch_button as @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=ld_new_block,tag=!ld_drone,tag=!ld_turret] at @s positioned ~ ~0.23 ~ run function lockdown:place_block/birch_button_setup

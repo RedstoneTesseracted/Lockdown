@@ -1,15 +1,22 @@
 # Target the nearest available potential target
 tag @a remove ld_drone_targeted
-# Target rival drones
+
+## Target rival drones
 #execute at @e[tag=ld_drone_hitbox,distance=..15] unless score @s ld_channel = @e[tag=ld_drone,limit=1,sort=nearest,distance=..1] ld_channel run tag @e[tag=ld_drone_hitbox,limit=1,sort=nearest] add ld_channel_rival
 #tag @e[tag=ld_channel_rival,distance=..15,sort=nearest,limit=1] add ld_drone_target
 #execute unless entity @e[tag=ld_channel_rival,distance=..15] run tag @e[type=#lockdown:hostile,tag=!ld_channel_match,distance=..15,sort=nearest,limit=1,gamemode=!creative,gamemode=!spectator] add ld_drone_target
+
+# Mark all possible targets, excluding those that have a matching code or are in creative/spectator
 tag @e[type=#lockdown:hostile,tag=!ld_channel_match,distance=..15] add ld_drone_potential_target
 tag @a[tag=ld_drone_potential_target,gamemode=creative] remove ld_drone_potential_target
 tag @a[tag=ld_drone_potential_target,gamemode=spectator] remove ld_drone_potential_target
+
+# Remove potential targets outside a control tower's reach, if applicable
+execute if entity @s[tag=ld_tower_controlled] at @e[distance=..15,tag=ld_drone_potential_target] run function lockdown:devices/drone/control_tower_check
+
+# Pick the nearest potential target
 tag @e[tag=ld_drone_potential_target,distance=..15,sort=nearest,limit=1] add ld_drone_target
 tag @e[tag=ld_drone_potential_target,distance=..15,sort=nearest,limit=1] remove ld_drone_potential_target
-
 
 # If said target is within five blocks, the drone may be able to fire at it
 tag @s remove ld_drone_fire
@@ -22,7 +29,7 @@ execute unless entity @e[tag=ld_drone_target,tag=ld_drone_confirmed,distance=..5
 execute unless entity @e[tag=ld_drone_target,tag=ld_drone_confirmed,distance=..3] if entity @e[tag=ld_drone_target,distance=3..15] run tag @s add ld_drone_seek
 #execute if entity @e[tag=ld_drone_target,distance=..3] unless entity @e[tag=ld_drone_target,distance=..3,tag=ld_drone_confirmed] run tag @s add ld_drone_seek
 
-# If no target was founnd within three blocks to begin with, pathfind to the nearest target within 4-15 blocks away
+## If no target was founnd within three blocks to begin with, pathfind to the nearest target within 4-15 blocks away
 #execute unless entity @e[tag=ld_drone_target,distance=..3] if entity @e[tag=ld_drone_target,distance=3..15] run tag @s add ld_drone_seek
 
 # If no target was found at all, ensure that the drone has been halted

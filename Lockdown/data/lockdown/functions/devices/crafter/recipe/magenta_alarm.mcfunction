@@ -18,7 +18,7 @@ execute store result score $ld_var ld_result run data get block ~ ~ ~ Items[{Slo
 scoreboard players operation $ld_result ld_result < $ld_var ld_result
 
 # Output the calculated number of items
-replaceitem block ~ ~ ~ container.16 birch_button{LockdownItem:1b,LockdownData:{id:5,function_model:10002,block_model:10018,item_model:10044,block_id:2,item_id:1,channel:0},CustomModelData:10044,display:{Name:'{"text":"Magenta Alarm","italic":"false","color":"light_purple"}',Lore:['{"text":"No Channel Assigned","color":"red"}']}}
+item replace block ~ ~ ~ container.16 with birch_button{LockdownItem:1b,LockdownData:{id:5,function_model:10002,block_model:10018,item_model:10044,block_id:2,item_id:1,channel:0},CustomModelData:10044,display:{Name:'{"text":"Magenta Alarm","italic":"false","color":"light_purple"}',Lore:['{"text":"No Channel Assigned","color":"red"}']}}
 execute store result block ~ ~ ~ Items[{Slot:16b}].Count byte 1 run scoreboard players get $ld_result ld_result
 # Remove the calculated number of used items
 execute store result score $ld_var ld_result run data get block ~ ~ ~ Items[{Slot:1b}].Count

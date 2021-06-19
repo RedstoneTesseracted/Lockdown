@@ -18,7 +18,7 @@ execute store result score $ld_var ld_result run data get block ~ ~ ~ Items[{Slo
 scoreboard players operation $ld_result ld_result < $ld_var ld_result
 
 # Output the calculated number of items
-replaceitem block ~ ~ ~ container.16 gray_glazed_terracotta{LockdownItem:1b,LockdownData:{id:10,function_model:10005,block_model:10004,item_model:10004,block_id:3,item_id:3,channel:-1},CustomModelData:10004,display:{Name:'{"text":"Klaxon","italic":"false"}'}}
+item replace block ~ ~ ~ container.16 with gray_glazed_terracotta{LockdownItem:1b,LockdownData:{id:10,function_model:10005,block_model:10004,item_model:10004,block_id:3,item_id:3,channel:-1},CustomModelData:10004,display:{Name:'{"text":"Klaxon","italic":"false"}'}}
 execute store result block ~ ~ ~ Items[{Slot:16b}].Count byte 1 run scoreboard players get $ld_result ld_result
 # Remove the calculated number of used items
 execute store result score $ld_var ld_result run data get block ~ ~ ~ Items[{Slot:1b}].Count

@@ -1,0 +1,28 @@
+{
+	"display":{
+		"icon":{
+			"item":"minecraft:book",
+			"nbt": "{CustomModelData:9998}"
+		},
+		"frame":"task",
+		"title":"Durability Upgrade",
+		"description":"Increase the durability of a drone or turret by throwing a durability upgrade at it.",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "lockdown:lockdown/turret",
+	"criteria":{
+		"durability_upgrade":{
+			"trigger":"minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:book",
+						"nbt": "{LockdownItem:1b,LockdownData:{upgrade_id:2}}"
+					}
+				
+				]
+			}
+		}
+	}
+}

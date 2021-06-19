@@ -1,0 +1,15 @@
+{
+    "parent": "gui/recipe_page",
+    "textures": {
+        "slot0": "item/iron_ingot",
+        "slot1": "item/diamond",
+        "slot2": "item/iron_ingot",
+        "slot3": "item/diamond",
+        "slot4": "gui/block/obsidian",
+        "slot5": "item/diamond",
+        "slot6": "item/iron_ingot",
+        "slot7": "item/diamond",
+        "slot8": "item/iron_ingot",
+        "slot_out": "gui/device/durability_upgrade"
+    }
+}

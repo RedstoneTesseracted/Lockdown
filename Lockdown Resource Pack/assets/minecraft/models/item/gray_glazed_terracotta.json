@@ -16,6 +16,7 @@
         {"predicate": {"custom_model_data": 10012}, "model": "item/devices/force_field_projector_off"},
         {"predicate": {"custom_model_data": 10013}, "model": "item/devices/force_field_projector_on"},
         {"predicate": {"custom_model_data": 10014}, "model": "item/devices/encoding_station"},
-        {"predicate": {"custom_model_data": 10015}, "model": "item/devices/secure_crafting_table"}
+        {"predicate": {"custom_model_data": 10015}, "model": "item/devices/secure_crafting_table"},
+        {"predicate": {"custom_model_data": 10016}, "model": "item/devices/drone_control_tower"}
     ]
 }

@@ -6,6 +6,10 @@ data modify entity @e[type=item,limit=1,sort=nearest,tag=ld_turret_item] Item.ta
 execute if score @s ld_channel matches 0 run data modify entity @e[tag=ld_turret_item,limit=1,sort=nearest] Item.tag.display.Lore set value ['{"text":"No Code Assigned","color":"red"}','{"text":"Attacks Hostile Mobs","color":"green"}']
 execute if score @s ld_channel matches 1.. run data modify entity @e[tag=ld_turret_item,limit=1,sort=nearest] Item.tag.display.Lore set value ['{"text":"Code Assigned","color":"green","italic":"false"}','{"text":"Attacks Hostile Mobs","color":"green","italic":"false"}','{"text":"Attacks Unauthorized Players","color":"red","italic":"false"}']
 
+# Summon upgrades, if applicable
+execute if entity @s[tag=ld_durable] run summon item ~ ~ ~ {Item:{id:"minecraft:book",Count:1b,tag:{LockdownItem:1b,LockdownData:{upgrade:1b,upgrade_id:2},CustomModelData:9998,display:{Name:'{"text":"Durability Upgrade","italic":"false"}',Lore:['{"text":"Increases the durability","color":"light_purple","italic":"false"}','{"text":"of a drone or turret","color":"light_purple","italic":"false"}']}}}}
+execute if entity @s[tag=ld_flamethrower] run summon item ~ ~ ~ {Item:{id:"minecraft:book",Count:1b,tag:{LockdownItem:1b,LockdownData:{upgrade:1b,upgrade_id:3},CustomModelData:9997,display:{Name:'{"text":"Flamethrower Upgrade","italic":"false"}',Lore:['{"text":"Drone/Turret laser","color":"light_purple","italic":"false"}','{"text":"sets targets on fire","color":"light_purple","italic":"false"}']}}}}
+
 # Clean up turret
 kill @e[type=armor_stand,limit=1,sort=nearest,distance=..0.5,tag=ld_turret_blaster]
 kill @s[type=armor_stand,tag=ld_turret]

@@ -4,7 +4,7 @@ execute unless entity @e[type=minecraft:bee,tag=ld_drone_hitbox,distance=..1] ru
 # Warn unauthorized players of their impending doom, unless the drone is set to non-player only.
 tag @a[tag=ld_channel_match] remove ld_channel_match
 execute at @a[distance=..15] if score @s ld_channel = @p ld_last_channel run tag @p add ld_channel_match
-execute if score @s ld_channel matches 0 run tag @a[distance=..10] add ld_channel_match
+execute if score @s ld_channel matches 0 run tag @a[distance=..15] add ld_channel_match
 title @a[tag=!ld_channel_match,distance=..15,gamemode=!creative,gamemode=!spectator] actionbar {"text":"Warning: Your most recent keycard does not match.","color":"red"}
 
 # Run timer-specific commands.

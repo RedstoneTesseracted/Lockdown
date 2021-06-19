@@ -17,10 +17,14 @@ execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_laser] at @s positi
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_transmitter] at @s positioned ~ ~0.23 ~ run function lockdown:devices/transmitter/transmitter
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_receiver] at @s positioned ~ ~0.23 ~ run function lockdown:devices/receiver/receiver
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_force_field] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/force_field
+execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_control_tower] at @s positioned ~ ~0.23 ~ run function lockdown:devices/control_tower/control_tower
 execute as @e[type=minecraft:armor_stand,tag=ld_drone] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
 execute as @e[type=minecraft:armor_stand,tag=ld_turret] at @s positioned ~ ~0.23 ~ run function lockdown:devices/turret/turret
 execute as @e[type=minecraft:armor_stand,tag=ld_encoder] at @s positioned ~ ~0.23 ~ run function lockdown:devices/encoder/encoder
 execute as @e[type=minecraft:armor_stand,tag=ld_crafter] at @s positioned ~ ~0.23 ~ run function lockdown:devices/crafter/crafter
+
+# Run upgrade-related commands
+execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
 
 # Run recipe-book-related commands if player is holding recipe book
 execute at @a[nbt={SelectedItem:{id:"minecraft:book",tag:{LockdownRecipeBook:1b}}}] run function lockdown:recipe_book
