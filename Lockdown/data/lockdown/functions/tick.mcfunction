@@ -24,8 +24,7 @@ execute as @e[type=minecraft:armor_stand,tag=ld_crafter] at @s positioned ~ ~0.2
 
 # Run recipe-book-related commands if player is holding recipe book
 execute at @a[nbt={SelectedItem:{id:"minecraft:book",tag:{LockdownRecipeBook:1b}}}] run function lockdown:recipe_book
-# Remove right-click detecting armor stands if the closest player within two blocks is not holding the recipe book
-execute as @e[type=minecraft:armor_stand,tag=ld_click_detector] at @s unless entity @p[distance=..2,nbt={SelectedItem:{id:"minecraft:book",tag:{LockdownRecipeBook:1b}}}] run kill @s
+execute as @e[type=minecraft:armor_stand,tag=ld_click_detector] at @s run function lockdown:recipe_book_clicker
 
 # Maintain custom block light level and invisibility
 execute as @e[type=minecraft:armor_stand,tag=ld_block] run data modify entity @s Fire set value 1000000
