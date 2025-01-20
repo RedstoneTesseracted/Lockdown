@@ -1,7 +1,0 @@
-{
-    "parent": "block/generic_column",
-    "textures": {
-        "end": "block/player_detector_top_off",
-		"side": "block/entity_detector_side_off"
-    }
-}

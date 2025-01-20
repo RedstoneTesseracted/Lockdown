@@ -1,0 +1,8 @@
+{
+    "parent": "lockdown:item/button/button_off",
+    "textures": {
+        "base": "minecraft:block/white_concrete",
+        "button": "minecraft:block/green_concrete",
+		"particle": "minecraft:block/white_concrete"
+    }
+}

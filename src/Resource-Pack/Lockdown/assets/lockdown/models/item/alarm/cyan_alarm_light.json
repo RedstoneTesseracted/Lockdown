@@ -1,0 +1,7 @@
+{
+    "parent": "lockdown:item/alarm/alarm_light",
+    "textures": {
+        "glass": "minecraft:block/cyan_stained_glass",
+        "source": "minecraft:block/cyan_concrete"
+    }
+}

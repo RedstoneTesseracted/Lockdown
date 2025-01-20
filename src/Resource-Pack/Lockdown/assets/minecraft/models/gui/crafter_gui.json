@@ -1,6 +1,0 @@
-{
-    "parent": "gui/upper_section",
-    "textures": {
-        "texture": "minecraft:gui/crafter_gui"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "parent": "item/alarm/alarm_light",
-    "textures": {
-        "glass": "minecraft:block/black_stained_glass",
-        "source": "minecraft:block/black_concrete"
-    }
-}

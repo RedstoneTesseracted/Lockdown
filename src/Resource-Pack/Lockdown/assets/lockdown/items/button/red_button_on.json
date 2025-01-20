@@ -1,0 +1,6 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "lockdown:item/button/red_button_on"
+    }
+}

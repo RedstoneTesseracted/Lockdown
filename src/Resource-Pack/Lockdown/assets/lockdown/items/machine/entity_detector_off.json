@@ -1,0 +1,6 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "lockdown:item/machine/entity_detector_off"
+    }
+}

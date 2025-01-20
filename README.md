@@ -23,10 +23,9 @@ Below is a table of all planned features currently (re)implemented
 | Defense drone                 |   ❌   |
 | Drone control tower           |   ❌   |
 | Encoding station              |   ❌   |
-| Turret range upgrade          |   ❌   |
-| Turret durability upgrade     |   ❌   |
-| Drone flamethrower upgrade    |   ❌   |
-| Drone durability upgrade      |   ❌   |
+| Range upgrade                 |   ❌   |
+| Durability upgrade            |   ❌   |
+| Flamethrower upgrade          |   ❌   |
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
 

@@ -1,0 +1,6 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "lockdown:item/alarm/black_alarm_light"
+    }
+}

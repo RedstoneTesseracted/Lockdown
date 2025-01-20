@@ -1,0 +1,12 @@
+{
+    "parent": "lockdown:block/generic_cube",
+    "textures": {
+        "up": "lockdown:block/encoding_station_top",
+		"north": "lockdown:block/encoding_station_side",
+		"east": "lockdown:block/encoding_station_side",
+		"south": "lockdown:block/encoding_station_side",
+		"west": "lockdown:block/encoding_station_side",
+		"down": "lockdown:block/encoding_station_side",
+		"particle": "lockdown:block/encoding_station_side"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "parent": "lockdown:block/generic_cube",
+    "textures": {
+        "up": "lockdown:block/force_field_projector_off",
+		"north": "lockdown:block/force_field_projector_side_off",
+		"east": "lockdown:block/force_field_projector_side_off",
+		"south": "lockdown:block/force_field_projector_side_off",
+		"west": "lockdown:block/force_field_projector_side_off",
+		"down": "lockdown:block/force_field_projector_side_off",
+		"particle": "lockdown:block/force_field_projector_side_off"
+    }
+}

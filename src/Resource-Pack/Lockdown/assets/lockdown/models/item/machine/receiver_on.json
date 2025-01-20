@@ -1,0 +1,8 @@
+{
+    "parent": "lockdown:block/generic_column",
+    "textures": {
+        "end": "lockdown:block/receiver_top_on",
+		"side": "lockdown:block/receiver_side_on",
+		"particle": "lockdown:block/receiver_side_on"
+    }
+}

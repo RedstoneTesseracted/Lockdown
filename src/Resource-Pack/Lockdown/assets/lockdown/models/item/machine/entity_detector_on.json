@@ -1,0 +1,8 @@
+{
+    "parent": "lockdown:block/generic_column",
+    "textures": {
+        "end": "lockdown:block/player_detector_top_on",
+		"side": "lockdown:block/entity_detector_side_on",
+		"particle": "lockdown:block/entity_detector_side_on"
+    }
+}

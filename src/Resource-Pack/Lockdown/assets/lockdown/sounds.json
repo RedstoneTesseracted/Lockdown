@@ -1,0 +1,23 @@
+{
+  "lockdown.alarm1": {
+    "category": "block",
+	"subtitle": "subtitles.lockdown.alarm",
+    "sounds": [
+	  "lockdown:alarm/alarm1"
+    ]
+  },
+  "lockdown.alarm2": {
+    "category": "block",
+	"subtitle": "subtitles.lockdown.alarm",
+    "sounds": [
+      "lockdown:alarm/alarm2"
+    ]
+  },
+  "lockdown.drone.target": {
+    "category": "neutral",
+	"subtitle": "subtitles.lockdown.drone.target",
+    "sounds": [
+      "lockdown:drone_target"
+    ]
+  }
+}

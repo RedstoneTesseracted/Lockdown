@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "minecraft:composite",
+		"models": [
+			{
+				"type": "minecraft:model",
+				"model": "lockdown:item/keycard_base"
+			},
+			{
+				"type": "minecraft:model",
+				"model": "lockdown:item/keycard_strip",
+				"tint": {
+					"type": "minecraft:dye",
+					"default": [99, 65, 198]
+				}
+			}
+		]
+    }
+}
