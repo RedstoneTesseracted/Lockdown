@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "lockdown:big_buttons",
+    "category": "misc",
+    "pattern": [
+        "ttt",
+        "wbw"
+    ],
+    "key": {
+        "w": [
+            "minecraft:white_concrete"
+        ],
+        "b": "#minecraft:stone_buttons",
+        "t": [
+            "minecraft:green_concrete"
+        ]
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_green\",\"fallback\":\"Big Green Button\",\"color\":\"dark_green\"}",
+            "minecraft:item_model": "lockdown:button/green_button_off",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+            ],
+            "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.alarm_light.placer\",\"lockdown.color.white\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+        }
+    }
+}

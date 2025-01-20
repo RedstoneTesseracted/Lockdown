@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "oie",
+        "mbd",
+        "oii"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_block"
+        ],
+        "e": [
+            "minecraft:ender_eye"
+        ],
+        "o": [
+            "minecraft:obsidian"
+        ],
+        "b": [
+            "minecraft:dragon_breath"
+        ],
+        "d": [
+            "minecraft:dispenser"
+        ],
+        "m": [
+            "minecraft:diamond"
+        ]
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.turret\",\"fallback\":\"Laser Turret\"}",
+            "minecraft:item_model": "lockdown:machine/turret",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
+                "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"
+            ],
+            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.turret.placer\"]}"
+        }
+    }
+}

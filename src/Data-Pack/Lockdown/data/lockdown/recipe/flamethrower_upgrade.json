@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "ifi",
+        "fsf",
+        "ifi"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "f": [
+            "minecraft:fire_charge"
+        ],
+        "s": [
+            "minecraft:blaze_rod"
+        ]
+    },
+    "result": {
+        "id": "minecraft:paper",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.flamethrower\",\"fallback\":\"Flamethrower Upgrade\"}",
+            "minecraft:item_model": "lockdown:flamethrower_upgrade",
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "common",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.upgrade.flamethrower_upgrade.hint\",\"fallback\":\"Installs a flamethrower on the target\",\"color\":\"light_purple\",\"italic\":false}",
+                "\"\"",
+                "{\"translate\":\"item.lockdown.upgrade.lore_header\",\"fallback\":\"Applies to: \",\"color\":\"gray\",\"italic\":false}",
+                "[\" \",{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Drone\",\"color\":\"green\",\"italic\":false}]",
+                "[\" \",{\"translate\":\"item.lockdown.turret\",\"fallback\":\"Laser Turret\",\"color\":\"green\",\"italic\":false}]"
+            ]
+        }
+    }
+}

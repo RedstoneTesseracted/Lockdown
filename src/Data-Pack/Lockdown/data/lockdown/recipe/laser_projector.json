@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "ici",
+        "fds",
+        "iri"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "r": [
+            "minecraft:repeater"
+        ],
+        "c": [
+            "minecraft:comparator"
+        ],
+        "f": [
+            "minecraft:fire_charge"
+        ],
+        "d": [
+            "minecraft:dispenser"
+        ],
+        "s": [
+            "minecraft:red_stained_glass_pane"
+        ]
+    },
+    "result": {
+        "id": "minecraft:barrel",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\",\"fallback\":\"Laser Projector\"}",
+            "minecraft:item_model": "lockdown:machine/laser_projector_off",
+            "minecraft:container": [
+                {
+                    "slot": 0,
+                    "item": {
+                        "id": "minecraft:stick",
+                        "components": {
+                            "minecraft:custom_data": {
+                                "lockdown_replace_block": true
+                            },
+                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

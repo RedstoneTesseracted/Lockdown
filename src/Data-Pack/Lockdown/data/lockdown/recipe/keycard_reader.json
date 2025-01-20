@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "lol",
+        "bcb",
+        "idi"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "l": [
+            "minecraft:light_gray_concrete"
+        ],
+        "b": [
+            "minecraft:black_concrete"
+        ],
+        "o": [
+            "minecraft:observer"
+        ],
+        "c": [
+            "minecraft:comparator"
+        ],
+        "d": [
+            "minecraft:detector_rail"
+        ]
+    },
+    "result": {
+        "id": "minecraft:barrel",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_reader\",\"fallback\":\"Keycard Reader\"}",
+            "minecraft:item_model": "lockdown:machine/keycard_reader",
+            "minecraft:container": [
+                {
+                    "slot": 0,
+                    "item": {
+                        "id": "minecraft:stick",
+                        "components": {
+                            "minecraft:custom_data": {
+                                "lockdown_replace_block": true
+                            },
+                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

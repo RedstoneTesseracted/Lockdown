@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "lockdown:keycards",
+    "category": "misc",
+    "pattern": [
+        "eop",
+        "dcd",
+        "pap"
+    ],
+    "key": {
+        "p": [
+            "minecraft:paper"
+        ],
+        "o": [
+            "minecraft:observer"
+        ],
+        "c": [
+            "minecraft:comparator"
+        ],
+        "d": [
+            "minecraft:diamond"
+        ],
+        "a": [
+            "minecraft:activator_rail"
+        ],
+        "e": [
+            "minecraft:gray_dye"
+        ]
+    },
+    "result": {
+        "id": "minecraft:paper",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_gray\",\"fallback\":\"Gray Keycard\"}",
+            "minecraft:item_model": "lockdown:keycard",
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "rare",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+            ],
+            "minecraft:dyed_color": {
+                "rgb": 5461594,
+                "show_in_tooltip": false
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "dbd",
+        "iei",
+        "dcd"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "d": [
+            "minecraft:diamond"
+        ],
+        "b": [
+            "minecraft:blue_stained_glass_pane"
+        ],
+        "e": [
+            "minecraft:end_crystal"
+        ],
+        "c": [
+            "minecraft:chorus_fruit"
+        ]
+    },
+    "result": {
+        "id": "minecraft:barrel",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.force_field_projector\",\"fallback\":\"Force Field Projector\"}",
+            "minecraft:item_model": "lockdown:machine/force_field_projector_off",
+            "minecraft:container": [
+                {
+                    "slot": 0,
+                    "item": {
+                        "id": "minecraft:stick",
+                        "components": {
+                            "minecraft:custom_data": {
+                                "lockdown_replace_block": true
+                            },
+                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                        }
+                    }
+                }
+            ],
+            "minecraft:rarity": "rare"
+        }
+    }
+}

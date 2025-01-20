@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "iei",
+        "obo",
+        "idi"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "e": [
+            "minecraft:ender_eye"
+        ],
+        "o": [
+            "minecraft:observer"
+        ],
+        "b": [
+            "minecraft:dragon_breath"
+        ],
+        "d": [
+            "minecraft:dispenser"
+        ]
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Defense Drone\"}",
+            "minecraft:item_model": "lockdown:machine/defense_drone",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
+                "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"
+            ],
+            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.drone.placer\"]}"
+        }
+    }
+}

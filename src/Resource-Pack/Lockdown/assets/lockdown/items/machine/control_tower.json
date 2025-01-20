@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "lockdown:item/drone_tower_upgrade"
+        "model": "lockdown:item/machine/control_tower"
     }
 }

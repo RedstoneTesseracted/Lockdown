@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "iri",
+        "njn",
+        "iri"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "r": [
+            "minecraft:redstone"
+        ],
+        "n": [
+            "minecraft:note_block"
+        ],
+        "j": [
+            "minecraft:jukebox"
+        ]
+    },
+    "result": {
+        "id": "minecraft:barrel",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.klaxon\",\"fallback\":\"Klaxon\"}",
+            "minecraft:item_model": "lockdown:machine/klaxon_off",
+            "minecraft:container": [
+                {
+                    "slot": 0,
+                    "item": {
+                        "id": "minecraft:stick",
+                        "components": {
+                            "minecraft:custom_data": {
+                                "lockdown_replace_block": true
+                            },
+                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
