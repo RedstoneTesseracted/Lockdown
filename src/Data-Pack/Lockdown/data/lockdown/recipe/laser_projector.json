@@ -31,6 +31,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\",\"fallback\":\"Laser Projector\"}",
             "minecraft:item_model": "lockdown:machine/laser_projector_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "laser_projector"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,

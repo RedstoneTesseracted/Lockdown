@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:alarm/red_alarm_light"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.alarms.title",
+            "fallback": "Weewoo!"
+        },
+        "description": {
+            "translate": "advancement.lockdown.alarms.description",
+            "fallback": "Craft a wireless alarm light.  These are powered with a wireless signal."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "alarms": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "group": "alarms"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

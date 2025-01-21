@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/force_field_projector_on"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.force_field_projector.title",
+            "fallback": "Force Field Projector"
+        },
+        "description": {
+            "translate": "advancement.lockdown.force_field_projector.description",
+            "fallback": "The force field projector generates an indestructable force field.  Right-click the block to adjust the field size."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "force_field_projector": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "force_field_projector"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

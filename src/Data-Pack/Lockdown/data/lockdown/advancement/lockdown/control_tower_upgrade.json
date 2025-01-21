@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:control_tower_upgrade"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.control_tower_upgrade.title",
+            "fallback": "We Copy, Over"
+        },
+        "description": {
+            "translate": "advancement.lockdown.control_tower_upgrade.description",
+            "fallback": "Use a drone control tower upgrade on a drone so it can receive commands from a tower."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/control_tower",
+    "criteria": {
+        "redstone_receiver": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "control_tower_upgrade"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

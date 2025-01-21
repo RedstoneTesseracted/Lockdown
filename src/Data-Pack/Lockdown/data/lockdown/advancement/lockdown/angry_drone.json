@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/defense_drone_hostile"
+            }
+        },
+        "frame": "challenge",
+        "title": {
+            "translate": "advancement.lockdown.angry_drone.title",
+            "fallback": "Robot Uprising"
+        },
+        "description": {
+            "translate": "advancement.lockdown.angry_drone.description",
+            "fallback": "Be attacked by a drone!"
+        },
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "lockdown:lockdown/drone",
+    "criteria": {
+        "angry_drone": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "lockdown:drone_fire",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

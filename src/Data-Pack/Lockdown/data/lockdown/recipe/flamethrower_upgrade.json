@@ -22,6 +22,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.flamethrower\",\"fallback\":\"Flamethrower Upgrade\"}",
             "minecraft:item_model": "lockdown:flamethrower_upgrade",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "flamethrower_upgrade"
+                }
+            },
             "minecraft:max_stack_size": 1,
             "minecraft:rarity": "common",
             "minecraft:lore": [

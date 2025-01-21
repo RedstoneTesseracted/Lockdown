@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/keycard_reader"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.keycard_reader.title",
+            "fallback": "Keycard Reader"
+        },
+        "description": {
+            "translate": "advancement.lockdown.keycard_reader.description",
+            "fallback": "Craft a wireless keycard reader.  Outputs a wireless signal when powered."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "keycard_reader": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "keycard_reader"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

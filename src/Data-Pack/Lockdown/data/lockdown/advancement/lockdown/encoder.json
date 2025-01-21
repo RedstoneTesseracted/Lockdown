@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/encoding_station"
+            }
+        },
+        "frame": "goal",
+        "title": {
+            "translate": "advancement.lockdown.encoder.title",
+            "fallback": "Encoding Station"
+        },
+        "description": {
+            "translate": "advancement.lockdown.encoder.description",
+            "fallback": "The Encoding Station assigns codes to certain blocks/items for a wireless signal.  Use three dye to represent the code."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "encoder": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "encoding_station"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

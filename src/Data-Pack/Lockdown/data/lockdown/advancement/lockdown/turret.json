@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/turret"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.turret.title",
+            "fallback": "\"Defensive\" Measures"
+        },
+        "description": {
+            "translate": "advancement.lockdown.turret.description",
+            "fallback": "Craft an autonomous LASER TURRET.  Use the encoder to pair to a keycard."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "turret": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "turret"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

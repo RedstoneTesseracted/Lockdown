@@ -32,6 +32,12 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_light_gray\",\"fallback\":\"Light Gray Keycard\"}",
             "minecraft:item_model": "lockdown:keycard",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "light_gray_keycard",
+                    "group": "keycards"
+                }
+            },
             "minecraft:max_stack_size": 1,
             "minecraft:rarity": "rare",
             "minecraft:lore": [

@@ -1,4 +1,0 @@
-# This function repeatedly removes spawn eggs from the player's inventory, replacing them with secure crafting tables
-execute store success score @s ld_result run clear @s minecraft:pufferfish_spawn_egg 1
-execute if score @s ld_result matches 1 run give @s minecraft:book{display:{Name:'{"text":"Recipe Guide","italic":"false"}',Lore:['["",{"text":"Previous Page: ","color":"blue","italic":"false"},{"keybind":"key.sneak","color":"blue","italic":"false"},{"text":" + ","color":"blue","italic":"false"},{"keybind":"key.use","color":"blue","italic":"false"}]','["",{"text":"Next Page: ","color":"blue","italic":"false"},{"keybind":"key.use","color":"blue","italic":"false"}]']},CustomModelData:10001,LockdownRecipeBook:1b,LockdownRecipePage:0}
-execute if score @s ld_result matches 1 run function lockdown:craft/secure_book_recursive

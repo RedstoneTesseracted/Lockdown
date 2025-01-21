@@ -28,6 +28,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.player_detector\",\"fallback\":\"Player Detector\"}",
             "minecraft:item_model": "lockdown:machine/player_detector_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "player_detector"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,

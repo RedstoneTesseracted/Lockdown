@@ -23,6 +23,12 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_white\",\"fallback\":\"White Alarm Light\"}",
             "minecraft:item_model": "lockdown:alarm/white_alarm_light",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "white_alarm",
+					"group": "alarms"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
             ],

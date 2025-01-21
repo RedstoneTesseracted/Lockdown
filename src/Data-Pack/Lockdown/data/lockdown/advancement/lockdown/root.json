@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:iron_bars"
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.root.title",
+            "fallback": "Lockdown"
+        },
+        "description": {
+            "translate": "advancement.lockdown.root.description",
+            "fallback": "Welcome to Lockdown, the datapack for all your security needs!"
+        },
+        "background": "lockdown:textures/gui/advancements/backgrounds/iron_block.png",
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "criteria": {
+        "start": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

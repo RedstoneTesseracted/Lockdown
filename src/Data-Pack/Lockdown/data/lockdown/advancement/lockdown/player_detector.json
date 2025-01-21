@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/player_detector_off"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.player_detector.title",
+            "fallback": "Player Detector"
+        },
+        "description": {
+            "translate": "advancement.lockdown.player_detector.description",
+            "fallback": "The player detector outputs a redstone signal if a player is within a five-block radius."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "player_detector": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "player_detector"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

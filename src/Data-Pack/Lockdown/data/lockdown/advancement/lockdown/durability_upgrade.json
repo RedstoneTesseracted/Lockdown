@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "paper",
+            "components": {
+                "minecraft:item_model": "lockdown:durability_upgrade"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.durability_upgrade.title",
+            "fallback": "Durability Upgrade"
+        },
+        "description": {
+            "translate": "advancement.lockdown.durability_upgrade.description",
+            "fallback": "Increase the durability of a drone or turret by throwing a durability upgrade at it."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/turret",
+    "criteria": {
+        "durability_upgrade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "durability_upgrade"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

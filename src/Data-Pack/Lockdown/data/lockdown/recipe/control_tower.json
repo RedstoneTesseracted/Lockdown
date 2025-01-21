@@ -28,6 +28,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\",\"fallback\":\"Control Tower\"}",
             "minecraft:item_model": "lockdown:machine/control_tower",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "control_tower"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,

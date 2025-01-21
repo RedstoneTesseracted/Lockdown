@@ -20,6 +20,12 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_orange\",\"fallback\":\"Big Orange Button\",\"color\":\"gold\"}",
             "minecraft:item_model": "lockdown:button/orange_button_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "orange_big_button",
+                    "group": "buttons"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
             ],

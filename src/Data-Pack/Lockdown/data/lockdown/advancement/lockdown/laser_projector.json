@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/laser_projector_on"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.laser_projector.title",
+            "fallback": "Not The Sun"
+        },
+        "description": {
+            "translate": "advancement.lockdown.laser_projector.description",
+            "fallback": "Craft a laser projector to guard against intruders."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "laser_projector": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "components": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "laser_projector"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

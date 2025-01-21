@@ -20,6 +20,12 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_yellow\",\"fallback\":\"Big Yellow Button\",\"color\":\"yellow\"}",
             "minecraft:item_model": "lockdown:button/yellow_button_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "yellow_big_button",
+                    "group": "buttons"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
             ],

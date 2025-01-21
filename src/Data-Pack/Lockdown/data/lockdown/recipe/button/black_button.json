@@ -20,6 +20,12 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_black\",\"fallback\":\"Big Black Button\",\"color\":\"dark_gray\"}",
             "minecraft:item_model": "lockdown:button/black_button_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "black_big_button",
+                    "group": "buttons"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
             ],

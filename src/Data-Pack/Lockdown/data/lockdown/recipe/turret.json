@@ -31,6 +31,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.turret\",\"fallback\":\"Laser Turret\"}",
             "minecraft:item_model": "lockdown:machine/turret",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "turret"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
                 "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"

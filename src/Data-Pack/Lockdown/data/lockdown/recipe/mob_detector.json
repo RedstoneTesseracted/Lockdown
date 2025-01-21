@@ -28,6 +28,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.mob_detector\",\"fallback\":\"Mob Detector\"}",
             "minecraft:item_model": "lockdown:machine/entity_detector_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "mob_detector"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,

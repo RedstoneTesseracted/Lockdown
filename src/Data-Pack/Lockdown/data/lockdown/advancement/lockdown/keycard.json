@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:keycard"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.keycard.title",
+            "fallback": "Access Granted"
+        },
+        "description": {
+            "translate": "advancement.lockdown.keycard.description",
+            "fallback": "A keycard will trigger all keycard readers within five blocks that have the same code."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/keycard_reader",
+    "criteria": {
+        "keycard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "group": "keycards"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

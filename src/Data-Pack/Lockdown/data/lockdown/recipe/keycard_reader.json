@@ -31,6 +31,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_reader\",\"fallback\":\"Keycard Reader\"}",
             "minecraft:item_model": "lockdown:machine/keycard_reader",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "keycard_reader"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,

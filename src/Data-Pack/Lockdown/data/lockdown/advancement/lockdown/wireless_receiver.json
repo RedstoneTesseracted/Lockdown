@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/receiver_off"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.wireless_receiver.title",
+            "fallback": "Wireless Receiver"
+        },
+        "description": {
+            "translate": "advancement.lockdown.wireless_receiver.description",
+            "fallback": "Pick up a redstone signal from any wireless device with the same code."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "redstone_receiver": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "wireless_receiver"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:flamethrower_upgrade"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.flamethrower_upgrade.title",
+            "fallback": "Flamethrower Upgrade"
+        },
+        "description": {
+            "translate": "advancement.lockdown.flamethrower_upgrade.description",
+            "fallback": "Supercharge a drone/turret's laser to set targets on fire by throwing a flamethrower upgrade at it."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/turret",
+    "criteria": {
+        "durability_upgrade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "flamethrower_upgrade"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

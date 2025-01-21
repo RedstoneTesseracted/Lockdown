@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/defense_drone"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.drone.title",
+            "fallback": "Our Robot Overlords"
+        },
+        "description": {
+            "translate": "advancement.lockdown.drone.description",
+            "fallback": "Craft a defense drone to patrol the area"
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "drone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "drone"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

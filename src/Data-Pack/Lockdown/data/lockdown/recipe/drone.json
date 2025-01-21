@@ -28,6 +28,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Defense Drone\"}",
             "minecraft:item_model": "lockdown:machine/defense_drone",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "drone"
+                }
+            },
             "minecraft:lore": [
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
                 "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"

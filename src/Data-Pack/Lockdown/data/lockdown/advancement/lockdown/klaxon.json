@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:machine/klaxon_off"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.klaxon.title",
+            "fallback": "AWOOGAA!"
+        },
+        "description": {
+            "translate": "advancement.lockdown.klaxon.description",
+            "fallback": "When powered, the klaxon will audibly remind you of the impending disaster."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "klaxon": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "klaxon"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

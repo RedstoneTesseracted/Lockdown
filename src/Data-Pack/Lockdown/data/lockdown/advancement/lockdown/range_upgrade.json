@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:range_upgrade"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.range_upgrade.title",
+            "fallback": "Range Upgrade"
+        },
+        "description": {
+            "translate": "advancement.lockdown.range_upgrade.description",
+            "fallback": "Increase the range of a drone or turret by throwing a range upgrade at it."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/turret",
+    "criteria": {
+        "durability_upgrade": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "range_upgrade"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

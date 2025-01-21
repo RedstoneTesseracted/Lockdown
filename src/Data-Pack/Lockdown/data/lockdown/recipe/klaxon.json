@@ -25,6 +25,11 @@
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.klaxon\",\"fallback\":\"Klaxon\"}",
             "minecraft:item_model": "lockdown:machine/klaxon_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "klaxon"
+                }
+            },
             "minecraft:container": [
                 {
                     "slot": 0,
