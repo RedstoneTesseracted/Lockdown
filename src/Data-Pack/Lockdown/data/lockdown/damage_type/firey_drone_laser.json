@@ -1,0 +1,7 @@
+{
+    "message_id": "death.attack.lockdown.flamethrower",
+    "exhaustion": 0,
+    "scaling": "never",
+    "effects": "burning",
+    "death_message_type": "default"
+}
