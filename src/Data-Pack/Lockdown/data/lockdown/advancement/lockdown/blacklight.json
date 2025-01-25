@@ -6,7 +6,7 @@
                 "minecraft:item_model": "lockdown:alarm/black_alarm_light"
             }
         },
-        "frame": "goal",
+        "frame": "task",
         "title": {
             "translate": "advancement.lockdown.blacklight.title",
             "fallback": "This is Beyond Science"
@@ -21,7 +21,7 @@
     },
     "parent": "lockdown:lockdown/alarms",
     "criteria": {
-        "black_alarm": {
+        "blacklight": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [

@@ -3,33 +3,31 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/transmitter_off"
+                "minecraft:item_model": ""
             }
         },
-        "frame": "task",
+        "frame": "",
         "title": {
-            "translate": "advancement.lockdown.wireless_transmitter.title",
-            "fallback": "Wireless Transmitter"
+            "translate": "",
+            "fallback": ""
         },
         "description": {
-            "translate": "advancement.lockdown.wireless_transmitter.description",
-            "fallback": "Wirelessly send a redstone signal to any receiver with the same code."
+            "translate": "",
+            "fallback": ""
         },
         "show_toast": true,
         "announce_to_chat": true
     },
-    "parent": "lockdown:lockdown/encoder",
+    "parent": "",
     "criteria": {
-        "wireless_transmitter": {
+        "placeholder": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
                         "predicates": {
                             "minecraft:custom_data": {
-                                "lockdown_data": {
-                                    "name": "wireless_transmitter"
-                                }
+                                "lockdown_data": {}
                             }
                         }
                     }

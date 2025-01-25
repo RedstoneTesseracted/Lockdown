@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.force_field_projector.description",
-            "fallback": "The force field projector generates an indestructable force field.  Right-click the block to adjust the field size."
+            "fallback": "The force field projector generates an indestructible force field.  Right-click the block to adjust the field size."
         },
         "show_toast": true,
         "announce_to_chat": true

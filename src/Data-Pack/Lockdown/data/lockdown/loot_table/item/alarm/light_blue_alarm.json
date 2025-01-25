@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_light_blue\",\"fallback\":\"Light Blue Alarm Light\",\"color\":\"blue\"}",
+                                "minecraft:item_model": "lockdown:alarm/light_blue_alarm_light",
+                                "minecraft:custom_data": {
+                                    "lockdown_data": {
+                                        "name": "light_blue_alarm_light",
+                                        "group": "alarms"
+                                    }
+                                },
+                                "minecraft:lore": [
+                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+                                ],
+                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.alarm_light.placer\",\"lockdown.color.white\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

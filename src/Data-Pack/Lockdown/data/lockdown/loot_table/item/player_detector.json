@@ -1,0 +1,41 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:barrel",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": "{\"translate\":\"item.lockdown.player_detector\",\"fallback\":\"Player Detector\"}",
+                                "minecraft:item_model": "lockdown:machine/player_detector_off",
+                                "minecraft:custom_data": {
+                                    "lockdown_data": {
+                                        "name": "player_detector"
+                                    }
+                                },
+                                "minecraft:container": [
+                                    {
+                                        "slot": 0,
+                                        "item": {
+                                            "id": "minecraft:stick",
+                                            "components": {
+                                                "minecraft:custom_data": {
+                                                    "lockdown_replace_block": true
+                                                },
+                                                "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "alarms": {
+        "item": "lockdown:alarm/red_alarm_light",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "group": "alarms"
+        }
+    },
+    "big_buttons": {
+        "item": "lockdown:button/red_button_off",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "group": "buttons"
+        }
+    },
+    "blacklight": {
+        "item": "lockdown:alarm/black_alarm_light",
+        "parent": "lockdown:lockdown/alarms",
+        "hidden": true,
+        "condition": {
+            "name": "black_alarm_light"
+        }
+    },
+    "control_tower_upgrade": {
+        "item": "lockdown:control_tower_upgrade",
+        "parent": "lockdown:lockdown/control_tower",
+        "condition": {
+            "name": "control_tower_upgrade"
+        }
+    },
+    "control_tower": {
+        "item": "lockdown:machine/control_tower",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "control_tower"
+        }
+    },
+    "drone": {
+        "item": "lockdown:machine/defense_drone",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "drone"
+        }
+    },
+    "durability_upgrade": {
+        "item": "lockdown:durability_upgrade",
+        "parent": "lockdown:lockdown/turret",
+        "condition": {
+            "name": "durability_upgrade"
+        }
+    },
+    "flamethrower_upgrade": {
+        "item": "lockdown:flamethrower_upgrade",
+        "parent": "lockdown:lockdown/turret",
+        "condition": {
+            "name": "flamethrower_upgrade"
+        }
+    },
+    "range_upgrade": {
+        "item": "lockdown:range_upgrade",
+        "parent": "lockdown:lockdown/turret",
+        "condition": {
+            "name": "range_upgrade"
+        }
+    },
+    "encoder": {
+        "item": "lockdown:machine/encoding_station",
+        "frame": "goal",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "encoding_station"
+        }
+    },
+    "force_field_projector": {
+        "item": "lockdown:machine/force_field_projector_on",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "force_field_projector"
+        }
+    },
+    "keycard_reader": {
+        "item": "lockdown:machine/keycard_reader",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "keycard_reader"
+        }
+    },
+    "keycard": {
+        "item": "lockdown:keycard",
+        "parent": "lockdown:lockdown/keycard_reader",
+        "condition": {
+            "group": "keycards"
+        }
+    },
+    "klaxon": {
+        "item": "lockdown:machine/klaxon_off",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "klaxon"
+        }
+    },
+    "laser_projector": {
+        "item": "lockdown:machine/laser_projector_off",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "laser_projector"
+        }
+    },
+    "mob_detector": {
+        "item": "lockdown:machine/entity_detector_off",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "mob_detector"
+        }
+    },
+    "player_detector": {
+        "item": "lockdown:machine/player_detector_off",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "player_detector"
+        }
+    },
+    "turret": {
+        "item": "lockdown:machine/turret",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "turret"
+        }
+    },
+    "wireless_receiver": {
+        "item": "lockdown:machine/receiver_off",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "wireless_receiver"
+        }
+    },
+    "wireless_transmitter": {
+        "item": "lockdown:machine/transmitter_off",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "wireless_transmitter"
+        }
+    }
+}

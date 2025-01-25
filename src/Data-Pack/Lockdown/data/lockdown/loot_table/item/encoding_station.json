@@ -1,0 +1,41 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:barrel",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": "{\"translate\":\"item.lockdown.encoding_station\",\"fallback\":\"Encoding Station\"}",
+                                "minecraft:item_model": "lockdown:machine/encoding_station",
+                                "minecraft:custom_data": {
+                                    "lockdown_data": {
+                                        "name": "encoding_station"
+                                    }
+                                },
+                                "minecraft:container": [
+                                    {
+                                        "slot": 0,
+                                        "item": {
+                                            "id": "minecraft:stick",
+                                            "components": {
+                                                "minecraft:custom_data": {
+                                                    "lockdown_replace_block": true
+                                                },
+                                                "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

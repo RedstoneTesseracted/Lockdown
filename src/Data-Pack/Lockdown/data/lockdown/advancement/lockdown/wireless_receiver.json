@@ -20,7 +20,7 @@
     },
     "parent": "lockdown:lockdown/encoder",
     "criteria": {
-        "redstone_receiver": {
+        "wireless_receiver": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [

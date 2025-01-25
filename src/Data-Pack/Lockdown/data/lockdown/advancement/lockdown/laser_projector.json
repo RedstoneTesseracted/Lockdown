@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/laser_projector_on"
+                "minecraft:item_model": "lockdown:machine/laser_projector_off"
             }
         },
         "frame": "task",
@@ -25,7 +25,7 @@
             "conditions": {
                 "items": [
                     {
-                        "components": {
+                        "predicates": {
                             "minecraft:custom_data": {
                                 "lockdown_data": {
                                     "name": "laser_projector"

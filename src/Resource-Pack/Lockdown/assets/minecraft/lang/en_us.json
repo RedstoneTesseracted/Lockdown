@@ -87,8 +87,8 @@
   "advancement.lockdown.alarms.description": "Craft a wireless alarm light.  These are powered with a wireless signal.",
   "advancement.lockdown.angry_drone.title": "Robot Uprising",
   "advancement.lockdown.angry_drone.description": "Be attacked by a drone!",
-  "advancement.lockdown.button.title": "End-of-The-World Button",
-  "advancement.lockdown.button.description": "Craft a wireless big button.  Outputs a wireless signal when powered.",
+  "advancement.lockdown.big_buttons.title": "End-of-The-World Button",
+  "advancement.lockdown.big_buttons.description": "Craft a wireless big button.  Outputs a wireless signal when powered.",
   "advancement.lockdown.blacklight.title": "This is Beyond Science",
   "advancement.lockdown.blacklight.description": "That's not how blacklights work",
   "advancement.lockdown.drone.title": "Our Robot Overlords",
@@ -104,7 +104,7 @@
   "advancement.lockdown.range_upgrade.title": "Range Upgrade",
   "advancement.lockdown.range_upgrade.description": "Increase the range of a drone or turret by throwing a range upgrade at it.",
   "advancement.lockdown.force_field_projector.title": "Force Field Projector",
-  "advancement.lockdown.force_field_projector.description": "The force field projector generates an indestructable force field.  Right-click the block to adjust the field size.",
+  "advancement.lockdown.force_field_projector.description": "The force field projector generates an indestructible force field.  Right-click the block to adjust the field size.",
   "advancement.lockdown.keycard.title": "Access Granted",
   "advancement.lockdown.keycard.description": "A keycard will trigger all keycard readers within five blocks that have the same code.",
   "advancement.lockdown.keycard_reader.title": "Keycard Reader",
@@ -128,5 +128,5 @@
   "death.attack.lockdown.laser.item": "%1$s was reduced to atoms by %2$s using %3$s",
   "death.attack.lockdown.flamethrower": "%1$s was incinerated",
   "death.attack.lockdown.flamethrower.player": "%1$s was incinerated by %2$s",
-  "death.attack.lockdown.flamethrower.item": "%1$s was barbequed by %2$s using %3$s"
+  "death.attack.lockdown.flamethrower.item": "%1$s was barbecued by %2$s using %3$s"
 }

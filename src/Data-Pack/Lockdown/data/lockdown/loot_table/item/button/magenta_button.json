@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_magenta\",\"fallback\":\"Big Magenta Button\",\"color\":\"light_purple\"}",
+                                "minecraft:item_model": "lockdown:button/magenta_button_off",
+                                "minecraft:custom_data": {
+                                    "lockdown_data": {
+                                        "name": "magenta_big_button",
+                                        "group": "buttons"
+                                    }
+                                },
+                                "minecraft:lore": [
+                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+                                ],
+                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.alarm_light.placer\",\"lockdown.color.white\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -8,11 +8,11 @@
         },
         "frame": "task",
         "title": {
-            "translate": "advancement.lockdown.button.title",
+            "translate": "advancement.lockdown.big_buttons.title",
             "fallback": "End-of-The-World Button"
         },
         "description": {
-            "translate": "advancement.lockdown.button.description",
+            "translate": "advancement.lockdown.big_buttons.description",
             "fallback": "Craft a wireless big button.  Outputs a wireless signal when powered."
         },
         "show_toast": true,
@@ -20,7 +20,7 @@
     },
     "parent": "lockdown:lockdown/encoder",
     "criteria": {
-        "big_button": {
+        "big_buttons": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [

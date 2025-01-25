@@ -20,7 +20,7 @@
     },
     "parent": "lockdown:lockdown/control_tower",
     "criteria": {
-        "redstone_receiver": {
+        "control_tower_upgrade": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [

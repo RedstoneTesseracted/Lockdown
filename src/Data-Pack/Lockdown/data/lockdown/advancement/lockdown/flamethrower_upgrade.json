@@ -20,7 +20,7 @@
     },
     "parent": "lockdown:lockdown/turret",
     "criteria": {
-        "durability_upgrade": {
+        "flamethrower_upgrade": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [

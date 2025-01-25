@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "id": "paper",
+            "id": "minecraft:paper",
             "components": {
                 "minecraft:item_model": "lockdown:durability_upgrade"
             }
