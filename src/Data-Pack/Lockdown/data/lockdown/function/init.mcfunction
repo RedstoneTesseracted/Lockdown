@@ -1,9 +1,4 @@
 # Scoreboard objective setup
-scoreboard objectives add ld_place_button minecraft.used:minecraft.birch_button
-scoreboard objectives add ld_place_block minecraft.used:minecraft.gray_glazed_terracotta
-scoreboard objectives add ld_use_noteblock minecraft.custom:minecraft.tune_noteblock
-scoreboard objectives add ld_craft_crafter minecraft.crafted:minecraft.polar_bear_spawn_egg
-scoreboard objectives add ld_craft_book minecraft.crafted:minecraft.pufferfish_spawn_egg
 scoreboard objectives add ld_id dummy
 scoreboard objectives add ld_block_model dummy
 scoreboard objectives add ld_item_model dummy
