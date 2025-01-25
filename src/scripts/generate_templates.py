@@ -14,7 +14,7 @@ def generate_item_advancements():
     with open("item_advancements.json", mode='r') as rf:
         advancements = load(rf)
     
-    with open("advancement_template.json", mode='r') as rf:
+    with open(path.join('templates', 'advancement_template.json'), mode='r') as rf:
         raw_template = rf.read()
     
     with open(path.join('..', 'Resource-Pack', 'Lockdown', 'assets', 'minecraft', 'lang', 'en_us.json'), mode='r') as rf:
@@ -51,7 +51,7 @@ def generate_items():
     Substitutes item definitions into all places that need to have the correct item components.
     The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
     """
-    with open("item_loot_table_template.json", mode='r') as rf:
+    with open(path.join('templates', 'item_loot_table_template.json'), mode='r') as rf:
         raw_template = rf.read()
 
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
