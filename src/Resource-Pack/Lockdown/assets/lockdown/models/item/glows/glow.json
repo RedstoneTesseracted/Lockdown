@@ -1,11 +1,11 @@
 {
     "elements": [
         {
-            "from": [-16, 0, 0],
-            "to": [32, 16, 0],
+            "from": [-16, -3, 8],
+            "to": [32, 13, 8],
             "faces": {
-                "north": { "uv": [0, 0, 16, 16], "texture": "glow"},
-				"south": { "uv": [0, 0, 16, 16], "texture": "glow"}
+                "north": { "uv": [0, 0, 16, 16], "texture": "#glow"},
+				"south": { "uv": [0, 0, 16, 16], "texture": "#glow"}
             }
         }
     ],

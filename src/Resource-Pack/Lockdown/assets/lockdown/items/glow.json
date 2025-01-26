@@ -1,0 +1,129 @@
+{
+    "model": {
+        "type": "minecraft:condition",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "on_false": {
+            "type": "minecraft:empty"
+        },
+        "on_true": {
+            "type": "minecraft:select",
+            "property": "minecraft:custom_model_data",
+            "index": 0,
+            "cases": [
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/black_glow"
+                    },
+                    "when": "black"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/blue_glow"
+                    },
+                    "when": "blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/brown_glow"
+                    },
+                    "when": "brown"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/cyan_glow"
+                    },
+                    "when": "cyan"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/gray_glow"
+                    },
+                    "when": "gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/green_glow"
+                    },
+                    "when": "green"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/light_blue_glow"
+                    },
+                    "when": "light_blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/light_gray_glow"
+                    },
+                    "when": "light_gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/lime_glow"
+                    },
+                    "when": "lime"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/magenta_glow"
+                    },
+                    "when": "magenta"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/orange_glow"
+                    },
+                    "when": "orange"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/pink_glow"
+                    },
+                    "when": "pink"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/purple_glow"
+                    },
+                    "when": "purple"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/red_glow"
+                    },
+                    "when": "red"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/white_glow"
+                    },
+                    "when": "white"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/glows/yellow_glow"
+                    },
+                    "when": "yellow"
+                }
+            ]
+        }
+    }
+}

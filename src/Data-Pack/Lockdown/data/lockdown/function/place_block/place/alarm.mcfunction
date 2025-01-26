@@ -45,8 +45,22 @@ execute if score lockdown.direction lockdown.local matches 3 run data merge enti
 execute if score lockdown.direction lockdown.local matches 4 run data merge entity @e[tag=lockdown.alarm,tag=lockdown.block.display.new,limit=1] {transformation: {translation: [-0.1875f, -0.3125f, 0.0f], right_rotation: [1.0f, -1.0f, 0.0f, 0.0f]}}
 execute if score lockdown.direction lockdown.local matches 5 run data merge entity @e[tag=lockdown.alarm,tag=lockdown.block.display.new,limit=1] {transformation: {translation: [0.1875f, -0.3125f, 0.0f], right_rotation: [1.0f, 1.0f, 0.0f, 0.0f]}}
 
+# Scoreboard properties
+scoreboard players set @n[tag=lockdown.block.display.new] lockdown.rotation 0
+
 # Set button color info
 function lockdown:place_block/place/colored_common
+
+# Summon and mount item display used to show glow effect
+execute at @n[tag=lockdown.block.root.new] positioned ~ ~0.625 ~ run summon minecraft:item_display ~ ~ ~ {interpolation_duration: 1, brightness: {block: 15, sky: 15}, Tags:["lockdown.alarm", "lockdown.block", "lockdown.alarm.glow", "lockdown.alarm.glow.new"],item:{"id": "minecraft:paper",count:1b,components:{"minecraft:item_model": "lockdown:glow", "minecraft:custom_model_data": {strings:["red"],flags:[false]}}}}
+ride @n[tag=lockdown.alarm.glow.new] mount @n[tag=lockdown.block.root.new]
+execute if score lockdown.direction lockdown.local matches 0 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.0f, -0.5f, 0.0f], right_rotation: [0.0f, 0.0f, 1.0f, 0.0f]}}
+execute if score lockdown.direction lockdown.local matches 1 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.0f, -0.125f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}}
+execute if score lockdown.direction lockdown.local matches 2 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.0f, -0.3125f, -0.1875f], right_rotation: [0.0f, -1.0f, 1.0f, 0.0f]}}
+execute if score lockdown.direction lockdown.local matches 3 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.0f, -0.3125f, 0.1875f], right_rotation: [0.0f, 1.0f, 1.0f, 0.0f]}}
+execute if score lockdown.direction lockdown.local matches 4 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [-0.1875f, -0.3125f, 0.0f], right_rotation: [1.0f, -1.0f, 0.0f, 0.0f]}}
+execute if score lockdown.direction lockdown.local matches 5 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.1875f, -0.3125f, 0.0f], right_rotation: [1.0f, 1.0f, 0.0f, 0.0f]}}
+data modify entity @n[tag=lockdown.alarm.glow.new] item.components."minecraft:custom_model_data".strings set from entity @n[tag=lockdown.block.display.new] item.components."minecraft:custom_model_data".strings
 
 # Assign channel from earlier
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.channel = lockdown.channel lockdown.local

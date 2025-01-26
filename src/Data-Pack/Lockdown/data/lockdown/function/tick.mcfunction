@@ -1,7 +1,7 @@
 # Machine behavior-related commands
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_big_button] at @s positioned ~ ~0.23 ~ run function lockdown:devices/button/big_button
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_alarm] at @s positioned ~ ~0.23 ~ run function lockdown:devices/alarm/alarm
-execute as @e[type=armor_stand,tag=ld_glow_effect] at @s run function lockdown:devices/alarm/alarm_shine_do
+execute as @e[type=armor_stand,tag=ld_glow_effect] at @s run function lockdown:devices/alarm/alarm_glow_do
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_heavy_lever] at @s positioned ~ ~0.23 ~ run function lockdown:devices/lever/heavy_lever
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_keypad] at @s positioned ~ ~0.23 ~ run function lockdown:devices/keypad/keypad
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_keycard_reader] at @s positioned ~ ~0.23 ~ run function lockdown:devices/keycard/keycard_reader
