@@ -1,10 +1,16 @@
-# Declare scoreboards
+#### Declare scoreboards
 
 # Generic objectives
 scoreboard objectives add lockdown.local dummy
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
+
+
+#### Scheduled timers
+function lockdown:periodic_fix
+
+
 
 
 
