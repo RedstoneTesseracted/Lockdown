@@ -2,7 +2,7 @@
 
 # Requires enough room
 execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/mob_detector"}
-execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=!minecraft:player,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/mob_detector"}
+execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/mob_detector"}
 
 # Play effects
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
