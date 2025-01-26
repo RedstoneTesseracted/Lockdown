@@ -8,26 +8,8 @@
                     "name": "minecraft:paper",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_brown\",\"fallback\":\"Brown Keycard\"}",
-                                "minecraft:item_model": "lockdown:keycard",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "brown_keycard",
-                                        "group": "keycards"
-                                    }
-                                },
-                                "minecraft:max_stack_size": 1,
-                                "minecraft:rarity": "rare",
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ],
-                                "minecraft:dyed_color": {
-                                    "rgb": 9069126,
-                                    "show_in_tooltip": false
-                                }
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/keycard/brown_keycard"
                         }
                     ]
                 }

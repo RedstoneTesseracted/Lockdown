@@ -8,17 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\",\"fallback\":\"Laser Projector\"}",
-                                "minecraft:item_model": "lockdown:machine/laser_projector_off",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "laser_projector"
-                                    }
-                                },
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.laser_projector\"]}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/laser_projector"
                         }
                     ]
                 }

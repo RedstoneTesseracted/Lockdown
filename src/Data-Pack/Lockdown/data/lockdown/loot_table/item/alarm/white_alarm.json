@@ -8,21 +8,8 @@
                     "name": "minecraft:item_frame",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_white\",\"fallback\":\"White Alarm Light\"}",
-                                "minecraft:item_model": "lockdown:alarm/white_alarm_light",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "white_alarm",
-                                        "group": "alarms"
-                                    }
-                                },
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ],
-                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Item:{id:\"minecraft:paper\",components:{\"minecraft:custom_data\": {lockdown_data: {channel: -1}}, \"minecraft:item_model\":\"lockdown:invisible\"}},Tags:[\"lockdown.placer\",\"lockdown.placer.alarm\",\"lockdown.color.white\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/alarm/white_alarm"
                         }
                     ]
                 }

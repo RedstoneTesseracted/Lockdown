@@ -8,17 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.encoding_station\",\"fallback\":\"Encoding Station\"}",
-                                "minecraft:item_model": "lockdown:machine/encoding_station",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "encoding_station"
-                                    }
-                                },
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.encoder\"]}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/encoding_station"
                         }
                     ]
                 }

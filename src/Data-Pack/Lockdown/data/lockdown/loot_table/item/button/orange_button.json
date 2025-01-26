@@ -8,21 +8,8 @@
                     "name": "minecraft:item_frame",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_orange\",\"fallback\":\"Big Orange Button\",\"color\":\"gold\"}",
-                                "minecraft:item_model": "lockdown:button/orange_button_off",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "orange_big_button",
-                                        "group": "buttons"
-                                    }
-                                },
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ],
-                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.placer.big_button\",\"lockdown.color.orange\"],Item:{id:\"minecraft:paper\",components:{\"minecraft:custom_data\": {lockdown_data: {channel: -1}}, \"minecraft:item_model\":\"lockdown:invisible\"}},Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/button/orange_button"
                         }
                     ]
                 }

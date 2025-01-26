@@ -8,18 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.force_field_projector\",\"fallback\":\"Force Field Projector\"}",
-                                "minecraft:item_model": "lockdown:machine/force_field_projector_off",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "force_field_projector"
-                                    }
-                                },
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.force_field_projector\"]}",
-                                "minecraft:rarity": "rare"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/force_field_projector"
                         }
                     ]
                 }

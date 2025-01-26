@@ -1,28 +1,35 @@
-# Mark the dropped item for replacement
-tag @e[type=item,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_button"}}] add ld_replace_item
+# Handles the removal of an alarm block
+# This is run BY and AT the base alarm entity
 
-# Give the item its name
-execute store result score @s ld_item_model run data get entity @s ArmorItems[3].tag.LockdownData.item_model
-execute if score @s ld_item_model matches 10042 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"White Alarm","italic":"false","color":"white"}'
-execute if score @s ld_item_model matches 10043 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Orange Alarm","italic":"false","color":"gold"}'
-execute if score @s ld_item_model matches 10044 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Magenta Alarm","italic":"false","color":"light_purple"}'
-execute if score @s ld_item_model matches 10045 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Big Light Blue Button","italic":"false","color":"blue"}'
-execute if score @s ld_item_model matches 10046 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Yellow Alarm","italic":"false","color":"yellow"}'
-execute if score @s ld_item_model matches 10047 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Lime Alarm","italic":"false","color":"green"}'
-execute if score @s ld_item_model matches 10048 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Pink Alarm","italic":"false","color":"light_purple"}'
-execute if score @s ld_item_model matches 10049 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Gray Alarm","italic":"false","color":"dark_gray"}'
-execute if score @s ld_item_model matches 10050 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Big Light Gray Button","italic":"false","color":"gray"}'
-execute if score @s ld_item_model matches 10051 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Cyan Alarm","italic":"false","color":"dark_aqua"}'
-execute if score @s ld_item_model matches 10052 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Purple Alarm","italic":"false","color":"dark_purple"}'
-execute if score @s ld_item_model matches 10053 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Blue Alarm","italic":"false","color":"dark_blue"}'
-execute if score @s ld_item_model matches 10054 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Brown Alarm","italic":"false","color":"gold"}'
-execute if score @s ld_item_model matches 10055 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Green Alarm","italic":"false","color":"dark_green"}'
-execute if score @s ld_item_model matches 10056 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Red Alarm","italic":"false","color":"red"}'
-execute if score @s ld_item_model matches 10057 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Black Alarm","italic":"false","color":"dark_gray"}'
+# Spawn the base item to be configured
+execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
 
-# Set item lore
-execute if score @s ld_channel matches 0 run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Lore set value ['{"text":"No Channel Assigned","color":"red"}']
-execute if score @s ld_channel matches 1.. run data modify entity @e[tag=ld_replace_item,limit=1,sort=nearest] Item.tag.display.Lore set value ['{"text":"Channel Assigned","color":"green","italic":"false"}']
+# Configure item according to color
+execute align xyz if entity @s[tag=lockdown.color.white] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/white_alarm
+execute align xyz if entity @s[tag=lockdown.color.red] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/red_alarm
+execute align xyz if entity @s[tag=lockdown.color.orange] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/orange_alarm
+execute align xyz if entity @s[tag=lockdown.color.yellow] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/yellow_alarm
+execute align xyz if entity @s[tag=lockdown.color.green] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/green_alarm
+execute align xyz if entity @s[tag=lockdown.color.blue] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/blue_alarm
+execute align xyz if entity @s[tag=lockdown.color.light_blue] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/light_blue_alarm
+execute align xyz if entity @s[tag=lockdown.color.lime] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/lime_alarm
+execute align xyz if entity @s[tag=lockdown.color.cyan] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/cyan_alarm
+execute align xyz if entity @s[tag=lockdown.color.pink] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/pink_alarm
+execute align xyz if entity @s[tag=lockdown.color.magenta] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/magenta_alarm
+execute align xyz if entity @s[tag=lockdown.color.purple] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/purple_alarm
+execute align xyz if entity @s[tag=lockdown.color.black] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/black_alarm
+execute align xyz if entity @s[tag=lockdown.color.gray] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/gray_alarm
+execute align xyz if entity @s[tag=lockdown.color.light_gray] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/light_gray_alarm
+execute align xyz if entity @s[tag=lockdown.color.brown] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/brown_alarm
 
-# Apply the generic custom block removal
-function lockdown:devices/generic_destroy
+# Set channel data
+execute store result entity @n[tag=lockdown.item.configure] Item.components."minecraft:custom_data".lockdown_data.channel int 1.0 run scoreboard players get @s lockdown.channel
+execute if score @s lockdown.channel matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_channel_lore
+execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_channel_lore
+
+# Unmark dropped item for configuration
+tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
+
+# Remove all entities comprising this custom block
+execute on passengers run kill @s[tag=lockdown.block]
+kill @s[tag=lockdown.block]

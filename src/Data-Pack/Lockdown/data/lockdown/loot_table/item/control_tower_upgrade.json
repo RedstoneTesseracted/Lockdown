@@ -8,24 +8,8 @@
                     "name": "minecraft:paper",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.control_tower\",\"fallback\":\"Control Tower Upgrade\"}",
-                                "minecraft:item_model": "lockdown:control_tower_upgrade",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "control_tower_upgrade"
-                                    }
-                                },
-                                "minecraft:max_stack_size": 1,
-                                "minecraft:rarity": "common",
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.upgrade.control_tower_upgrade.hint\",\"fallback\":\"Binds target to a control tower\",\"color\":\"light_purple\",\"italic\":false}",
-                                    "\"\"",
-                                    "{\"translate\":\"item.lockdown.upgrade.lore_header\",\"fallback\":\"Applies to: \",\"color\":\"gray\",\"italic\":false}",
-                                    "[\" \",{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Drone\",\"color\":\"green\",\"italic\":false}]"
-                                ]
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/control_tower_upgrade"
                         }
                     ]
                 }

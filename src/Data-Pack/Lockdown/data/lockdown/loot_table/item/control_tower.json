@@ -8,20 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\",\"fallback\":\"Control Tower\"}",
-                                "minecraft:item_model": "lockdown:machine/control_tower",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "control_tower"
-                                    }
-                                },
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:-1}},Tags:[\"lockdown.placer\",\"lockdown.placer.control_tower\"]}",
-                                "minecraft:lore": [
-                                    "{\"translate\":\"lockdown.channel.no_channel\",\"fallback\":\"No Channel Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ]
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/control_tower"
                         }
                     ]
                 }

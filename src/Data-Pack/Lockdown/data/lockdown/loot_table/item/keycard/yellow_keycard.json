@@ -8,26 +8,8 @@
                     "name": "minecraft:paper",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_yellow\",\"fallback\":\"Yellow Keycard\"}",
-                                "minecraft:item_model": "lockdown:keycard",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "yellow_keycard",
-                                        "group": "keycards"
-                                    }
-                                },
-                                "minecraft:max_stack_size": 1,
-                                "minecraft:rarity": "rare",
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ],
-                                "minecraft:dyed_color": {
-                                    "rgb": 15973686,
-                                    "show_in_tooltip": false
-                                }
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/keycard/yellow_keycard"
                         }
                     ]
                 }

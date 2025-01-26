@@ -1,0 +1,12 @@
+{
+    "function": "minecraft:set_lore",
+    "lore": [
+        {
+            "translate": "item.lockdown.channel.channel",
+            "color": "green",
+            "italic": false
+        }
+    ],
+    "mode": "replace_section",
+    "offset": 0
+}

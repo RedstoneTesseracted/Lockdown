@@ -33,7 +33,7 @@
                     "name": "control_tower"
                 }
             },
-            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:-1}},Tags:[\"lockdown.placer\",\"lockdown.placer.control_tower\"]}",
+            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.control_tower\"]}",
             "minecraft:lore": [
                 "{\"translate\":\"lockdown.channel.no_channel\",\"fallback\":\"No Channel Assigned\",\"color\":\"red\",\"italic\":false}"
             ]

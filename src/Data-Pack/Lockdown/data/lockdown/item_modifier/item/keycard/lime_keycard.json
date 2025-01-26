@@ -1,0 +1,29 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_lime\",\"fallback\":\"Lime Keycard\"}",
+            "minecraft:item_model": "lockdown:keycard",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "lime_keycard",
+                    "group": "keycards",
+                    "configure": true
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "rare",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+            ],
+            "minecraft:dyed_color": {
+                "rgb": 8897846,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:paper"
+    }
+]

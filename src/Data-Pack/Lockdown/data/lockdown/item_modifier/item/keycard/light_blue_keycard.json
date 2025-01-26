@@ -1,0 +1,29 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_light_blue\",\"fallback\":\"Light Blue Keycard\"}",
+            "minecraft:item_model": "lockdown:keycard",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "light_blue_keycard",
+                    "group": "keycards",
+                    "configure": true
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "rare",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+            ],
+            "minecraft:dyed_color": {
+                "rgb": 6540263,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:paper"
+    }
+]

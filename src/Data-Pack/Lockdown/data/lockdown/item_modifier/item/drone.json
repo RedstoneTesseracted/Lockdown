@@ -1,0 +1,24 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Defense Drone\"}",
+            "minecraft:item_model": "lockdown:machine/defense_drone",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "drone",
+                    "configure": true
+                }
+            },
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
+                "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"
+            ],
+            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.drone\"]}"
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:item_frame"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.mob_detector\",\"fallback\":\"Mob Detector\"}",
+            "minecraft:item_model": "lockdown:machine/mob_detector_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "mob_detector",
+                    "configure": true
+                }
+            },
+            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.mob_detector\"]}"
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:pig_spawn_egg"
+    }
+]

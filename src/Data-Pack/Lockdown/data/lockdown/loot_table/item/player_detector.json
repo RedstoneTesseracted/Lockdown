@@ -8,17 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.player_detector\",\"fallback\":\"Player Detector\"}",
-                                "minecraft:item_model": "lockdown:machine/player_detector_off",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "player_detector"
-                                    }
-                                },
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.player_detector\"]}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/player_detector"
                         }
                     ]
                 }

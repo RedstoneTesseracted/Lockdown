@@ -1,0 +1,28 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.range\",\"fallback\":\"Range Upgrade\"}",
+            "minecraft:item_model": "lockdown:range_upgrade",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "range_upgrade",
+                    "configure": true
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "common",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.upgrade.range_upgrade.hint\",\"fallback\":\"Increases firing range of the target\",\"color\":\"light_purple\",\"italic\":false}",
+                "\"\"",
+                "{\"translate\":\"item.lockdown.upgrade.lore_header\",\"fallback\":\"Applies to: \",\"color\":\"gray\",\"italic\":false}",
+                "[\" \",{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Drone\",\"color\":\"green\",\"italic\":false}]",
+                "[\" \",{\"translate\":\"item.lockdown.turret\",\"fallback\":\"Laser Turret\",\"color\":\"green\",\"italic\":false}]"
+            ]
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:paper"
+    }
+]

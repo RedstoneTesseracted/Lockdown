@@ -8,20 +8,8 @@
                     "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_reader\",\"fallback\":\"Keycard Reader\"}",
-                                "minecraft:item_model": "lockdown:machine/keycard_reader",
-                                "minecraft:custom_data": {
-                                    "lockdown_data": {
-                                        "name": "keycard_reader"
-                                    }
-                                },
-                                "minecraft:lore": [
-                                    "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
-                                ],
-                                "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:-1}},Tags:[\"lockdown.placer\",\"lockdown.placer.force_field_projector\"]}"
-                            }
+                            "function": "minecraft:reference",
+                            "name": "lockdown:item/keycard_reader"
                         }
                     ]
                 }

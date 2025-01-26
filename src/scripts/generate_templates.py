@@ -67,12 +67,13 @@ def generate_items():
             with open(path.join(dirpath, file), mode='r') as rf:
                 data = load(rf)
             base_id = data['result']['id']
-            components = data['result']['components']
 
             # Generate loot table that gives item
+            item_modifier_path = path.join(dirpath.removeprefix(recipe_dir).removeprefix(path.sep), file)
+            item_modifier = 'lockdown:item/' + '/'.join(path.splitext(item_modifier_path)[0].split(path.sep))
             template = loads(raw_template)
             template['pools'][0]["entries"][0]['name'] = base_id
-            template['pools'][0]["entries"][0]['functions'][0]['components'] = components
+            template['pools'][0]["entries"][0]['functions'][0]['name'] = item_modifier
 
             # Save to file.  Create parent directory if needed
             loot_table_path = path.join(loot_table_dir, dirpath.removeprefix(recipe_dir).removeprefix(path.sep))
@@ -82,10 +83,47 @@ def generate_items():
                 dump(template, wf, indent=4)
 
 
+def generate_item_modifiers():
+    """
+    Generates all item modifiers used to set the components for a lockdown item
+    """
+    with open(path.join('templates', 'item_modifier_template.json'), mode='r') as rf:
+        raw_template = rf.read()
+
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    recipe_dir = path.join(datapack_dir, 'recipe')
+    item_modifier_dir = path.join(datapack_dir, 'item_modifier', 'item')
+    for dirpath, dirnames, filenames in os.walk(recipe_dir):
+        for file in filenames:
+            # Skip non-JSON files
+            if path.splitext(file)[1] != '.json':
+                continue
+
+            # Extract item components from recipe output
+            with open(path.join(dirpath, file), mode='r') as rf:
+                data = load(rf)
+            base_id = data['result']['id']
+            components = data['result']['components']
+
+            # Generate loot table that gives item
+            components['minecraft:custom_data']['lockdown_data']['configure'] = True
+            template = loads(raw_template)
+            template[0]['components'] = components
+            template[1]['item'] = base_id
+
+            # Save to file.  Create parent directory if needed
+            item_modifier_path = path.join(item_modifier_dir, dirpath.removeprefix(recipe_dir).removeprefix(path.sep))
+            if not path.exists(item_modifier_path):
+                os.mkdir(item_modifier_path)
+            with open(path.join(item_modifier_path, file), mode='w') as wf:
+                dump(template, wf, indent=4)
+
+
 def main():
     os.chdir(path.split(__file__)[0])
     generate_item_advancements()
     generate_items()
+    generate_item_modifiers()
 
 
 if __name__ == "__main__":

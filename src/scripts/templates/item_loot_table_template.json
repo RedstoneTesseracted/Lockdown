@@ -8,8 +8,8 @@
                     "name": "",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {}
+                            "function": "minecraft:reference",
+                            "name": ""
                         }
                     ]
                 }
