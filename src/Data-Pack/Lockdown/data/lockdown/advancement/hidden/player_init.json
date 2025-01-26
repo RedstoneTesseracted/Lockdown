@@ -1,0 +1,10 @@
+{
+	"criteria":{
+		"setup":{
+			"trigger":"minecraft:tick"
+		}
+	},
+	"rewards":{
+		"function": "lockdown:player_init"
+	}
+}

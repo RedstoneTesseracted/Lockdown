@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_cube",
+    "parent": "minecraft:block/cube",
     "textures": {
         "up": "lockdown:block/laser_side_off",
 		"north": "lockdown:block/laser_side_off",

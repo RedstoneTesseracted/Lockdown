@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_all",
+    "parent": "minecraft:block/cube_all",
     "textures": {
         "all": "lockdown:block/klaxon_off",
         "particle": "lockdown:block/klaxon_off"

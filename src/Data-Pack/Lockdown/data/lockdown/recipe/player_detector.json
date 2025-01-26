@@ -24,7 +24,7 @@
         ]
     },
     "result": {
-        "id": "minecraft:barrel",
+        "id": "minecraft:pig_spawn_egg",
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.player_detector\",\"fallback\":\"Player Detector\"}",
             "minecraft:item_model": "lockdown:machine/player_detector_off",
@@ -33,20 +33,7 @@
                     "name": "player_detector"
                 }
             },
-            "minecraft:container": [
-                {
-                    "slot": 0,
-                    "item": {
-                        "id": "minecraft:stick",
-                        "components": {
-                            "minecraft:custom_data": {
-                                "lockdown_replace_block": true
-                            },
-                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
-                        }
-                    }
-                }
-            ]
+            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.player_detector\"]}"
         }
     }
 }

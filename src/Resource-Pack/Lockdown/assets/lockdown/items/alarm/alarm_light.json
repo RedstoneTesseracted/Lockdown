@@ -1,0 +1,121 @@
+{
+    "model": {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "cases": [
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/black_alarm_light"
+                },
+                "when": "black"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/blue_alarm_light"
+                },
+                "when": "blue"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/brown_alarm_light"
+                },
+                "when": "brown"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/cyan_alarm_light"
+                },
+                "when": "cyan"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/gray_alarm_light"
+                },
+                "when": "gray"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/green_alarm_light"
+                },
+                "when": "green"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/light_blue_alarm_light"
+                },
+                "when": "light_blue"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/light_gray_alarm_light"
+                },
+                "when": "light_gray"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/lime_alarm_light"
+                },
+                "when": "lime"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/magenta_alarm_light"
+                },
+                "when": "magenta"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/orange_alarm_light"
+                },
+                "when": "orange"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/pink_alarm_light"
+                },
+                "when": "pink"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/purple_alarm_light"
+                },
+                "when": "purple"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/red_alarm_light"
+                },
+                "when": "red"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/white_alarm_light"
+                },
+                "when": "white"
+            },
+            {
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/alarm/yellow_alarm_light"
+                },
+                "when": "yellow"
+            }
+        ]
+    }
+}

@@ -1,3 +1,14 @@
+# Declare scoreboards
+
+# Generic objectives
+scoreboard objectives add lockdown.local dummy
+
+# Mechanic objectives
+scoreboard objectives add lockdown.channel dummy
+
+
+
+######################### LEGACY #########################
 # Scoreboard objective setup
 scoreboard objectives add ld_id dummy
 scoreboard objectives add ld_block_model dummy

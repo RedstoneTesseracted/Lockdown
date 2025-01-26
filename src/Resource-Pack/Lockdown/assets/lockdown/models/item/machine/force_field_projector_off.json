@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_cube",
+    "parent": "minecraft:block/cube",
     "textures": {
         "up": "lockdown:block/force_field_projector_off",
 		"north": "lockdown:block/force_field_projector_side_off",

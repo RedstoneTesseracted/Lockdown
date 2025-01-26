@@ -40,7 +40,7 @@
                 "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}",
                 "{\"translate\":\"item.lockdown.turret.mob_hint\",\"fallback\":\"Attacks Hostile Mobs\",\"color\":\"green\",\"italic\":false}"
             ],
-            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.turret.placer\"]}"
+            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:-1}},Tags:[\"lockdown.placer\",\"lockdown.placer.turret\"]}"
         }
     }
 }

@@ -28,6 +28,7 @@ name_colors = {
 # Load regular keycard as a template
 with open('white_alarm.json', mode='r') as rf:
     template = json.load(rf)
+    default_entity_data = template['result']['components']['minecraft:entity_data']
 
 # Generate all variants
 for name, code in name_colors.items():
@@ -35,6 +36,6 @@ for name, code in name_colors.items():
     template['result']['components']['minecraft:item_name'] = '{"translate":"item.lockdown.alarm_light_' + name + '","fallback":"' + " ".join(map(str.capitalize, name.split('_'))) + ' Alarm Light","color":"' + code + '"}'
     template['result']['components']['minecraft:item_model'] = f'lockdown:alarm/{name}_alarm_light'
     template['result']['components']['minecraft:custom_data']['lockdown_data']['name'] = f'{name}_alarm_light'
-    template['result']['components']['minecraft:entity_data'].replace('white', name)
+    template['result']['components']['minecraft:entity_data'] = default_entity_data.replace('white', name)
     with open(f'{name}_alarm.json', mode='w') as wf:
         json.dump(template, wf, indent=4)

@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_column",
+    "parent": "minecraft:block/cube_column",
     "textures": {
         "end": "lockdown:block/player_detector_top_off",
 		"side": "lockdown:block/entity_detector_side_off",

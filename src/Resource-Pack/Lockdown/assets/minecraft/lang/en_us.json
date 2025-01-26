@@ -128,5 +128,10 @@
   "death.attack.lockdown.laser.item": "%1$s was reduced to atoms by %2$s using %3$s",
   "death.attack.lockdown.flamethrower": "%1$s was incinerated",
   "death.attack.lockdown.flamethrower.player": "%1$s was incinerated by %2$s",
-  "death.attack.lockdown.flamethrower.item": "%1$s was barbecued by %2$s using %3$s"
+  "death.attack.lockdown.flamethrower.item": "%1$s was barbecued by %2$s using %3$s",
+  "lockdown.placer.reject.not_enough_space": "Not enough room",
+  "lockdown.placer.reject.no_code": "No code assigned",
+  "lockdown.placer.reject.no_channel": "No channel assigned",
+  "gui.lockdown.encoder.name": "Encoding Station",
+  "gui.lockdown.encoder.confirm": "No channel assigned"
 }

@@ -1,10 +1,7 @@
 {
 	"criteria":{
 		"setup":{
-			"trigger":"minecraft:tick"
+			"trigger":"minecraft:impossible"
 		}
-	},
-	"rewards":{
-		"function": "lockdown:player_init"
 	}
 }

@@ -1,0 +1,24 @@
+{
+    "parent": "lockdown:hidden/root",
+    "criteria": {
+        "forbidden": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "forbidden": true
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:clear_forbidden"
+    }
+}

@@ -24,7 +24,7 @@
         ]
     },
     "result": {
-        "id": "minecraft:barrel",
+        "id": "minecraft:armor_stand",
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\",\"fallback\":\"Control Tower\"}",
             "minecraft:item_model": "lockdown:machine/control_tower",
@@ -33,20 +33,7 @@
                     "name": "control_tower"
                 }
             },
-            "minecraft:container": [
-                {
-                    "slot": 0,
-                    "item": {
-                        "id": "minecraft:stick",
-                        "components": {
-                            "minecraft:custom_data": {
-                                "lockdown_replace_block": true
-                            },
-                            "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
-                        }
-                    }
-                }
-            ],
+            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:-1}},Tags:[\"lockdown.placer\",\"lockdown.placer.control_tower\"]}",
             "minecraft:lore": [
                 "{\"translate\":\"lockdown.channel.no_channel\",\"fallback\":\"No Channel Assigned\",\"color\":\"red\",\"italic\":false}"
             ]

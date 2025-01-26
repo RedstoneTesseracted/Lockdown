@@ -1,0 +1,245 @@
+{
+    "model": {
+        "type": "minecraft:condition",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "on_true": {
+            "type": "minecraft:select",
+            "property": "minecraft:custom_model_data",
+            "index": 0,
+            "cases": [
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/black_button_on"
+                    },
+                    "when": "black"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/blue_button_on"
+                    },
+                    "when": "blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/brown_button_on"
+                    },
+                    "when": "brown"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/cyan_button_on"
+                    },
+                    "when": "cyan"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/gray_button_on"
+                    },
+                    "when": "gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/green_button_on"
+                    },
+                    "when": "green"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/light_blue_button_on"
+                    },
+                    "when": "light_blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/light_gray_button_on"
+                    },
+                    "when": "light_gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/lime_button_on"
+                    },
+                    "when": "lime"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/magenta_button_on"
+                    },
+                    "when": "magenta"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/orange_button_on"
+                    },
+                    "when": "orange"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/pink_button_on"
+                    },
+                    "when": "pink"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/purple_button_on"
+                    },
+                    "when": "purple"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/red_button_on"
+                    },
+                    "when": "red"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/white_button_on"
+                    },
+                    "when": "white"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/yellow_button_on"
+                    },
+                    "when": "yellow"
+                }
+            ]
+        },
+        "on_false": {
+            "type": "minecraft:select",
+            "property": "minecraft:custom_model_data",
+            "index": 0,
+            "cases": [
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/black_button_off"
+                    },
+                    "when": "black"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/blue_button_off"
+                    },
+                    "when": "blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/brown_button_off"
+                    },
+                    "when": "brown"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/cyan_button_off"
+                    },
+                    "when": "cyan"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/gray_button_off"
+                    },
+                    "when": "gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/green_button_off"
+                    },
+                    "when": "green"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/light_blue_button_off"
+                    },
+                    "when": "light_blue"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/light_gray_button_off"
+                    },
+                    "when": "light_gray"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/lime_button_off"
+                    },
+                    "when": "lime"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/magenta_button_off"
+                    },
+                    "when": "magenta"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/orange_button_off"
+                    },
+                    "when": "orange"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/pink_button_off"
+                    },
+                    "when": "pink"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/purple_button_off"
+                    },
+                    "when": "purple"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/red_button_off"
+                    },
+                    "when": "red"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/white_button_off"
+                    },
+                    "when": "white"
+                },
+                {
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/button/yellow_button_off"
+                    },
+                    "when": "yellow"
+                }
+            ]
+        }
+    }
+}

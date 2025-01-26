@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_cube",
+    "parent": "minecraft:block/cube",
     "textures": {
         "up": "lockdown:block/encoding_station_top",
 		"north": "lockdown:block/encoding_station_side",

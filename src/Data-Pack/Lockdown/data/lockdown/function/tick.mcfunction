@@ -1,8 +1,3 @@
-# Custom block placing-related commands
-execute as @a[nbt={SelectedItem:{tag:{LockdownItem:1b}}}] run function lockdown:get_item_data
-execute as @a[scores={ld_place_button=1..}] run function lockdown:place_block/birch_button_root
-execute as @a[scores={ld_place_block=1..}] run function lockdown:place_block/gray_terracotta_root
-
 # Machine behavior-related commands
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_big_button] at @s positioned ~ ~0.23 ~ run function lockdown:devices/button/big_button
 execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_alarm] at @s positioned ~ ~0.23 ~ run function lockdown:devices/alarm/alarm
@@ -21,24 +16,14 @@ execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_control_tower] at @
 execute as @e[type=minecraft:armor_stand,tag=ld_drone] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
 execute as @e[type=minecraft:armor_stand,tag=ld_turret] at @s positioned ~ ~0.23 ~ run function lockdown:devices/turret/turret
 execute as @e[type=minecraft:armor_stand,tag=ld_encoder] at @s positioned ~ ~0.23 ~ run function lockdown:devices/encoder/encoder
-execute as @e[type=minecraft:armor_stand,tag=ld_crafter] at @s positioned ~ ~0.23 ~ run function lockdown:devices/crafter/crafter
 
 # Run upgrade-related commands
 execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
-
-# Run recipe-book-related commands if player is holding recipe book
-execute at @a[nbt={SelectedItem:{id:"minecraft:book",tag:{LockdownRecipeBook:1b}}}] run function lockdown:recipe_book
-execute as @e[type=minecraft:armor_stand,tag=ld_click_detector] at @s run function lockdown:recipe_book_clicker
 
 # Maintain custom block light level and invisibility
 execute as @e[type=minecraft:armor_stand,tag=ld_block] run data modify entity @s Fire set value 1000000
 effect give @e[tag=ld_invisible] minecraft:invisibility 1000000 1 true
 
-# Replace spawn eggs with correct items after being crafted in a crafting table
-execute as @a[scores={ld_craft_crafter=1..}] if data entity @s Inventory[{id:"minecraft:polar_bear_spawn_egg"}].Slot run function lockdown:craft/secure_crafter
-execute as @a[scores={ld_craft_book=1..}] if data entity @s Inventory[{id:"minecraft:pufferfish_spawn_egg"}].Slot run function lockdown:craft/secure_book
-
 # Reset some scores
 execute at @a[scores={ld_use_noteblock=1..}] as @e[type=minecraft:armor_stand,tag=ld_force_field,limit=1,sort=nearest,distance=..5] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/outline
 scoreboard players set @a ld_use_noteblock 0
-execute as @a[nbt=!{SelectedItem:{tag:{LockdownItem:1b}}}] run function lockdown:reset_item_data

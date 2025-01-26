@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:barrel",
+                    "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
                             "function": "minecraft:set_components",
@@ -17,20 +17,7 @@
                                         "name": "encoding_station"
                                     }
                                 },
-                                "minecraft:container": [
-                                    {
-                                        "slot": 0,
-                                        "item": {
-                                            "id": "minecraft:stick",
-                                            "components": {
-                                                "minecraft:custom_data": {
-                                                    "lockdown_replace_block": true
-                                                },
-                                                "minecraft:custom_name": "{\"text\":\"If you can read this, something has gone wrong!\",\"color\":\"red\"}"
-                                            }
-                                        }
-                                    }
-                                ]
+                                "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.encoder\"]}"
                             }
                         }
                     ]

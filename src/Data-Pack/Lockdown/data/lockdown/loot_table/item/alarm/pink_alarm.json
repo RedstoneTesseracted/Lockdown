@@ -21,7 +21,7 @@
                                 "minecraft:lore": [
                                     "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
                                 ],
-                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.alarm_light.placer\",\"lockdown.color.white\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+                                "minecraft:entity_data": "{id:\"minecraft:item_frame\",Item:{id:\"minecraft:paper\",components:{\"minecraft:custom_data\": {lockdown_data: {channel: -1}}, \"minecraft:item_model\":\"lockdown:invisible\"}},Tags:[\"lockdown.placer\",\"lockdown.placer.alarm\",\"lockdown.color.pink\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
                             }
                         }
                     ]

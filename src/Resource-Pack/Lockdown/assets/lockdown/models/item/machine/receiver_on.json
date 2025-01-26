@@ -1,5 +1,5 @@
 {
-    "parent": "lockdown:block/generic_column",
+    "parent": "minecraft:block/cube_column",
     "textures": {
         "end": "lockdown:block/receiver_top_on",
 		"side": "lockdown:block/receiver_side_on",
