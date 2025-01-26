@@ -23,7 +23,7 @@ execute align xyz if entity @s[tag=lockdown.color.light_gray] run item modify en
 execute align xyz if entity @s[tag=lockdown.color.brown] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/alarm/brown_alarm
 
 # Set channel data
-execute store result entity @n[tag=lockdown.item.configure] Item.components."minecraft:custom_data".lockdown_data.channel int 1.0 run scoreboard players get @s lockdown.channel
+execute store result entity @n[tag=lockdown.item.configure] Item.components."minecraft:entity_data".Item.components."minecraft:custom_data".lockdown_data.channel int 1.0 run scoreboard players get @s lockdown.channel
 execute if score @s lockdown.channel matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_channel_lore
 execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_channel_lore
 

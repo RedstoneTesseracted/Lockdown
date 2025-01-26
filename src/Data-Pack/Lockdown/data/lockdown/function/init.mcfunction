@@ -9,6 +9,7 @@ scoreboard objectives add lockdown.channel dummy
 
 #### Scheduled timers
 function lockdown:periodic_fix
+function lockdown:periodic_break_check
 
 
 #### Storage containers

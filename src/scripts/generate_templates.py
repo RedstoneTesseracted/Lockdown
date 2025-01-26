@@ -119,11 +119,42 @@ def generate_item_modifiers():
                 dump(template, wf, indent=4)
 
 
+def generate_universal_destroyer():
+    """
+    Generates a function that can destroy any lockdown custom block/entity.
+    This is achieved by scanning all directories under functions/devices/
+    for the presence of a "destroy" function.
+    """
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    devices_dir = path.join(datapack_dir, 'function', 'devices')
+
+    with open(path.join(devices_dir, 'universal_destroy.mcfunction'), mode='w') as wf:
+        # Write header
+        wf.write("""\
+# This function is capable of destroying any custom lockdown block/entity.
+# It works by running the corresponding block destruction function that
+# matches whatever this entity is.
+# This is run BY and AT the root block entity
+# WARNING: THIS IS AUTO-GENERATED USING A SCRIPT
+
+""")
+
+        # Check for all custom blocks with a "destroy" function
+        for directory in os.listdir(devices_dir):
+            full_path = path.join(devices_dir, directory)
+            if not path.isdir(full_path): continue
+            if not path.exists(path.join(full_path, 'destroy.mcfunction')): continue
+            wf.write(f'execute if entity @s[tag=lockdown.{directory}] run return run function lockdown:devices/{directory}/destroy\n')
+    
+
+
+
 def main():
     os.chdir(path.split(__file__)[0])
     generate_item_advancements()
     generate_items()
     generate_item_modifiers()
+    generate_universal_destroyer()
 
 
 if __name__ == "__main__":

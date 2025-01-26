@@ -31,6 +31,7 @@ execute if score lockdown.direction lockdown.local matches 3 align xyz positione
 execute if score lockdown.direction lockdown.local matches 4 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~-0.3125 ~ positioned ~-0.001 ~ ~ run summon minecraft:interaction ~0.1875 ~ ~ {Tags:["lockdown.alarm", "lockdown.block", "lockdown.block.root", "lockdown.block.root.new", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], height: 0.625, width: 0.625}
 execute if score lockdown.direction lockdown.local matches 5 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~-0.3125 ~ positioned ~0.001 ~ ~ run summon minecraft:interaction ~-0.1875 ~ ~ {Tags:["lockdown.alarm", "lockdown.block", "lockdown.block.root", "lockdown.block.root.new", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], height: 0.625, width: 0.625}
 
+execute as @n[tag=lockdown.block.root.new] run function lockdown:place_block/place/common_wall_mounted
 
 # Summon and mount item display used to show block
 execute at @n[tag=lockdown.block.root.new] positioned ~ ~0.625 ~ run summon minecraft:item_display ~ ~ ~ {transformation:[1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.alarm", "lockdown.block", "lockdown.block.display", "lockdown.block.display.new"],item:{"id": "minecraft:paper",count:1b,components:{"minecraft:item_model": "lockdown:alarm/alarm_light", "minecraft:custom_model_data": {strings:["red"],flags:[false]}}}}
