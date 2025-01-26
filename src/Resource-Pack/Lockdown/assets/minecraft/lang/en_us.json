@@ -72,9 +72,11 @@
   "item.lockdown.upgrade.lore_drone": "Drone",
   "item.lockdown.laser_blaster": "Laser Blaster",
   "item.lockdown.code.no_code": "No Code Assigned",
-  "item.lockdown.code.code": "Assigned",
-  "item.lockdown.no_channel.no_channel": "No Channel Assigned",
-  "item.lockdown.channel.channel": "Assigned",
+  "item.lockdown.channel.no_channel": "No Channel Assigned",
+  "item.lockdown.code.code": "Code Assigned",
+  "item.lockdown.channel.channel": "Channel Assigned",
+  "item.lockdown.code_channel.code_channel": "Code/Channel Assigned",
+  "item.lockdown.code_channel.no_code_channel": "No Code/Channel Assigned",
   "subtitles.lockdown.alarm": "Alarm Wails",
   "subtitles.lockdown.turret.fire": "Turret Fires",
   "subtitles.lockdown.drone.target": "Drone Prepares to Obliterate its Target",
@@ -136,5 +138,7 @@
   "gui.lockdown.encoder.confirm": "No channel assigned",
   "lockdown.messages.welcome": "Welcome to %1$s—the datapack for all your security needs!  Open your advancements with '%2$s' for a roadmap ahead.",
   "lockdown.messages.welcome.hidden": "",
-  "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Running '/reload' will automatically update any pre-existing Lockdown blocks/items in the world and in your inventory."
+  "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Running '/reload' will automatically update any pre-existing Lockdown blocks/items in the world and in your inventory.",
+  "lockdown.messages.encoder.error.no_item": "No item was provided for encoding",
+  "lockdown.messages.encoder.error.not_encodable": "This item is not encodable"
 }
