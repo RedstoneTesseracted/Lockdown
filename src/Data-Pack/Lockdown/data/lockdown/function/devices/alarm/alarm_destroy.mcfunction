@@ -27,9 +27,5 @@ execute store result entity @n[tag=lockdown.item.configure] Item.components."min
 execute if score @s lockdown.channel matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_channel_lore
 execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_channel_lore
 
-# Unmark dropped item for configuration
-tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
-
-# Remove all entities comprising this custom block
-execute on passengers run kill @s[tag=lockdown.block]
-kill @s[tag=lockdown.block]
+# Common block removal functionality
+function lockdown:devices/common_destroy

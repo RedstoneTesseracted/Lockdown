@@ -1,13 +1,14 @@
-# Mark the dropped item for replacement
-tag @e[type=item,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_button"}}] add ld_replace_item
+# Remove the incorrect item
+execute if entity @s[tag=lockdown.active] run kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:redstone_block"}}]
+execute unless entity @s[tag=lockdown.active] run kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:glass"}}]
 
-# Give the item its name
-execute if score @s ld_channel matches 0 run data merge entity @e[tag=ld_replace_item,limit=1,sort=nearest] {Item:{tag:{display:{Name:'{"text":"Keycard Reader","italic":"false"}',Lore:['{"text":"No Code/Channel Assigned","color":"red"}']}}}}
-execute if score @s ld_channel matches 1.. run data merge entity @e[tag=ld_replace_item,limit=1,sort=nearest] {Item:{tag:{display:{Name:'{"text":"Keycard Reader","italic":"false"}',Lore:['{"text":"Code/Channel Assigned","color":"green","italic":"false"}']}}}}
+# Spawn the correct item
+execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:pig_spawn_egg",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
+item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/keycard_reader
 
-# Update channels
-tag @s remove ld_sending
-function lockdown:devices/update_channels
+# Assign code
+execute if score @s lockdown.channel matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_code_lore
+execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_code_lore
 
-# Apply the generic custom block removal
-function lockdown:devices/generic_destroy
+# Common block removal functionality
+function lockdown:devices/common_destroy

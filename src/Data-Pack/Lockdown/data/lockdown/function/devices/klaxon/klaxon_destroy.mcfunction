@@ -1,8 +1,8 @@
-# Mark the dropped item for replacement
-tag @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Item:{id:"minecraft:note_block"}}] add ld_replace_item
+# Remove the incorrect item
+kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:redstone_lamp"}}]
 
-# Give the item its name
-data merge entity @e[tag=ld_replace_item,limit=1,sort=nearest] {Item:{tag:{display:{Name:'{"text":"Klaxon","italic":"false"}'}}}}
+# Spawn the correct item
+execute align xyz run loot spawn ~0.5 ~0.5 ~0.5 loot lockdown:item/klaxon
 
-# Apply the generic custom block removal
-function lockdown:devices/generic_destroy
+# Common block removal functionality
+function lockdown:devices/common_destroy

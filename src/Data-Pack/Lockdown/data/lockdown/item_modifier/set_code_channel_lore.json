@@ -2,8 +2,8 @@
     "function": "minecraft:set_lore",
     "lore": [
         {
-            "translate": "item.lockdown.channel.no_channel",
-            "color": "red",
+            "translate": "item.lockdown.code_channel.code_channel",
+            "color": "green",
             "italic": false
         }
     ],

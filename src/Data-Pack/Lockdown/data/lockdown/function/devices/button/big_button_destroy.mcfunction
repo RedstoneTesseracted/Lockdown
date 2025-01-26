@@ -31,9 +31,6 @@ execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=l
 tag @s remove lockdown.sending
 function lockdown:devices/update_channels
 
-# Unmark dropped item for configuration
-tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
+# Common block removal functionality
+function lockdown:devices/common_destroy
 
-# Remove all entities comprising this custom block
-execute on passengers run kill @s[tag=lockdown.block]
-kill @s[tag=lockdown.block]

@@ -1,9 +1,9 @@
-# Mark the dropped item for replacement
-execute if entity @s[tag=ld_found_mob] run tag @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Item:{id:"minecraft:redstone_block"}}] add ld_replace_item
-execute unless entity @s[tag=ld_found_mob] run tag @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Item:{id:"minecraft:light_gray_glazed_terracotta"}}] add ld_replace_item
+# Remove the incorrect item
+execute if entity @s[tag=lockdown.found_mob] run kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:redstone_block"}}]
+execute unless entity @s[tag=lockdown.found_mob] run kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:red_terracotta"}}]
 
-# Give the item its name
-data merge entity @e[tag=ld_replace_item,limit=1,sort=nearest] {Item:{tag:{display:{Name:'{"text":"Mob Detector","italic":"false"}'}}}}
+# Spawn the correct item
+execute align xyz run loot spawn ~0.5 ~0.5 ~0.5 loot lockdown:item/mob_detector
 
-# Apply the generic custom block removal
-function lockdown:devices/generic_destroy
+# Common block removal functionality
+function lockdown:devices/common_destroy

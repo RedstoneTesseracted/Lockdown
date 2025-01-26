@@ -2,7 +2,7 @@
     "function": "minecraft:set_lore",
     "lore": [
         {
-            "translate": "item.lockdown.channel.no_channel",
+            "translate": "item.lockdown.code.no_code",
             "color": "red",
             "italic": false
         }

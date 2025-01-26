@@ -1,8 +1,9 @@
 # Remove the incorrect item
-kill @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dispenser"}}]
+kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:dispenser"}}]
 
 # Spawn the encoder item
-loot spawn ~ ~ ~ loot lockdown:item/encoding_station
+execute align xyz run loot spawn ~0.5 ~0.5 ~0.5 loot lockdown:item/encoding_station
 
-# Apply the generic custom block removal
-function lockdown:devices/generic_destroy
+# Common block removal functionality
+function lockdown:devices/common_destroy
+
