@@ -28,8 +28,116 @@ Below is a table of all planned features currently (re)implemented
 | Flamethrower upgrade          |   ❌   |
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
+| Big Bertha                    |   ❌   |
 
-## Obsolete Features
+
+## Redstone wireless transmitter
+
+* Added in R1
+* Transmits a redstone signal to other receivers on the same channel
+
+
+## Redstone wireless receiver
+
+* Added in R1
+* Outputs a redstone signal received from other transmitters on the same channel
+
+
+## Alarm lights
+
+* Added in R1
+* 16 colors
+* Flashes when receiving a redstone signal from other transmitters
+
+
+## Force field projector
+
+* Added in R1
+* Creates an indestructible energy shield when powered by redstone
+* Right-click to change size
+
+
+## Keycard reader w/ keycard
+
+* Added in R1
+
+
+## Big buttons
+
+* Added in R1
+
+
+## Klaxon block
+
+* Added in R1
+
+
+## Laser projector
+
+* Added in R1
+
+
+## Player detector
+
+* Added in R1
+
+
+## Mob detector
+
+* Added in R1
+
+
+## Defense turret
+
+* Added in R1
+
+
+## Defense drone
+
+* Added in R1
+
+
+## Drone control tower
+
+* Added in R2
+
+
+## Encoding station
+
+* Added in R1
+
+
+## Range upgrade
+
+* Added in R1
+
+
+## Durability upgrade
+
+* Added in R1
+
+
+## Flamethrower upgrade
+
+* Added in R1
+
+
+## Drone control tower upgrade
+
+* Added in R1
+
+
+## Laser blaster
+
+* Planned for R3
+
+
+## Big Bertha
+
+* Planned for R3
+
+
+## Removed Features
 
 These features existed prior to the 1.21.4 update due to technical limitations.  However, they are now obsolete:
 * Secure crafting table
