@@ -1,7 +1,17 @@
 #### Declare scoreboards
 
-# Generic objectives
+# Utility objectives
 scoreboard objectives add lockdown.local dummy
+scoreboard objectives add lockdown.time dummy
+scoreboard objectives add lockdown.press_time dummy
+scoreboard objectives add lockdown.global dummy
+
+scoreboard players set lockdown.button_duration lockdown.global 20
+
+scoreboard objectives add lockdown.uuid1 dummy
+scoreboard objectives add lockdown.uuid2 dummy
+scoreboard objectives add lockdown.uuid3 dummy
+scoreboard objectives add lockdown.uuid4 dummy
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy

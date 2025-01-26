@@ -2,7 +2,7 @@
 # This is run BY and AT the base alarm entity
 
 # Spawn the base item to be configured
-execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
+execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_model":"lockdown:invisible","minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
 
 # Configure item according to color
 execute align xyz if entity @s[tag=lockdown.color.white] run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/button/white_button

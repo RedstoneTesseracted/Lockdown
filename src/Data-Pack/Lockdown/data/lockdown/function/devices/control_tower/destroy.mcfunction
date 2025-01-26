@@ -2,7 +2,7 @@
 kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:glass"}}]
 
 # Spawn the correct item
-execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:pig_spawn_egg",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
+execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:pig_spawn_egg",components:{"minecraft:item_model":"lockdown:invisible","minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
 item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/control_tower
 
 # Assign code

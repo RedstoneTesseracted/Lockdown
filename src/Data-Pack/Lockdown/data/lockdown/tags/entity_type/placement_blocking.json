@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:item_frame",
+        "minecraft:glow_item_frame",
+        "minecraft:painting",
+        "minecraft:interaction",
+        "minecraft:item_display",
+        "minecraft:block_display",
+        "minecraft:armor_stand"
+    ]
+}

@@ -28,6 +28,7 @@ Below is a table of all planned features currently (re)implemented
 | Flamethrower upgrade          |   ❌   |
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
+| Key                           |   ❌   |
 | Big Bertha                    |   ❌   |
 
 
@@ -130,6 +131,12 @@ Below is a table of all planned features currently (re)implemented
 ## Laser blaster
 
 * Planned for R3
+
+
+## Key
+
+* Planned for R3
+* Brings container locking to survival
 
 
 ## Big Bertha
