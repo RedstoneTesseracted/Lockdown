@@ -107,7 +107,7 @@
         }
     },
     "mob_detector": {
-        "item": "lockdown:machine/entity_detector_off",
+        "item": "lockdown:machine/mob_detector_off",
         "parent": "lockdown:lockdown/root",
         "condition": {
             "name": "mob_detector"

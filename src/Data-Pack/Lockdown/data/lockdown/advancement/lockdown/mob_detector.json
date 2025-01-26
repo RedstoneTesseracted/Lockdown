@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/entity_detector_off"
+                "minecraft:item_model": "lockdown:machine/mob_detector_off"
             }
         },
         "frame": "task",
