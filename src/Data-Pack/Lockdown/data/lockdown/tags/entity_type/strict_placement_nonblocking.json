@@ -1,6 +1,27 @@
 {
     "replace": false,
     "values": [
-        "minecraft:item"
+        "minecraft:item",
+        "minecraft:experience_orb",
+        "minecraft:experience_bottle",
+        "minecraft:text_display",
+        "minecraft:snowball",
+        "minecraft:fireball",
+        "minecraft:small_fireball",
+        "minecraft:firework_rocket",
+        "minecraft:fishing_bobber",
+        "minecraft:potion",
+        "minecraft:lightning_bolt",
+        "minecraft:wind_charge",
+        "minecraft:breeze_wind_charge",
+        "minecraft:egg",
+        "minecraft:trident",
+        "minecraft:ender_pearl",
+        "minecraft:eye_of_ender",
+        "minecraft:vex",
+        "minecraft:ominous_item_spawner",
+        "minecraft:area_effect_cloud",
+        "minecraft:spectral_arrow",
+        "minecraft:arrow"
     ]
 }
