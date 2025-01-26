@@ -1,6 +1,9 @@
 # Handles the removal of an alarm block
 # This is run BY and AT the base alarm entity
 
+# Destroy the incorrect item
+kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:acacia_button"}}]
+
 # Spawn the base item to be configured
 execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_model":"lockdown:invisible","minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
 
