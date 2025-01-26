@@ -24,7 +24,7 @@
         ]
     },
     "result": {
-        "id": "minecraft:armor_stand",
+        "id": "minecraft:pig_spawn_egg",
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\",\"fallback\":\"Control Tower\"}",
             "minecraft:item_model": "lockdown:machine/control_tower",

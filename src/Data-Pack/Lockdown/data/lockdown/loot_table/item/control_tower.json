@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:armor_stand",
+                    "name": "minecraft:pig_spawn_egg",
                     "functions": [
                         {
                             "function": "minecraft:set_components",

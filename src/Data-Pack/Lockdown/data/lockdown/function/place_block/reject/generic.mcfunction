@@ -4,9 +4,9 @@
 $title @a[tag=lockdown.placer.source] actionbar {"translate": "$(msg)","color": "red"}
 
 # Play effects
-particle minecraft:block{block_state:{Name:"minecraft:iron_block"}} ~0.5 ~0.5 ~0.5 0.25 0.25 0.25 1 20
+execute align xyz run particle minecraft:block{block_state:{Name:"minecraft:iron_block"}} ~0.5 ~0.5 ~0.5 0.25 0.25 0.25 1 20
 playsound minecraft:entity.zombie.attack_wooden_door block @a ~ ~ ~ 0.5 1.6
 
 # Do not drop item if source player is in creative mode
 execute if entity @a[tag=lockdown.placer.source,gamemode=creative] run return 0
-$loot spawn ~ ~ ~ loot lockdown:item/$(loot)
+$loot spawn ~ ~ ~ loot $(loot)
