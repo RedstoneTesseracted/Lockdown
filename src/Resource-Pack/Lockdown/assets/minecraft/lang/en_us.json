@@ -140,5 +140,7 @@
   "lockdown.messages.welcome.hidden": "",
   "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Running '/reload' will automatically update any pre-existing Lockdown blocks/items in the world and in your inventory.",
   "lockdown.messages.encoder.error.no_item": "No item was provided for encoding",
-  "lockdown.messages.encoder.error.not_encodable": "This item is not encodable"
+  "lockdown.messages.encoder.error.not_encodable": "This item is not encodable",
+  "lockdown.messages.force_field_projector.size": "Width: %1$s, Height: %2$s",
+  "lockdown.messages.force_field_projector.obstructed": "Not enough space"
 }

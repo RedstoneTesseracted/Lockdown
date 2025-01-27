@@ -1,5 +1,5 @@
 {
-    "parent": "block/block",
+    "parent": "minecraft:block/block",
     "textures": {
         "field": "lockdown:block/force_field",
         "particle": "lockdown:block/force_field"
@@ -7,42 +7,42 @@
     "elements": [
         {
             "from": [
-                0,
-                -16,
-                -16.0
+                0.0,
+                8.0,
+                6.4
             ],
             "to": [
-                16,
-                12.799999999999997,
-                32.0
+                16.0,
+                17.6,
+                9.6
             ],
             "faces": {
                 "down": {
                     "texture": "#field",
                     "uv": [
-                        0,
-                        0,
-                        3.2,
-                        9.600000000000001
+                        0.0,
+                        0.0,
+                        16.0,
+                        3.2
                     ],
                     "cullface": "down"
                 },
                 "up": {
                     "texture": "#field",
                     "uv": [
-                        0,
-                        0,
-                        3.2,
-                        16.0
+                        0.0,
+                        0.0,
+                        16.0,
+                        3.2
                     ],
                     "cullface": "up"
                 },
                 "north": {
                     "texture": "#field",
                     "uv": [
-                        0,
-                        0,
-                        3.2,
+                        0.0,
+                        0.0,
+                        16.0,
                         9.600000000000001
                     ],
                     "cullface": "north"
@@ -50,53 +50,34 @@
                 "south": {
                     "texture": "#field",
                     "uv": [
-                        0,
-                        0,
-                        3.2,
+                        0.0,
+                        0.0,
+                        16.0,
                         9.600000000000001
                     ],
                     "cullface": "south"
                 },
-                "west": {
-                    "texture": "#field",
-                    "uv": [
-                        0,
-                        0,
-                        16.0,
-                        9.600000000000001
-                    ],
-                    "cullface": "west"
-                },
                 "east": {
                     "texture": "#field",
                     "uv": [
-                        0,
-                        0,
-                        16.0,
+                        0.0,
+                        0.0,
+                        3.2,
                         9.600000000000001
                     ],
                     "cullface": "east"
+                },
+                "west": {
+                    "texture": "#field",
+                    "uv": [
+                        0.0,
+                        0.0,
+                        3.2,
+                        9.600000000000001
+                    ],
+                    "cullface": "west"
                 }
             }
         }
-    ],
-    "display": {
-        "head": {
-            "rotation": [
-                0,
-                -90,
-                0
-            ],
-            "translation": [
-                0,
-                21.5,
-                0
-            ],
-            "scale": [
-                2.3,
-                3.84,
-                3.84
-            ]
-        }
-    }
+    ]
 }

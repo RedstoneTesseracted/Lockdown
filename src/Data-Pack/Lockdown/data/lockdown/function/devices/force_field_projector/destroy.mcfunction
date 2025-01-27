@@ -1,5 +1,5 @@
 # Ensure that the force field is disabled
-execute if entity @s[tag=ld_projecting] run function lockdown:devices/force_field_projector/field_off
+execute if entity @s[tag=lockdown.projecting] run function lockdown:devices/force_field_projector/deactivate
 
 # Destroy the dropped item
 kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:note_block"}}]

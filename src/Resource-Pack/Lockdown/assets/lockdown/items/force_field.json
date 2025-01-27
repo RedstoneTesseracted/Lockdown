@@ -1,0 +1,188 @@
+{
+    "model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "scale": 1,
+        "fallback": {
+            "type": "minecraft:empty"
+        },
+        "entries": [
+            {
+                "threshold": 0.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field11"
+                }
+            },
+            {
+                "threshold": 1.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field12"
+                }
+            },
+            {
+                "threshold": 2.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field13"
+                }
+            },
+            {
+                "threshold": 3.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field14"
+                }
+            },
+            {
+                "threshold": 4.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field15"
+                }
+            },
+            {
+                "threshold": 5.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field21"
+                }
+            },
+            {
+                "threshold": 6.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field22"
+                }
+            },
+            {
+                "threshold": 7.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field23"
+                }
+            },
+            {
+                "threshold": 8.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field24"
+                }
+            },
+            {
+                "threshold": 9.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field25"
+                }
+            },
+            {
+                "threshold": 10.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field31"
+                }
+            },
+            {
+                "threshold": 11.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field32"
+                }
+            },
+            {
+                "threshold": 12.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field33"
+                }
+            },
+            {
+                "threshold": 13.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field34"
+                }
+            },
+            {
+                "threshold": 14.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field35"
+                }
+            },
+            {
+                "threshold": 15.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field41"
+                }
+            },
+            {
+                "threshold": 16.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field42"
+                }
+            },
+            {
+                "threshold": 17.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field43"
+                }
+            },
+            {
+                "threshold": 18.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field44"
+                }
+            },
+            {
+                "threshold": 19.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field45"
+                }
+            },
+            {
+                "threshold": 20.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field51"
+                }
+            },
+            {
+                "threshold": 21.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field52"
+                }
+            },
+            {
+                "threshold": 22.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field53"
+                }
+            },
+            {
+                "threshold": 23.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field54"
+                }
+            },
+            {
+                "threshold": 24.0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/fields/force_field55"
+                }
+            }
+        ]
+    }
+}

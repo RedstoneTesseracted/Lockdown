@@ -6,6 +6,7 @@ scoreboard objectives add lockdown.time dummy
 scoreboard objectives add lockdown.press_time dummy
 scoreboard objectives add lockdown.global dummy
 scoreboard objectives add lockdown.rotation dummy
+scoreboard objectives add lockdown.mode dummy
 
 scoreboard players set lockdown.button_duration lockdown.global 20
 
