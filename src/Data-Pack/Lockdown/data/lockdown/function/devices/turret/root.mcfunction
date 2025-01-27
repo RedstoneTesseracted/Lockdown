@@ -3,7 +3,7 @@ execute as @a[distance=..15] run function lockdown:devices/turret/check_channel
 
 # Destroy the turret if applicable
 execute if block ~ ~-1 ~ #lockdown:passthrough run kill @e[distance=..0.5,type=minecraft:bee,tag=ld_turret_hitbox]
-execute unless entity @e[distance=..0.5,type=minecraft:bee,tag=ld_turret_hitbox] run function lockdown:devices/turret/turret_destroy
+execute unless entity @e[distance=..0.5,type=minecraft:bee,tag=ld_turret_hitbox] run function lockdown:devices/turret/destroy
 
 # Run timer-specific commands.  Every 30 ticks attempt to fire the turret.
 scoreboard players add @s ld_time 1

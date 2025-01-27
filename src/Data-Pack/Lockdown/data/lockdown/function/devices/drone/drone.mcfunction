@@ -1,5 +1,5 @@
 # Destroy the drone, if possible
-execute unless entity @e[type=minecraft:bee,tag=ld_drone_hitbox,distance=..1] run function lockdown:devices/drone/drone_destroy
+execute unless entity @e[type=minecraft:bee,tag=ld_drone_hitbox,distance=..1] run function lockdown:devices/drone/destroy
 
 # Warn unauthorized players of their impending doom, unless the drone is set to non-player only.
 tag @a[tag=ld_channel_match] remove ld_channel_match

@@ -1,3 +1,4 @@
-tag @s remove ld_found_player
-execute store result entity @s ArmorItems[3].tag.CustomModelData int 1 run data get entity @s ArmorItems[3].tag.LockdownData.block_model
-execute if block ~ ~ ~ minecraft:redstone_block run setblock ~ ~ ~ minecraft:light_gray_glazed_terracotta
+# This function handles the player detector ceasing to detect any players
+tag @s remove lockdown.detected
+data modify entity @s item.components."minecraft:item_model" set value "lockdown:machine/player_detector_off"
+execute if block ~ ~ ~ minecraft:redstone_block run setblock ~ ~ ~ minecraft:red_terracotta
