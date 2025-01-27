@@ -1,23 +1,31 @@
 {
-  "lockdown.alarm1": {
+  "alarm.alarm1": {
     "category": "block",
-	"subtitle": "subtitles.lockdown.alarm",
-    "sounds": [
-	  "lockdown:alarm/alarm1"
-    ]
+    "subtitle": "subtitles.lockdown.alarm",
+      "sounds": [
+        "lockdown:alarm/alarm1"
+      ]
   },
-  "lockdown.alarm2": {
+  "alarm.alarm2": {
     "category": "block",
-	"subtitle": "subtitles.lockdown.alarm",
-    "sounds": [
-      "lockdown:alarm/alarm2"
-    ]
+    "subtitle": "subtitles.lockdown.alarm",
+      "sounds": [
+        "lockdown:alarm/alarm2"
+      ]
   },
-  "lockdown.drone.target": {
+  "alarm.industrial_alarm": {
+    "category": "block",
+    "subtitle": "subtitles.lockdown.alarm",
+      "sounds": [
+        "lockdown:alarm/industrial_alarm"
+      ],
+    "attribution": "TODO: Where is this from?"
+  },
+  "drone.target": {
     "category": "neutral",
-	"subtitle": "subtitles.lockdown.drone.target",
-    "sounds": [
-      "lockdown:drone_target"
-    ]
+    "subtitle": "subtitles.lockdown.drone.target",
+      "sounds": [
+        "lockdown:drone_target"
+      ]
   }
 }
