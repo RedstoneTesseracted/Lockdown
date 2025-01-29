@@ -8,6 +8,7 @@
                 "lockdown_data": {
                     "name": "light_blue_alarm_light",
                     "group": "alarms",
+                    "encodable": true,
                     "configure": true
                 }
             },

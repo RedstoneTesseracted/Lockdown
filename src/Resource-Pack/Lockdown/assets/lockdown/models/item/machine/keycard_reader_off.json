@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "up": "lockdown:block/keycard_reader_top_off",
+		"north": "lockdown:block/keycard_reader_front_off",
+		"east": "lockdown:block/keycard_reader_side_off",
+		"south": "lockdown:block/keycard_reader_side_off",
+		"west": "lockdown:block/keycard_reader_side_off",
+		"down": "lockdown:block/keycard_reader_top_off",
+		"particle": "lockdown:block/keycard_reader_side_off"
+    }
+}

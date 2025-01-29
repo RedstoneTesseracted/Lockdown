@@ -23,7 +23,8 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "cyan_big_button",
-                    "group": "buttons"
+                    "group": "buttons",
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

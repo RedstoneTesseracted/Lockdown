@@ -8,6 +8,7 @@
                 "lockdown_data": {
                     "name": "yellow_big_button",
                     "group": "buttons",
+                    "encodable": true,
                     "configure": true
                 }
             },

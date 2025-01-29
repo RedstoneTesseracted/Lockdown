@@ -145,7 +145,80 @@ def generate_universal_destroyer():
             if not path.isdir(full_path): continue
             if not path.exists(path.join(full_path, 'destroy.mcfunction')): continue
             wf.write(f'execute if entity @s[tag=lockdown.{directory}] run return run function lockdown:devices/{directory}/destroy\n')
+
+
+def generate_code_channel_string_identifier():
+    """
+    This generates the function that is used to determine whether
+    encoded items should receive the "Code Assigned" lore string or the
+    "Channel Assigned" lore string.  This is achieve by checking the item's
+    recipe for either "No Code Assigned" or "No Channel Assigned"
+    """
+    by_group = {}
+    by_name = {}
     
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    recipe_dir = path.join(datapack_dir, 'recipe')
+    function_dir = path.join(datapack_dir, 'function')
+    for dirpath, dirnames, filenames in os.walk(recipe_dir):
+        for file in filenames:
+            # Skip non-JSON files
+            if path.splitext(file)[1] != '.json':
+                continue
+
+            # Extract item components from recipe output
+            with open(path.join(dirpath, file), mode='r') as rf:
+                data = load(rf)
+            components = data['result']['components']
+            lockdown_data = components.get('minecraft:custom_data', {}).get('lockdown_data', {})
+            lore_data = components.get('minecraft:lore', [''])
+
+            # Skip non-encodable items
+            if not lockdown_data.get('encodable'):
+                continue
+
+            # Determine whether this should say "code" or "channel"
+            if 'lockdown.channel.no_channel' in lore_data[0]:
+                return_code = 0
+
+            elif 'lockdown.code.no_code' in lore_data[0]:
+                return_code = 1
+
+            else:
+                continue
+
+            # Determine whether this is by group or by name
+            if 'group' in lockdown_data:
+                by_group[lockdown_data['group']] = return_code
+
+            elif 'name' in lockdown_data:
+                by_name[lockdown_data['name']] = return_code
+
+            else:
+                continue
+    
+    # Write function file
+    with open(path.join(function_dir, 'devices', 'encoder', 'determine_lore.mcfunction'), mode='w') as wf:
+        wf.write("""\
+# Identifies whether an encoded item should say "channel" or "code"
+# in its lore.  This function is auto-generated using a script that
+# bases its results off of the defined recipes.
+# 0 = "channel"
+# 1 = "code"
+
+# By item group
+""")
+        for group, return_code in by_group.items():
+            wf.write(f'execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{{lockdown_data:{{group:"{group}"}}}}] run return {return_code}\n')
+
+        wf.write("\n# By item name\n")
+        for name, return_code in by_name.items():
+            wf.write(f'execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{{lockdown_data:{{name:"{name}"}}}}] run return {return_code}\n')
+
+        wf.write("""
+# Default case
+return 0
+""")
 
 
 
@@ -155,6 +228,7 @@ def main():
     generate_items()
     generate_item_modifiers()
     generate_universal_destroyer()
+    generate_code_channel_string_identifier()
 
 
 if __name__ == "__main__":

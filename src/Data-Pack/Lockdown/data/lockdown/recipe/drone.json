@@ -30,7 +30,8 @@
             "minecraft:item_model": "lockdown:machine/defense_drone",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "drone"
+                    "name": "drone",
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

@@ -1,0 +1,6 @@
+# This function restores the hidden items in the GUI
+item replace block ~ ~ ~ container.0 with minecraft:paper[minecraft:hide_tooltip={},minecraft:item_model="lockdown:gui/encoder",minecraft:max_stack_size=1,minecraft:custom_data={lockdown_data: {forbidden: 1b, slot: 0b}}]
+item replace block ~ ~ ~ container.1 with minecraft:paper[minecraft:hide_tooltip={},minecraft:item_model="lockdown:invisible",minecraft:max_stack_size=1,minecraft:custom_data={lockdown_data: {forbidden: 1b, slot: 1b}}]
+item replace block ~ ~ ~ container.2 with minecraft:paper[minecraft:hide_tooltip={},minecraft:item_model="lockdown:invisible",minecraft:max_stack_size=1,minecraft:custom_data={lockdown_data: {forbidden: 1b, slot: 2b}}]
+item replace block ~ ~ ~ container.3 with minecraft:paper[minecraft:hide_tooltip={},minecraft:item_model="lockdown:invisible",minecraft:max_stack_size=1,minecraft:custom_data={lockdown_data: {forbidden: 1b, slot: 3b}}]
+item replace block ~ ~ ~ container.5 with minecraft:paper[minecraft:item_name='{"translate":"gui.lockdown.encoder.confirm","color":"green"}',minecraft:item_model="lockdown:gui/checkmark",minecraft:max_stack_size=1,minecraft:custom_data={lockdown_data: {forbidden: 1b, slot: 5b}}]

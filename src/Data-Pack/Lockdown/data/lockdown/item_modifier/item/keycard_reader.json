@@ -3,10 +3,11 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_reader\",\"fallback\":\"Keycard Reader\"}",
-            "minecraft:item_model": "lockdown:machine/keycard_reader",
+            "minecraft:item_model": "lockdown:machine/keycard_reader_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "keycard_reader",
+                    "encodable": true,
                     "configure": true
                 }
             },

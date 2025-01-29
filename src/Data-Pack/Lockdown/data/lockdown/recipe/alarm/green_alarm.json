@@ -26,7 +26,8 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "green_alarm_light",
-                    "group": "alarms"
+                    "group": "alarms",
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

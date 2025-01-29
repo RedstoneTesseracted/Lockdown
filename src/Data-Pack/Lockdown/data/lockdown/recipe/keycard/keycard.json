@@ -35,7 +35,8 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "keycard",
-					"group": "keycards"
+					"group": "keycards",
+                    "encodable": true
                 }
             },
             "minecraft:max_stack_size": 1,

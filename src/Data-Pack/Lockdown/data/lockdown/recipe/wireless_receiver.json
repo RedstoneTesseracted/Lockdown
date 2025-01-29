@@ -30,7 +30,8 @@
             "minecraft:item_model": "lockdown:machine/receiver_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "wireless_receiver"
+                    "name": "wireless_receiver",
+                    "encodable": true
                 }
             },
             "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.wireless_receiver\"]}",

@@ -1,4 +1,10 @@
-tag @s remove ld_granted
-tag @s remove ld_sending
-function lockdown:devices/update_channels
-execute store result entity @s ArmorItems[3].tag.CustomModelData int 1 run data get entity @s ArmorItems[3].tag.LockdownData.block_model
+# This function handles the keycard reader ending its "accept" state
+
+# Update state tags
+tag @s remove lockdown.powered
+
+# Update model
+data modify entity @s[tag=lockdown.block.display] item.components."minecraft:item_model" set value "lockdown:machine/keycard_reader_off"
+
+# Update redstone output
+setblock ~ ~ ~ minecraft:red_terracotta

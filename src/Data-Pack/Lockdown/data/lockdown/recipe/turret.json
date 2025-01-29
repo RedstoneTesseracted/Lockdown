@@ -33,7 +33,8 @@
             "minecraft:item_model": "lockdown:machine/turret",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "turret"
+                    "name": "turret",
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

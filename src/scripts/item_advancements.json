@@ -79,7 +79,7 @@
         }
     },
     "keycard_reader": {
-        "item": "lockdown:machine/keycard_reader",
+        "item": "lockdown:machine/keycard_reader_off",
         "parent": "lockdown:lockdown/encoder",
         "condition": {
             "name": "keycard_reader"

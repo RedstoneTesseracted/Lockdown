@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/keycard_reader"
+                "minecraft:item_model": "lockdown:machine/keycard_reader_off"
             }
         },
         "frame": "task",
