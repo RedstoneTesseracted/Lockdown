@@ -135,7 +135,7 @@
   "lockdown.placer.reject.no_code": "No code assigned",
   "lockdown.placer.reject.no_channel": "No channel assigned",
   "gui.lockdown.encoder.name": "Encoding Station",
-  "gui.lockdown.encoder.confirm": "No channel assigned",
+  "gui.lockdown.encoder.confirm": "Assign Code",
   "lockdown.messages.welcome": "Welcome to %1$s—the datapack for all your security needs!  Open your advancements with '%2$s' for a roadmap ahead.",
   "lockdown.messages.welcome.hidden": "",
   "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Running '/reload' will automatically update any pre-existing Lockdown blocks/items in the world and in your inventory.",
