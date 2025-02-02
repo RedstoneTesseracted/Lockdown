@@ -1,12 +1,12 @@
 {
     "parent": "minecraft:block/cube",
     "textures": {
-        "up": "lockdown:block/laser_side_on",
-		"north": "lockdown:block/laser_side_on2",
-		"east": "lockdown:block/laser_front_on",
-		"south": "lockdown:block/laser_side_on",
-		"west": "lockdown:block/laser_back",
-		"down": "lockdown:block/laser_side_on",
+        "up": "lockdown:block/laser_top_on",
+		"north": "lockdown:block/laser_front_on",
+		"east": "lockdown:block/laser_side_on",
+		"south": "lockdown:block/laser_back",
+		"west": "lockdown:block/laser_side_on2",
+		"down": "lockdown:block/laser_bottom_on",
 		"particle": "lockdown:block/laser_side_on"
     }
 }

@@ -1,5 +1,5 @@
 {
-    "message_id": "death.attack.lockdown.laser",
+    "message_id": "lockdown.laser",
     "exhaustion": 0,
     "scaling": "never",
     "effects": "hurt",

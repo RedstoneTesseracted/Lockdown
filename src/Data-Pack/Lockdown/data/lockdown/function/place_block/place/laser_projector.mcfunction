@@ -11,4 +11,34 @@ playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 setblock ~ ~ ~ minecraft:redstone_lamp
 
 # Summon display entity
-execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.laser_projector", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/laser_projector_off"}}}
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.laser_projector", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:invisible"}}}
+
+# The laser projector is directional
+#   0=up
+#   1=down
+#   2=north
+#   3=south
+#   4=west
+#   5=east
+execute store result score lockdown.direction lockdown.local run data get entity @s Facing
+execute if score lockdown.direction lockdown.local matches 0 run rotate @n[tag=lockdown.block.display.new] 0.0 90.0
+execute if score lockdown.direction lockdown.local matches 1 run rotate @n[tag=lockdown.block.display.new] 0.0 -90.0
+execute if score lockdown.direction lockdown.local matches 2 run rotate @n[tag=lockdown.block.display.new] 180.0 0.0
+execute if score lockdown.direction lockdown.local matches 3 run rotate @n[tag=lockdown.block.display.new] 0.0 0.0
+execute if score lockdown.direction lockdown.local matches 4 run rotate @n[tag=lockdown.block.display.new] 90.0 0.0
+execute if score lockdown.direction lockdown.local matches 5 run rotate @n[tag=lockdown.block.display.new] -90.0 0.0
+execute as @n[tag=lockdown.block.root.new] run function lockdown:place_block/place/common_directional
+
+# Summon and mount the beam display entity
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, interpolation_duration: 2, transformation:[0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.laser_projector", "lockdown.laser_projector.beam", "lockdown.laser_projector.beam.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:laser_beam"}}}
+ride @n[tag=lockdown.laser_projector.beam.new] mount @n[tag=lockdown.block.root]
+execute if score lockdown.direction lockdown.local matches 0 run rotate @n[tag=lockdown.laser_projector.beam.new] 0.0 90.0
+execute if score lockdown.direction lockdown.local matches 1 run rotate @n[tag=lockdown.laser_projector.beam.new] 0.0 -90.0
+execute if score lockdown.direction lockdown.local matches 2 run rotate @n[tag=lockdown.laser_projector.beam.new] 180.0 0.0
+execute if score lockdown.direction lockdown.local matches 3 run rotate @n[tag=lockdown.laser_projector.beam.new] 0.0 0.0
+execute if score lockdown.direction lockdown.local matches 4 run rotate @n[tag=lockdown.laser_projector.beam.new] 90.0 0.0
+execute if score lockdown.direction lockdown.local matches 5 run rotate @n[tag=lockdown.laser_projector.beam.new] -90.0 0.0
+
+# It is now safe to show the model without a weird visual glitch
+data modify entity @n[tag=lockdown.block.display.new] item.components."minecraft:item_model" set value "lockdown:machine/laser_projector_off"
+

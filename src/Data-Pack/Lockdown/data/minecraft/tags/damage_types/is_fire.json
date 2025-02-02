@@ -1,7 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "lockdown:firey_drone_laser",
-        "lockdown:firey_turret_laser"
-    ]
-}

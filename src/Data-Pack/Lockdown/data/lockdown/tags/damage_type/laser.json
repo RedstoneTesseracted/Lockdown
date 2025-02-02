@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "#lockdown:robot_laser"
+        "#lockdown:robot_laser",
+        "lockdown:projector_laser"
     ]
 }

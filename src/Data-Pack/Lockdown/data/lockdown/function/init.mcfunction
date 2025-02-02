@@ -8,11 +8,15 @@ scoreboard objectives add lockdown.global dummy
 scoreboard objectives add lockdown.rotation dummy
 scoreboard objectives add lockdown.mode dummy
 scoreboard objectives add lockdown.channel.sources dummy
+scoreboard objectives add lockdown.range dummy
 
 scoreboard objectives add lockdown.uuid1 dummy
 scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
 scoreboard objectives add lockdown.uuid4 dummy
+
+# Global configuration scores
+scoreboard players set lockdown.max_laser_distance lockdown.global 10
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy

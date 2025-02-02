@@ -1,0 +1,13 @@
+{
+    "values": [
+     "minecraft:area_effect_cloud",
+     "minecraft:block_display",
+     "minecraft:falling_block",
+     "minecraft:interaction",
+     "minecraft:item_display",
+     "minecraft:lightning_bolt",
+     "minecraft:marker",
+     "minecraft:text_display"
+    ]
+ }
+ 

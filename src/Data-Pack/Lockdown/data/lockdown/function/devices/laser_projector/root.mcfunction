@@ -1,4 +1,5 @@
-execute if block ~ ~ ~ minecraft:note_block[powered=true] if entity @s[tag=!ld_pew] run function lockdown:devices/laser/laser_activate
-execute if block ~ ~ ~ minecraft:note_block[powered=false] if entity @s[tag=ld_pew] run function lockdown:devices/laser/laser_stop
-execute if entity @s[tag=ld_pew] run function lockdown:devices/laser/laser_fire
-execute unless block ~ ~ ~ #lockdown:redstone_input run function lockdown:devices/laser_projector/destroy
+# Root function for all laser projectors
+execute if block ~ ~ ~ minecraft:redstone_lamp[lit=true] if entity @s[tag=!lockdown.powered] run function lockdown:devices/laser_projector/activate
+execute if block ~ ~ ~ minecraft:redstone_lamp[lit=false] if entity @s[tag=lockdown.powered] run function lockdown:devices/laser_projector/deactivate
+execute if entity @s[tag=lockdown.powered] run function lockdown:devices/laser_projector/firing
+execute unless block ~ ~ ~ minecraft:redstone_lamp run function lockdown:devices/laser_projector/destroy
