@@ -32,7 +32,7 @@ execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=l
 
 # Update channels
 tag @s remove lockdown.sending
-function lockdown:devices/update_channels
+function lockdown:channels/end_broadcast
 
 # Common block removal functionality
 function lockdown:devices/common_destroy

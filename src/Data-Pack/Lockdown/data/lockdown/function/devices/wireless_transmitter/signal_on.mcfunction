@@ -1,3 +1,3 @@
-tag @s add ld_sending
-execute store result entity @s ArmorItems[3].tag.CustomModelData int 1 run data get entity @s ArmorItems[3].tag.LockdownData.function_model
-function lockdown:devices/update_channels
+# This function handles starting the wireless signal broadcast
+data modify entity @s[tag=lockdown.block.display] item.components."minecraft:item_model" set value "lockdown:machine/transmitter_on"
+function lockdown:channels/start_broadcast

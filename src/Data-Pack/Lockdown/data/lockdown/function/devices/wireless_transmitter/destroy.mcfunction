@@ -11,4 +11,5 @@ execute if score @s lockdown.channel matches 0 run item modify entity @n[tag=loc
 execute if score @s lockdown.channel matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_channel_lore
 
 # Common block removal functionality
+function lockdown:channels/end_broadcast
 function lockdown:devices/common_destroy

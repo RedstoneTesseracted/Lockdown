@@ -31,7 +31,11 @@ execute if score lockdown.direction lockdown.local matches 3 align xyz positione
 execute if score lockdown.direction lockdown.local matches 4 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~-0.3125 ~ positioned ~-0.001 ~ ~ run summon minecraft:interaction ~0.1875 ~ ~ {Tags:["lockdown.alarm", "lockdown.block", "lockdown.block.root", "lockdown.block.root.new", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], height: 0.625, width: 0.625, response: 1b}
 execute if score lockdown.direction lockdown.local matches 5 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~-0.3125 ~ positioned ~0.001 ~ ~ run summon minecraft:interaction ~-0.1875 ~ ~ {Tags:["lockdown.alarm", "lockdown.block", "lockdown.block.root", "lockdown.block.root.new", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], height: 0.625, width: 0.625, response: 1b}
 
+# Behavior tags
+tag @n[tag=lockdown.block.root.new] add lockdown.channel.receiver
 tag @n[tag=lockdown.block.root.new] add lockdown.behavior.attack_to_destroy
+
+# Common wall-mounting stuff
 execute as @n[tag=lockdown.block.root.new] run function lockdown:place_block/place/common_wall_mounted
 
 # Summon and mount item display used to show block
@@ -62,5 +66,6 @@ execute if score lockdown.direction lockdown.local matches 4 run data merge enti
 execute if score lockdown.direction lockdown.local matches 5 run data merge entity @e[tag=lockdown.alarm.glow.new,limit=1] {transformation: {translation: [0.1875f, -0.3125f, 0.0f], right_rotation: [1.0f, 1.0f, 0.0f, 0.0f]}}
 data modify entity @n[tag=lockdown.alarm.glow.new] item.components."minecraft:custom_model_data".strings set from entity @n[tag=lockdown.block.display.new] item.components."minecraft:custom_model_data".strings
 
-# Assign channel from earlier
+# Assign channel
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.channel = lockdown.channel lockdown.local
+execute as @n[tag=lockdown.block.root.new] run function lockdown:channels/update

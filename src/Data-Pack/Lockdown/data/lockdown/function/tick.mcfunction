@@ -12,7 +12,7 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s 
 execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run function lockdown:devices/control_tower/root
 # execute as @e[tag=lockdown.drone.root] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
 # execute as @e[tag=lockdown.turret.root] at @s run function lockdown:devices/turret/turret
-execute as @e[tag=lockdown.encoder.root] at @s run function lockdown:devices/encoder/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root
 
 # Run upgrade-related commands
 # execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root

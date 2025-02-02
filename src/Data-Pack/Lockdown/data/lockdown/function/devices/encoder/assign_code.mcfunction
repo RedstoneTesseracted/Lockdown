@@ -11,8 +11,8 @@ execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".
 execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".Item.components."minecraft:custom_data".lockdown_data.channel run return 1
 
 # Custom blocks where the channel is stored in the marker's data
-execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.channel run data modify block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.channel set from storage lockdown:temp channel
-execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.channel run return 1
+execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.lockdown_data.channel run data modify block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.lockdown_data.channel set from storage lockdown:temp channel
+execute if data block ~ ~ ~ Items[{Slot:4b}].components."minecraft:entity_data".data.lockdown_data.channel run return 1
 
 # Failed to encode item: not a recognized case
 return fail

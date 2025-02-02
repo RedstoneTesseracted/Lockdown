@@ -1,3 +1,6 @@
-tag @s remove ld_appear_on
-execute store result entity @s ArmorItems[3].tag.CustomModelData int 1 run data get entity @s ArmorItems[3].tag.LockdownData.block_model
-execute if block ~ ~ ~ minecraft:redstone_block run setblock ~ ~ ~ minecraft:light_gray_glazed_terracotta
+# Handles the detection of a signal.
+# Update state tags, model, and redstone output
+
+tag @s remove lockdown.powered
+data modify entity @s[tag=lockdown.block.display] item.components."minecraft:item_model" set value "lockdown:machine/receiver_off"
+execute if block ~ ~ ~ minecraft:redstone_block run setblock ~ ~ ~ minecraft:red_terracotta

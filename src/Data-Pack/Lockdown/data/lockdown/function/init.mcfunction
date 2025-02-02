@@ -7,6 +7,7 @@ scoreboard objectives add lockdown.press_time dummy
 scoreboard objectives add lockdown.global dummy
 scoreboard objectives add lockdown.rotation dummy
 scoreboard objectives add lockdown.mode dummy
+scoreboard objectives add lockdown.channel.sources dummy
 
 scoreboard objectives add lockdown.uuid1 dummy
 scoreboard objectives add lockdown.uuid2 dummy
