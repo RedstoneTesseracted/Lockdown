@@ -1,29 +1,26 @@
 # Machine behavior-related commands
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_big_button] at @s positioned ~ ~0.23 ~ run function lockdown:devices/button/big_button
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_alarm] at @s positioned ~ ~0.23 ~ run function lockdown:devices/alarm/alarm
-execute as @e[type=armor_stand,tag=ld_glow_effect] at @s run function lockdown:devices/alarm/alarm_glow_do
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_heavy_lever] at @s positioned ~ ~0.23 ~ run function lockdown:devices/lever/heavy_lever
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_keypad] at @s positioned ~ ~0.23 ~ run function lockdown:devices/keypad/keypad
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_keycard_reader] at @s positioned ~ ~0.23 ~ run function lockdown:devices/keycard/keycard_reader
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_player_detector] at @s positioned ~ ~0.23 ~ run function lockdown:devices/player_detector/player_detector
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_mob_detector] at @s positioned ~ ~0.23 ~ run function lockdown:devices/mob_detector/mob_detector
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_klaxon] at @s positioned ~ ~0.23 ~ run function lockdown:devices/klaxon/klaxon
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_laser] at @s positioned ~ ~0.23 ~ run function lockdown:devices/laser/laser
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_transmitter] at @s positioned ~ ~0.23 ~ run function lockdown:devices/transmitter/transmitter
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_receiver] at @s positioned ~ ~0.23 ~ run function lockdown:devices/receiver/receiver
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_force_field] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/force_field
-execute as @e[type=minecraft:armor_stand,tag=ld_block,tag=ld_control_tower] at @s positioned ~ ~0.23 ~ run function lockdown:devices/control_tower/control_tower
-execute as @e[type=minecraft:armor_stand,tag=ld_drone] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
-execute as @e[type=minecraft:armor_stand,tag=ld_turret] at @s positioned ~ ~0.23 ~ run function lockdown:devices/turret/turret
-execute as @e[type=minecraft:armor_stand,tag=ld_encoder] at @s positioned ~ ~0.23 ~ run function lockdown:devices/encoder/encoder
+execute as @e[tag=lockdown.block.root,tag=lockdown.big_button] at @s run function lockdown:devices/big_button/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.alarm] at @s run function lockdown:devices/alarm/root
+# execute as @e[tag=lockdown.block.root,tag=lockdown.keycard_reader] at @s run function lockdown:devices/keycard_reader/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.player_detector] at @s run function lockdown:devices/player_detector/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.mob_detector] at @s run function lockdown:devices/mob_detector/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.klaxon] at @s run function lockdown:devices/klaxon/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.laser_projector] at @s run function lockdown:devices/laser_projector/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_transmitter] at @s run function lockdown:devices/wireless_transmitter/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_receiver] at @s run function lockdown:devices/wireless_receiver/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s run function lockdown:devices/force_field_projector/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run function lockdown:devices/control_tower/root
+# execute as @e[tag=lockdown.drone.root] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
+# execute as @e[tag=lockdown.turret.root] at @s run function lockdown:devices/turret/turret
+execute as @e[tag=lockdown.encoder.root] at @s run function lockdown:devices/encoder/root
 
 # Run upgrade-related commands
-execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
+# execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
 
 # Maintain custom block light level and invisibility
-execute as @e[type=minecraft:armor_stand,tag=ld_block] run data modify entity @s Fire set value 1000000
-effect give @e[tag=ld_invisible] minecraft:invisibility 1000000 1 true
+# execute as @e[type=minecraft:armor_stand,tag=ld_block] run data modify entity @s Fire set value 1000000
+# effect give @e[tag=ld_invisible] minecraft:invisibility 1000000 1 true
 
 # Reset some scores
-execute at @a[scores={ld_use_noteblock=1..}] as @e[type=minecraft:armor_stand,tag=ld_force_field,limit=1,sort=nearest,distance=..5] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/outline
-scoreboard players set @a ld_use_noteblock 0
+# execute at @a[scores={ld_use_noteblock=1..}] as @e[type=minecraft:armor_stand,tag=ld_force_field,limit=1,sort=nearest,distance=..5] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/outline
+# scoreboard players set @a ld_use_noteblock 0
