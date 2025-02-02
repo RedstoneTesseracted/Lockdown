@@ -14,8 +14,14 @@ playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 # Set base block
 setblock ~ ~ ~ minecraft:red_terracotta
 
-# Summon display entity
-execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.keycard_reader", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/keycard_reader_off"}}}
+# Get direction based on source's direction
+execute store result score lockdown.direction lockdown.local run function lockdown:place_block/place/common_cardinal_direction
+
+# Summon display entity (with appropriate direction)
+execute if score lockdown.direction lockdown.local matches 2 align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Rotation:[0.0f, 0.0f], brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.keycard_reader", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/keycard_reader_off"}}}
+execute if score lockdown.direction lockdown.local matches 3 align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Rotation:[-180.0f, 0.0f], brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.keycard_reader", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/keycard_reader_off"}}}
+execute if score lockdown.direction lockdown.local matches 4 align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Rotation:[-90.0f, 0.0f], brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.keycard_reader", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/keycard_reader_off"}}}
+execute if score lockdown.direction lockdown.local matches 5 align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Rotation:[90.0f, 0.0f], brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.keycard_reader", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/keycard_reader_off"}}}
 
 # Configure the new block
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.channel = lockdown.channel lockdown.local

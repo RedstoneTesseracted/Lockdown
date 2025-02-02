@@ -1,7 +1,7 @@
 # Machine behavior-related commands
 execute as @e[tag=lockdown.block.root,tag=lockdown.big_button] at @s run function lockdown:devices/big_button/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.alarm] at @s run function lockdown:devices/alarm/root
-# execute as @e[tag=lockdown.block.root,tag=lockdown.keycard_reader] at @s run function lockdown:devices/keycard_reader/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.keycard_reader] at @s run function lockdown:devices/keycard_reader/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.player_detector] at @s run function lockdown:devices/player_detector/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.mob_detector] at @s run function lockdown:devices/mob_detector/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.klaxon] at @s run function lockdown:devices/klaxon/root

@@ -1,0 +1,10 @@
+[
+    {
+        "condition": "minecraft:reference",
+        "name": "lockdown:keycard_mainhand"
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "lockdown:keycard_offhand"
+    }
+]
