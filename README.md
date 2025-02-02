@@ -16,7 +16,7 @@ Below is a table of all planned features currently (re)implemented
 | Keycard reader w/ keycard     |   ❌   |
 | Big buttons                   |   ✅   |
 | Klaxon block                  |   ✅   |
-| Laser projector               |   ❌   |
+| Laser projector               |   ✅   |
 | Player detector               |   ✅   |
 | Mob detector                  |   ✅   |
 | Defense turret                |   ❌   |
