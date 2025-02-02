@@ -13,7 +13,7 @@ Below is a table of all planned features currently (re)implemented
 | Redstone wireless receiver    |   ✅   |
 | Alarm lights                  |   ✅   |
 | Force field projector         |   ✅   |
-| Keycard reader w/ keycard     |   ❌   |
+| Keycard reader w/ keycard     |   ✅   |
 | Big buttons                   |   ✅   |
 | Klaxon block                  |   ✅   |
 | Laser projector               |   ✅   |
