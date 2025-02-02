@@ -9,20 +9,20 @@ Below is a table of all planned features currently (re)implemented
 
 |             Name              | Status |
 | ----------------------------- | ------ |
-| Redstone wireless transmitter |   ❌   |
-| Redstone wireless receiver    |   ❌   |
-| Alarm lights                  |   ❌   |
-| Force field projector         |   ❌   |
+| Redstone wireless transmitter |   ✅   |
+| Redstone wireless receiver    |   ✅   |
+| Alarm lights                  |   ✅   |
+| Force field projector         |   ✅   |
 | Keycard reader w/ keycard     |   ❌   |
-| Big buttons                   |   ❌   |
-| Klaxon block                  |   ❌   |
+| Big buttons                   |   ✅   |
+| Klaxon block                  |   ✅   |
 | Laser projector               |   ❌   |
-| Player detector               |   ❌   |
-| Mob detector                  |   ❌   |
+| Player detector               |   ✅   |
+| Mob detector                  |   ✅   |
 | Defense turret                |   ❌   |
 | Defense drone                 |   ❌   |
 | Drone control tower           |   ❌   |
-| Encoding station              |   ❌   |
+| Encoding station              |   ✅   |
 | Range upgrade                 |   ❌   |
 | Durability upgrade            |   ❌   |
 | Flamethrower upgrade          |   ❌   |
