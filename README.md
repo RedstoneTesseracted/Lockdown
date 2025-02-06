@@ -28,7 +28,7 @@ Below is a table of all planned features currently (re)implemented
 | Flamethrower upgrade          |   ❌   |
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
-| Key                           |   ❌   |
+| Key                           |   ✅   |
 | Big Bertha                    |   ❌   |
 
 
