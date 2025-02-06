@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "gg ",
+        "ggn",
+        "  g"
+    ],
+    "key": {
+        "g": [
+            "minecraft:gold_ingot"
+        ],
+        "n": [
+            "minecraft:gold_nugget"
+        ]
+    },
+    "result": {
+        "id": "minecraft:carrot_on_a_stick",
+        "components": {
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.key\",\"fallback\":\"Key\"}",
+            "minecraft:item_model": "lockdown:key",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "key",
+                    "channel": 0,
+                    "encodable": true
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "uncommon",
+            "minecraft:lore": [
+                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+            ],
+            "!minecraft:tool": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:damage": {},
+            "!minecraft:attribute_modifiers": {}
+        }
+    }
+}

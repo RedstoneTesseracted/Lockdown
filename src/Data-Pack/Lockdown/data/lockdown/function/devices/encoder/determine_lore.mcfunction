@@ -12,6 +12,7 @@ execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:
 # By item name
 execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"control_tower"}}] run return 0
 execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"drone"}}] run return 1
+execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"key"}}] run return 1
 execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"keycard_reader"}}] run return 1
 execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"turret"}}] run return 1
 execute if items block ~ ~ ~ container.4 *[minecraft:custom_data~{lockdown_data:{name:"wireless_receiver"}}] run return 0

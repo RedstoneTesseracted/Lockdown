@@ -77,6 +77,7 @@
   "item.lockdown.channel.channel": "Channel Assigned",
   "item.lockdown.code_channel.code_channel": "Code/Channel Assigned",
   "item.lockdown.code_channel.no_code_channel": "No Code/Channel Assigned",
+  "item.lockdown.key": "Key",
   "subtitles.lockdown.alarm": "Alarm Wails",
   "subtitles.lockdown.turret.fire": "Turret Fires",
   "subtitles.lockdown.drone.target": "Drone Prepares to Obliterate its Target",
@@ -145,5 +146,10 @@
   "lockdown.messages.encoder.error.i_forgot_an_item": "Failed to encode item—this is likely a bug",
   "lockdown.messages.encoder.success": "Code assigned!",
   "lockdown.messages.force_field_projector.size": "Width: %1$s, Height: %2$s",
-  "lockdown.messages.force_field_projector.obstructed": "Not enough space"
+  "lockdown.messages.force_field_projector.obstructed": "Not enough space",
+  "lockdown.messages.key.no_code": "No code assigned to key",
+  "lockdown.messages.key.not_a_container": "Not a container",
+  "lockdown.messages.key.already_locked": "Already locked with another key",
+  "lockdown.messages.key.locked": "Locked Container",
+  "lockdown.messages.key.unlocked": "Removed Lock on Container"
 }

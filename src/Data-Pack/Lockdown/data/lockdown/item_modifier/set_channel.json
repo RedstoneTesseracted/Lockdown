@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:copy_custom_data",
+        "source": {
+            "type": "minecraft:storage",
+            "source": "lockdown:temp"
+        },
+        "ops": [
+            {
+                "source": "channel",
+                "target": "lockdown_data.channel",
+                "op": "replace"
+            }
+        ]
+    }
+]

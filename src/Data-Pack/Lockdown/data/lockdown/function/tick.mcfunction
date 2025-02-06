@@ -14,6 +14,11 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run func
 # execute as @e[tag=lockdown.turret.root] at @s run function lockdown:devices/turret/turret
 execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root
 
+
+# Right-clickable items
+execute as @a[scores={lockdown.use_carrot_on_a_stick=1..}] at @s run function lockdown:items/click_callback
+
+
 # Run upgrade-related commands
 # execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
 

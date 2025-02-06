@@ -21,6 +21,7 @@ scoreboard players set lockdown.max_laser_distance lockdown.global 10
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
+scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
 
 
 #### Scheduled timers
