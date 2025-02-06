@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:chiseled_bookshelf",
+        "minecraft:campfire",
+        "minecraft:soul_campfire"
+    ]
+}
