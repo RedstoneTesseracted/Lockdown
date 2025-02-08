@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:paper",
+                    "name": "minecraft:carrot_on_a_stick",
                     "functions": [
                         {
                             "function": "minecraft:reference",
