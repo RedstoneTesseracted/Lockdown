@@ -7,7 +7,6 @@
 execute if entity @s[tag=lockdown.alarm] run return run function lockdown:devices/alarm/destroy
 execute if entity @s[tag=lockdown.big_button] run return run function lockdown:devices/big_button/destroy
 execute if entity @s[tag=lockdown.control_tower] run return run function lockdown:devices/control_tower/destroy
-execute if entity @s[tag=lockdown.drone] run return run function lockdown:devices/drone/destroy
 execute if entity @s[tag=lockdown.encoder] run return run function lockdown:devices/encoder/destroy
 execute if entity @s[tag=lockdown.force_field_projector] run return run function lockdown:devices/force_field_projector/destroy
 execute if entity @s[tag=lockdown.keycard_reader] run return run function lockdown:devices/keycard_reader/destroy

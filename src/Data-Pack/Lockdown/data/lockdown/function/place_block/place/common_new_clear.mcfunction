@@ -7,4 +7,5 @@ tag @e[tag=lockdown.block.hitbox.new] remove lockdown.block.hitbox.new
 tag @e[tag=lockdown.alarm.glow.new] remove lockdown.alarm.glow.new
 tag @e[tag=lockdown.force_field_projector.shield.new] remove lockdown.force_field_projector.shield.new
 tag @e[tag=lockdown.laser_projector.beam.new] remove lockdown.laser_projector.beam.new
+tag @e[tag=lockdown.block.interaction.new] remove lockdown.block.interaction.new
 

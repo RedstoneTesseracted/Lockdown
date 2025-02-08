@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "lockdown:item/machine/turret_base"
+        "model": "lockdown:item/turret/base"
     }
 }

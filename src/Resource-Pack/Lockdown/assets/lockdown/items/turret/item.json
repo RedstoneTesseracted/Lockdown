@@ -1,0 +1,15 @@
+{
+    "model": {
+        "type": "minecraft:composite",
+        "models": [
+            {
+                "type": "minecraft:model",
+                "model": "lockdown:item/turret/gantry"
+            },
+            {
+                "type": "minecraft:model",
+                "model": "lockdown:item/turret/barrel/down"
+            }
+        ]
+    }
+}

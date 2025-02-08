@@ -19,6 +19,10 @@ scoreboard objectives add lockdown.uuid4 dummy
 # Global configuration scores
 scoreboard players set lockdown.max_laser_distance lockdown.global 10
 
+# Numbers
+scoreboard objectives add lockdown.number dummy
+scoreboard players set -1 lockdown.number -1
+
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick

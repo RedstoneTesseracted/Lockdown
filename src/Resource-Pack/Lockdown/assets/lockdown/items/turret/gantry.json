@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "lockdown:item/machine/turret"
+        "model": "lockdown:item/turret/gantry"
     }
 }

@@ -1,0 +1,55 @@
+{
+    "model": {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "lockdown:item/turret/barrel/down"
+        },
+        "cases": [
+            {
+                "when": "up",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/up"
+                }
+            },
+            {
+                "when": "down",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/down"
+                }
+            },
+            {
+                "when": "north",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/north"
+                }
+            },
+            {
+                "when": "south",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/south"
+                }
+            },
+            {
+                "when": "east",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/east"
+                }
+            },
+            {
+                "when": "west",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/turret/barrel/west"
+                }
+            }
+        ]
+    }
+}

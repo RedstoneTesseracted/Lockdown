@@ -11,7 +11,7 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_receiver] at @s run 
 execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s run function lockdown:devices/force_field_projector/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run function lockdown:devices/control_tower/root
 # execute as @e[tag=lockdown.drone.root] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
-# execute as @e[tag=lockdown.turret.root] at @s run function lockdown:devices/turret/turret
+execute as @e[tag=lockdown.block.root,tag=lockdown.turret] at @s run function lockdown:devices/turret/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root
 
 
