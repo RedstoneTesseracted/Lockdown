@@ -1,7 +1,10 @@
 {
    "values": [
 	"minecraft:blaze",
+	"minecraft:bogged",
+	"minecraft:breeze",
 	"minecraft:cave_spider",
+	"minecraft:creaking",
 	"minecraft:creeper",
 	"minecraft:drowned",
 	"minecraft:elder_guardian",
@@ -17,8 +20,8 @@
 	"minecraft:illusioner",
 	"minecraft:magma_cube",
 	"minecraft:phantom",
-	"minecraft:player",
 	"minecraft:piglin",
+	"minecraft:piglin_brute",
 	"minecraft:pillager",
 	"minecraft:ravager",
 	"minecraft:shulker",

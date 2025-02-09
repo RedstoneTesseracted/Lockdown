@@ -5,7 +5,9 @@
 #
 # The target is defined as the entity with the lockdown.turret.target tag
 
-# Convert angles to local coordinates
+# Mark the target with a tag.  Abort if the target is missing
+execute unless function lockdown:devices/turret/set_target_context run return 0
+
 # Global System:
 #   Axes: {x, y, z}
 #   θ: Y-rotation

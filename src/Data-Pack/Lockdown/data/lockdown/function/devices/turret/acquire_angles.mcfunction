@@ -11,4 +11,4 @@ execute store result storage lockdown:temp rotation.transformation.left_rotation
 execute store result storage lockdown:temp rotation.transformation.right_rotation.angle float 0.017453292519943295 run data get entity @s Rotation[1]
 
 # Remove temporary marker entity
-kill @s[tag=lockdown.marker]
+kill @s[type=minecraft:marker]

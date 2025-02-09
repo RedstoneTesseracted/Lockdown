@@ -23,9 +23,10 @@
 	"minecraft:comparator",
 	"minecraft:redstone_wire",
 	"minecraft:tripwire_hook",
-	"minecraft:grass",
+	"minecraft:short_grass",
 	"minecraft:tripwire",
 	"minecraft:seagrass",
+	"minecraft:tall_seagrass",
 	"minecraft:kelp",
 	"minecraft:sugar_cane",
 	"minecraft:sunflower",
@@ -69,6 +70,7 @@
 	"minecraft:pointed_dripstone",
 	"minecraft:moss_carpet",
 	"#minecraft:replaceable",
-	"minecraft:pink_petals"
+	"minecraft:pink_petals",
+	"minecraft:cobweb"
    ]
 }

@@ -4,7 +4,7 @@
 # * Very special
 
 # Prevent overlap with an existing entity
-execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/alarm {msg: "lockdown.placer.reject.not_enough_space"}
+execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/turret"}
 
 # Play effects
 playsound minecraft:block.metal.place block @a ~ ~ ~ 1.0 1.0
@@ -35,8 +35,9 @@ execute if score lockdown.direction lockdown.local matches 5 align xyz positione
 #   1. Base (turret base entity)
 #   2. Turret mount
 #   3. Turret barrel
-execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {interpolation_duration: 2, transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.gantry","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible"}}}
-execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {interpolation_duration: 2, transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.barrel","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible","minecraft:custom_model_data":{strings:["unset"]}}}}
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.gantry","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible"}}}
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.barrel","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible","minecraft:custom_model_data":{strings:["unset"]}}}}
+execute as @e[tag=lockdown.block.display.new] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
 ride @n[tag=lockdown.block.display.new,tag=lockdown.turret.gantry] mount @n[tag=lockdown.block.root.new]
 ride @n[tag=lockdown.block.display.new,tag=lockdown.turret.barrel] mount @n[tag=lockdown.block.root.new]
 
@@ -77,3 +78,14 @@ ride @n[tag=lockdown.block.hitbox.new] mount @n[tag=lockdown.block.root.new]
 # Summon the interaction entity
 execute align xyz run summon minecraft:interaction ~0.5 ~0.5 ~0.5 {width: 0.0f, height: 0.0f, response: 1b,Tags:["lockdown.block", "lockdown.turret", "lockdown.block.interaction", "lockdown.block.interaction.new"]}
 ride @n[tag=lockdown.block.interaction.new] mount @n[tag=lockdown.block.root.new]
+
+
+# Assign special behavior tags
+tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.code_hostile
+
+# Set scores
+execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
+scoreboard players operation @n[tag=lockdown.block.hitbox.new] lockdown.channel = @n[tag=lockdown.block.root.new] lockdown.channel
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.time 0
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_range = lockdown.default_turret_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_damage = lockdown.default_turret_damage lockdown.constant
