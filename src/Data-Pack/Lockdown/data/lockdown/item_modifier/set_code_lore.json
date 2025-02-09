@@ -3,6 +3,7 @@
     "lore": [
         {
             "translate": "item.lockdown.code.code",
+            "fallback": "Code Assigned",
             "color": "green",
             "italic": false
         }

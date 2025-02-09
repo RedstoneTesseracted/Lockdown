@@ -3,6 +3,7 @@
     "lore": [
         {
             "translate": "item.lockdown.channel.channel",
+            "fallback": "Channel Assigned",
             "color": "green",
             "italic": false
         }
