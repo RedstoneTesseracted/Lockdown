@@ -262,7 +262,7 @@ def generate_beam_models():
     INCREMENT = 0.5
     DIRECTIONS = {
         'north': (90.0, 0.0, 0.0),
-        'south': (90.0, 0.0, 0.0),
+        'south': (-90.0, 0.0, 0.0),
         'unset': (0.0, 0.0, 0.0)
     }
     for direction, rotation in DIRECTIONS.items():
@@ -299,7 +299,7 @@ def generate_beam_models():
 
         # Add sub-item model definition to the full one
         if direction == 'unset':
-            item_model_def['model']['fallback']['model'] = sub_item_model_def
+            item_model_def['model']['fallback'] = sub_item_model_def['model']
         else:
             sub_item_model_def['when'] = direction
             item_model_def['model']['cases'].append(sub_item_model_def)
