@@ -29,10 +29,7 @@ function lockdown:devices/turret/pick_target/line_of_sight
 tag @s remove lockdown.turret.has_target
 execute if entity @e[tag=lockdown.turret.candidate] run tag @s add lockdown.turret.has_target
 execute as @n[tag=lockdown.turret.candidate] run function lockdown:devices/turret/pick_target/store_target_uuid
-scoreboard players operation @s lockdown.target_uuid1 = lockdown.target_uuid1 lockdown.local
-scoreboard players operation @s lockdown.target_uuid2 = lockdown.target_uuid2 lockdown.local
-scoreboard players operation @s lockdown.target_uuid3 = lockdown.target_uuid3 lockdown.local
-scoreboard players operation @s lockdown.target_uuid4 = lockdown.target_uuid4 lockdown.local
+execute on passengers if entity @s[type=minecraft:bee] run data modify entity @s AngryAt set from storage lockdown:temp target.uuid
 
 # Clear candidates list
 tag @e remove lockdown.turret.candidate

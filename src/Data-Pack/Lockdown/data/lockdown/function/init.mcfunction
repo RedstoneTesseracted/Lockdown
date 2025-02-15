@@ -16,11 +16,6 @@ scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
 scoreboard objectives add lockdown.uuid4 dummy
 
-scoreboard objectives add lockdown.target_uuid1 dummy
-scoreboard objectives add lockdown.target_uuid2 dummy
-scoreboard objectives add lockdown.target_uuid3 dummy
-scoreboard objectives add lockdown.target_uuid4 dummy
-
 # Global configuration scores
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.turret_target_interval lockdown.constant 20
