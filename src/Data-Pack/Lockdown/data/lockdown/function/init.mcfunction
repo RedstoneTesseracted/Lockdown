@@ -46,7 +46,7 @@ data merge storage lockdown:temp {}
 
 
 #### Restore entity properties
-execute as @e[tag=lockdown.block.display,tag=lockdown.turret,tag=!lockdown.turret.base] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
+execute as @e[tag=lockdown.block.display,tag=lockdown.turret,tag=!lockdown.turret.base,tag=!lockdown.turret.beam] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
 
 
 

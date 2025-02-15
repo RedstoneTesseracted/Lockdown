@@ -1,20 +1,17 @@
-# This function is run immediately by the temporary beam effect entity
+# This function is responsible for configuring the turret beam entity whenever it fires.
+# This is run BY the turret beam entity
 
-# Assign tags/scores
-tag @s add lockdown.turret.laser_beam
-tag @s add lockdown.effect
+# Update the transformation
+# data modify entity @s transformation.scale[0] set value 0.9f
+# data modify entity @s transformation.scale[1] set value 0.9f
+execute store result entity @s transformation.scale[0] float 1.0 run scoreboard players get lockdown.attempts lockdown.local
+execute store result entity @s transformation.scale[1] float 1.0 run scoreboard players get lockdown.attempts lockdown.local
+execute store result entity @s transformation.scale[2] float 1.0 run scoreboard players get lockdown.attempts lockdown.local
+execute store result entity @s item.components."minecraft:custom_model_data".floats[0] float 1.0 run scoreboard players get lockdown.attempts lockdown.local
+data modify entity @s start_interpolation set value 0
+
+# Save time so we can target this entity again when its time for it to vanish
 execute store result score @s lockdown.time run time query gametime
 
-# Orient entity
-# Arguments were obtained by impact_normal/impact_flamethrower
-function lockdown:devices/turret/fire/__configure_beam with storage lockdown:temp args
-
-# Set transformation
-# data modify entity @s transformation set from entity @n[tag=lockdown.block.display,tag=lockdown.turret.barrel] transformation
-execute store result entity @s transformation.scale[2] float 1.0 run scoreboard players get lockdown.attempts lockdown.local
-
-# Set item
-item replace entity @s container.0 with minecraft:paper[minecraft:item_model="lockdown:laser_beam"]
-
-# Schedule function to kill this entity
-schedule function lockdown:devices/turret/fire/scheduled_beam_destroy 10t append
+# Schedule function to make this entity vanish
+schedule function lockdown:devices/turret/fire/scheduled_beam_vanish 5t append

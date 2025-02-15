@@ -1,4 +1,4 @@
-# This function destroys a beam if it is at least 2 ticks old
+# This function destroys a beam if it is at least 10 ticks old
 # It is run BY the laser beam entity and is called from lockdown:devices/turret/fire/scheduled_beam_destroy
 
 execute store result score lockdown.time lockdown.local run time query gametime

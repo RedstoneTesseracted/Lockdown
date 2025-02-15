@@ -4,7 +4,7 @@
 execute store result score lockdown.cx lockdown.local run data get entity @s Pos[0] 70.0
 execute store result score lockdown.cy lockdown.local run data get entity @s Pos[1] 70.0
 execute store result score lockdown.cz lockdown.local run data get entity @s Pos[2] 70.0
-execute on passengers if entity @s[type=minecraft:bee] on target run function lockdown:devices/turret/get_global_target_position
+execute on passengers if entity @s[type=minecraft:bee] on target run function lockdown:devices/turret/point_at_target/get_global_target_position
 scoreboard players operation lockdown.x lockdown.local -= lockdown.cx lockdown.local
 scoreboard players operation lockdown.y lockdown.local -= lockdown.cy lockdown.local
 scoreboard players operation lockdown.z lockdown.local -= lockdown.cz lockdown.local

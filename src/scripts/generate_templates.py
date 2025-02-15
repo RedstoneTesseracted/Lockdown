@@ -7,6 +7,7 @@ import os
 from os import path
 
 
+
 def generate_item_advancements():
     """
     Generate all the item-related advancements under the advancements/lockdown folder
@@ -222,6 +223,92 @@ return 0
 
 
 
+def generate_beam_models():
+    """
+    Generates the rescaled beam models and master item model definition.
+    This is used to compensate for the scaling transform on beam displays
+    having to be the same in all directions due to a fixed transformation
+    order.
+    Because of *course* you'd need to compensate for that...
+    """
+    # Declare paths used below
+    resourcepack_dir = path.join(path.pardir, 'Resource-Pack', 'Lockdown', 'assets', 'lockdown')
+    beam_models_dir = path.join(resourcepack_dir, 'models', 'item', 'beams')
+    items_dir = path.join(resourcepack_dir, 'items')
+
+    # Create beam models directory if it doesn't already exist
+    if not path.exists(beam_models_dir):
+        os.mkdir(beam_models_dir)
+
+    # Set up item model state
+    item_model_def = {
+        "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:custom_model_data",
+            "index": 0,
+            "fallback": {
+                "type": "minecraft:empty"
+            },
+            "cases": []
+        }
+    }
+
+    # Load template model
+    with open(path.join('templates', 'laser_beam_template.json'), mode='r') as rf:
+        raw_template = rf.read()
+
+    # Generate all item models (all scales & directions)
+    MAX_DIST = 10.0
+    INCREMENT = 0.5
+    DIRECTIONS = {
+        'north': (90.0, 0.0, 0.0),
+        'south': (90.0, 0.0, 0.0),
+        'unset': (0.0, 0.0, 0.0)
+    }
+    for direction, rotation in DIRECTIONS.items():
+        # Prepare range dispatch for this direction
+        sub_item_model_def = {
+            "model": {
+                "type": "minecraft:range_dispatch",
+                "property": "minecraft:custom_model_data",
+                "scale": 1.0,
+                "fallback": {
+                    "type": "minecraft:empty"
+                },
+                "entries": []
+            }
+        }
+
+        # Create sub-folder for this direction if it doesn't already exist
+        direction_specific_dir = path.join(beam_models_dir, direction)
+        if not path.exists(direction_specific_dir):
+            os.mkdir(direction_specific_dir)
+
+        # Generate all lengths
+        c = 0.0
+        while c < MAX_DIST:
+            c += INCREMENT
+            model_name = f'beam_{round(10*c)}'
+            model = loads(raw_template)
+            model['display']['head']['scale'][0] = 0.9/c
+            model['display']['head']['scale'][1] = 0.9/c
+            model['display']['head']['rotation'] = rotation
+            sub_item_model_def['model']['entries'].append({"threshold": c, "model": {"type":"minecraft:model", "model": f"lockdown:item/beams/{direction}/{model_name}"}})
+            with open(path.join(direction_specific_dir, model_name + '.json'), mode='w') as wf:
+                dump(model, wf, indent=4)
+
+        # Add sub-item model definition to the full one
+        if direction == 'unset':
+            item_model_def['model']['fallback']['model'] = sub_item_model_def
+        else:
+            sub_item_model_def['when'] = direction
+            item_model_def['model']['cases'].append(sub_item_model_def)
+
+    # Generate items model definition
+    with open(path.join(items_dir, 'turret_beam.json'), mode='w') as wf:
+        dump(item_model_def, wf, indent=4)
+
+
 def main():
     os.chdir(path.split(__file__)[0])
     generate_item_advancements()
@@ -229,6 +316,7 @@ def main():
     generate_item_modifiers()
     generate_universal_destroyer()
     generate_code_channel_string_identifier()
+    generate_beam_models()
 
 
 if __name__ == "__main__":

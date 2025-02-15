@@ -35,11 +35,15 @@ execute if score lockdown.direction lockdown.local matches 5 align xyz positione
 #   1. Base (turret base entity)
 #   2. Turret mount
 #   3. Turret barrel
+#   4. Laser beam
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.gantry","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible"}}}
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.barrel","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible","minecraft:custom_model_data":{strings:["unset"]}}}}
-execute as @e[tag=lockdown.block.display.new] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.beam","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:turret_beam","minecraft:custom_model_data":{strings:["unset"],floats:[0.0f]}}}, interpolation_duration: 2, teleport_duration: 2, item_display: "head"}
+execute as @e[tag=lockdown.block.display.new,tag=lockdown.turret.gantry] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
+execute as @e[tag=lockdown.block.display.new,tag=lockdown.turret.barrel] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
 ride @n[tag=lockdown.block.display.new,tag=lockdown.turret.gantry] mount @n[tag=lockdown.block.root.new]
 ride @n[tag=lockdown.block.display.new,tag=lockdown.turret.barrel] mount @n[tag=lockdown.block.root.new]
+ride @n[tag=lockdown.block.display.new,tag=lockdown.turret.beam] mount @n[tag=lockdown.block.root.new]
 
 # Shift display entities according to direction
 # Bee standard hitbox: height=0.6, width=0.7
@@ -70,14 +74,14 @@ execute if score lockdown.direction lockdown.local matches 3 as @e[tag=lockdown.
 execute if score lockdown.direction lockdown.local matches 4 as @e[tag=lockdown.block.display.new,tag=lockdown.turret.barrel] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "west"
 execute if score lockdown.direction lockdown.local matches 5 as @e[tag=lockdown.block.display.new,tag=lockdown.turret.barrel] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "east"
 
+execute if score lockdown.direction lockdown.local matches 2 as @e[tag=lockdown.block.display.new,tag=lockdown.turret.beam] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "north"
+execute if score lockdown.direction lockdown.local matches 3 as @e[tag=lockdown.block.display.new,tag=lockdown.turret.beam] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "south"
+
+
 
 # Summon the damage box entity
 execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:1b, NoGravity:1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.turret", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], Silent: 1b}
 ride @n[tag=lockdown.block.hitbox.new] mount @n[tag=lockdown.block.root.new]
-
-# Summon the interaction entity
-execute align xyz run summon minecraft:interaction ~0.5 ~0.5 ~0.5 {width: 0.0f, height: 0.0f, response: 1b,Tags:["lockdown.block", "lockdown.turret", "lockdown.block.interaction", "lockdown.block.interaction.new"]}
-ride @n[tag=lockdown.block.interaction.new] mount @n[tag=lockdown.block.root.new]
 
 
 # Assign special behavior tags

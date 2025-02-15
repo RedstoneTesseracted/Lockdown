@@ -3,8 +3,8 @@
 # Increment attempt counter
 scoreboard players add lockdown.attempts lockdown.local 1
 
-# Temporary particle effects
-particle minecraft:dust{color:[1.0f, 0.0f, 0.0f],scale:1.0f} ~ ~ ~ 0 0 0 0.0 5
+# # Debug particle effects
+# particle minecraft:dust{color:[1.0f, 0.0f, 0.0f],scale:1.0f} ~ ~ ~ 0 0 0 0.0 5
 
 # Stop if beam is obstructed
 execute unless block ~ ~ ~ #lockdown:passthrough run say stopped due to obstruction

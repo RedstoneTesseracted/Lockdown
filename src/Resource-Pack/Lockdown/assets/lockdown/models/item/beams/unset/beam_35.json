@@ -1,0 +1,21 @@
+{
+    "parent": "lockdown:item/laser_beam",
+    "textures": {
+        "0": "lockdown:block/laser_beam",
+        "particle": "lockdown:block/laser_beam"
+    },
+    "display": {
+        "head": {
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                0.2571428571428572,
+                0.2571428571428572,
+                1.0
+            ]
+        }
+    }
+}
