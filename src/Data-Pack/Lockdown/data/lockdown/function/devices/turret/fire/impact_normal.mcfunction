@@ -8,7 +8,7 @@ execute summon minecraft:marker run function lockdown:devices/turret/fire/save_p
 $damage @s $(damage) lockdown:turret_laser
 
 # Play effects
-particle minecraft:dust{color:[1.0f, 0.0f, 0.0f],scale:1.0f} ~ ~ ~ 0 0 0 0.0 5
+execute at @s run particle minecraft:dust{color:[1.0f, 0.0f, 0.0f],scale:1.0f} ~ ~ ~ 0.25 0.4 0.25 0.3 20
 
 # Success!
 return 1
