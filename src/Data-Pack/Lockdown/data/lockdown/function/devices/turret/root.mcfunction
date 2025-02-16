@@ -16,7 +16,7 @@ scoreboard players operation lockdown.check lockdown.local %= lockdown.turret_ro
 execute if entity @s[tag=lockdown.turret.has_target] if score lockdown.check lockdown.local matches 0 run function lockdown:devices/turret/point_at_target
 
 
-# Every 30 ticks, fire at the turret
+# Every 30 ticks, fire at the target
 scoreboard players operation lockdown.check lockdown.local = @s lockdown.time
 scoreboard players operation lockdown.check lockdown.local %= lockdown.turret_fire_interval lockdown.constant
 execute if entity @s[tag=lockdown.turret.has_target] if score lockdown.check lockdown.local matches 0 run function lockdown:devices/turret/fire
