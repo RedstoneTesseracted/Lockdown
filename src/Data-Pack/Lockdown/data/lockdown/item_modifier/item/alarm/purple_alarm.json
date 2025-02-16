@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_purple\",\"fallback\":\"Purple Alarm Light\",\"color\":\"dark_purple\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_purple\",\"color\":\"dark_purple\"}",
             "minecraft:item_model": "lockdown:alarm/purple_alarm_light",
             "minecraft:custom_data": {
                 "lockdown_data": {

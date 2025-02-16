@@ -26,7 +26,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\",\"fallback\":\"Defense Drone\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\"}",
             "minecraft:item_model": "lockdown:machine/defense_drone",
             "minecraft:custom_data": {
                 "lockdown_data": {

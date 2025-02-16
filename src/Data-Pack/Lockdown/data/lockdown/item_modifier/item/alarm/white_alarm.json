@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_white\",\"fallback\":\"White Alarm Light\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_white\"}",
             "minecraft:item_model": "lockdown:alarm/white_alarm_light",
             "minecraft:custom_data": {
                 "lockdown_data": {

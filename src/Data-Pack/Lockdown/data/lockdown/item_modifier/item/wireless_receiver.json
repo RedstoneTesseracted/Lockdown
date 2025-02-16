@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.wireless_receiver\",\"fallback\":\"Wireless Receiver\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.wireless_receiver\"}",
             "minecraft:item_model": "lockdown:machine/receiver_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -13,7 +13,7 @@
             },
             "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.wireless_receiver\"]}",
             "minecraft:lore": [
-                "{\"translate\":\"lockdown.channel.no_channel\",\"fallback\":\"No Channel Assigned\",\"color\":\"red\",\"italic\":false}"
+                "{\"translate\":\"lockdown.channel.no_channel\",\"color\":\"red\",\"italic\":false}"
             ]
         }
     },

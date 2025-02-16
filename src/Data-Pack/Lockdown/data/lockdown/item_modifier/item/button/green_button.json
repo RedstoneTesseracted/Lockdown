@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_green\",\"fallback\":\"Big Green Button\",\"color\":\"dark_green\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_green\",\"color\":\"dark_green\"}",
             "minecraft:item_model": "lockdown:button/green_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

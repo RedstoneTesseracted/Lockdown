@@ -20,7 +20,7 @@
     "result": {
         "id": "minecraft:carrot_on_a_stick",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.flamethrower\",\"fallback\":\"Flamethrower Upgrade\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.flamethrower\"}",
             "minecraft:item_model": "lockdown:flamethrower_upgrade",
             "minecraft:custom_data": {
                 "lockdown_data": {

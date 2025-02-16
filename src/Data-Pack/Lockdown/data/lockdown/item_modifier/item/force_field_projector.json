@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.force_field_projector\",\"fallback\":\"Force Field Projector\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.force_field_projector\"}",
             "minecraft:item_model": "lockdown:machine/force_field_projector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

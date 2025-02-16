@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\",\"fallback\":\"Control Tower\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.control_tower\"}",
             "minecraft:item_model": "lockdown:machine/control_tower",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -13,7 +13,7 @@
             },
             "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.control_tower\"]}",
             "minecraft:lore": [
-                "{\"translate\":\"lockdown.channel.no_channel\",\"fallback\":\"No Channel Assigned\",\"color\":\"red\",\"italic\":false}"
+                "{\"translate\":\"item.lockdown.code.no_code\",\"color\":\"red\",\"italic\":false}"
             ]
         }
     },

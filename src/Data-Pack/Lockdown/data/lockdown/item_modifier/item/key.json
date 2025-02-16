@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.key\",\"fallback\":\"Key\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.key\"}",
             "minecraft:item_model": "lockdown:key",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -15,7 +15,7 @@
             "minecraft:max_stack_size": 1,
             "minecraft:rarity": "uncommon",
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.code.no_code\",\"fallback\":\"No Code Assigned\",\"color\":\"red\",\"italic\":false}"
+                "{\"translate\":\"item.lockdown.code.no_code\",\"color\":\"red\",\"italic\":false}"
             ],
             "!minecraft:tool": {},
             "!minecraft:max_damage": {},

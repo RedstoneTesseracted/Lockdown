@@ -26,7 +26,7 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.wireless_receiver\",\"fallback\":\"Wireless Receiver\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.wireless_receiver\"}",
             "minecraft:item_model": "lockdown:machine/receiver_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

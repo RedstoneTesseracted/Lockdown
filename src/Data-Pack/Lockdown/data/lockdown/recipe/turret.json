@@ -29,7 +29,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.turret\",\"fallback\":\"Laser Turret\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.turret\"}",
             "minecraft:item_model": "lockdown:turret/item",
             "minecraft:custom_data": {
                 "lockdown_data": {

@@ -20,7 +20,7 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.encoding_station\",\"fallback\":\"Encoding Station\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.encoding_station\"}",
             "minecraft:item_model": "lockdown:machine/encoding_station",
             "minecraft:custom_data": {
                 "lockdown_data": {

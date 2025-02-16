@@ -23,7 +23,7 @@
     "result": {
         "id": "minecraft:carrot_on_a_stick",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.control_tower\",\"fallback\":\"Control Tower Upgrade\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.control_tower\"}",
             "minecraft:item_model": "lockdown:control_tower_upgrade",
             "minecraft:custom_data": {
                 "lockdown_data": {

@@ -30,7 +30,7 @@
     "result": {
         "id": "minecraft:paper",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_blue\",\"fallback\":\"Blue Keycard\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_blue\"}",
             "minecraft:item_model": "lockdown:keycard",
             "minecraft:custom_data": {
                 "lockdown_data": {

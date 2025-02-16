@@ -20,7 +20,7 @@
     "result": {
         "id": "minecraft:carrot_on_a_stick",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.durability\",\"fallback\":\"Durability Upgrade\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.durability\"}",
             "minecraft:item_model": "lockdown:durability_upgrade",
             "minecraft:custom_data": {
                 "lockdown_data": {

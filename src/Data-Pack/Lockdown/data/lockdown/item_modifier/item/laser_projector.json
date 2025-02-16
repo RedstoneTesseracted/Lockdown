@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\",\"fallback\":\"Laser Projector\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\"}",
             "minecraft:item_model": "lockdown:machine/laser_projector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

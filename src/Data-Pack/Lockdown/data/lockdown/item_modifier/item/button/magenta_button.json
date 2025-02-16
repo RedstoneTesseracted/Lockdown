@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_magenta\",\"fallback\":\"Big Magenta Button\",\"color\":\"light_purple\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_magenta\",\"color\":\"light_purple\"}",
             "minecraft:item_model": "lockdown:button/magenta_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

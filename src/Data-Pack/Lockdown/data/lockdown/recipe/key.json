@@ -17,7 +17,7 @@
     "result": {
         "id": "minecraft:carrot_on_a_stick",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.key\",\"fallback\":\"Key\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.key\"}",
             "minecraft:item_model": "lockdown:key",
             "minecraft:custom_data": {
                 "lockdown_data": {

@@ -2,7 +2,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_black\",\"fallback\":\"Big Black Button\",\"color\":\"dark_gray\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_black\",\"color\":\"dark_gray\"}",
             "minecraft:item_model": "lockdown:button/black_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

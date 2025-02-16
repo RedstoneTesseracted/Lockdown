@@ -26,7 +26,7 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.mob_detector\",\"fallback\":\"Mob Detector\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.mob_detector\"}",
             "minecraft:item_model": "lockdown:machine/mob_detector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
