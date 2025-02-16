@@ -18,7 +18,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_orange\",\"fallback\":\"Big Orange Button\",\"color\":\"gold\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_orange\",\"color\":\"gold\"}",
             "minecraft:item_model": "lockdown:button/orange_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

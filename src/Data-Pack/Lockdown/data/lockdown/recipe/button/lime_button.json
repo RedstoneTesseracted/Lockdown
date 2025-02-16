@@ -18,7 +18,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_lime\",\"fallback\":\"Big Lime Button\",\"color\":\"green\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_lime\",\"color\":\"green\"}",
             "minecraft:item_model": "lockdown:button/lime_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

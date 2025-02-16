@@ -18,7 +18,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_cyan\",\"fallback\":\"Big Cyan Button\",\"color\":\"dark_aqua\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_cyan\",\"color\":\"dark_aqua\"}",
             "minecraft:item_model": "lockdown:button/cyan_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

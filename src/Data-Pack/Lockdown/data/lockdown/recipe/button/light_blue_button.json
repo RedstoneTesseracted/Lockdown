@@ -18,7 +18,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_light_blue\",\"fallback\":\"Big Light Blue Button\",\"color\":\"blue\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_light_blue\",\"color\":\"blue\"}",
             "minecraft:item_model": "lockdown:button/light_blue_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {

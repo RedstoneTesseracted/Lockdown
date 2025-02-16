@@ -21,7 +21,7 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_blue\",\"fallback\":\"Blue Alarm Light\",\"color\":\"dark_blue\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.alarm_light_blue\",\"color\":\"dark_blue\"}",
             "minecraft:item_model": "lockdown:alarm/blue_alarm_light",
             "minecraft:custom_data": {
                 "lockdown_data": {
