@@ -21,7 +21,7 @@
       ],
     "attribution": "TODO: Where is this from?"
   },
-  "drone.target": {
+  "entity.drone.target": {
     "category": "neutral",
     "subtitle": "subtitles.lockdown.drone.target",
       "sounds": [

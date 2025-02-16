@@ -3,7 +3,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\"}",
-            "minecraft:item_model": "lockdown:machine/defense_drone",
+            "minecraft:item_model": "lockdown:drone/normal",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "drone",
@@ -20,6 +20,6 @@
     },
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:item_frame"
+        "item": "minecraft:pig_spawn_egg"
     }
 ]

@@ -3,7 +3,10 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/defense_drone_hostile"
+                "minecraft:item_model": "lockdown:drone/normal",
+                "minecraft:custom_model_data": {
+                    "strings": ["hostile"]
+                }
             }
         },
         "frame": "challenge",

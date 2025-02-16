@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "lockdown:item/machine/defense_drone"
+		"model": "lockdown:item/nothing"
     }
 }

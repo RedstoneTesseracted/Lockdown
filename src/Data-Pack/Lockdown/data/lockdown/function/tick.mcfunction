@@ -10,22 +10,10 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_transmitter] at @s r
 execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_receiver] at @s run function lockdown:devices/wireless_receiver/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s run function lockdown:devices/force_field_projector/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run function lockdown:devices/control_tower/root
-# execute as @e[tag=lockdown.drone.root] at @s positioned ~ ~ ~ run function lockdown:devices/drone/drone
+execute as @e[tag=lockdown.block.root,tag=lockdown.drone] at @s run function lockdown:devices/drone/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.turret] at @s run function lockdown:devices/turret/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root
 
 
 # Right-clickable items
 execute as @a[scores={lockdown.use_carrot_on_a_stick=1..}] at @s run function lockdown:items/click_callback
-
-
-# Run upgrade-related commands
-# execute as @e[type=item,nbt={Item:{tag:{LockdownData:{upgrade:1b}}}}] at @s run function lockdown:upgrades/root
-
-# Maintain custom block light level and invisibility
-# execute as @e[type=minecraft:armor_stand,tag=ld_block] run data modify entity @s Fire set value 1000000
-# effect give @e[tag=ld_invisible] minecraft:invisibility 1000000 1 true
-
-# Reset some scores
-# execute at @a[scores={ld_use_noteblock=1..}] as @e[type=minecraft:armor_stand,tag=ld_force_field,limit=1,sort=nearest,distance=..5] at @s positioned ~ ~0.23 ~ run function lockdown:devices/force_field/outline
-# scoreboard players set @a ld_use_noteblock 0

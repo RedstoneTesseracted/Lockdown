@@ -1,0 +1,27 @@
+{
+    "model": {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "fallback": {
+            "type": "minecraft:model",
+            "model": "lockdown:item/machine/defense_drone"
+        },
+        "cases": [
+            {
+                "when": "standby",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/machine/defense_drone"
+                }
+            },
+            {
+                "when": "hostile",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/machine/defense_drone_hostile"
+                }
+            }
+        ]
+    }
+}
