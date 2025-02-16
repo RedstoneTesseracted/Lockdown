@@ -10,6 +10,14 @@
                         {
                             "function": "minecraft:reference",
                             "name": "lockdown:item/durability_upgrade"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "lockdown.upgrades.durability"
+                            }
                         }
                     ]
                 }

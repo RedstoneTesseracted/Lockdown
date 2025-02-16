@@ -4,6 +4,9 @@
 # Unmark dropped item for configuration
 tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
 
+# Drop upgrades
+function lockdown:devices/common_upgrade_drop
+
 # Destroy all entities associated with this block
 execute on passengers run kill @s[tag=lockdown.block]
 kill @s[tag=lockdown.block]

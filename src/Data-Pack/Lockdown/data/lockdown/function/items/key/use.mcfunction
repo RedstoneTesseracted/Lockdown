@@ -1,4 +1,4 @@
-# This function is called whenever the player uses the key on a block
+# This function is called whenever the player uses a key
 
 # Play effects
 playsound minecraft:block.chest.locked block @a ~ ~ ~ 1.0 2.0

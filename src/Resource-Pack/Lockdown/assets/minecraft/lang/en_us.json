@@ -64,8 +64,8 @@
   "item.lockdown.upgrade.durability": "Durability Upgrade",
   "item.lockdown.upgrade.flamethrower": "Flamethrower Upgrade",
   "item.lockdown.upgrade.control_tower.hint": "Binds target to a control tower",
-  "item.lockdown.upgrade.range.hint": "Increases firing range of the target",
-  "item.lockdown.upgrade.durability.hint": "Reinforces target armor",
+  "item.lockdown.upgrade.range.hint": "+2 blocks to maximum firing range",
+  "item.lockdown.upgrade.durability.hint": "+3 to maximum health",
   "item.lockdown.upgrade.flamethrower.hint": "Installs a flamethrower on the target",
   "item.lockdown.upgrade.lore_header": "Applies To:",
   "item.lockdown.upgrade.lore_turret": "Turret",
@@ -151,5 +151,8 @@
   "lockdown.messages.key.not_a_container": "Not a container",
   "lockdown.messages.key.already_locked": "Already locked with another key",
   "lockdown.messages.key.locked": "Locked Container",
-  "lockdown.messages.key.unlocked": "Removed Lock on Container"
+  "lockdown.messages.key.unlocked": "Removed Lock on Container",
+  "lockdown.messages.bug.macro.generic": "If you can read this, something has gone wrong with %1$s",
+  "lockdown.messages.upgrade.not_eligible": "%1$s does not apply to this device",
+  "lockdown.messages.upgrade.max_upgraded": "Device already at max level for %1$s"
 }

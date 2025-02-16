@@ -86,10 +86,13 @@ ride @n[tag=lockdown.block.hitbox.new] mount @n[tag=lockdown.block.root.new]
 
 # Assign special behavior tags
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.code_hostile
+tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.upgradeable
 
 # Set scores
 execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
 scoreboard players operation @n[tag=lockdown.block.hitbox.new] lockdown.channel = @n[tag=lockdown.block.root.new] lockdown.channel
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.time 0
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.upgrades.durability 0
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.upgrades.range 0
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_range = lockdown.default_turret_range lockdown.constant
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_damage = lockdown.default_turret_damage lockdown.constant

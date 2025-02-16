@@ -24,6 +24,10 @@ scoreboard players set lockdown.turret_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_turret_range lockdown.constant 8
 scoreboard players set lockdown.default_turret_damage lockdown.constant 4
 
+scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
+scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
+
+
 # Numbers
 scoreboard objectives add lockdown.number dummy
 scoreboard players set -1 lockdown.number -1
@@ -33,7 +37,8 @@ scoreboard objectives add lockdown.channel dummy
 scoreboard objectives add lockdown.firing_range dummy
 scoreboard objectives add lockdown.firing_damage dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
-
+scoreboard objectives add lockdown.upgrades.range dummy
+scoreboard objectives add lockdown.upgrades.durability dummy
 
 #### Scheduled timers
 function lockdown:periodic_fix
