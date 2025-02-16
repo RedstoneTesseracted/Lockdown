@@ -29,19 +29,21 @@ Below is a table of all planned features currently (re)implemented
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
 | Key                           |   ✅   |
-| Big Bertha                    |   ❌   |
+| BFG 8000                      |   ❌   |
 
 
 ## Redstone wireless transmitter
 
 * Added in R1
 * Transmits a redstone signal to other receivers on the same channel
+* Encodable (required)
 
 
 ## Redstone wireless receiver
 
 * Added in R1
 * Outputs a redstone signal received from other transmitters on the same channel
+* Encodable (required)
 
 
 ## Alarm lights
@@ -49,6 +51,7 @@ Below is a table of all planned features currently (re)implemented
 * Added in R1
 * 16 colors
 * Flashes when receiving a redstone signal from other transmitters
+* Encodable (required)
 
 
 ## Force field projector
@@ -61,11 +64,13 @@ Below is a table of all planned features currently (re)implemented
 ## Keycard reader w/ keycard
 
 * Added in R1
+* Encodable (required)
 
 
 ## Big buttons
 
 * Added in R1
+* Encodable (optional)
 
 
 ## Klaxon block
@@ -91,16 +96,19 @@ Below is a table of all planned features currently (re)implemented
 ## Defense turret
 
 * Added in R1
+* Encodable (optional)
 
 
 ## Defense drone
 
 * Added in R1
+* Encodable (optional)
 
 
 ## Drone control tower
 
 * Added in R2
+* Encodable (required)
 
 
 ## Encoding station
@@ -137,9 +145,10 @@ Below is a table of all planned features currently (re)implemented
 
 * Planned for R3
 * Brings container locking to survival
+* Encodable (required)
 
 
-## Big Bertha
+## The BFG 8000
 
 * Planned for R3
 
