@@ -11,5 +11,8 @@ advancement revoke @a through lockdown:hidden/root
 # Eliminate temporary beam entities that somehow got left over
 function lockdown:devices/turret/fire/scheduled_beam_destroy
 
+# Maintain invisible bees
+effect give @e[type=minecraft:bee,tag=lockdown.block.hitbox] invisibility infinite 1 true
+
 # Schedule this function to run again
 schedule function lockdown:periodic_fix 0.5d replace
