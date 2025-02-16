@@ -29,6 +29,14 @@ tag @e[tag=lockdown.candidate.valid,limit=1] add lockdown.context
 tag @e remove lockdown.candidate.valid
 
 # Shift context to root block entity
+# Possible cases that I've accounted for here (not all of these are used):
+#   * Root entity is riding a passenger of the context
+#   * Root entity is riding the context
+#   * Root entity is the context
+#   * Context is riding root entity
+#   * Context is a passenger of a passenger of the root entity
+execute as @e[tag=lockdown.context] on passengers on passengers run tag @s[tag=lockdown.block.root] add lockdown.shift_context
+execute as @e[tag=lockdown.context] on passengers run tag @s[tag=lockdown.block.root] add lockdown.shift_context
 execute as @e[tag=lockdown.context,tag=lockdown.block.root] run tag @s add lockdown.shift_context
 execute as @e[tag=lockdown.context] on vehicle if entity @s[tag=lockdown.block.root] run tag @s add lockdown.shift_context
 execute as @e[tag=lockdown.context] on vehicle on vehicle if entity @s[tag=lockdown.block.root] run tag @s add lockdown.shift_context

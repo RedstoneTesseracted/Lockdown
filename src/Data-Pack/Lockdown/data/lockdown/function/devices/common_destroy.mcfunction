@@ -8,5 +8,8 @@ tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
 function lockdown:devices/common_upgrade_drop
 
 # Destroy all entities associated with this block
+tag @s add lockdown.not_yet
+execute on vehicle on passengers run kill @s[tag=!lockdown.not_yet]
+execute on vehicle run kill @s[tag=lockdown.block]
 execute on passengers run kill @s[tag=lockdown.block]
 kill @s[tag=lockdown.block]

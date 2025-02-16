@@ -6,10 +6,23 @@ execute if function lockdown:items/upgrade/checks/max_durability_upgrades run re
 
 # Apply upgrade to chosen entity
 # Note: context is ALWAYS the root block entity
+# Therefore, we need to shift execution to whoever the hitbox
+# is in order to apply the health bonus.  Here, I've accounted
+# for cases where:
+#   * Hitbox is riding a passenger of the context
+#   * Hitbox is riding the context
+#   * Hitbox is the context
+#   * Context is riding the hitbox
+#   * Context is riding a passenger of the hitbox
 scoreboard players add @e[tag=lockdown.context,limit=1] lockdown.upgrades.durability 1
 execute store result storage lockdown:temp args.health float 3.0 run scoreboard players get @e[tag=lockdown.context,limit=1] lockdown.upgrades.durability
-execute as @e[tag=lockdown.context,limit=1] on passengers if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/__durability with storage lockdown:temp args
-execute as @e[tag=lockdown.context,limit=1] on passengers if entity @s[tag=lockdown.block.hitbox] unless score lockdown.macro_status lockdown.local matches 1 run tellraw @p {"translate": "lockdown.messages.bug.macro.generic", "color":"red","with": [{"text": "lockdown:items/upgrade/apply/__durability","color":"gray","underlined": true}]}
+
+execute as @e[tag=lockdown.context,limit=1] on passengers on passengers if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
+execute as @e[tag=lockdown.context,limit=1] on passengers if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
+execute as @e[tag=lockdown.context,limit=1] on passengers if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
+execute as @e[tag=lockdown.context,limit=1] on vehicle if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
+execute as @e[tag=lockdown.context,limit=1] on vehicle on vehicle if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
+
 execute at @e[tag=lockdown.context,limit=1] run particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 0.1 10
 
 return 0
