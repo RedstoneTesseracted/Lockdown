@@ -1,4 +1,4 @@
-# This function picks a new target for the turret.  The chosen target's UUID is stored in the turret's scoreboard.
+# This function picks a new target for the turret.  The chosen target's UUID is stored as the bee's target
 # Run BY and AT the turret base entity
 #
 # The rules for selecting targets are as follows:
