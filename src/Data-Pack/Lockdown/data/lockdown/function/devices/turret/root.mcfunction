@@ -25,4 +25,4 @@ tag @e[tag=lockdown.turret.target] remove lockdown.turret.target
 
 # Destroy the turret if applicable
 # execute if block ~ ~-1 ~ #lockdown:passthrough run kill @e[distance=..0.5,type=minecraft:bee,tag=ld_turret_hitbox]
-execute unless predicate lockdown:has_bee_passenger run function lockdown:devices/turret/destroy
+execute unless predicate lockdown:has_live_bee_passenger run function lockdown:devices/turret/destroy
