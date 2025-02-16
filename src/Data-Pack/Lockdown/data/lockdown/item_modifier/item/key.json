@@ -20,7 +20,10 @@
             "!minecraft:tool": {},
             "!minecraft:max_damage": {},
             "!minecraft:damage": {},
-            "!minecraft:attribute_modifiers": {}
+            "!minecraft:attribute_modifiers": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {}
         }
     },
     {
