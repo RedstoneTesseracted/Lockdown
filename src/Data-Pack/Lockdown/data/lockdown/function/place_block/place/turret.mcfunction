@@ -1,7 +1,15 @@
 # Place a turret at current position
-# * Directional (check item frame for direction)
-# * Not solid
-# * Very special
+#   * Directional (check item frame for direction)
+#   * Not solid
+#   * Very special
+#
+# Entity Composition:
+#   * Base item display (root entity)
+#   * Gantry item display
+#   * Barrel item display
+#   * Laser beam item display
+#   * Invisible bee (hitbox)
+#
 
 # Prevent overlap with an existing entity
 execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/turret"}
@@ -33,7 +41,7 @@ execute if score lockdown.direction lockdown.local matches 5 align xyz positione
 
 # Summon and mount the item displays
 #   1. Base (turret base entity)
-#   2. Turret mount
+#   2. Turret gantry
 #   3. Turret barrel
 #   4. Laser beam
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.turret.gantry","lockdown.turret"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:invisible"}}}
