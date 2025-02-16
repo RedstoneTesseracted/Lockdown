@@ -19,13 +19,13 @@ Below is a table of all planned features currently (re)implemented
 | Laser projector               |   ✅   |
 | Player detector               |   ✅   |
 | Mob detector                  |   ✅   |
-| Defense turret                |   ❌   |
+| Defense turret                |   ✅   |
 | Defense drone                 |   ❌   |
 | Drone control tower           |   ❌   |
 | Encoding station              |   ✅   |
-| Range upgrade                 |   ❌   |
-| Durability upgrade            |   ❌   |
-| Flamethrower upgrade          |   ❌   |
+| Range upgrade                 |   ✅   |
+| Durability upgrade            |   ✅   |
+| Flamethrower upgrade          |   ✅   |
 | Drone control tower upgrade   |   ❌   |
 | Laser blaster                 |   ❌   |
 | Key                           |   ✅   |
