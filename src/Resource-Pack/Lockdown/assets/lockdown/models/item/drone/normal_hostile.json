@@ -1,0 +1,10 @@
+{
+	"parent": "lockdown:item/drone/normal_standby",
+	"textures": {
+		"obsidian": "minecraft:block/obsidian",
+		"hull": "lockdown:item/drone/hull",
+		"eye": "lockdown:item/drone/hostile_eye",
+		"turbines": "lockdown:item/drone/turbine",
+		"particle": "lockdown:item/drone/hull"
+	}
+}

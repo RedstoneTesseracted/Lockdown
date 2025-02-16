@@ -5,21 +5,28 @@
         "index": 0,
         "fallback": {
             "type": "minecraft:model",
-            "model": "lockdown:item/machine/defense_drone"
+            "model": "lockdown:item/drone/normal_standby"
         },
         "cases": [
             {
                 "when": "standby",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/machine/defense_drone"
+                    "model": "lockdown:item/drone/normal_standby"
+                }
+            },
+            {
+                "when": "alert",
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/drone/normal_alert"
                 }
             },
             {
                 "when": "hostile",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/machine/defense_drone_hostile"
+                    "model": "lockdown:item/drone/normal_hostile"
                 }
             }
         ]

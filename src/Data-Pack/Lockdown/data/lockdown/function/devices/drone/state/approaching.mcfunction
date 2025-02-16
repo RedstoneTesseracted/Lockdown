@@ -7,7 +7,7 @@
 # say set to "approaching"
 
 # Update model
-data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "warning"
+data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "alert"
 
 # Play sound effects if coming from "standby" state
 execute at @s[tag=lockdown.drone.state.standby] run playsound lockdown:entity.drone.target neutral @a ~ ~ ~ 1.0 1.0
