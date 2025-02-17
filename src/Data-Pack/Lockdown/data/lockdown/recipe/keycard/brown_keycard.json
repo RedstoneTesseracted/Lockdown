@@ -30,12 +30,13 @@
     "result": {
         "id": "minecraft:paper",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_brown\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_brown\",\"fallback\":\"Brown Keycard\"}",
             "minecraft:item_model": "lockdown:keycard",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "brown_keycard",
-                    "group": "keycards"
+                    "group": "keycards",
+                    "encodable": true
                 }
             },
             "minecraft:max_stack_size": 1,

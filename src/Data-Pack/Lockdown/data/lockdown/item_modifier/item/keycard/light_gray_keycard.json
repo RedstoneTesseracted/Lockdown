@@ -2,12 +2,13 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_light_gray\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_light_gray\",\"fallback\":\"Light Gray Keycard\"}",
             "minecraft:item_model": "lockdown:keycard",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "light_gray_keycard",
                     "group": "keycards",
+                    "encodable": true,
                     "configure": true
                 }
             },

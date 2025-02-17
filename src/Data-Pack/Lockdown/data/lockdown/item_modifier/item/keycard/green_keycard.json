@@ -2,12 +2,13 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_green\"}",
+            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_green\",\"fallback\":\"Green Keycard\"}",
             "minecraft:item_model": "lockdown:keycard",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "green_keycard",
                     "group": "keycards",
+                    "encodable": true,
                     "configure": true
                 }
             },
