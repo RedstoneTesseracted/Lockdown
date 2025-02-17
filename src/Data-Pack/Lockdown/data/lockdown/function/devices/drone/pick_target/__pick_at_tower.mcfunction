@@ -3,5 +3,4 @@
 #   1. Create a sculk vibration particle effect that STARTS here
 #   2. Execute lockdown:devices/drone/pick_target/pick
 
-function lockdown:devices/drone/pick_target/tower_particle with storage lockdown:temp args
-function lockdown:devices/drone/pick_target/pick
+execute if function lockdown:devices/drone/pick_target/pick run function lockdown:devices/drone/pick_target/tower_particle with storage lockdown:temp args

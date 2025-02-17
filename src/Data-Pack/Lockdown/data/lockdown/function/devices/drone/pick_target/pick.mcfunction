@@ -34,3 +34,5 @@ execute if entity @s[tag=lockdown.drone.state.hostile,tag=!lockdown.drone.has_ta
 
 # Clear candidates list
 tag @e remove lockdown.drone.candidate
+
+return run execute if entity @s[tag=lockdown.drone.has_target]
