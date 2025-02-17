@@ -32,7 +32,7 @@ tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.upgradeable
 tag @n[tag=lockdown.block.root.new] add lockdown.drone.state.standby
 
 # Set scores
-execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
+execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s data.lockdown_data.channel
 scoreboard players operation @n[tag=lockdown.block.hitbox.new] lockdown.channel = @n[tag=lockdown.block.root.new] lockdown.channel
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.time 0
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.upgrades.durability 0

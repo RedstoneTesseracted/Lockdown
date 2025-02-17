@@ -10,11 +10,16 @@ scoreboard objectives add lockdown.mode dummy
 scoreboard objectives add lockdown.channel.sources dummy
 scoreboard objectives add lockdown.range dummy
 scoreboard objectives add lockdown.held_channel dummy
-scoreboard objectives add lockdown.damage_type dummy
+scoreboard objectives add lockdown.left_origin dummy
 
 scoreboard objectives add lockdown.motion.x dummy
 scoreboard objectives add lockdown.motion.y dummy
 scoreboard objectives add lockdown.motion.z dummy
+
+scoreboard objectives add lockdown.origin_uuid1 dummy
+scoreboard objectives add lockdown.origin_uuid2 dummy
+scoreboard objectives add lockdown.origin_uuid3 dummy
+scoreboard objectives add lockdown.origin_uuid4 dummy
 
 scoreboard objectives add lockdown.target_uuid1 dummy
 scoreboard objectives add lockdown.target_uuid2 dummy
@@ -33,9 +38,9 @@ scoreboard players set lockdown.turret_rotate_interval lockdown.constant 5
 scoreboard players set lockdown.turret_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_turret_range lockdown.constant 8
 scoreboard players set lockdown.default_turret_damage lockdown.constant 4
-scoreboard players set lockdown.drone_target_interval lockdown.constant 20
+scoreboard players set lockdown.drone_target_interval lockdown.constant 31
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
-scoreboard players set lockdown.default_drone_range lockdown.constant 8
+scoreboard players set lockdown.default_drone_range lockdown.constant 14
 scoreboard players set lockdown.default_drone_damage lockdown.constant 4
 
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
