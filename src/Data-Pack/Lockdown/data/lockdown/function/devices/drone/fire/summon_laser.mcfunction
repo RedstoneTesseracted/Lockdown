@@ -11,7 +11,7 @@ tag @s add lockdown.laser
 tag @s add lockdown.origin.drone
 
 # Set nbt/attribute data
-data modify entity @s Invisible set value 0b
+data modify entity @s Invisible set value 1b
 data modify entity @s DisabledSlots set value 2147483647
 attribute @s minecraft:gravity base set 0.0
 # Standard armor stand rider offset: 1.975

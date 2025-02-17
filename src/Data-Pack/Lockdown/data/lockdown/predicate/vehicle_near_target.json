@@ -7,7 +7,7 @@
                 "distance": {
                     "absolute": {
                         "min": 0,
-                        "max": 7
+                        "max": 5
                     }
                 }
             }

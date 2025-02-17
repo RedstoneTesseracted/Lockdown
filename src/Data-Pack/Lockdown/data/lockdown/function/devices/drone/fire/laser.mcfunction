@@ -1,8 +1,5 @@
 # This function launches a laser projectile at the drone's target
 
-# # Obtain vector from drone to target - we use this as the motion vector
-# execute positioned ^ ^-0.6 ^0.1 facing entity @e[tag=lockdown.drone.target,limit=1] eyes positioned 0.0 0.0 0.0 positioned ^ ^ ^0.5 summon minecraft:marker run function lockdown:devices/drone/fire/store_vector
-
 # Summon laser beam entity
 execute store result score lockdown.damage lockdown.local run scoreboard players get @s lockdown.firing_damage
 execute store result score lockdown.uuid1 lockdown.local on vehicle run data get entity @s UUID[0]

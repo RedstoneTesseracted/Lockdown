@@ -40,7 +40,7 @@ scoreboard players set lockdown.default_turret_range lockdown.constant 8
 scoreboard players set lockdown.default_turret_damage lockdown.constant 4
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
-scoreboard players set lockdown.default_drone_range lockdown.constant 14
+scoreboard players set lockdown.default_drone_range lockdown.constant 10
 scoreboard players set lockdown.default_drone_damage lockdown.constant 4
 
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
