@@ -10,7 +10,7 @@ execute facing entity @e[tag=lockdown.drone.target,limit=1] eyes positioned ^ ^-
 
 # Play effects
 # particle minecraft:dust{color:[1.0f,0.0f,0.0f],scale:0.9f} ~ ~ ~ 0.25 0.25 0.25 0.2 15
-playsound minecraft:entity.illusioner.prepare_mirror neutral @a ~ ~ ~ 1.0 2.0
+playsound lockdown:laser.quick neutral @a ~ ~ ~ 1.0 1.0
 
 # Activate the projectile loop if it isn't already running
 schedule function lockdown:projectile/tick 1t replace

@@ -10,8 +10,11 @@
 # Update model
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "hostile"
 
+# Play sound effect
+playsound lockdown:entity.drone.identify.target neutral @a ~ ~ ~ 1.0 1.0
+
 # Play sound effects if coming from "standby" state
-execute at @s[tag=lockdown.drone.state.standby] run playsound lockdown:entity.drone.target neutral @a ~ ~ ~ 1.0 1.0
+#execute at @s[tag=lockdown.drone.state.standby] run playsound lockdown:entity.drone.target neutral @a ~ ~ ~ 1.0 1.0
 
 # Update bee data
 execute on vehicle run data modify entity @s NoAI set value 0b
