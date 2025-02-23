@@ -1,6 +1,7 @@
 {
     "parent": "lockdown:item/glows/glow",
     "textures": {
-        "glow": "lockdown:block/pink_glow"
+        "glow": "lockdown:block/pink_glow",
+        "particle": "lockdown:block/pink_glow"
     }
 }
