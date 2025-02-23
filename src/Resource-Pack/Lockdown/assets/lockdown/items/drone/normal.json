@@ -4,11 +4,14 @@
         "models": [
             {
                 "type": "minecraft:model",
-                "model": "lockdown:item/drone/normal/base"
-            },
-            {
-                "type": "minecraft:model",
-                "model": "lockdown:item/drone/normal/glow"
+                "model": "lockdown:item/drone/normal/base",
+                "tints": [
+                    {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": [1.0, 1.0, 1.0]
+                    }
+                ]
             },
             {
                 "type": "minecraft:select",
