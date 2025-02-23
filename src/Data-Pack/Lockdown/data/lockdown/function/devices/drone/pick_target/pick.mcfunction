@@ -29,8 +29,8 @@ execute if entity @e[tag=lockdown.drone.candidate] run tag @s add lockdown.drone
 execute on vehicle run function lockdown:devices/drone/pick_target/store_target_uuid
 
 # Update state
-execute if entity @s[tag=!lockdown.drone.state.hostile,tag=lockdown.drone.has_target] run function lockdown:devices/drone/state/choose_hostile
-execute if entity @s[tag=lockdown.drone.state.hostile,tag=!lockdown.drone.has_target] run function lockdown:devices/drone/state/standby
+execute if entity @s[tag=!lockdown.drone.state.hostile,tag=lockdown.drone.has_target] at @s run function lockdown:devices/drone/state/choose_hostile
+execute if entity @s[tag=lockdown.drone.state.hostile,tag=!lockdown.drone.has_target] at @s run function lockdown:devices/drone/state/standby
 
 # Clear candidates list
 tag @e remove lockdown.drone.candidate

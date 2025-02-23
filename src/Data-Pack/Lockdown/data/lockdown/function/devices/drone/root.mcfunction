@@ -1,4 +1,5 @@
 # The root function run by all drone entities
+# This is run BY and AT the root drone entity
 
 # Increment action timer for actions below
 scoreboard players add @s lockdown.time 1

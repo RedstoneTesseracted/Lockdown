@@ -13,9 +13,6 @@ data modify entity @s item.components."minecraft:custom_model_data".strings[0] s
 # Play sound effect
 playsound lockdown:entity.drone.identify.target neutral @a ~ ~ ~ 1.0 1.0
 
-# Play sound effects if coming from "standby" state
-#execute at @s[tag=lockdown.drone.state.standby] run playsound lockdown:entity.drone.target neutral @a ~ ~ ~ 1.0 1.0
-
 # Update bee data
 # Here we push the bee up slightly to stop it from flying too low
 execute on vehicle run data modify entity @s NoAI set value 0b
