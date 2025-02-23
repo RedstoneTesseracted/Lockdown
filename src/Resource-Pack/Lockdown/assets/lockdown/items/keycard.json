@@ -1,21 +1,12 @@
 {
-    "model": {
-        "type": "minecraft:composite",
-		"models": [
+	"model": {
+		"type": "minecraft:model",
+		"model": "lockdown:item/keycard",
+		"tints": [
 			{
-				"type": "minecraft:model",
-				"model": "lockdown:item/keycard_base"
-			},
-			{
-				"type": "minecraft:model",
-				"model": "lockdown:item/keycard_strip",
-				"tints": [
-					{
-						"type": "minecraft:dye",
-						"default": [0.38823529411764707, 0.2549019607843137, 0.7764705882352941]
-					}
-				]
+				"type": "minecraft:dye",
+				"default": [0.38823529411764707, 0.2549019607843137, 0.7764705882352941]
 			}
 		]
-    }
+	}
 }
