@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"1": "lockdown:item/drone/eye"
+	},
+	"elements": [
+		{
+			"name": "eye_overlay",
+			"from": [7.25, 7.5, 4.499],
+			"to": [8.75, 9, 4.499],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.25, 7, 2.475]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [15, 135, 0],
+			"translation": [-0.75, 0, 0]
+		}
+	}
+}

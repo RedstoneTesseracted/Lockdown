@@ -1,33 +1,78 @@
 {
     "model": {
-        "type": "minecraft:select",
-        "property": "minecraft:custom_model_data",
-        "index": 0,
-        "fallback": {
-            "type": "minecraft:model",
-            "model": "lockdown:item/drone/normal_standby"
-        },
-        "cases": [
+        "type": "minecraft:composite",
+        "models": [
             {
-                "when": "standby",
-                "model": {
-                    "type": "minecraft:model",
-                    "model": "lockdown:item/drone/normal_standby"
-                }
+                "type": "minecraft:model",
+                "model": "lockdown:item/drone/normal/base"
             },
             {
-                "when": "alert",
-                "model": {
-                    "type": "minecraft:model",
-                    "model": "lockdown:item/drone/normal_alert"
-                }
+                "type": "minecraft:model",
+                "model": "lockdown:item/drone/normal/glow"
             },
             {
-                "when": "hostile",
-                "model": {
+                "type": "minecraft:select",
+                "property": "minecraft:custom_model_data",
+                "index": 0,
+                "fallback": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/drone/normal_hostile"
-                }
+                    "model": "lockdown:item/drone/normal/eye/standby"
+                },
+                "cases": [
+                    {
+                        "when": "standby",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/eye/standby"
+                        }
+                    },
+                    {
+                        "when": "alert",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/eye/notice"
+                        }
+                    },
+                    {
+                        "when": "hostile",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/eye/hostile"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "minecraft:select",
+                "property": "minecraft:custom_model_data",
+                "index": 0,
+                "fallback": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/drone/normal/weapon/retracted"
+                },
+                "cases": [
+                    {
+                        "when": "standby",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/weapon/retracted"
+                        }
+                    },
+                    {
+                        "when": "alert",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/weapon/extended"
+                        }
+                    },
+                    {
+                        "when": "hostile",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "lockdown:item/drone/normal/weapon/extended"
+                        }
+                    }
+                ]
             }
         ]
     }

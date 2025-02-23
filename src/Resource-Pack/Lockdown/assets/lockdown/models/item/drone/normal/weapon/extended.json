@@ -1,0 +1,48 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"0": "lockdown:item/drone/light",
+		"2": "lockdown:item/drone/glow",
+		"particle": "lockdown:item/drone/light"
+	},
+	"elements": [
+		{
+			"from": [7.5, 5.7, 8.5],
+			"to": [8.5, 6.7, 10.5],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8.5, 5.7, 8.5]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9], "texture": "#0"},
+				"west": {"uv": [8.5, 8, 9.5, 8.5], "texture": "#0"},
+				"up": {"uv": [4.5, 9.5, 4, 8.5], "texture": "#0"},
+				"down": {"uv": [9, 8.5, 8.5, 9.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.5, 5.7, 6.5],
+			"to": [8.5, 6.7, 8.5],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.5, 6.7, 7.5]},
+			"faces": {
+				"north": {"uv": [2, 3, 4, 5], "texture": "#2"},
+				"east": {"uv": [0, 9, 1, 9.5], "texture": "#0"},
+				"west": {"uv": [9, 2, 10, 2.5], "texture": "#0"},
+				"up": {"uv": [9.5, 3.5, 9, 2.5], "texture": "#0"},
+				"down": {"uv": [9.5, 3.5, 9, 4.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [15, 135, 0],
+			"translation": [-0.75, 0, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "weapon",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}
