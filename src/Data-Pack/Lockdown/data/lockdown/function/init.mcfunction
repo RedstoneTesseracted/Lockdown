@@ -31,6 +31,8 @@ scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
 scoreboard objectives add lockdown.uuid4 dummy
 
+scoreboard objectives add lockdown.drone.float dummy
+
 # Global configuration scores
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.turret_target_interval lockdown.constant 20
@@ -38,6 +40,7 @@ scoreboard players set lockdown.turret_rotate_interval lockdown.constant 5
 scoreboard players set lockdown.turret_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_turret_range lockdown.constant 8
 scoreboard players set lockdown.default_turret_damage lockdown.constant 4
+scoreboard players set lockdown.drone_float_interval lockdown.constant 25
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_drone_range lockdown.constant 10

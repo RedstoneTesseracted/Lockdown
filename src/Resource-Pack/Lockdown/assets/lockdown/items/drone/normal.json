@@ -62,7 +62,7 @@
                         "when": "alert",
                         "model": {
                             "type": "minecraft:model",
-                            "model": "lockdown:item/drone/normal/weapon/extended"
+                            "model": "lockdown:item/drone/normal/weapon/retracted"
                         }
                     },
                     {
