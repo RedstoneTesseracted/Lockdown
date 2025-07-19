@@ -1,8 +1,8 @@
 # This function applies the range upgrade to a turret/drone
 
 # Check if chosen entity is applicable for this upgrade
-execute unless function lockdown:items/upgrade/checks/target_is_turret_or_drone run return run title @s actionbar {"translate": "lockdown.messages.upgrade.not_eligible","color": "red", "with": [{"translate": "item.lockdown.upgrade.range"}]}
-execute if function lockdown:items/upgrade/checks/max_range_upgrades run return run title @s actionbar {"translate": "lockdown.messages.upgrade.max_upgraded","color": "red", "with": [{"translate": "item.lockdown.upgrade.range"}]}
+execute unless function lockdown:items/upgrade/checks/target_is_turret_or_drone run return run title @s actionbar {translate: "lockdown.messages.upgrade.not_eligible",color: "red", with: [{translate: "item.lockdown.upgrade.range"}]}
+execute if function lockdown:items/upgrade/checks/max_range_upgrades run return run title @s actionbar {translate: "lockdown.messages.upgrade.max_upgraded",color: "red", with: [{translate: "item.lockdown.upgrade.range"}]}
 
 # Apply upgrade to chosen entity
 # Note: context is ALWAYS the root block entity

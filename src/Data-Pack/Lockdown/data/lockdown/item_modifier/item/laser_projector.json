@@ -2,7 +2,9 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.laser_projector\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.laser_projector"
+            },
             "minecraft:item_model": "lockdown:machine/laser_projector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -10,7 +12,16 @@
                     "configure": true
                 }
             },
-            "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.placer.laser_projector\"],Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+            "minecraft:entity_data": {
+                "id": "minecraft:item_frame",
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.laser_projector"
+                ],
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
+            }
         }
     },
     {

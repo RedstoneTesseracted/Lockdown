@@ -26,7 +26,9 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.drone\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.drone"
+            },
             "minecraft:item_model": "lockdown:drone/normal",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -35,10 +37,29 @@
                 }
             },
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.code.no_code\",\"color\":\"red\",\"italic\":false}",
-                "{\"translate\":\"item.lockdown.turret.mob_hint\",\"color\":\"green\",\"italic\":false}"
+                {
+                    "translate": "item.lockdown.code.no_code",
+                    "color": "red",
+                    "italic": false
+                },
+                {
+                    "translate": "item.lockdown.turret.mob_hint",
+                    "color": "green",
+                    "italic": false
+                }
             ],
-            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.drone\"]}"
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "data": {
+                    "lockdown_data": {
+                        "channel": 0
+                    },
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.drone"
+                    ]
+                }
+            }
         }
     }
 }

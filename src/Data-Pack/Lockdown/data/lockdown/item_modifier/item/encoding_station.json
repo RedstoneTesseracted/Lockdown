@@ -2,7 +2,9 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.encoding_station\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.encoding_station"
+            },
             "minecraft:item_model": "lockdown:machine/encoding_station",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -10,7 +12,13 @@
                     "configure": true
                 }
             },
-            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.encoder\"]}"
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.encoder"
+                ]
+            }
         }
     },
     {

@@ -28,14 +28,19 @@ name_colors = {
 # Load regular keycard as a template
 with open('white_button.json', mode='r') as rf:
     template = json.load(rf)
-    default_entity_data = template['result']['components']['minecraft:entity_data']
+    color_tag_idx = template['result']['components']['minecraft:entity_data']['Tags'].index('lockdown.color.white')
 
 # Generate all variants
 for name, code in name_colors.items():
     template['key']['t'][0] = f'minecraft:{name}_concrete'
-    template['result']['components']['minecraft:item_name'] = '{"translate":"item.lockdown.big_button_' + name + '","fallback":"Big ' + " ".join(map(str.capitalize, name.split('_'))) + ' Button","color":"' + code + '"}'
+    template['result']['components']['minecraft:item_name'] = {
+        "translate": "item.lockdown.big_button_" + name,
+        "fallback": "Big " + " ".join(map(str.capitalize, name.split('_'))) + " Button",
+        "color": str(code)
+    }
     template['result']['components']['minecraft:item_model'] = f'lockdown:button/{name}_button_off'
     template['result']['components']['minecraft:custom_data']["lockdown_data"]["name"] = name + '_big_button'
-    template['result']['components']['minecraft:entity_data'] = default_entity_data.replace('white', name)
+    template['result']['components']['minecraft:entity_data']['Tags'][color_tag_idx] = f'lockdown.color.{name}'
+    
     with open(f'{name}_button.json', mode='w') as wf:
         json.dump(template, wf, indent=4)

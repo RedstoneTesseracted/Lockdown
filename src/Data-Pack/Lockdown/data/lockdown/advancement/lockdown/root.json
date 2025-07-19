@@ -12,7 +12,7 @@
             "translate": "advancement.lockdown.root.description",
             "fallback": "Welcome to Lockdown, the datapack for all your security needs!"
         },
-        "background": "lockdown:textures/gui/advancements/backgrounds/iron_block.png",
+        "background": "lockdown:gui/advancements/backgrounds/iron_block",
         "show_toast": true,
         "announce_to_chat": true
     },

@@ -17,7 +17,7 @@ scoreboard players set lockdown.candidate_id lockdown.local 0
 execute store result score lockdown.result lockdown.local run function lockdown:items/upgrade/mark_nearby_candidates with storage lockdown:temp args
 
 # mark_nearby_candidates should NEVER return a zero (if it does, it means the function macro has broken)
-execute unless score lockdown.result lockdown.local matches 1 run title @s actionbar {"translate": "lockdown.messages.bug.macro.generic", "fallback": "If you can read this, something has gone wrong with %1$s", "color": "red", "with": [{"text": "lockdown:items/upgrade/mark_nearby_candidates","underlined": false, "color": "gray"}]}
+execute unless score lockdown.result lockdown.local matches 1 run title @s actionbar {translate: "lockdown.messages.bug.macro.generic", fallback: "If you can read this, something has gone wrong with %1$s", color: "red", with: [{text: "lockdown:items/upgrade/mark_nearby_candidates",underlined: false, color: "gray"}]}
 
 # Check all possible candidates
 tag @s add lockdown.context

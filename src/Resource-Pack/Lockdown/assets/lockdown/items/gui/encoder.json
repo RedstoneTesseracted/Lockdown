@@ -2,5 +2,6 @@
     "model": {
         "type": "minecraft:model",
         "model": "lockdown:gui/encoder"
-    }
+    },
+	"oversized_in_gui": true
 }

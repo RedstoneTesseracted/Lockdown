@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:machine/defense_drone"
+                "minecraft:item_model": "lockdown:drone/normal"
             }
         },
         "frame": "task",

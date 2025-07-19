@@ -20,7 +20,9 @@
     "result": {
         "id": "minecraft:carrot_on_a_stick",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.upgrade.durability\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.upgrade.durability"
+            },
             "minecraft:item_model": "lockdown:durability_upgrade",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -38,11 +40,33 @@
             "minecraft:max_stack_size": 16,
             "minecraft:rarity": "common",
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.upgrade.durability.hint\",\"color\":\"light_purple\",\"italic\":false}",
-                "\"\"",
-                "{\"translate\":\"item.lockdown.upgrade.lore_header\",\"color\":\"gray\",\"italic\":false}",
-                "[\" \",{\"translate\":\"item.lockdown.drone\",\"color\":\"green\",\"italic\":false}]",
-                "[\" \",{\"translate\":\"item.lockdown.turret\",\"color\":\"green\",\"italic\":false}]"
+                {
+                    "translate":"item.lockdown.upgrade.durability.hint",
+                    "color":"light_purple",
+                    "italic":false
+                },
+                "",
+                {
+                    "translate":"item.lockdown.upgrade.lore_header",
+                    "color":"gray",
+                    "italic":false
+                },
+                [
+                    " ",
+                    {
+                        "translate":"item.lockdown.drone",
+                        "color":"green",
+                        "italic":false
+                    }
+                ],
+                [
+                    " ",
+                    {
+                        "translate":"item.lockdown.turret",
+                        "color":"green",
+                        "italic":false
+                    }
+                ]
             ]
         }
     }

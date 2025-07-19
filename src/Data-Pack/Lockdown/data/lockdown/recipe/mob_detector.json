@@ -26,14 +26,22 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.mob_detector\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.mob_detector"
+            },
             "minecraft:item_model": "lockdown:machine/mob_detector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "mob_detector"
                 }
             },
-            "minecraft:entity_data": "{id:\"minecraft:marker\",Tags:[\"lockdown.placer\",\"lockdown.placer.mob_detector\"]}"
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.mob_detector"
+                ]
+            }
         }
     }
 }

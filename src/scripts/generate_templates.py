@@ -86,7 +86,8 @@ def generate_items():
 
 def generate_item_modifiers():
     """
-    Generates all item modifiers used to set the components for a lockdown item
+    Generates all item modifiers used to set the components for a lockdown item.
+    The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
     """
     with open(path.join('templates', 'item_modifier_template.json'), mode='r') as rf:
         raw_template = rf.read()

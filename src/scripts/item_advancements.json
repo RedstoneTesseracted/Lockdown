@@ -36,7 +36,7 @@
         }
     },
     "drone": {
-        "item": "lockdown:machine/defense_drone",
+        "item": "lockdown:drone/normal",
         "parent": "lockdown:lockdown/encoder",
         "condition": {
             "name": "drone"
@@ -121,7 +121,7 @@
         }
     },
     "turret": {
-        "item": "lockdown:machine/turret",
+        "item": "lockdown:turret/item",
         "parent": "lockdown:lockdown/encoder",
         "condition": {
             "name": "turret"

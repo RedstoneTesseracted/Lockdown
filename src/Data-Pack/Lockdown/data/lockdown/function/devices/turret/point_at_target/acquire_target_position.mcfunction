@@ -22,7 +22,7 @@ scoreboard players operation lockdown.x lockdown.local += lockdown.cx lockdown.l
 scoreboard players operation lockdown.y lockdown.local += lockdown.cy lockdown.local
 scoreboard players operation lockdown.z lockdown.local += lockdown.cz lockdown.local
 
-#title @a actionbar [{"text":"X: "},{"score": {"name": "lockdown.x","objective": "lockdown.local"}},{"text":", Y: "},{"score": {"name": "lockdown.y","objective": "lockdown.local"}},{"text":", Z: "},{"score": {"name": "lockdown.z","objective": "lockdown.local"}}]
+#title @a actionbar [{text:"X: "},{"score": {"name": "lockdown.x","objective": "lockdown.local"}},{text:", Y: "},{"score": {"name": "lockdown.y","objective": "lockdown.local"}},{text:", Z: "},{"score": {"name": "lockdown.z","objective": "lockdown.local"}}]
 
 # Transfer to storage for later use with function macros
 data modify storage lockdown:temp turret.pos set value {x: 0.0d, y: 0.0d, z: 0.0d}

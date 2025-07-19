@@ -30,7 +30,10 @@
     "result": {
         "id": "minecraft:paper",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.keycard_red\",\"fallback\":\"Red Keycard\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.keycard_red",
+                "fallback": "Red Keycard"
+            },
             "minecraft:item_model": "lockdown:keycard",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -42,11 +45,17 @@
             "minecraft:max_stack_size": 1,
             "minecraft:rarity": "rare",
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.code.no_code\",\"color\":\"red\",\"italic\":false}"
+                {
+                    "translate": "item.lockdown.code.no_code",
+                    "color": "red",
+                    "italic": false
+                }
             ],
-            "minecraft:dyed_color": {
-                "rgb": 10174271,
-                "show_in_tooltip": false
+            "minecraft:dyed_color": 10174271,
+            "minecraft:tooltip_display": {
+                "hidden_components": [
+                    "minecraft:dyed_color"
+                ]
             }
         }
     }

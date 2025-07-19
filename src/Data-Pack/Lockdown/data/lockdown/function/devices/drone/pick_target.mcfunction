@@ -24,4 +24,4 @@ data modify storage lockdown:temp args.z set from entity @s Pos[2]
 # Report the existence of a bug if the function macro in "pick_at_tower" fails to compile
 execute store result storage lockdown:temp args.channel int 1 run scoreboard players get @s lockdown.channel
 execute store result score lockdown.macro_status lockdown.local run function lockdown:devices/drone/pick_target/pick_at_tower with storage lockdown:temp args
-execute unless score lockdown.macro_status lockdown.local matches 1 run title @p actionbar {"translate": "lockdown.messages.bug.macro.generic","color": "red","with": [{"text":"lockdown:devices/drone/pick_target/pick_at_tower","color": "gray", "underlined": true}]}
+execute unless score lockdown.macro_status lockdown.local matches 1 run title @p actionbar {translate: "lockdown.messages.bug.macro.generic",color: "red",with: [{text:"lockdown:devices/drone/pick_target/pick_at_tower",color: "gray", underlined: true}]}

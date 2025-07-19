@@ -26,7 +26,9 @@
     "result": {
         "id": "minecraft:pig_spawn_egg",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.wireless_transmitter\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.wireless_transmitter"
+            },
             "minecraft:item_model": "lockdown:machine/transmitter_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -34,9 +36,24 @@
                     "encodable": true
                 }
             },
-            "minecraft:entity_data": "{id:\"minecraft:marker\",data:{lockdown_data:{channel:0}},Tags:[\"lockdown.placer\",\"lockdown.placer.wireless_transmitter\"]}",
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "data": {
+                    "lockdown_data": {
+                        "channel": 0
+                    }
+                },
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.wireless_transmitter"
+                ]
+            },
             "minecraft:lore": [
-                "{\"translate\":\"lockdown.channel.no_channel\",\"color\":\"red\",\"italic\":false}"
+                {
+                    "translate": "lockdown.channel.no_channel",
+                    "color": "red",
+                    "italic": false
+                }
             ]
         }
     }

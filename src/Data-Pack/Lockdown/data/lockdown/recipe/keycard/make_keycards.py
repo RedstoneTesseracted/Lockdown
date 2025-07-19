@@ -32,9 +32,17 @@ with open('keycard.json', mode='r') as rf:
 
 # Generate all variants
 for name, color in colors.items():
-    template['result']['components']['minecraft:dyed_color'] = {'rgb': color, 'show_in_tooltip': False}
+    template['result']['components']['minecraft:dyed_color'] = color
+    template['result']['components']['minecraft:tooltip_display'] = {
+        "hidden_components": [
+            "minecraft:dyed_color"
+        ]
+    }
     template['key']['e'][0] = f'minecraft:{name}_dye'
-    template['result']['components']['minecraft:item_name'] = '{"translate":"item.lockdown.keycard_' + name + '","fallback":"' + " ".join(map(str.capitalize, name.split('_'))) + ' Keycard"}'
+    template['result']['components']['minecraft:item_name'] = {
+            "translate": "item.lockdown.keycard_" + name,
+            "fallback": " ".join(map(str.capitalize, name.split('_'))) + " Keycard"
+        }
     template['result']['components']['minecraft:custom_data']["lockdown_data"]["name"] = name + '_keycard'
     with open(f'{name}_keycard.json', mode='w') as wf:
         json.dump(template, wf, indent=4)

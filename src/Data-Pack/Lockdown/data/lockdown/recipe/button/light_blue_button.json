@@ -18,7 +18,11 @@
     "result": {
         "id": "minecraft:item_frame",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.big_button_light_blue\",\"color\":\"blue\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.big_button_light_blue",
+                "fallback": "Big Light Blue Button",
+                "color": "blue"
+            },
             "minecraft:item_model": "lockdown:button/light_blue_button_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -28,9 +32,34 @@
                 }
             },
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.channel.no_channel\",\"color\":\"red\",\"italic\":false}"
+                {
+                    "translate": "item.lockdown.channel.no_channel",
+                    "color": "red",
+                    "italic": false
+                }
             ],
-            "minecraft:entity_data": "{id:\"minecraft:item_frame\",Tags:[\"lockdown.placer\",\"lockdown.placer.big_button\",\"lockdown.color.light_blue\"],Item:{id:\"minecraft:paper\",components:{\"minecraft:custom_data\": {lockdown_data: {channel: 0}}, \"minecraft:item_model\":\"lockdown:invisible\"}},Invisible:1b,CustomName:'\"If you can read this, something has gone wrong\"',CustomNameVisible:1b}"
+            "minecraft:entity_data": {
+                "id": "minecraft:item_frame",
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.big_button",
+                    "lockdown.color.light_blue"
+                ],
+                "Item": {
+                    "id": "minecraft:paper",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "lockdown_data": {
+                                "channel": 0
+                            }
+                        },
+                        "minecraft:item_model": "lockdown:invisible"
+                    }
+                },
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
+            }
         }
     }
 }

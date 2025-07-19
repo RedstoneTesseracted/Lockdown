@@ -2,7 +2,9 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:item_name": "{\"translate\":\"item.lockdown.turret\"}",
+            "minecraft:item_name": {
+                "translate": "item.lockdown.turret"
+            },
             "minecraft:item_model": "lockdown:turret/item",
             "minecraft:custom_data": {
                 "lockdown_data": {
@@ -12,10 +14,34 @@
                 }
             },
             "minecraft:lore": [
-                "{\"translate\":\"item.lockdown.code.no_code\",\"color\":\"red\",\"italic\":false}",
-                "{\"translate\":\"item.lockdown.turret.mob_hint\",\"color\":\"green\",\"italic\":false}"
+                {
+                    "translate": "item.lockdown.code.no_code",
+                    "color": "red",
+                    "italic": false
+                },
+                {
+                    "translate": "item.lockdown.turret.mob_hint",
+                    "color": "green",
+                    "italic": false
+                }
             ],
-            "minecraft:entity_data": "{id:\"minecraft:item_frame\",Item:{id:\"minecraft:paper\",components:{\"minecraft:custom_data\":{lockdown_data:{channel: 0}}}},Tags:[\"lockdown.placer\",\"lockdown.placer.turret\"]}"
+            "minecraft:entity_data": {
+                "id": "minecraft:item_frame",
+                "Item": {
+                    "id": "minecraft:paper",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "lockdown_data": {
+                                "channel": 0
+                            }
+                        }
+                    }
+                },
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.turret"
+                ]
+            }
         }
     },
     {

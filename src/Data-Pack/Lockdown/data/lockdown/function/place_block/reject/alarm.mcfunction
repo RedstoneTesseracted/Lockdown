@@ -1,7 +1,7 @@
 # Run when a lockdown device CANNOT be placed in a spot.  Handles re-spawning the item
 # Run BY and AT the placer entity
 
-$title @a[tag=lockdown.placer.source] actionbar {"translate": "$(msg)","color": "red"}
+$title @a[tag=lockdown.placer.source] actionbar {translate: "$(msg)",color: "red"}
 
 # Play effects
 execute align xyz run particle minecraft:block{block_state:{Name:"minecraft:iron_block"}} ~0.5 ~0.5 ~0.5 0.25 0.25 0.25 1 20
