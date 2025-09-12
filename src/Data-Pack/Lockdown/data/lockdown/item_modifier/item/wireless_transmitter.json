@@ -27,7 +27,7 @@
             },
             "minecraft:lore": [
                 {
-                    "translate": "lockdown.channel.no_channel",
+                    "translate": "item.lockdown.channel.no_channel",
                     "color": "red",
                     "italic": false
                 }
