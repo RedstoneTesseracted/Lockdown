@@ -13,8 +13,8 @@ execute on passengers if entity @s[tag=lockdown.laser_projector.beam] store resu
 
 # Run function macro for all the distance-dependent stuff
 data modify storage lockdown:temp args set value {range: 0, dx: 0.0, dy: 0.0, dz: 0.0, damage: 1}
-execute if entity @s[tag=lockdown.direction.up] store result storage lockdown:temp args.dy float 1 run scoreboard players get lockdown.range lockdown.local
-execute if entity @s[tag=lockdown.direction.down] store result storage lockdown:temp args.dy float -1 run scoreboard players get lockdown.range lockdown.local
+execute if entity @s[tag=lockdown.direction.up] store result storage lockdown:temp args.dy float -1 run scoreboard players get lockdown.range lockdown.local
+execute if entity @s[tag=lockdown.direction.down] store result storage lockdown:temp args.dy float 1 run scoreboard players get lockdown.range lockdown.local
 execute if entity @s[tag=lockdown.direction.north] store result storage lockdown:temp args.dz float -1 run scoreboard players get lockdown.range lockdown.local
 execute if entity @s[tag=lockdown.direction.south] store result storage lockdown:temp args.dz float 1 run scoreboard players get lockdown.range lockdown.local
 execute if entity @s[tag=lockdown.direction.east] store result storage lockdown:temp args.dx float 1 run scoreboard players get lockdown.range lockdown.local
