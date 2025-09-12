@@ -168,6 +168,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | ---------------------------------------------- | ------------ |
 | Wireless transmitter/receiver                  |      ✅      |
 | Block placement                                |      ❌      |
+| Block placement when obstructed                |      ❌      |
 | Block breaking                                 |      ❌      |
 | Loot table consistency                         |      ❌      |
 | Legacy block upgrading                         |      ❌      |
@@ -175,7 +176,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Encoding (assign channel)                      |      ✅      |
 | Force field projector                          |      ✅      |
 | Laser projector range                          |      ✅      |
-| Laser projector damage                         |      ❌      |
+| Laser projector damage                         |      ✅      |
 | Keycards & keycard readers                     |      ❌      |
 | Keycards & drones                              |      ❌      |
 | Keycards & turrets                             |      ❌      |
@@ -194,8 +195,25 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Applying drone control tower upgrade           |      ❌      |
 | Drone targeting and firing                     |      ❌      |
 | Turret targeting and firing                    |      ❌      |
-| Chest key                                      |      ❌      |
+| Chest key                                      |      ❓      |
 | Encoder dispensing prevention                  |      ❌      |
+
+Block placement tests need to exist for the following devices:
+* Keycard reader
+* Alarm
+* Bug button
+* Drone
+* Player detector
+* Mob detector
+* Klaxon
+* Laser projector
+* Wireless transmitter
+* Wireless receiver
+* Force field projector
+* Turret
+* Encoder
+* Control tower
+
 
 
 Tests not covered under the GameTest system:
@@ -204,5 +222,6 @@ Tests not covered under the GameTest system:
 | Static code analysis                           |      ❌      |
 | Data pack load errors                          |      ❌      |
 | Resource pack load errors                      |      ❌      |
-| JSON text resolution errors                    |      ❌      |
+| Translation key existence checks               |      ✅      |
+| JSON text resolution errors                    |      ❓      |
 
