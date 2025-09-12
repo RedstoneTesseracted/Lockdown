@@ -180,13 +180,17 @@ def generate_code_channel_string_identifier():
                 continue
 
             # Determine whether this should say "code" or "channel"
-            if 'lockdown.channel.no_channel' in lore_data[0]:
-                return_code = 0
+            return_code = None
+            for lore_line in lore_data:
+                #if not isinstance(lore_line, dict): continue
+                if lore_line.get('translate') == 'item.lockdown.channel.no_channel':
+                    return_code = 0
+                    break
+                elif lore_line.get('translate') == 'item.lockdown.code.no_code':
+                    return_code = 1
+                    break
 
-            elif 'lockdown.code.no_code' in lore_data[0]:
-                return_code = 1
-
-            else:
+            if return_code is None:
                 continue
 
             # Determine whether this is by group or by name
