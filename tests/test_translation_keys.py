@@ -8,6 +8,7 @@ import pytest
 from json import load
 import os
 from os import path
+from typing import Union
 
 
 # Commonly re-used variables
@@ -19,23 +20,31 @@ en_us_path = path.join(lang_dir, 'en_us.json')
 
 
 
-def recursive_key_find(dictionary: dict, search_key: str) -> list:
+def recursive_key_find(searchable: Union[dict, list], search_key: str) -> list:
     """
-    Recursively searches for all entries with the given key within a dictionary.
+    Recursively searches for all entries with the given key within a nested dictionary/list.
 
     Arguments:
-        dictionary (dict): Dictionary to search
+        searchable (Union[dict, list]): Nested list/dictionary to search
         search_key (str): Key to search for
 
     Returns:
         (list): List of all values found for a key 
     """
     result = []
-    for key, value in dictionary.items():
-        if key == search_key:
-            result.append(value)
-        elif hasattr(value, 'items'):
-            result += recursive_key_find(value, search_key)
+
+    if hasattr(searchable, 'items'):
+        for key, value in searchable.items():
+            if key == search_key:
+                result.append(value)
+            else:
+                result += recursive_key_find(value, search_key)
+
+    elif hasattr(searchable, '__iter__'):
+        for entry in searchable:
+            if entry is searchable: continue
+            result += recursive_key_find(entry, search_key)
+    
     return result
 
 
@@ -66,13 +75,18 @@ def test_recipes_reference_existing_keys():
         keys = set(load(rf).keys())
 
     # Check the output of every recipe file
+    actually_did_anything = False
     for dirpath, dirnames, filenames in os.walk(recipes_dir):
         for file in filenames:
-            if path.splitext(file)[-1] != 'json': continue
+            if path.splitext(file)[-1] != '.json': continue
             with open(path.join(dirpath, file), mode='r') as rf:
                 recipe = load(rf)
             components = recipe['result'].get('components')
+            
             if components is None: continue
             for value in recursive_key_find(components, 'translate'):
                 assert value in keys, f'Recipe {file} referenced missing key: {value}'
+                actually_did_anything = True
+
+    assert actually_did_anything, "No actual checks were performed?"
     
