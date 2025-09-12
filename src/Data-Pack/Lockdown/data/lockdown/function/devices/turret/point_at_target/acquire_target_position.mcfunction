@@ -1,6 +1,7 @@
 # Acquire's the target's position relative to the turret's own coordinate system
 
 # Obtain target position relative to non-rotated frame
+# A scale factor of 70 is chosen to increase precision while avoiding integer over/underflows within the standard world border
 execute store result score lockdown.cx lockdown.local run data get entity @s Pos[0] 70.0
 execute store result score lockdown.cy lockdown.local run data get entity @s Pos[1] 70.0
 execute store result score lockdown.cz lockdown.local run data get entity @s Pos[2] 70.0
@@ -24,7 +25,7 @@ scoreboard players operation lockdown.z lockdown.local += lockdown.cz lockdown.l
 
 #title @a actionbar [{text:"X: "},{"score": {"name": "lockdown.x","objective": "lockdown.local"}},{text:", Y: "},{"score": {"name": "lockdown.y","objective": "lockdown.local"}},{text:", Z: "},{"score": {"name": "lockdown.z","objective": "lockdown.local"}}]
 
-# Transfer to storage for later use with function macros
+# Transfer to storage for later use with function macros (note: we undo the multiplication by 70, since we're switching double-supporting storage)
 data modify storage lockdown:temp turret.pos set value {x: 0.0d, y: 0.0d, z: 0.0d}
 execute store result storage lockdown:temp turret.pos.x double 0.014285714285714285 run scoreboard players get lockdown.x lockdown.local
 execute store result storage lockdown:temp turret.pos.y double 0.014285714285714285 run scoreboard players get lockdown.y lockdown.local
