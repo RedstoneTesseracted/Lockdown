@@ -1,0 +1,26 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "minecraft:redstone_lamp",
+                    "state": {
+                        "lit": "true"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{item:{components:{\"minecraft:item_model\": \"lockdown:machine/laser_projector_on\"}}}",
+                "passenger": {
+                    "nbt": "{transformation:{scale:[1.0f,1.0f,2.0f]}}"
+                }
+            }
+        }
+    ]
+}

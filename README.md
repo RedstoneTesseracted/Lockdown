@@ -160,4 +160,49 @@ These features existed prior to the 1.21.4 update due to technical limitations. 
 * Secure recipe book
 
 
+# Test Coverage
+
+A list of all mechanics that should be tested using the [GameTest](https://minecraft.wiki/w/GameTest) system:
+
+|                   Test Name                    | Implemented? |
+| ---------------------------------------------- | ------------ |
+| Wireless transmitter/receiver                  |      ✅      |
+| Block placement                                |      ❌      |
+| Block breaking                                 |      ❌      |
+| Loot table consistency                         |      ❌      |
+| Legacy block upgrading                         |      ❌      |
+| Encoding (assign code)                         |      ✅      |
+| Encoding (assign channel)                      |      ✅      |
+| Force field projector                          |      ✅      |
+| Laser projector range                          |      ✅      |
+| Laser projector damage                         |      ❌      |
+| Keycards & keycard readers                     |      ❌      |
+| Keycards & drones                              |      ❌      |
+| Keycards & turrets                             |      ❌      |
+| Klaxon                                         |      ❌      |
+| Wireless alarm lights                          |      ❌      |
+| Player detector (ignore mobs, detect players)  |      ✅      |
+| Mob detector (ignore technical entities)       |      ✅      |
+| Big buttons (clickable, wireless transmission) |      ❌      |
+| Range upgrades on drones                       |      ❌      |
+| Range upgrades on turrets                      |      ❌      |
+| Durability upgrades on drones                  |      ❌      |
+| Durability upgrades on turrets                 |      ❌      |
+| Flamethrower upgrades on drones                |      ❌      |
+| Flamethrower upgrades on turrets               |      ❌      |
+| Laser projectile motion                        |      ❌      |
+| Applying drone control tower upgrade           |      ❌      |
+| Drone targeting and firing                     |      ❌      |
+| Turret targeting and firing                    |      ❌      |
+| Chest key                                      |      ❌      |
+| Encoder dispensing prevention                  |      ❌      |
+
+
+Tests not covered under the GameTest system:
+|                   Test Name                    | Implemented? |
+| ---------------------------------------------- | ------------ |
+| Static code analysis                           |      ❌      |
+| Data pack load errors                          |      ❌      |
+| Resource pack load errors                      |      ❌      |
+| JSON text resolution errors                    |      ❌      |
 
