@@ -180,11 +180,11 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Keycards & keycard readers                     |      ❌      |
 | Keycards & drones                              |      ❌      |
 | Keycards & turrets                             |      ❌      |
-| Klaxon                                         |      ❌      |
-| Wireless alarm lights                          |      ❌      |
+| Klaxon                                         |      ✅      |
+| Wireless alarm lights                          |      ✅      |
 | Player detector (ignore mobs, detect players)  |      ✅      |
 | Mob detector (ignore technical entities)       |      ✅      |
-| Big buttons (clickable, wireless transmission) |      ❌      |
+| Big buttons (clickable, wireless transmission) |      ✅      |
 | Range upgrades on drones                       |      ❌      |
 | Range upgrades on turrets                      |      ❌      |
 | Durability upgrades on drones                  |      ❌      |
@@ -214,6 +214,51 @@ Block placement tests need to exist for the following devices:
 * ✔ Encoder (✔ inventory)
 * ✔ Control tower (channel)
 
+Block obstruction tests need to exist for the following:
+* Keycard reader
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * Requires channel
+* Alarm
+    * Prevent entity overlap (deny #lockdown:placement_blocking)
+    * Requires channel
+* Big button
+    * Prevent entity overlap (deny #lockdown:placement_blocking)
+* Drone
+    * Prevent entity overlap (deny #lockdown:placement_blocking)
+* Player detector
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Mob detector
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Klaxon
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Laser projector
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Wireless transmitter
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * Requires channel
+* Wireless receiver
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * Requires channel
+* Force field projector
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Turret
+    * Prevent entity overlap (deny #lockdown:placement_blocking)
+* Encoder
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* Control tower
+    * Prevent block overlap (allow #minecraft:replaceable)
+    * Prevent block overlap one block up (allow #minecraft:replaceable)
+    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * Requires channel
 
 
 Tests not covered under the GameTest system:
@@ -230,3 +275,4 @@ Tests not covered under the GameTest system:
 # Known Bugs
 
 * Devices broken due to invalid placement lose their assigned channel
+* Certain devices could feasibly be placed in the same position twice if done so on the same tick
