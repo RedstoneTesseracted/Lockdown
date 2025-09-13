@@ -1,4 +1,15 @@
 # Place a keycard reader block at current position
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: true
+# Block: minecraft:acacia_button
+# Entity: marker
+# Directions 4
+# Channels: true
+# Colors: false
+# Extra Parts:
+###### END INFO BLOCK ######
 
 # Requires enough room
 execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/keycard_reader"}

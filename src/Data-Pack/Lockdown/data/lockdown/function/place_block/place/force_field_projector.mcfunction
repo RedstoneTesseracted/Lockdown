@@ -1,4 +1,15 @@
 # Place a force field projector block at current position
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: true
+# Block: minecraft:note_block
+# Entity: marker
+# Directions 4
+# Channels: false
+# Colors: false
+# Extra Parts: lockdown.force_field_projector.shield
+###### END INFO BLOCK ######
 
 # Requires enough room
 execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/force_field_projector"}

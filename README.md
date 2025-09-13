@@ -167,7 +167,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 |                   Test Name                    | Implemented? |
 | ---------------------------------------------- | ------------ |
 | Wireless transmitter/receiver                  |      ✅      |
-| Block placement                                |      ❌      |
+| Block placement                                |      ⚠️      |
 | Block placement when obstructed                |      ❌      |
 | Block breaking                                 |      ❌      |
 | Loot table consistency                         |      ❌      |
@@ -199,20 +199,20 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Encoder dispensing prevention                  |      ❌      |
 
 Block placement tests need to exist for the following devices:
-* Keycard reader
-* Alarm
-* Bug button
-* Drone
-* Player detector
-* Mob detector
-* Klaxon
-* Laser projector
-* Wireless transmitter
-* Wireless receiver
-* Force field projector
-* Turret
-* Encoder
-* Control tower
+* ✔ Keycard reader (❌ multi-directional, ✔ channel)
+* ~ Alarm (❌ multi-directional, ✔ channel)
+* ~ Big button (❌ multi-directional, ✔ channel)
+* ✔ Drone (channel)
+* ✔ Player detector
+* ✔ Mob detector
+* ✔ Klaxon
+* ~ Laser projector (❌ multi-directional)
+* ✔ Wireless transmitter (channel)
+* ✔ Wireless receiver (channel)
+* ✔ Force field projector (❌ multi-directional)
+* ✔ Turret (multi-directional, channel)
+* ✔ Encoder (❌ inventory)
+* ✔ Control tower (channel)
 
 
 
@@ -225,3 +225,8 @@ Tests not covered under the GameTest system:
 | Translation key existence checks               |      ✅      |
 | JSON text resolution errors                    |      ❓      |
 
+
+
+# Known Bugs
+
+* Devices broken due to invalid placement lose their assigned channel

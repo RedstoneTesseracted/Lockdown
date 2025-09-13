@@ -1,11 +1,90 @@
 """
 This script is used to generate various advancement/loot table en-masse.
 It uses the contents of ./templates and data from several .json files to fill out said templates.
+
+Be warned, there's some
+   _____                   __         __  __  _
+  / ___/____  ____ _____ _/ /_  ___  / /_/ /_(_)
+  \__ \/ __ \/ __ `/ __ `/ __ \/ _ \/ __/ __/ /
+ ___/ / /_/ / /_/ / /_/ / / / /  __/ /_/ /_/ /
+/____/ .___/\__,_/\__, /_/ /_/\___/\__/\__/_/
+    /_/          /____/
+
 """
 from json import load, loads, dump
 import os
 from os import path
+import nbtlib
+from nbtlib import String, Compound
+import re
+from typing import Union
+import random
 
+
+def recursive_key_find(searchable: Union[dict, list], search_key: str) -> list:
+    """
+    Recursively searches for all entries with the given key within a nested dictionary/list.
+
+    Arguments:
+        searchable (Union[dict, list]): Nested list/dictionary to search
+        search_key (str): Key to search for
+
+    Returns:
+        (list): List of all values found for a key 
+    """
+    result = []
+
+    if hasattr(searchable, 'items'):
+        for key, value in searchable.items():
+            if key == search_key:
+                result.append(value)
+            else:
+                result += recursive_key_find(value, search_key)
+
+    elif hasattr(searchable, '__iter__'):
+        for entry in searchable:
+            if entry is searchable: continue
+            result += recursive_key_find(entry, search_key)
+    
+    return result
+
+
+def json_to_nbt(convertable) -> Compound:
+    """
+    Converts the JSON-compatible object to an NBT object
+
+    Arguments:
+        convertable: JSON-compatible dictionary to convert
+
+    Returns:
+        (Compound): Converted NBT object
+    """
+    if isinstance(convertable, int):
+        if -2**31 < convertable < 2**31-1:
+            return nbtlib.Int(convertable)
+        else:
+            return nbtlib.Long(convertable)
+
+    elif isinstance(convertable, str):
+        return String(convertable)
+
+    elif isinstance(convertable, float):
+        return nbtlib.Float(convertable)
+
+    elif isinstance(convertable, bool):
+        return nbtlib.Byte(convertable)
+
+    elif isinstance(convertable, dict):
+        result = Compound()
+        for key, value in convertable.items():
+            result[key] = json_to_nbt(value)
+        return result
+
+    elif isinstance(convertable, list) or isinstance(convertable, tuple):
+        return nbtlib.List([json_to_nbt(i) for i in convertable])
+
+    else:
+        raise TypeError(f"Unhandled data type '{type(convertable)}' when converting to NBT")
 
 
 def generate_item_advancements():
@@ -314,6 +393,214 @@ def generate_beam_models():
         dump(item_model_def, wf, indent=4)
 
 
+def generate_placer_tests():
+    """
+    Generates the structure files and test instance definitions for all placer tests.
+    
+    * lockdown:place_block/placer is checked to determine which devices need tests.
+    * The recipes directory is scanned to determine which attributes need to be tested.
+    """
+    # Declare paths used below
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    recipe_dir = path.join(datapack_dir, 'recipe')
+    function_dir = path.join(datapack_dir, 'function')
+    test_structure_placer_dir = path.join(datapack_dir, 'structure', 'test', 'placer')
+    test_instance_placer_dir = path.join(datapack_dir, 'test_instance', 'placer')
+
+    
+    def from_template(device: str, properties: dict):
+        """
+        Builds a device placer test structure
+
+        Arguments:
+            device (str): Name of device to be substituted into command blocks
+            properties (dict): Device properties table
+        """
+        # Choose which base structure to use and load it
+        if properties['channels']:
+            source_file = 'templates/placer_test_channel.snbt'
+        else:
+            source_file = 'templates/placer_test_basic.snbt'
+
+        with open(source_file, mode='r') as rf:
+            source_nbt = rf.read()
+        template = nbtlib.parse_nbt(source_nbt)
+
+        # Randomly pick a channel ID (even if it's not actually needed).
+        # Channels are chosen from the range [4096, 2147483647].  This is deliberately chosen
+        # to prevent conflicts with channels that could naturally exist within the world.
+        # Additionally, the device name is used as the seed to ensure consistency between
+        # subsequent runs.
+        random.seed(device)
+        channel = str(random.randint(4096, 2147483647))
+        
+        # Build the snbt of the summoned placer entity
+        summoned_nbt = json_to_nbt(properties['entity_data'])
+        if properties['channels']:
+            if properties['entity'] == 'minecraft:marker':
+                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            elif properties['entity'] == 'minecraft:item_frame':
+                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+
+        if properties['entity'] == 'minecraft:item_frame':
+            summoned_nbt['Facing'] = nbtlib.Byte(1)
+
+        # Replace templated strings in structure
+        for i, block in enumerate(template['blocks']):
+            command = block.get('nbt', {}).get('Command')
+            if command is None: continue
+            command = command.replace('<<T:DEVICE>>', device)
+            command = command.replace('<<T:BASE BLOCK>>', properties['block'])
+            if '<<T:SUMMON PLACER>>' in command:
+                command = f'/summon {properties["entity"]} ~1 ~ ~ ' + summoned_nbt.snbt()
+            
+            command = command.replace('<<T:CHANNEL>>', channel)
+            block['nbt']['Command'] = String(command)
+        return template
+
+    # Parse lockdown:place_block/placer to determine which devices need tests
+    devices = dict()
+    with open(path.join(function_dir, 'place_block', 'placer.mcfunction'), mode='r') as rf:
+        for line in rf.readlines():
+            matched = re.match('^execute if entity @s\[tag=lockdown\.placer\.([a-z_]+)\] run function lockdown:place_block/place/[a-z_]+', line)
+            if matched is None: continue
+            device = matched.groups()[0]
+            devices[device] = {
+                'block': 'minecraft:air',
+                'entity': 'unknown',
+                'directions': 0,
+                'channels': False,
+                'colors': False,
+                'extra_parts': [],
+                'special': False
+            }
+
+    # Use the info block header in the placer functions to obtain information about how each device is processed
+    for file in os.listdir(path.join(function_dir, 'place_block', 'place')):
+        device, ext = path.splitext(file)
+        if ext != '.mcfunction': continue
+        if device not in devices: continue
+
+        # Each placer function contains a commented header listing information for us to parse here
+        in_info_block = False
+        with open(path.join(function_dir, 'place_block', 'place', file), mode='r') as rf:
+            for line in rf.readlines():
+                # Enter/exit header
+                if line.startswith('##') and 'BEGIN INFO BLOCK' in line:
+                    in_info_block = True
+                elif line.startswith('##') and 'END INFO BLOCK' in line:
+                    in_info_block = False
+                    break
+
+                # Parse header fields
+                if in_info_block:
+                    line = line.strip('#').strip()
+                    if line.startswith('>'): continue
+                    key, sep, value = line.partition(':')
+                    if sep != ':': continue
+                    # Reformat key (case-insenitive, underscores instead of spaces)
+                    key = key.lower()
+                    key = key.replace(' ', '_')
+                    if key == 'solid': continue
+                    
+                    value = value.strip()
+                    if key in devices[device]:
+                        if key == 'extra_parts':
+                            value = [i.strip() for i in value.split(',')]
+                        if type(devices[device][key]) == bool:
+                            value = value.lower() == 'true'
+                        else:
+                            value = type(devices[device][key])(value)
+                        devices[device][key] = value
+                    else:
+                        raise Exception(f"Unrecognized info block key: {key}")
+    
+    # Some devices come in multiple colors, so the placer will not have a name-matching recipe.
+    # In such cases, we'll just default to "red"
+    #colorful_devices = [i for i, j in devices.items() if j['colors']]
+    #for device in colorful_devices:
+    #    devices['red_' + device] = devices.pop(device)
+
+    # There's a few devices whose name doesn't match the recipe name
+    recipe_to_device = dict((i, i) for i in devices.keys())
+    #device_to_recipe['encoder'] = 'encoding_station'
+    #device_to_recipe['big_button'] = 'button'
+    recipe_to_device['encoding_station'] = 'encoder'
+    recipe_to_device['red_button'] = 'big_button'
+    recipe_to_device['red_alarm'] = 'alarm'
+    
+    # "found_recipe" is used as a sanity check to ensure we haven't missed the recipe for any placers
+    # It's set here to prevent it from being writable above
+    for device, properties in devices.items():
+        properties['found_recipe'] = False
+
+##    # Scan the placer function to obtain information about each device once placed
+##    for file in os.listdir(path.join(function_dir, 'place_block', 'place')):
+##        device, ext = path.splitext(file)
+##        if ext != '.mcfunction': continue
+##        if device not in devices: continue
+##        already_found_setblock = False
+##        with open(path.join(function_dir, 'place_block', 'place', file), mode='r') as rf:
+##            for line in rf.readlines():
+##                # Locate the /setblock command to determine what block to use
+##                if line.startswith('setblock ~ ~ ~ minecraft:'):
+##                    if already_found_setblock:
+##                        raise Exception(f"Multiple /setblock commands in {file}: cannot determine base block")
+##                    devices[device]['block'] = line.strip()[len('setblock ~ ~ ~ '):]
+
+    # Scan recipes to obtain default entity data
+    for dirpath, dirnames, filenames in os.walk(recipe_dir):
+        for file in filenames:
+            recipe_name = path.splitext(file)[0]
+            
+            if path.splitext(file)[-1] != '.json': continue            # Ignore non-JSON files
+            #if recipe_name not in device_to_recipe.values(): continue  # Ignore recipes with no matching placer
+            if recipe_name not in recipe_to_device: continue  # Ignore recipes with no matching placer
+            device = recipe_to_device[recipe_name]
+            devices[device]['found_recipe'] = True
+            
+            with open(path.join(dirpath, file), mode='r') as rf:
+                recipe = load(rf)
+
+            # Convert JSON-formatted data to NBT format
+            entity_data = recipe['result'].get('components', {}).get('minecraft:entity_data')
+            if entity_data is None: continue
+            entity_id = entity_data.pop('id')
+            # Sanity check
+            assert entity_id.partition(':')[-1] == devices[device]['entity'], f"Mismatched entity between info recipe and header for device \"{device}\" ({entity_id.partition(':')[-1]} != {devices[device]['entity']})"
+            devices[device]['entity'] = entity_id
+            devices[device]['entity_data'] = entity_data
+
+    # Make sure recipes were found for ALL devices
+    for device, properties in devices.items():
+        assert properties['found_recipe'], f'No recipe was found for {device}'
+
+    # Generate files for each placer unit test
+    for device, properties in devices.items():
+        # Generate appropriate structure file
+        nbt_data = from_template(device, properties)
+        nbtlib.File(nbt_data, gzipped=True).save(path.join(test_structure_placer_dir, f'{device}.nbt'))
+        
+        # Generate test instance file
+        test_instance = {
+            "type": "block_based",
+            "environment": "minecraft:default",
+            "structure": f"lockdown:test/placer/{device}",
+            "max_attempts": 1,
+            "max_ticks": 20,
+            "sky_access": False,
+            "manual_only": False,
+            "required_successes": 1,
+            "setup_ticks": 0,
+            "rotation": "none",
+            "required": True
+        }
+        with open(path.join(test_instance_placer_dir, f'{device}.json'), mode='w') as wf:
+            dump(test_instance, wf, indent=4)
+            
+            
+
+
 def main():
     os.chdir(path.split(__file__)[0])
     generate_item_advancements()
@@ -322,6 +609,7 @@ def main():
     generate_universal_destroyer()
     generate_code_channel_string_identifier()
     generate_beam_models()
+    generate_placer_tests()
 
 
 if __name__ == "__main__":

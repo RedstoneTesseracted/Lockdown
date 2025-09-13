@@ -1,6 +1,15 @@
 # Place the big button block at current position
-# * Directional (check item frame for direction)
-# * Not solid
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: true
+# Block: minecraft:acacia_button
+# Entity: item_frame
+# Directions 6
+# Channels: true
+# Colors: true
+# Extra Parts:
+###### END INFO BLOCK ######
 
 # Prevent overlap with an existing entity
 execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/big_button {msg: "lockdown.placer.reject.not_enough_space"}

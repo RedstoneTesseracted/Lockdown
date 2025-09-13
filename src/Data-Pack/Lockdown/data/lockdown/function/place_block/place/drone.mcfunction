@@ -6,6 +6,18 @@
 # Entity Composition:
 #   * Bee (hitbox)
 #   * Drone item display (root entity) (mounted to bee)
+#
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: false
+# Entity: marker
+# Directions 0
+# Channels: true
+# Colors: false
+# Extra Parts: lockdown.block.hitbox
+###### END INFO BLOCK ######
+
 
 # Prevent overlap with an existing entity
 execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/turret"}

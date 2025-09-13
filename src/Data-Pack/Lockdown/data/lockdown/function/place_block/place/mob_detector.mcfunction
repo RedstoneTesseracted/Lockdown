@@ -1,4 +1,15 @@
 # Place a mob detector block at current position
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: true
+# Block: minecraft:red_terracotta
+# Entity: marker
+# Directions 0
+# Channels: false
+# Colors: false
+# Extra Parts:
+###### END INFO BLOCK ######
 
 # Requires enough room
 execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/mob_detector"}

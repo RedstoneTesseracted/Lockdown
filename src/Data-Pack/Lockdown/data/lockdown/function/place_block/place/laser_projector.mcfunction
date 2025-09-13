@@ -1,4 +1,15 @@
 # Place a laser projector block at current position
+##### BEGIN INFO BLOCK #####
+# > WARNING: This block is used by generate_templates.py to fill in certain details
+# > when automatically generating the device placer unit tests.  Change it with caution!
+# Solid: true
+# Block: minecraft:redstone_lamp
+# Entity: item_frame
+# Directions 6
+# Channels: false
+# Colors: false
+# Extra Parts: lockdown.laser_projector.beam
+###### END INFO BLOCK ######
 
 # Requires enough room
 execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/laser_projector"}

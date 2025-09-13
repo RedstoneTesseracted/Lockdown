@@ -30,12 +30,12 @@
                 "data": {
                     "lockdown_data": {
                         "channel": 0
-                    },
-                    "Tags": [
-                        "lockdown.placer",
-                        "lockdown.drone"
-                    ]
-                }
+                    }
+                },
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.drone"
+                ]
             }
         }
     },
