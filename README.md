@@ -192,7 +192,8 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Flamethrower upgrades on drones                |      ❌      |
 | Flamethrower upgrades on turrets               |      ❌      |
 | Laser projectile motion                        |      ❌      |
-| Applying drone control tower upgrade           |      ❌      |
+| Drones and control towers                      |      ❌      |
+| Applying drone/turret upgrades                 |      ❓      |
 | Drone targeting and firing                     |      ❌      |
 | Turret targeting and firing                    |      ❌      |
 | Chest key                                      |      ❓      |
