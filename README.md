@@ -196,7 +196,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Drone targeting and firing                     |      ❌      |
 | Turret targeting and firing                    |      ❌      |
 | Chest key                                      |      ❓      |
-| Encoder dispensing prevention                  |      ❌      |
+| Encoder dispensing prevention                  |      ✅      |
 
 Block placement tests need to exist for the following devices:
 * ✔ Keycard reader (❌ multi-directional, ✔ channel)
