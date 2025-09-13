@@ -1,0 +1,23 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "minecraft:note_block",
+                    "state": {
+                        "powered": "true"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"lockdown.powered\"],item:{components:{\"minecraft:item_model\": \"lockdown:machine/klaxon_on\"}}}"
+            }
+        }
+    ]
+}
