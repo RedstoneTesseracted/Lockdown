@@ -12,7 +12,7 @@
 ###### END INFO BLOCK ######
 
 # Prevent overlap with an existing entity
-execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:placement_blocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/big_button {msg: "lockdown.placer.reject.not_enough_space"}
+execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:blocks_nonsolid_placement,tag=!lockdown.placer] run return run function lockdown:place_block/reject/big_button {msg: "lockdown.placer.reject.not_enough_space"}
 
 # Play effects
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0

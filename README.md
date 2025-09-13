@@ -221,12 +221,12 @@ Block obstruction tests need to exist for the following:
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
     * Requires channel
 * Alarm
-    * Prevent entity overlap (deny #lockdown:placement_blocking)
+    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
     * Requires channel
 * Big button
-    * Prevent entity overlap (deny #lockdown:placement_blocking)
+    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * Drone
-    * Prevent entity overlap (deny #lockdown:placement_blocking)
+    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * Player detector
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
@@ -251,7 +251,7 @@ Block obstruction tests need to exist for the following:
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
 * Turret
-    * Prevent entity overlap (deny #lockdown:placement_blocking)
+    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * Encoder
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
