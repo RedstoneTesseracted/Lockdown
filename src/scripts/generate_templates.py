@@ -409,6 +409,103 @@ def generate_beam_models():
         dump(item_model_def, wf, indent=4)
 
 
+def generate_grouped_loot_tables():
+    """
+    Generates a loot tables for various groups of items
+    """
+    # Declare paths used below
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    loot_table_dir = path.join(datapack_dir, 'loot_table')
+    item_loot_table_dir = path.join(loot_table_dir, 'item')
+
+    # This set is used as a sanity check to ensure we don't miss any items
+    accounted_for = set()
+
+    def add_reference(loot_table, reference):
+        loot_table['pools'].append({
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": reference.removesuffix('.json')
+                }
+            ]
+        })
+
+    def classify_loot_table(loot_table):
+        # Upgrades end with "_upgrade.json"
+        if loot_table.endswith("_upgrade.json"):
+            return 'upgrade'
+
+        # Anything else we need to open and check
+        with open(loot_table, mode='r') as rf:
+            data = load(rf)
+        try:
+            entry = data['pools'][0]['entries'][0]
+            if entry['type'] != 'minecraft:item': return 'other'
+            if entry['name'] in ('minecraft:item_frame', 'minecraft:pig_spawn_egg'):
+                return 'placeable'
+            else:
+                return 'item'
+        except (KeyError, TypeError):
+            return 'other'
+
+    # Generate grouped loot tables for alarms, buttons, and keycards
+    explicit_groups = ('alarm', 'button', 'keycard')
+    for group in explicit_groups:
+        result = {'pools': []}
+        for entry in os.listdir(path.join(item_loot_table_dir, group)):
+            if path.splitext(entry)[-1] != '.json': continue
+            accounted_for.add(path.join(group, entry))
+            add_reference(result, f"lockdown:item/{group}/{entry}")
+
+        # Write the loot table for this group
+        with open(path.join(loot_table_dir, 'cheat', group.removesuffix('s') + 's.json'), mode='w') as wf:
+            dump(result, wf, indent=4)
+
+    # Generate loot table for other groups:
+    #   * Upgrades
+    #   * Placeable miscellaneous items (machines)
+    #   * Non-placeable miscellaneous items (tools)
+    upgrades = {'pools': []}
+    machines = {'pools': []}
+    tools = {'pools': []}
+    for dirpath, dirnames, filenames in os.walk(item_loot_table_dir):
+        subdir = dirpath.removeprefix(item_loot_table_dir).removeprefix(path.sep)
+        if subdir in explicit_groups: continue
+        for file in filenames:
+            if path.splitext(file)[-1] != '.json': continue
+            loot_table = 'lockdown:' + path.join('item', subdir, file.removesuffix('.json')).replace(path.sep, '/')
+            accounted_for.add(path.join(subdir, file))
+
+            # Loot tables related to upgrades end in "_upgrade"
+            loot_table_type = classify_loot_table(path.join(dirpath, file))
+            match loot_table_type:
+                case 'upgrade':
+                    add_reference(upgrades, loot_table)
+                case 'placeable':
+                    add_reference(machines, loot_table)
+                case 'item':
+                    add_reference(tools, loot_table)
+                case 'other':
+                    pass
+
+    with open(path.join(loot_table_dir, 'cheat', 'upgrades.json'), mode='w') as wf:
+        dump(upgrades, wf, indent=4)
+
+    with open(path.join(loot_table_dir, 'cheat', 'machines.json'), mode='w') as wf:
+        dump(machines, wf, indent=4)
+
+    with open(path.join(loot_table_dir, 'cheat', 'tools.json'), mode='w') as wf:
+        dump(tools, wf, indent=4)
+
+    # Make sure we didn't miss anything
+    for dirpath, dirnames, filenames in os.walk(item_loot_table_dir):
+        for file in filenames:
+            relative_path = path.join(dirpath.removeprefix(item_loot_table_dir).removeprefix(path.sep), file)
+            assert relative_path in accounted_for, f'{relative_path} missing from list of accounted-for files'
+    
+
 def generate_placer_tests():
     """
     Generates the structure files and test instance definitions for all placer tests.
@@ -609,6 +706,7 @@ def main():
     generate_universal_destroyer()
     generate_code_channel_string_identifier()
     generate_beam_models()
+    generate_grouped_loot_tables()
     generate_placer_tests()
 
 
