@@ -170,7 +170,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Block placement                                |      ⚠️      |
 | Block placement when obstructed                |      ❌      |
 | Block breaking                                 |      ❌      |
-| Loot table consistency                         |      ❌      |
+| Loot table consistency                         |      ✅      |
 | Legacy block upgrading                         |      ❌      |
 | Encoding (assign code)                         |      ✅      |
 | Encoding (assign channel)                      |      ✅      |

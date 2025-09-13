@@ -8,45 +8,7 @@ import pytest
 from json import load
 import os
 from os import path
-from typing import Union
-
-
-# Commonly re-used variables
-resource_pack_dir = path.join('src', 'Resource-Pack')
-data_pack_dir = path.join('src', 'Data-Pack')
-recipes_dir = path.join(data_pack_dir, 'Lockdown', 'data', 'lockdown', 'recipe')
-item_modifiers_dir = path.join(data_pack_dir, 'Lockdown', 'data', 'lockdown', 'item_modifier')
-lang_dir = path.join(resource_pack_dir, 'Lockdown', 'assets', 'minecraft', 'lang')
-en_us_path = path.join(lang_dir, 'en_us.json')
-
-
-
-def recursive_key_find(searchable: Union[dict, list], search_key: str) -> list:
-    """
-    Recursively searches for all entries with the given key within a nested dictionary/list.
-
-    Arguments:
-        searchable (Union[dict, list]): Nested list/dictionary to search
-        search_key (str): Key to search for
-
-    Returns:
-        (list): List of all values found for a key 
-    """
-    result = []
-
-    if hasattr(searchable, 'items'):
-        for key, value in searchable.items():
-            if key == search_key:
-                result.append(value)
-            else:
-                result += recursive_key_find(value, search_key)
-
-    elif hasattr(searchable, '__iter__'):
-        for entry in searchable:
-            if entry is searchable: continue
-            result += recursive_key_find(entry, search_key)
-    
-    return result
+from common import recipes_dir, item_modifiers_dir, lang_dir, en_us_path, recursive_key_find
 
 
 
