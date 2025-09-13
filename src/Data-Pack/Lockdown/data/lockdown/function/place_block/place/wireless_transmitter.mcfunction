@@ -9,6 +9,7 @@
 # Channels: true
 # Colors: false
 # Extra Parts:
+# Placement Rules: requires_channel, solid_block_placement
 ###### END INFO BLOCK ######
 
 # Requires enough room
@@ -23,7 +24,7 @@ execute unless score lockdown.channel lockdown.local matches 1.. run return run 
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 
 # Set base block
-setblock ~ ~ ~ minecraft:redstone_lamp
+setblock ~ ~ ~ minecraft:redstone_lamp destroy
 
 # Summon display entity
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.wireless_transmitter", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/transmitter_off"}}}

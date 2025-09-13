@@ -10,6 +10,7 @@
 # Colors: false
 # Extra Parts:
 # Special: true
+# Placement Rules: solid_block_placement
 ###### END INFO BLOCK ######
 
 # Requires enough room
@@ -20,7 +21,7 @@ execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=!#lockdown:strict_pla
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 
 # Set base block
-setblock ~ ~ ~ minecraft:dropper[facing=up]{CustomName:{translate: "gui.lockdown.encoder.name"}}
+setblock ~ ~ ~ minecraft:dropper[facing=up]{CustomName:{translate: "gui.lockdown.encoder.name"}} destroy
 function lockdown:devices/encoder/restore_gui
 
 # Summon display entity

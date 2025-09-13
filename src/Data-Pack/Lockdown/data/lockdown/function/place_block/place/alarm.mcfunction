@@ -8,6 +8,7 @@
 # Channels: true
 # Colors: true
 # Extra Parts: lockdown.alarm.glow
+# Placement Rules: requires_channel, nonsolid_entity_placement
 ###### END INFO BLOCK ######
 
 # * Directional (check item frame for direction)

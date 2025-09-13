@@ -9,6 +9,7 @@
 # Channels: true
 # Colors: true
 # Extra Parts:
+# Placement Rules: nonsolid_entity_placement
 ###### END INFO BLOCK ######
 
 # Prevent overlap with an existing entity
@@ -40,12 +41,12 @@ execute if score lockdown.direction lockdown.local matches 5 align xyz run summo
 function lockdown:place_block/place/colored_common
 
 # Place block based on direction
-execute if score lockdown.direction lockdown.local matches 0 run setblock ~ ~ ~ minecraft:acacia_button[face=ceiling,powered=false]
-execute if score lockdown.direction lockdown.local matches 1 run setblock ~ ~ ~ minecraft:acacia_button[face=floor,powered=false]
-execute if score lockdown.direction lockdown.local matches 2 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=north]
-execute if score lockdown.direction lockdown.local matches 3 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=south]
-execute if score lockdown.direction lockdown.local matches 4 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=west]
-execute if score lockdown.direction lockdown.local matches 5 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=east]
+execute if score lockdown.direction lockdown.local matches 0 run setblock ~ ~ ~ minecraft:acacia_button[face=ceiling,powered=false] destroy
+execute if score lockdown.direction lockdown.local matches 1 run setblock ~ ~ ~ minecraft:acacia_button[face=floor,powered=false] destroy
+execute if score lockdown.direction lockdown.local matches 2 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=north] destroy
+execute if score lockdown.direction lockdown.local matches 3 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=south] destroy
+execute if score lockdown.direction lockdown.local matches 4 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=west] destroy
+execute if score lockdown.direction lockdown.local matches 5 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=east] destroy
 
 # This item may optionally have a channel assigned
 execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel

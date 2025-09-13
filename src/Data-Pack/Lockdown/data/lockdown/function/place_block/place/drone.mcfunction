@@ -16,6 +16,7 @@
 # Channels: true
 # Colors: false
 # Extra Parts: lockdown.block.hitbox
+# Placement Rules: nonsolid_entity_placement
 ###### END INFO BLOCK ######
 
 

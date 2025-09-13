@@ -20,6 +20,7 @@
 # Colors: false
 # Extra Parts: lockdown.turret.gantry, lockdown.turret.barrel, lockdown.turret.beam, lockdown.block.hitbox
 # Special: true
+# Placement Rules: nonsolid_entity_placement
 ###### END INFO BLOCK ######
 
 # Prevent overlap with an existing entity

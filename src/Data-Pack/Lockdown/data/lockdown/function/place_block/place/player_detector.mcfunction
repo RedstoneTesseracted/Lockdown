@@ -9,6 +9,7 @@
 # Channels: false
 # Colors: false
 # Extra Parts:
+# Placement Rules: solid_block_placement
 ###### END INFO BLOCK ######
 
 # Requires enough room
@@ -19,7 +20,7 @@ execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=!#lockdown:strict_pla
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 
 # Set base block
-setblock ~ ~ ~ minecraft:red_terracotta
+setblock ~ ~ ~ minecraft:red_terracotta destroy
 
 # Summon display entity
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{block: 15, sky: 15}, transformation:[1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.01f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.player_detector", "lockdown.block.root", "lockdown.block.display", "lockdown.block.root.new", "lockdown.block.display.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:machine/player_detector_off"}}}

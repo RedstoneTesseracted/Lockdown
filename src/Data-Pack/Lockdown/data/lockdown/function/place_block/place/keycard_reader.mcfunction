@@ -9,6 +9,7 @@
 # Channels: true
 # Colors: false
 # Extra Parts:
+# Placement Rules: requires_channel, solid_block_placement
 ###### END INFO BLOCK ######
 
 # Requires enough room
@@ -23,7 +24,7 @@ execute unless score lockdown.channel lockdown.local matches 1.. run return run 
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
 
 # Set base block
-setblock ~ ~ ~ minecraft:red_terracotta
+setblock ~ ~ ~ minecraft:red_terracotta destroy
 
 # Get direction based on source's direction
 execute store result score lockdown.direction lockdown.local run function lockdown:place_block/place/common_cardinal_direction
