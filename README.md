@@ -211,7 +211,7 @@ Block placement tests need to exist for the following devices:
 * ✔ Wireless receiver (channel)
 * ✔ Force field projector (❌ multi-directional)
 * ✔ Turret (multi-directional, channel)
-* ✔ Encoder (❌ inventory)
+* ✔ Encoder (✔ inventory)
 * ✔ Control tower (channel)
 
 

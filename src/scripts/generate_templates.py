@@ -87,6 +87,22 @@ def json_to_nbt(convertable) -> Compound:
         raise TypeError(f"Unhandled data type '{type(convertable)}' when converting to NBT")
 
 
+def same_unzipped_nbt(nbt_data: Compound, file_path: str) -> bool:
+    """
+    Checks whether the unzipped NBT data in the target file is identical to the provided compound.
+    This is used to avoid updating files whose only difference is in the gzip header.
+
+    Arguments:
+        nbt_data (Compound): NBT compound to be checked
+        file_path (str): Path to gzipped NBT file to compare against
+
+    Returns:
+        (bool): Whether the actual, non-gzipped NBT contents are identical
+    """
+    file_nbt = nbtlib.load(file_path, gzipped=True)
+    return nbt_data.snbt() == file_nbt.snbt()
+
+
 def generate_item_advancements():
     """
     Generate all the item-related advancements under the advancements/lockdown folder
@@ -514,17 +530,11 @@ def generate_placer_tests():
                         devices[device][key] = value
                     else:
                         raise Exception(f"Unrecognized info block key: {key}")
-    
-    # Some devices come in multiple colors, so the placer will not have a name-matching recipe.
-    # In such cases, we'll just default to "red"
-    #colorful_devices = [i for i, j in devices.items() if j['colors']]
-    #for device in colorful_devices:
-    #    devices['red_' + device] = devices.pop(device)
 
-    # There's a few devices whose name doesn't match the recipe name
+    # There's a few devices whose name doesn't match the recipe name.
+    # Additionally, big buttons and alarm lights come in multiple colors, and therefore
+    # don't have a singular recipe.  For those cases, we'll just default to "red"
     recipe_to_device = dict((i, i) for i in devices.keys())
-    #device_to_recipe['encoder'] = 'encoding_station'
-    #device_to_recipe['big_button'] = 'button'
     recipe_to_device['encoding_station'] = 'encoder'
     recipe_to_device['red_button'] = 'big_button'
     recipe_to_device['red_alarm'] = 'alarm'
@@ -534,27 +544,12 @@ def generate_placer_tests():
     for device, properties in devices.items():
         properties['found_recipe'] = False
 
-##    # Scan the placer function to obtain information about each device once placed
-##    for file in os.listdir(path.join(function_dir, 'place_block', 'place')):
-##        device, ext = path.splitext(file)
-##        if ext != '.mcfunction': continue
-##        if device not in devices: continue
-##        already_found_setblock = False
-##        with open(path.join(function_dir, 'place_block', 'place', file), mode='r') as rf:
-##            for line in rf.readlines():
-##                # Locate the /setblock command to determine what block to use
-##                if line.startswith('setblock ~ ~ ~ minecraft:'):
-##                    if already_found_setblock:
-##                        raise Exception(f"Multiple /setblock commands in {file}: cannot determine base block")
-##                    devices[device]['block'] = line.strip()[len('setblock ~ ~ ~ '):]
-
     # Scan recipes to obtain default entity data
     for dirpath, dirnames, filenames in os.walk(recipe_dir):
         for file in filenames:
             recipe_name = path.splitext(file)[0]
             
-            if path.splitext(file)[-1] != '.json': continue            # Ignore non-JSON files
-            #if recipe_name not in device_to_recipe.values(): continue  # Ignore recipes with no matching placer
+            if path.splitext(file)[-1] != '.json': continue   # Ignore non-JSON files
             if recipe_name not in recipe_to_device: continue  # Ignore recipes with no matching placer
             device = recipe_to_device[recipe_name]
             devices[device]['found_recipe'] = True
@@ -579,7 +574,11 @@ def generate_placer_tests():
     for device, properties in devices.items():
         # Generate appropriate structure file
         nbt_data = from_template(device, properties)
-        nbtlib.File(nbt_data, gzipped=True).save(path.join(test_structure_placer_dir, f'{device}.nbt'))
+
+        # Avoid updating structure files whose only difference is the "last updated" timestamp in the header
+        placer_structure_file = path.join(test_structure_placer_dir, f'{device}.nbt')
+        if not path.exists(placer_structure_file) or not same_unzipped_nbt(nbt_data, placer_structure_file):
+            nbtlib.File(nbt_data, gzipped=True).save(path.join(test_structure_placer_dir, f'{device}.nbt'))
         
         # Generate test instance file
         test_instance = {
