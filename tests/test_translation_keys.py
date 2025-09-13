@@ -15,6 +15,7 @@ from typing import Union
 resource_pack_dir = path.join('src', 'Resource-Pack')
 data_pack_dir = path.join('src', 'Data-Pack')
 recipes_dir = path.join(data_pack_dir, 'Lockdown', 'data', 'lockdown', 'recipe')
+item_modifiers_dir = path.join(data_pack_dir, 'Lockdown', 'data', 'lockdown', 'item_modifier')
 lang_dir = path.join(resource_pack_dir, 'Lockdown', 'assets', 'minecraft', 'lang')
 en_us_path = path.join(lang_dir, 'en_us.json')
 
@@ -88,5 +89,28 @@ def test_recipes_reference_existing_keys():
                 assert value in keys, f'Recipe {file} referenced missing key: {value}'
                 actually_did_anything = True
 
-    assert actually_did_anything, "No actual checks were performed?"
-    
+    assert actually_did_anything, "No actual recipe checks were performed?"
+
+
+def test_item_modifiers_reference_existing_keys():
+    """
+    Confirm that all item modifiers reference translation keys that actually exist
+    """
+    # Load en_us as a reference
+    with open(en_us_path, mode='r') as rf:
+        keys = set(load(rf).keys())
+
+    # Check all item modifiers
+    actually_did_anything = False
+    for dirpath, dirnames, filenames in os.walk(item_modifiers_dir):
+        for file in filenames:
+            if path.splitext(file)[-1] != '.json': continue
+            with open(path.join(dirpath, file), mode='r') as rf:
+                item_modifier = load(rf)
+            
+            for value in recursive_key_find(item_modifier, 'translate'):
+                assert value in keys, f'Item modifier {file} referenced missing key: {value}'
+                actually_did_anything = True
+
+    assert actually_did_anything, "No actual item modifier checks were performed?"
+
