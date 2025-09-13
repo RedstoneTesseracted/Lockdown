@@ -414,7 +414,8 @@ def generate_placer_tests():
     Generates the structure files and test instance definitions for all placer tests.
     
     * lockdown:place_block/placer is checked to determine which devices need tests.
-    * The recipes directory is scanned to determine which attributes need to be tested.
+    * lockdown:place_block/place/* are scanned to gather information about how device placement is processed.
+    * The recipes directory is scanned to obtain default entity data for placer entities.
     """
     # Declare paths used below
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
