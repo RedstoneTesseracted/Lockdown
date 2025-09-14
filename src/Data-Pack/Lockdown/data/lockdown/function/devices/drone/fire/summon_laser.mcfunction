@@ -19,7 +19,8 @@ attribute @s minecraft:gravity base set 0.0
 attribute @s minecraft:scale base set 0.12658227848101264
 
 # Rotate to face target
-rotate @s facing entity @e[tag=lockdown.drone.target,limit=1] eyes
+rotate @s facing entity @e[tag=lockdown.drone.target,limit=1] feet
+rotate @s ~ ~-1
 
 # Obtain vector from drone to target - we use this as the motion vector
 execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^0.5 summon minecraft:marker run function lockdown:devices/drone/fire/store_vector
