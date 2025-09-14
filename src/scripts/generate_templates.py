@@ -641,6 +641,12 @@ def generate_placer_tests():
             elif properties['entity'] == 'minecraft:item_frame':
                 dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
+        if properties['entity'] == 'minecraft:item_frame':
+            assert 'id' not in dropped_item_nbt['components']['minecraft:entity_data']
+            dropped_item_nbt['components']['minecraft:entity_data']['id'] = String('minecraft:item_frame')
+            dropped_item_nbt['components']['minecraft:entity_data']['Invisible'] = nbtlib.Byte(dropped_item_nbt['components']['minecraft:entity_data']['Invisible'])
+            dropped_item_nbt['components']['minecraft:entity_data']['CustomNameVisible'] = nbtlib.Byte(dropped_item_nbt['components']['minecraft:entity_data']['CustomNameVisible'])
+
         # Activate subtests according to placement rules.
         # We do this by replacing stained glass blocks with regular glass.
         # The glass blocks are then replaced with redstone blocks during
