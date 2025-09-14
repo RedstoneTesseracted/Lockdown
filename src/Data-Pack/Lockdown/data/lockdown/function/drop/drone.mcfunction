@@ -14,5 +14,8 @@ execute store result entity @n[tag=lockdown.item.configure] Item.components."min
 execute if score lockdown.channel lockdown.local matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_code_lore
 execute if score lockdown.channel lockdown.local matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_code_lore
 
+# Randomize motion
+execute as @n[tag=lockdown.item.configure] run function lockdown:drop/util/set_random_motion
+
 # Unmark dropped item for configuration
 tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
