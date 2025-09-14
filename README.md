@@ -276,4 +276,5 @@ Tests not covered under the GameTest system:
 
 # Known Bugs
 
-* Certain devices could feasibly be placed in the same position twice if done so on the same tick
+* Certain devices could feasibly be placed in the same position twice if done so on the same tick.
+* For devices with channels, the item obtained from the recipe does not stack with the item obtained when broken.  This is due to JSON not distinguishing between different numeric types.  As a result, Minecraft decides to use a `Byte` when interpreting the channel ID, when it should be an `Int`.  In previous versions, this wasn't an issue, as Minecraft didn't *force* you to use JSON for NBT in recipes.
