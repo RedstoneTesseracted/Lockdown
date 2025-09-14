@@ -256,9 +256,9 @@ Block obstruction tests need to exist for the following:
 * ✔ Encoder
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Control tower
+* ❌ Control tower
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent block overlap one block up (allow #minecraft:replaceable)
+    * ❌ Prevent block overlap one block up (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
     * ✔ Requires channel
 
