@@ -262,6 +262,22 @@ Block obstruction tests need to exist for the following:
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
     * ✔ Requires channel
 
+Block destruction tests need to exist for the following:
+* Keycard reader (block-based)
+* Alarm (interaction-based)
+* Big button (block-based)
+* Drone (entity-based)
+* Player detector (block-based)
+* Mob detector (block-based)
+* Klaxon (block-based)
+* Laser projector (block-based)
+* Wireless transmitter (block-based)
+* Wireless receiver (block-based)
+* Force field projector (block-based)
+* Turret (entity-based)
+* Encoder (block-based)
+* Control tower (block-based, two-block height)
+
 
 Tests not covered under the GameTest system:
 |                   Test Name                    | Implemented? |
