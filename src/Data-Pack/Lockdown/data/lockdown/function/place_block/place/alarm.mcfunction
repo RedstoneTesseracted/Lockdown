@@ -19,7 +19,7 @@ execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:blocks_nons
 
 # Requires channel
 execute store result score lockdown.channel lockdown.local run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
-execute unless score lockdown.channel lockdown.local matches 1.. run return run function lockdown:place_block/reject/alarm {msg: "lockdown.placer.reject.no_channel", loot: "lockdown:item/keycard_reader"}
+execute unless score lockdown.channel lockdown.local matches 1.. run return run function lockdown:place_block/reject/alarm {msg: "lockdown.placer.reject.no_channel"}
 
 # Play effects
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0

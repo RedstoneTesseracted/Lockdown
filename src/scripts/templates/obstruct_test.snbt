@@ -1027,7 +1027,7 @@
         }, 
         {
             pos: [0, 10, 3], 
-            state: 9
+            state: 11
         }, 
         {
             pos: [0, 10, 4], 
@@ -1047,7 +1047,7 @@
         }, 
         {
             pos: [1, 10, 4], 
-            state: 9
+            state: 11
         }, 
         {
             pos: [2, 10, 0], 
@@ -1131,11 +1131,7 @@
         }, 
         {
             pos: [0, 11, 3], 
-            state: 9
-        }, 
-        {
-            pos: [0, 11, 4], 
-            state: 9
+            state: 10
         }, 
         {
             pos: [1, 11, 0], 
@@ -1154,10 +1150,6 @@
             state: 9
         }, 
         {
-            pos: [1, 11, 4], 
-            state: 9
-        }, 
-        {
             pos: [2, 11, 0], 
             state: 13
         }, 
@@ -1168,14 +1160,6 @@
         {
             pos: [2, 11, 2], 
             state: 15
-        }, 
-        {
-            pos: [2, 11, 3], 
-            state: 9
-        }, 
-        {
-            pos: [2, 11, 4], 
-            state: 9
         }, 
         {
             pos: [3, 11, 1], 
@@ -2179,6 +2163,60 @@
         }, 
         {
             nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute positioned ~ ~-12 ~-4 if entity @e[dx=6,dy=12,dz=5,type=minecraft:item,predicate=lockdown:item_has_configure_flag]", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [0, 11, 4], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [1, 11, 4], 
+            state: 26
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Configure Flag", "Removed", ""]
+                }
+            }, 
+            pos: [2, 11, 3], 
+            state: 27
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: "Some dropped items for <<T:DEVICE>> retained configure flag"
+            }, 
+            pos: [2, 11, 4], 
+            state: 24
+        }, 
+        {
+            nbt: {
                 mode: "accept", 
                 components: {}, 
                 powered: 0b, 
@@ -2186,7 +2224,7 @@
                 message: "All obstruction tests passed!"
             }, 
             pos: [3, 11, 0], 
-            state: 26
+            state: 28
         }, 
         {
             nbt: {
@@ -2195,13 +2233,14 @@
                 components: {}, 
                 powered: 0b, 
                 Command: "execute positioned ~-5 ~-12 ~-2 as @e[dx=6,dy=12,dz=5,type=minecraft:item] run data modify entity @s Motion set value [0.0d,0.0d,0.0d]", 
+                LastExecution: 31574040L, 
                 id: "minecraft:command_block", 
                 SuccessCount: 0, 
                 TrackOutput: 1b, 
                 UpdateLastExecution: 1b
             }, 
             pos: [5, 11, 2], 
-            state: 27
+            state: 29
         }
     ], 
     palette: [
@@ -2356,6 +2395,21 @@
             Properties: {
                 waterlogged: "false", 
                 facing: "south"
+            }, 
+            Name: "minecraft:oak_wall_sign"
+        }, 
+        {
+            Properties: {
+                mode: "compare", 
+                powered: "false", 
+                facing: "west"
+            }, 
+            Name: "minecraft:comparator"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false", 
+                facing: "north"
             }, 
             Name: "minecraft:oak_wall_sign"
         }, 

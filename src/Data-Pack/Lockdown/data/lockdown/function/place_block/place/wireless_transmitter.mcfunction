@@ -13,12 +13,12 @@
 ###### END INFO BLOCK ######
 
 # Requires enough room
-execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/wireless_transmitter"}
-execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=!#lockdown:strict_placement_nonblocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:item/wireless_transmitter"}
+execute unless block ~ ~ ~ #minecraft:replaceable run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:drop/wireless_transmitter"}
+execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=!#lockdown:strict_placement_nonblocking,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", loot: "lockdown:drop/wireless_transmitter"}
 
 # Requires channel
 execute store result score lockdown.channel lockdown.local run data get entity @s data.lockdown_data.channel
-execute unless score lockdown.channel lockdown.local matches 1.. run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.no_channel", loot: "lockdown:item/wireless_transmitter"}
+execute unless score lockdown.channel lockdown.local matches 1.. run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.no_channel", loot: "lockdown:drop/wireless_transmitter"}
 
 # Play effects
 playsound minecraft:block.stone.place block @a ~ ~ ~ 1.0 1.0
