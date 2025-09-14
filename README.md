@@ -168,7 +168,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | ---------------------------------------------- | ------------ |
 | Wireless transmitter/receiver                  |      ✅      |
 | Block placement                                |      ⚠️      |
-| Block placement when obstructed                |      ❌      |
+| Block placement when obstructed                |      ✅      |
 | Block breaking                                 |      ❌      |
 | Loot table consistency                         |      ✅      |
 | Legacy block upgrading                         |      ❌      |
