@@ -177,9 +177,9 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Force field projector                          |      ✅      |
 | Laser projector range                          |      ✅      |
 | Laser projector damage                         |      ✅      |
-| Keycards & keycard readers                     |      ❌      |
-| Keycards & drones                              |      ❌      |
-| Keycards & turrets                             |      ❌      |
+| Keycards & keycard readers                     |      ❓      |
+| Keycards & drones                              |      ❓      |
+| Keycards & turrets                             |      ❓      |
 | Klaxon                                         |      ✅      |
 | Wireless alarm lights                          |      ✅      |
 | Player detector (ignore mobs, detect players)  |      ✅      |
@@ -191,29 +191,30 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Durability upgrades on turrets                 |      ❌      |
 | Flamethrower upgrades on drones                |      ❌      |
 | Flamethrower upgrades on turrets               |      ❌      |
-| Laser projectile motion                        |      ❌      |
-| Drones and control towers                      |      ❌      |
 | Applying drone/turret upgrades                 |      ❓      |
 | Drone targeting and firing                     |      ❌      |
+| Drone targeting and firing w/ control towers   |      ❌      |
 | Turret targeting and firing                    |      ❌      |
 | Chest key                                      |      ❓      |
 | Encoder dispensing prevention                  |      ✅      |
+
+> **Note**: Tests marked with "❓" involve a feature that *requires* player interaction.  As such, I'm not yet sure how to implement automated tests for them.
 
 Block placement tests need to exist for the following devices:
 * ✔ Keycard reader (❌ multi-directional, ✔ channel)
 * ~ Alarm (❌ multi-directional, ✔ channel)
 * ~ Big button (❌ multi-directional, ✔ channel)
-* ✔ Drone (channel)
+* ✔ Drone (✔ channel)
 * ✔ Player detector
 * ✔ Mob detector
 * ✔ Klaxon
 * ~ Laser projector (❌ multi-directional)
-* ✔ Wireless transmitter (channel)
-* ✔ Wireless receiver (channel)
+* ✔ Wireless transmitter (✔ channel)
+* ✔ Wireless receiver (✔ channel)
 * ✔ Force field projector (❌ multi-directional)
-* ✔ Turret (multi-directional, channel)
+* ✔ Turret (multi-directional, ✔ channel)
 * ✔ Encoder (✔ inventory)
-* ✔ Control tower (channel)
+* ✔ Control tower (✔ channel)
 
 Block obstruction tests need to exist for the following:
 * Keycard reader
