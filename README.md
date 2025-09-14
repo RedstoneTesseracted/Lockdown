@@ -30,6 +30,7 @@ Below is a table of all planned features currently (re)implemented
 | Laser blaster                 |   ❌   |
 | Key                           |   ✅   |
 | BFG 8000                      |   ❌   |
+| Legacy machine migration      |   ❌   |
 
 
 ## Redstone wireless transmitter
@@ -295,3 +296,4 @@ Tests not covered under the GameTest system:
 # Known Bugs
 
 * Certain devices could feasibly be placed in the same position twice if done so on the same tick.
+* It is possible to apply most placeable devices to spawners
