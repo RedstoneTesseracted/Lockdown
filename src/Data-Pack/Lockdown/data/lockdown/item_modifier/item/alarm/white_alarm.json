@@ -10,8 +10,7 @@
                 "lockdown_data": {
                     "name": "white_alarm",
                     "group": "alarms",
-                    "encodable": true,
-                    "configure": true
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

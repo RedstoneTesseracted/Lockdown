@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/mob_detector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "mob_detector",
-                    "configure": true
+                    "name": "mob_detector"
                 }
             },
             "minecraft:entity_data": {

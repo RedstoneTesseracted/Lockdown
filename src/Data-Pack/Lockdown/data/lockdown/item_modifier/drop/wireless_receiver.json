@@ -1,0 +1,41 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.wireless_receiver"
+            },
+            "minecraft:item_model": "lockdown:machine/receiver_off",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "wireless_receiver",
+                    "encodable": true,
+                    "configure": true
+                }
+            },
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "data": {
+                    "lockdown_data": {
+                        "channel": 0
+                    }
+                },
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.wireless_receiver"
+                ]
+            },
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.channel.no_channel",
+                    "color": "red",
+                    "italic": false
+                }
+            ]
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:pig_spawn_egg"
+    }
+]

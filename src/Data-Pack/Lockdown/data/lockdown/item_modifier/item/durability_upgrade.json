@@ -9,8 +9,7 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "durability_upgrade",
-                    "group": "upgrade",
-                    "configure": true
+                    "group": "upgrade"
                 }
             },
             "!minecraft:tool": {},

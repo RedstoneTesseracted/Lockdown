@@ -11,8 +11,7 @@
                 "lockdown_data": {
                     "name": "green_keycard",
                     "group": "keycards",
-                    "encodable": true,
-                    "configure": true
+                    "encodable": true
                 }
             },
             "minecraft:max_stack_size": 1,

@@ -9,8 +9,7 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "keycard_reader",
-                    "encodable": true,
-                    "configure": true
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

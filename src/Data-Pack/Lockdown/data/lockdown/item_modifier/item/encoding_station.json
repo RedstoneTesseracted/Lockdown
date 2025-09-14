@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/encoding_station",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "encoding_station",
-                    "configure": true
+                    "name": "encoding_station"
                 }
             },
             "minecraft:entity_data": {

@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/force_field_projector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "force_field_projector",
-                    "configure": true
+                    "name": "force_field_projector"
                 }
             },
             "minecraft:entity_data": {

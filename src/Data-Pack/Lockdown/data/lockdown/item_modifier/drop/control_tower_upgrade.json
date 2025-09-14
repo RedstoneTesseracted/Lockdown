@@ -1,0 +1,52 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.upgrade.control_tower"
+            },
+            "minecraft:item_model": "lockdown:control_tower_upgrade",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "control_tower_upgrade",
+                    "group": "upgrade",
+                    "configure": true
+                }
+            },
+            "!minecraft:tool": {},
+            "!minecraft:damage": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {},
+            "!minecraft:attribute_modifiers": {},
+            "minecraft:max_stack_size": 16,
+            "minecraft:rarity": "common",
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.upgrade.control_tower.hint",
+                    "color": "light_purple",
+                    "italic": false
+                },
+                "",
+                {
+                    "translate": "item.lockdown.upgrade.lore_header",
+                    "color": "gray",
+                    "italic": false
+                },
+                [
+                    " ",
+                    {
+                        "translate": "item.lockdown.drone",
+                        "color": "green",
+                        "italic": false
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:carrot_on_a_stick"
+    }
+]

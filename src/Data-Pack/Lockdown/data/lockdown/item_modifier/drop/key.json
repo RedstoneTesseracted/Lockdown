@@ -1,0 +1,39 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.key"
+            },
+            "minecraft:item_model": "lockdown:key",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "key",
+                    "channel": 0,
+                    "encodable": true,
+                    "configure": true
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "uncommon",
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.code.no_code",
+                    "color": "red",
+                    "italic": false
+                }
+            ],
+            "!minecraft:tool": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:damage": {},
+            "!minecraft:attribute_modifiers": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {}
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:carrot_on_a_stick"
+    }
+]

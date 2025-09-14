@@ -9,8 +9,7 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "control_tower_upgrade",
-                    "group": "upgrade",
-                    "configure": true
+                    "group": "upgrade"
                 }
             },
             "!minecraft:tool": {},

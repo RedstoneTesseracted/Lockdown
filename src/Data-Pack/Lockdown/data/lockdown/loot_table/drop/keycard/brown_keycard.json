@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:reference",
+                            "name": "lockdown:drop/keycard/brown_keycard"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -9,8 +9,7 @@
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "wireless_receiver",
-                    "encodable": true,
-                    "configure": true
+                    "encodable": true
                 }
             },
             "minecraft:entity_data": {

@@ -169,8 +169,9 @@ def generate_item_advancements():
             dump(template, wf, indent=4)
 
 
-def generate_items():
+def _generate_items(variant):
     """
+    Used by generate_items and generate_item_drops to generate both the "item" loot tables and the "dropped item" loot tables.
     Substitutes item definitions into all places that need to have the correct item components.
     The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
     """
@@ -179,7 +180,7 @@ def generate_items():
 
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
-    loot_table_dir = path.join(datapack_dir, 'loot_table', 'item')
+    loot_table_dir = path.join(datapack_dir, 'loot_table', variant)
     for dirpath, dirnames, filenames in os.walk(recipe_dir):
         for file in filenames:
             # Skip non-JSON files
@@ -193,7 +194,7 @@ def generate_items():
 
             # Generate loot table that gives item
             item_modifier_path = path.join(dirpath.removeprefix(recipe_dir).removeprefix(path.sep), file)
-            item_modifier = 'lockdown:item/' + '/'.join(path.splitext(item_modifier_path)[0].split(path.sep))
+            item_modifier = f'lockdown:{variant}/' + '/'.join(path.splitext(item_modifier_path)[0].split(path.sep))
             template = loads(raw_template)
             template['pools'][0]["entries"][0]['name'] = base_id
             template['pools'][0]["entries"][0]['functions'][0]['name'] = item_modifier
@@ -206,8 +207,13 @@ def generate_items():
                 dump(template, wf, indent=4)
 
 
-def generate_item_modifiers():
+generate_items = lambda: _generate_items('item')
+generate_item_drops = lambda: _generate_items('drop')
+
+
+def _generate_item_modifiers(variant):
     """
+    Used by generate_item_modifiers and generate_dropped_item_modifiers to generate both the "regular" and "dropped" item modifiers
     Generates all item modifiers used to set the components for a lockdown item.
     The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
     """
@@ -216,7 +222,7 @@ def generate_item_modifiers():
 
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
-    item_modifier_dir = path.join(datapack_dir, 'item_modifier', 'item')
+    item_modifier_dir = path.join(datapack_dir, 'item_modifier', variant)
     for dirpath, dirnames, filenames in os.walk(recipe_dir):
         for file in filenames:
             # Skip non-JSON files
@@ -230,7 +236,8 @@ def generate_item_modifiers():
             components = data['result']['components']
 
             # Generate loot table that gives item
-            components['minecraft:custom_data']['lockdown_data']['configure'] = True
+            if variant == 'drop':
+                components['minecraft:custom_data']['lockdown_data']['configure'] = True
             template = loads(raw_template)
             template[0]['components'] = components
             template[1]['item'] = base_id
@@ -241,6 +248,10 @@ def generate_item_modifiers():
                 os.mkdir(item_modifier_path)
             with open(path.join(item_modifier_path, file), mode='w') as wf:
                 dump(template, wf, indent=4)
+
+
+generate_item_modifiers = lambda: _generate_item_modifiers('item')
+generate_dropped_item_modifiers = lambda: _generate_item_modifiers('drop')
 
 
 def generate_universal_destroyer():
@@ -827,6 +838,8 @@ def main():
     generate_item_advancements()
     generate_items()
     generate_item_modifiers()
+    generate_item_drops()
+    generate_dropped_item_modifiers()
     generate_universal_destroyer()
     generate_code_channel_string_identifier()
     generate_beam_models()

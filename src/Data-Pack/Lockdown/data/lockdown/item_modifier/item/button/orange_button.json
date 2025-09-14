@@ -12,8 +12,7 @@
                 "lockdown_data": {
                     "name": "orange_big_button",
                     "group": "buttons",
-                    "encodable": true,
-                    "configure": true
+                    "encodable": true
                 }
             },
             "minecraft:lore": [

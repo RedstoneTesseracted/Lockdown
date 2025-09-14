@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:reference",
+                            "name": "lockdown:drop/alarm/orange_alarm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/klaxon_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "klaxon",
-                    "configure": true
+                    "name": "klaxon"
                 }
             },
             "minecraft:entity_data": {

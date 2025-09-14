@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/laser_projector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "laser_projector",
-                    "configure": true
+                    "name": "laser_projector"
                 }
             },
             "minecraft:entity_data": {

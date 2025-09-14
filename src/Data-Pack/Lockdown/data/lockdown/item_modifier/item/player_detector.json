@@ -8,8 +8,7 @@
             "minecraft:item_model": "lockdown:machine/player_detector_off",
             "minecraft:custom_data": {
                 "lockdown_data": {
-                    "name": "player_detector",
-                    "configure": true
+                    "name": "player_detector"
                 }
             },
             "minecraft:entity_data": {
