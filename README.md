@@ -187,8 +187,8 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Big buttons (clickable, wireless transmission) |      ✅      |
 | Range upgrades on drones                       |      ❌      |
 | Range upgrades on turrets                      |      ❌      |
-| Durability upgrades on drones                  |      ❌      |
-| Durability upgrades on turrets                 |      ❌      |
+| Durability upgrades on drones                  |      ✅      |
+| Durability upgrades on turrets                 |      ✅      |
 | Flamethrower upgrades on drones                |      ❌      |
 | Flamethrower upgrades on turrets               |      ❌      |
 | Applying drone/turret upgrades                 |      ❓      |
