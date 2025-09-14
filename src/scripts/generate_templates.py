@@ -11,7 +11,7 @@ Be warned, there's some
     /_/          /____/
 
 """
-from json import load, loads, dump
+from json import load, loads, dump, dumps
 import os
 from os import path
 import nbtlib
@@ -59,7 +59,10 @@ def json_to_nbt(convertable) -> Compound:
     Returns:
         (Compound): Converted NBT object
     """
-    if isinstance(convertable, int):
+    if isinstance(convertable, bool):
+        return nbtlib.Byte(convertable)
+    
+    elif isinstance(convertable, int):
         if -2**31 < convertable < 2**31-1:
             return nbtlib.Int(convertable)
         else:
@@ -70,9 +73,6 @@ def json_to_nbt(convertable) -> Compound:
 
     elif isinstance(convertable, float):
         return nbtlib.Float(convertable)
-
-    elif isinstance(convertable, bool):
-        return nbtlib.Byte(convertable)
 
     elif isinstance(convertable, dict):
         result = Compound()
@@ -128,6 +128,20 @@ def read_snbt(file_path: str) -> Compound:
     with open(file_path, mode='r') as rf:
         snbt_data = rf.read()
     return nbtlib.parse_nbt(snbt_data)
+
+
+def dictcopy(dictionary: dict) -> dict:
+    """
+    Scuffed helper function that returns an independent copy of a dictionary
+
+    Arguments:
+        dictionary (dict): Dictionary to copy
+
+    Returns:
+        (dict): An independent copy of the supplied dictionary
+    """
+    return loads(dumps(dictionary))
+
 
 
 def generate_item_advancements():
@@ -542,7 +556,7 @@ def generate_grouped_loot_tables():
         for file in filenames:
             relative_path = path.join(dirpath.removeprefix(item_loot_table_dir).removeprefix(path.sep), file)
             assert relative_path in accounted_for, f'{relative_path} missing from list of accounted-for files'
-    
+
 
 def generate_placer_tests():
     """
@@ -646,17 +660,19 @@ def generate_placer_tests():
         dropped_item_nbt['count'] = nbtlib.Int(1)
         dropped_item_nbt_channelless['count'] = nbtlib.Int(1)
         if properties['channels']:
-            #dropped_item_nbt['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            # Update lore on item given channel/code
+            for lore in dropped_item_nbt['components'].get('minecraft:lore', []):
+                if lore.get('translate') == 'item.lockdown.code.no_code':
+                    lore['translate'] = String('item.lockdown.code.code')
+                    lore['color'] = String('green')
+                elif lore.get('translate') == 'item.lockdown.channel.no_channel':
+                    lore['translate'] = String('item.lockdown.channel.channel')
+                    lore['color'] = String('green')
+            # Set channel tag.  Path to tag varies depending on whether the placer is a marker or an item frame
             if properties['entity'] == 'minecraft:marker':
                 dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
             elif properties['entity'] == 'minecraft:item_frame':
                 dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-
-        if properties['entity'] == 'minecraft:item_frame':
-            assert 'id' not in dropped_item_nbt['components']['minecraft:entity_data']
-            dropped_item_nbt['components']['minecraft:entity_data']['id'] = String('minecraft:item_frame')
-            dropped_item_nbt['components']['minecraft:entity_data']['Invisible'] = nbtlib.Byte(dropped_item_nbt['components']['minecraft:entity_data']['Invisible'])
-            dropped_item_nbt['components']['minecraft:entity_data']['CustomNameVisible'] = nbtlib.Byte(dropped_item_nbt['components']['minecraft:entity_data']['CustomNameVisible'])
 
         # Activate subtests according to placement rules.
         # We do this by replacing stained glass blocks with regular glass.
@@ -790,6 +806,7 @@ def generate_placer_tests():
             # Convert JSON-formatted data to NBT format
             entity_data = recipe['result'].get('components', {}).get('minecraft:entity_data')
             if entity_data is None: continue
+            entity_data = dictcopy(entity_data)
             entity_id = entity_data.pop('id')
             # Sanity check
             assert entity_id.partition(':')[-1] == devices[device]['entity'], f"Mismatched entity between info recipe and header for device \"{device}\" ({entity_id.partition(':')[-1]} != {devices[device]['entity']})"
@@ -838,8 +855,8 @@ def main():
     generate_item_advancements()
     generate_items()
     generate_item_modifiers()
-    generate_item_drops()
-    generate_dropped_item_modifiers()
+    #generate_item_drops()
+    #generate_dropped_item_modifiers()
     generate_universal_destroyer()
     generate_code_channel_string_identifier()
     generate_beam_models()

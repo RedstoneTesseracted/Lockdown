@@ -217,17 +217,17 @@ Block placement tests need to exist for the following devices:
 * ✔ Control tower (✔ channel)
 
 Block obstruction tests need to exist for the following:
-* Keycard reader
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * Requires channel
-* Alarm
-    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-    * Requires channel
-* Big button
-    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* Drone
-    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
+* ✔ Keycard reader
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * ✔ Requires channel
+* ✔ Alarm
+    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
+    * ✔ Requires channel
+* ✔ Big button
+    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
+* ✔ Drone
+    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * ✔ Player detector
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
@@ -240,27 +240,27 @@ Block obstruction tests need to exist for the following:
 * ✔ Laser projector
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Wireless transmitter
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * Requires channel
-* Wireless receiver
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * Requires channel
+* ✔ Wireless transmitter
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * ✔ Requires channel
+* ✔ Wireless receiver
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * ✔ Requires channel
 * ✔ Force field projector
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Turret
-    * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
+* ✔ Turret
+    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * ✔ Encoder
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Control tower
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent block overlap one block up (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * Requires channel
+* ✔ Control tower
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent block overlap one block up (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+    * ✔ Requires channel
 
 
 Tests not covered under the GameTest system:
@@ -276,5 +276,4 @@ Tests not covered under the GameTest system:
 
 # Known Bugs
 
-* Devices broken due to invalid placement lose their assigned channel
 * Certain devices could feasibly be placed in the same position twice if done so on the same tick

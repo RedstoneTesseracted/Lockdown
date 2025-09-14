@@ -12,6 +12,9 @@
 # Placement Rules: nonsolid_entity_placement
 ###### END INFO BLOCK ######
 
+# Needed for the channel-to-item assignment code in lockdown:place_block/reject/big_button
+execute store result score lockdown.channel lockdown.local run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
+
 # Prevent overlap with an existing entity
 execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:blocks_nonsolid_placement,tag=!lockdown.placer] run return run function lockdown:place_block/reject/big_button {msg: "lockdown.placer.reject.not_enough_space"}
 
