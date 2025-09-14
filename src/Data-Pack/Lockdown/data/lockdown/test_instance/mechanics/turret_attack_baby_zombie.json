@@ -1,0 +1,13 @@
+{
+    "type": "block_based",
+    "environment": "minecraft:default",
+    "structure": "lockdown:test/mechanics/turret_attack_baby_zombie",
+    "max_attempts": 1,
+    "max_ticks": 100,
+    "sky_access": false,
+    "manual_only": false,
+    "required_successes": 1,
+    "setup_ticks": 1,
+    "rotation": "none",
+    "required": true
+}
