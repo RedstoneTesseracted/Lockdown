@@ -103,6 +103,33 @@ def same_unzipped_nbt(nbt_data: Compound, file_path: str) -> bool:
     return nbt_data.snbt() == file_nbt.snbt()
 
 
+def safe_nbt_save(nbt_data: Compound, file_path: str):
+    """
+    Saves NBT data to a gzip-compressed file.  If the file's contents already match the provided NBT data, the file will not be written (even to update the gzip header)
+
+    Arguments:
+        nbt_data (Compound): NBT compound to save
+        file_path (str): Path to file
+    """
+    if not path.exists(file_path) or not same_unzipped_nbt(nbt_data, file_path):
+        nbtlib.File(nbt_data, gzipped=True).save(file_path)
+
+
+def read_snbt(file_path: str) -> Compound:
+    """
+    Reads and parsed snbt data from a file
+
+    Arguments:
+        file_path (str): Path to file
+
+    Returns:
+        (Compound): Parsed NBT data
+    """
+    with open(file_path, mode='r') as rf:
+        snbt_data = rf.read()
+    return nbtlib.parse_nbt(snbt_data)
+
+
 def generate_item_advancements():
     """
     Generate all the item-related advancements under the advancements/lockdown folder
@@ -518,11 +545,11 @@ def generate_placer_tests():
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
     function_dir = path.join(datapack_dir, 'function')
-    test_structure_placer_dir = path.join(datapack_dir, 'structure', 'test', 'placer')
-    test_instance_placer_dir = path.join(datapack_dir, 'test_instance', 'placer')
+    test_structure_dir = path.join(datapack_dir, 'structure', 'test')
+    test_instance_dir = path.join(datapack_dir, 'test_instance')
 
     
-    def from_template(device: str, properties: dict):
+    def placer_from_template(device: str, properties: dict):
         """
         Builds a device placer test structure
 
@@ -536,9 +563,7 @@ def generate_placer_tests():
         else:
             source_file = 'templates/placer_test_basic.snbt'
 
-        with open(source_file, mode='r') as rf:
-            source_nbt = rf.read()
-        template = nbtlib.parse_nbt(source_nbt)
+        template = read_snbt(source_file)
 
         # Randomly pick a channel ID (even if it's not actually needed).
         # Channels are chosen from the range [4096, 2147483647].  This is deliberately chosen
@@ -572,6 +597,93 @@ def generate_placer_tests():
             block['nbt']['Command'] = String(command)
         return template
 
+    def obstruct_from_template(device: str, properties: dict):
+        """
+        Builds a device obstructed placement test structure
+
+        Arguments:
+            device (str): Name of device to be substituted into command blocks
+            properties (dict): Device properties table
+        """
+        # Allowed placement rules:
+        #   requires_channel
+        #   nonsolid_entity_placement
+        #   solid_block_placement
+        #   control_tower_special (ignored, handle manually)
+        template = read_snbt('templates/obstruct_test.snbt')
+
+        # Randomly pick channel ID using same rules from placer_from_template
+        random.seed(device)
+        channel = str(random.randint(4096, 2147483647))
+        
+        # Build the snbt of the summoned placer entity
+        summoned_nbt_channelless = json_to_nbt(properties['entity_data'])
+        summoned_nbt = json_to_nbt(properties['entity_data'])
+        if properties['channels']:
+            if properties['entity'] == 'minecraft:marker':
+                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            elif properties['entity'] == 'minecraft:item_frame':
+                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+
+        if properties['entity'] == 'minecraft:item_frame':
+            summoned_nbt['Facing'] = nbtlib.Byte(1)
+            summoned_nbt_channelless['Facing'] = nbtlib.Byte(1)
+
+        # Build the snbt of the dropped item
+        dropped_item_nbt_channelless = json_to_nbt(properties['item_data'])
+        dropped_item_nbt = json_to_nbt(properties['item_data'])
+        dropped_item_nbt['count'] = nbtlib.Int(1)
+        dropped_item_nbt_channelless['count'] = nbtlib.Int(1)
+        if properties['channels']:
+            #dropped_item_nbt['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            if properties['entity'] == 'minecraft:marker':
+                dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            elif properties['entity'] == 'minecraft:item_frame':
+                dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+
+        # Activate subtests according to placement rules.
+        # We do this by replacing stained glass blocks with regular glass.
+        # The glass blocks are then replaced with redstone blocks during
+        # test execution.
+        for block in template['palette']:
+            if block['Name'] == 'minecraft:red_stained_glass' and 'requires_channel' in properties['placement_rules']:
+                block['Name'] = String('minecraft:glass')
+            if block['Name'] == 'minecraft:lime_stained_glass' and 'nonsolid_entity_placement' in properties['placement_rules']:
+                block['Name'] = String('minecraft:glass')
+            if block['Name'] == 'minecraft:yellow_stained_glass' and 'solid_block_placement' in properties['placement_rules']:
+                block['Name'] = String('minecraft:glass')
+
+        # Replace templated strings in structure
+        for i, block in enumerate(template['blocks']):
+            if 'nbt' not in block: continue
+
+            # Handle command blocks
+            if block['nbt']['id'] == 'minecraft:command_block':
+                command = block['nbt']['Command']
+                if command is None: continue
+                command = command.replace('<<T:DEVICE>>', device)
+                if '<<T:SUMMON PLACER>>' in command:
+                    command = f'/summon {properties["entity"]} ~ ~ ~1 ' + summoned_nbt.snbt()
+                if '<<T:SUMMON PLACER NO CHANNEL>>' in command:
+                    command = f'/summon {properties["entity"]} ~ ~ ~1 ' + summoned_nbt_channelless.snbt()
+                if '<<T:DROPPED ITEM CHECK>>' in command:
+                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1,type=minecraft:item,nbt={{Item:{dropped_item_nbt.snbt()}}}]'
+                if '<<T:DROPPED ITEM CHECK NO CHANNEL>>' in command:
+                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1,type=minecraft:item,nbt={{Item:{dropped_item_nbt_channelless.snbt()}}}]'
+                
+                command = command.replace('<<T:CHANNEL>>', channel)
+                block['nbt']['Command'] = String(command)
+
+            # Handle test blocks
+            if block['nbt']['id'] == 'minecraft:test_block':
+                message = block['nbt']['message']
+                message = message.replace('<<T:DEVICE>>', device)
+                block['nbt']['message'] = String(message)
+            
+        return template
+        
+
+
     # Parse lockdown:place_block/placer to determine which devices need tests
     devices = dict()
     with open(path.join(function_dir, 'place_block', 'placer.mcfunction'), mode='r') as rf:
@@ -586,7 +698,8 @@ def generate_placer_tests():
                 'channels': False,
                 'colors': False,
                 'extra_parts': [],
-                'special': False
+                'special': False,
+                'placement_rules': []
             }
 
     # Use the info block header in the placer functions to obtain information about how each device is processed
@@ -621,7 +734,9 @@ def generate_placer_tests():
                     if key in devices[device]:
                         if key == 'extra_parts':
                             value = [i.strip() for i in value.split(',')]
-                        if type(devices[device][key]) == bool:
+                        elif key == 'placement_rules':
+                            value = [i.strip() for i in value.split(',')]
+                        elif type(devices[device][key]) == bool:
                             value = value.lower() == 'true'
                         else:
                             value = type(devices[device][key])(value)
@@ -642,7 +757,7 @@ def generate_placer_tests():
     for device, properties in devices.items():
         properties['found_recipe'] = False
 
-    # Scan recipes to obtain default entity data
+    # Scan recipes to obtain default item and entity data
     for dirpath, dirnames, filenames in os.walk(recipe_dir):
         for file in filenames:
             recipe_name = path.splitext(file)[0]
@@ -663,6 +778,7 @@ def generate_placer_tests():
             assert entity_id.partition(':')[-1] == devices[device]['entity'], f"Mismatched entity between info recipe and header for device \"{device}\" ({entity_id.partition(':')[-1]} != {devices[device]['entity']})"
             devices[device]['entity'] = entity_id
             devices[device]['entity_data'] = entity_data
+            devices[device]['item_data'] = recipe['result']
 
     # Make sure recipes were found for ALL devices
     for device, properties in devices.items():
@@ -670,30 +786,32 @@ def generate_placer_tests():
 
     # Generate files for each placer unit test
     for device, properties in devices.items():
-        # Generate appropriate structure file
-        nbt_data = from_template(device, properties)
+        # Generate appropriate structure files
+        placer_nbt_data = placer_from_template(device, properties)
+        obstruct_nbt_data = obstruct_from_template(device, properties)
 
         # Avoid updating structure files whose only difference is the "last updated" timestamp in the header
-        placer_structure_file = path.join(test_structure_placer_dir, f'{device}.nbt')
-        if not path.exists(placer_structure_file) or not same_unzipped_nbt(nbt_data, placer_structure_file):
-            nbtlib.File(nbt_data, gzipped=True).save(path.join(test_structure_placer_dir, f'{device}.nbt'))
+        safe_nbt_save(placer_nbt_data, path.join(test_structure_dir, 'placer', f'{device}.nbt'))
+        safe_nbt_save(obstruct_nbt_data, path.join(test_structure_dir, 'obstruct', f'{device}.nbt'))
         
-        # Generate test instance file
-        test_instance = {
-            "type": "block_based",
-            "environment": "minecraft:default",
-            "structure": f"lockdown:test/placer/{device}",
-            "max_attempts": 1,
-            "max_ticks": 20,
-            "sky_access": False,
-            "manual_only": False,
-            "required_successes": 1,
-            "setup_ticks": 0,
-            "rotation": "none",
-            "required": True
-        }
-        with open(path.join(test_instance_placer_dir, f'{device}.json'), mode='w') as wf:
-            dump(test_instance, wf, indent=4)
+        # Generate test instance files for placement, obstructed placement, and destruction
+        #for test in ('placer', 'obstruct', 'destroy'):
+        for test in ('placer', 'obstruct'):
+            test_instance = {
+                "type": "block_based",
+                "environment": "minecraft:default",
+                "structure": f"lockdown:test/{test}/{device}",
+                "max_attempts": 1,
+                "max_ticks": 20,
+                "sky_access": False,
+                "manual_only": False,
+                "required_successes": 1,
+                "setup_ticks": 0,
+                "rotation": "none",
+                "required": True
+            }
+            with open(path.join(test_instance_dir, test, f'{device}.json'), mode='w') as wf:
+                dump(test_instance, wf, indent=4)
             
             
 

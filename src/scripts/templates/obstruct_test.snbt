@@ -1,0 +1,2325 @@
+{
+    size: [6, 12, 5], 
+    entities: [
+        {
+            nbt: {
+                Motion: [0.0d, 0.0d, 0.0d], 
+                Facing: 1b, 
+                block_pos: [I; 7, 11, 318], 
+                ItemRotation: 0b, 
+                Invulnerable: 0b, 
+                fall_distance: 0.0d, 
+                Air: 300s, 
+                OnGround: 0b, 
+                PortalCooldown: 0, 
+                Rotation: [0.0f, -90.0f], 
+                ItemDropChance: 1.0f, 
+                Pos: [7.5d, 11.03125d, 318.5d], 
+                Fire: 0s, 
+                id: "minecraft:item_frame", 
+                Invisible: 0b, 
+                UUID: [I; -388956597, -182760897, -1530081024, 1976493124], 
+                Fixed: 0b
+            }, 
+            blockPos: [1, 5, 1], 
+            pos: [1.5d, 5.03125d, 1.5d]
+        }, 
+        {
+            nbt: {
+                Motion: [0.0d, 0.0d, 0.0d], 
+                Facing: 1b, 
+                block_pos: [I; 10, 14, 318], 
+                ItemRotation: 0b, 
+                Invulnerable: 0b, 
+                fall_distance: 0.0d, 
+                Air: 300s, 
+                OnGround: 0b, 
+                PortalCooldown: 0, 
+                Rotation: [0.0f, -90.0f], 
+                ItemDropChance: 1.0f, 
+                Pos: [10.5d, 14.03125d, 318.5d], 
+                Fire: 0s, 
+                id: "minecraft:item_frame", 
+                Invisible: 0b, 
+                UUID: [I; -2096527276, -1542501621, -1283972764, -1522606987], 
+                Fixed: 0b
+            }, 
+            blockPos: [4, 8, 1], 
+            pos: [4.5d, 8.03125d, 1.5d]
+        }
+    ], 
+    blocks: [
+        {
+            pos: [0, 1, 1], 
+            state: 0
+        }, 
+        {
+            pos: [0, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [0, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [0, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 1, 0], 
+            state: 0
+        }, 
+        {
+            pos: [1, 1, 1], 
+            state: 1
+        }, 
+        {
+            pos: [1, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [1, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [1, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [2, 1, 0], 
+            state: 0
+        }, 
+        {
+            pos: [2, 1, 1], 
+            state: 0
+        }, 
+        {
+            pos: [2, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [2, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [2, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [3, 1, 0], 
+            state: 0
+        }, 
+        {
+            pos: [3, 1, 1], 
+            state: 0
+        }, 
+        {
+            pos: [3, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [3, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [3, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [4, 1, 0], 
+            state: 0
+        }, 
+        {
+            pos: [4, 1, 1], 
+            state: 0
+        }, 
+        {
+            pos: [4, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [4, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [4, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [5, 1, 0], 
+            state: 0
+        }, 
+        {
+            pos: [5, 1, 1], 
+            state: 0
+        }, 
+        {
+            pos: [5, 1, 2], 
+            state: 0
+        }, 
+        {
+            pos: [5, 1, 3], 
+            state: 0
+        }, 
+        {
+            pos: [5, 1, 4], 
+            state: 0
+        }, 
+        {
+            pos: [0, 2, 0], 
+            state: 2
+        }, 
+        {
+            pos: [0, 2, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 2, 4], 
+            state: 0
+        }, 
+        {
+            pos: [2, 2, 1], 
+            state: 3
+        }, 
+        {
+            pos: [2, 2, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 3, 1], 
+            state: 3
+        }, 
+        {
+            pos: [0, 4, 1], 
+            state: 0
+        }, 
+        {
+            pos: [1, 4, 1], 
+            state: 1
+        }, 
+        {
+            pos: [2, 4, 1], 
+            state: 0
+        }, 
+        {
+            pos: [0, 5, 0], 
+            state: 4
+        }, 
+        {
+            pos: [0, 5, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 5, 4], 
+            state: 0
+        }, 
+        {
+            pos: [2, 5, 1], 
+            state: 3
+        }, 
+        {
+            pos: [2, 5, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 6, 1], 
+            state: 3
+        }, 
+        {
+            pos: [0, 7, 1], 
+            state: 0
+        }, 
+        {
+            pos: [1, 7, 1], 
+            state: 1
+        }, 
+        {
+            pos: [2, 7, 1], 
+            state: 0
+        }, 
+        {
+            pos: [3, 7, 1], 
+            state: 0
+        }, 
+        {
+            pos: [4, 7, 1], 
+            state: 5
+        }, 
+        {
+            pos: [5, 7, 1], 
+            state: 0
+        }, 
+        {
+            pos: [0, 8, 0], 
+            state: 6
+        }, 
+        {
+            pos: [0, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [1, 8, 1], 
+            state: 7
+        }, 
+        {
+            pos: [1, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [2, 8, 1], 
+            state: 3
+        }, 
+        {
+            pos: [2, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [3, 8, 1], 
+            state: 3
+        }, 
+        {
+            pos: [3, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [4, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [5, 8, 1], 
+            state: 3
+        }, 
+        {
+            pos: [5, 8, 4], 
+            state: 0
+        }, 
+        {
+            pos: [0, 9, 1], 
+            state: 3
+        }, 
+        {
+            pos: [1, 9, 0], 
+            state: 3
+        }, 
+        {
+            pos: [1, 9, 2], 
+            state: 3
+        }, 
+        {
+            pos: [2, 9, 1], 
+            state: 3
+        }, 
+        {
+            pos: [3, 9, 1], 
+            state: 3
+        }, 
+        {
+            pos: [4, 9, 0], 
+            state: 3
+        }, 
+        {
+            pos: [4, 9, 2], 
+            state: 3
+        }, 
+        {
+            pos: [5, 9, 1], 
+            state: 3
+        }, 
+        {
+            pos: [1, 10, 1], 
+            state: 3
+        }, 
+        {
+            pos: [4, 10, 1], 
+            state: 3
+        }, 
+        {
+            pos: [0, 11, 0], 
+            state: 8
+        }, 
+        {
+            pos: [0, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [0, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [0, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [1, 0, 0], 
+            state: 9
+        }, 
+        {
+            pos: [1, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [1, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [1, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [2, 0, 0], 
+            state: 9
+        }, 
+        {
+            pos: [2, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [2, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [2, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [3, 0, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 0, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 0, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 0, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 0, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 0, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 0, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 2, 1], 
+            state: 10
+        }, 
+        {
+            pos: [1, 2, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 2, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 2, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 2, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 2, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 2, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 2, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 2, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 2, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 2, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 2, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 2, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 2, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 2, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 2, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 2, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 3, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 3, 0], 
+            state: 9
+        }, 
+        {
+            pos: [1, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [2, 3, 0], 
+            state: 9
+        }, 
+        {
+            pos: [2, 3, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 3, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 3, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 3, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 3, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 3, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 3, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 3, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 3, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 3, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 3, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 3, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 3, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 3, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 4, 0], 
+            state: 11
+        }, 
+        {
+            pos: [0, 4, 2], 
+            state: 11
+        }, 
+        {
+            pos: [0, 4, 3], 
+            state: 11
+        }, 
+        {
+            pos: [0, 4, 4], 
+            state: 11
+        }, 
+        {
+            pos: [1, 4, 0], 
+            state: 11
+        }, 
+        {
+            pos: [1, 4, 2], 
+            state: 11
+        }, 
+        {
+            pos: [1, 4, 3], 
+            state: 11
+        }, 
+        {
+            pos: [1, 4, 4], 
+            state: 11
+        }, 
+        {
+            pos: [2, 4, 0], 
+            state: 11
+        }, 
+        {
+            pos: [2, 4, 2], 
+            state: 11
+        }, 
+        {
+            pos: [2, 4, 3], 
+            state: 11
+        }, 
+        {
+            pos: [2, 4, 4], 
+            state: 11
+        }, 
+        {
+            pos: [3, 4, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 4, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 4, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 4, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 4, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 4, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 4, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 4, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 4, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 4, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 4, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 4, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 4, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 4, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 4, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 5, 1], 
+            state: 10
+        }, 
+        {
+            pos: [1, 5, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 5, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 5, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 5, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 5, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 5, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 5, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 5, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 5, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 5, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 5, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 5, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 5, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 5, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 5, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 5, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 6, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 6, 0], 
+            state: 9
+        }, 
+        {
+            pos: [1, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [2, 6, 0], 
+            state: 9
+        }, 
+        {
+            pos: [2, 6, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 6, 0], 
+            state: 9
+        }, 
+        {
+            pos: [3, 6, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 6, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 6, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 6, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 6, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 6, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 6, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 6, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 6, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 6, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 6, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 6, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [0, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [0, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [0, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [1, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [1, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [1, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [1, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [2, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [2, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [2, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [2, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [3, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [3, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [3, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [3, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [4, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [4, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [4, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [4, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [5, 7, 0], 
+            state: 11
+        }, 
+        {
+            pos: [5, 7, 2], 
+            state: 11
+        }, 
+        {
+            pos: [5, 7, 3], 
+            state: 11
+        }, 
+        {
+            pos: [5, 7, 4], 
+            state: 11
+        }, 
+        {
+            pos: [0, 8, 1], 
+            state: 10
+        }, 
+        {
+            pos: [4, 8, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 9, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 9, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 9, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 9, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 9, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 9, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 9, 3], 
+            state: 9
+        }, 
+        {
+            pos: [0, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [0, 10, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [0, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [0, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [1, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [1, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [1, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [2, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [2, 10, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [2, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [2, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [3, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [3, 10, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [4, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 10, 0], 
+            state: 11
+        }, 
+        {
+            pos: [5, 10, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 10, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 10, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 10, 4], 
+            state: 9
+        }, 
+        {
+            pos: [0, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [0, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [0, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [0, 11, 4], 
+            state: 9
+        }, 
+        {
+            pos: [1, 11, 0], 
+            state: 12
+        }, 
+        {
+            pos: [1, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [1, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [1, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [1, 11, 4], 
+            state: 9
+        }, 
+        {
+            pos: [2, 11, 0], 
+            state: 12
+        }, 
+        {
+            pos: [2, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [2, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [2, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [2, 11, 4], 
+            state: 9
+        }, 
+        {
+            pos: [3, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [3, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [3, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [3, 11, 4], 
+            state: 9
+        }, 
+        {
+            pos: [4, 11, 0], 
+            state: 9
+        }, 
+        {
+            pos: [4, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [4, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [4, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [4, 11, 4], 
+            state: 9
+        }, 
+        {
+            pos: [5, 11, 0], 
+            state: 9
+        }, 
+        {
+            pos: [5, 11, 1], 
+            state: 9
+        }, 
+        {
+            pos: [5, 11, 2], 
+            state: 9
+        }, 
+        {
+            pos: [5, 11, 3], 
+            state: 9
+        }, 
+        {
+            pos: [5, 11, 4], 
+            state: 9
+        }, 
+        {
+            nbt: {
+                mode: "start", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: ""
+            }, 
+            pos: [0, 0, 0], 
+            state: 13
+        }, 
+        {
+            nbt: {
+                conditionMet: 1b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "fill ~ ~1 ~ ~ ~10 ~ minecraft:redstone_block replace minecraft:glass", 
+                LastExecution: 31465850L, 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                LastOutput: {
+                    extra: [
+                        {
+                            color: "red", 
+                            extra: [
+                                {
+                                    translate: "commands.fill.failed"
+                                }
+                            ], 
+                            text: ""
+                        }
+                    ], 
+                    text: "[19:45:50] "
+                }, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [0, 1, 0], 
+            state: 14
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute positioned ~-1 ~ ~1 if entity @e[distance=..0.5,tag=lockdown.<<T:DEVICE>>]", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [0, 2, 2], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [0, 2, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:SUMMON PLACER NO CHANNEL>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 2, 0], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:DROPPED ITEM CHECK NO CHANNEL>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 2, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [1, 2, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless function lockdown:place_block/run_all_placers run return 1", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 2, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless block ~-1 ~ ~-1 #minecraft:air", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 2, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [2, 2, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "requires_channel", "", ""]
+                }
+            }, 
+            pos: [0, 3, 0], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Not", "Placed", ""]
+                }
+            }, 
+            pos: [0, 3, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Entities left over from "requires_channel" test of <<T:DEVICE>>'
+            }, 
+            pos: [0, 3, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Item", "Dropped", ""]
+                }
+            }, 
+            pos: [1, 3, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Mismatched/missing dropped item from "requires_channel" test of <<T:DEVICE>>'
+            }, 
+            pos: [1, 3, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Air", "", ""]
+                }
+            }, 
+            pos: [2, 3, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Unexpected block left over from "requires_channel" test of <<T:DEVICE>>'
+            }, 
+            pos: [2, 3, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute positioned ~-1 ~ ~1 if entity @e[distance=..0.5,tag=lockdown.<<T:DEVICE>>]", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [0, 5, 2], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [0, 5, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 1b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:SUMMON PLACER>>", 
+                LastExecution: 31463172L, 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                LastOutput: {
+                    extra: [
+                        {
+                            color: "red", 
+                            extra: [
+                                {
+                                    click_event: {
+                                        action: "suggest_command", 
+                                        command: "/<<T:SUMMON PLACER>>"
+                                    }, 
+                                    color: "gray", 
+                                    extra: [
+                                        {
+                                            color: "red", 
+                                            underlined: 1b, 
+                                            text: "<<T:SUMMON PLACER>>"
+                                        }, 
+                                        {
+                                            color: "red", 
+                                            italic: 1b, 
+                                            translate: "command.context.here"
+                                        }
+                                    ], 
+                                    text: ""
+                                }
+                            ], 
+                            text: ""
+                        }
+                    ], 
+                    text: "[19:43:11] "
+                }, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 5, 0], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:DROPPED ITEM CHECK>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 5, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [1, 5, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless function lockdown:place_block/run_all_placers run return 1", 
+                LastExecution: 31463172L, 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 5, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless block ~-1 ~ ~-1 #minecraft:air", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 5, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [2, 5, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "nonsolid_entity-", "placement", ""]
+                }
+            }, 
+            pos: [0, 6, 0], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Not", "Placed", ""]
+                }
+            }, 
+            pos: [0, 6, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Entities left over from "nonsolid_entity_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [0, 6, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Item", "Dropped", ""]
+                }
+            }, 
+            pos: [1, 6, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Mismatched/missing dropped item from "nonsolid_entity_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [1, 6, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Confirm Air", "", ""]
+                }
+            }, 
+            pos: [2, 6, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Unexpected block left over from "nonsolid_entity_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [2, 6, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute positioned ~-1 ~ ~1 if entity @e[distance=..0.5,tag=lockdown.<<T:DEVICE>>]", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [0, 8, 2], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [0, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 0b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:SUMMON PLACER>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 8, 0], 
+            state: 15
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:DROPPED ITEM CHECK>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [1, 8, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [1, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 8, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless block ~-1 ~ ~-1 minecraft:stone", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [2, 8, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [2, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [3, 8, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute positioned ~-1 ~ ~1 if entity @e[distance=..0.5,tag=lockdown.<<T:DEVICE>>]", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [3, 8, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [3, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:SUMMON PLACER>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [4, 8, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "<<T:DROPPED ITEM CHECK>>", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [4, 8, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [4, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless function lockdown:place_block/run_all_placers run return 1", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [5, 8, 0], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                conditionMet: 0b, 
+                auto: 1b, 
+                components: {}, 
+                powered: 0b, 
+                Command: "execute unless block ~-1 ~ ~-1 #minecraft:air", 
+                id: "minecraft:command_block", 
+                SuccessCount: 0, 
+                TrackOutput: 1b, 
+                UpdateLastExecution: 1b
+            }, 
+            pos: [5, 8, 2], 
+            state: 17
+        }, 
+        {
+            nbt: {
+                components: {}, 
+                id: "minecraft:comparator", 
+                OutputSignal: 0
+            }, 
+            pos: [5, 8, 3], 
+            state: 16
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "solid_block_plac-", "ement", ""]
+                }
+            }, 
+            pos: [0, 9, 0], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 1)", "Confirm Not", "Placed", ""]
+                }
+            }, 
+            pos: [0, 9, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Entities left over from "solid_block_placement" test (1) of <<T:DEVICE>>'
+            }, 
+            pos: [0, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 1)", "Confirm Item", "Dropped", ""]
+                }
+            }, 
+            pos: [1, 9, 3], 
+            state: 21
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Mismatched/missing dropped item from "solid_block_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [1, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Intentionally", "Left Blank", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Intentionally", "Left Blank", ""]
+                }
+            }, 
+            pos: [2, 9, 0], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 1)", "Confirm Stone", "", ""]
+                }
+            }, 
+            pos: [2, 9, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Unexpected block left over from "solid_block_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [2, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Intentionally", "Left Blank", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "Intentionally", "Left Blank", ""]
+                }
+            }, 
+            pos: [3, 9, 0], 
+            state: 18
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 2)", "Confirm Not", "Placed", ""]
+                }
+            }, 
+            pos: [3, 9, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Entities left over from "solid_block_placement" test (2) of <<T:DEVICE>>'
+            }, 
+            pos: [3, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 2)", "Confirm Item", "Dropped", ""]
+                }
+            }, 
+            pos: [4, 9, 3], 
+            state: 21
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Mismatched/missing dropped item from "solid_block_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [4, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                back_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["", "", "", ""]
+                }, 
+                components: {}, 
+                is_waxed: 0b, 
+                id: "minecraft:sign", 
+                front_text: {
+                    has_glowing_text: 0b, 
+                    color: "black", 
+                    messages: ["(Block 2)", "Confirm Air", "", ""]
+                }
+            }, 
+            pos: [5, 9, 2], 
+            state: 19
+        }, 
+        {
+            nbt: {
+                mode: "fail", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: 'Unexpected block left over from "solid_block_placement" test of <<T:DEVICE>>'
+            }, 
+            pos: [5, 9, 4], 
+            state: 20
+        }, 
+        {
+            nbt: {
+                mode: "accept", 
+                components: {}, 
+                powered: 0b, 
+                id: "minecraft:test_block", 
+                message: "All obstruction tests passed!"
+            }, 
+            pos: [3, 11, 0], 
+            state: 22
+        }
+    ], 
+    palette: [
+        {
+            Name: "minecraft:stone_bricks"
+        }, 
+        {
+            Name: "minecraft:red_terracotta"
+        }, 
+        {
+            Name: "minecraft:red_stained_glass"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false"
+            }, 
+            Name: "minecraft:barrier"
+        }, 
+        {
+            Name: "minecraft:lime_stained_glass"
+        }, 
+        {
+            Name: "minecraft:green_terracotta"
+        }, 
+        {
+            Name: "minecraft:yellow_stained_glass"
+        }, 
+        {
+            Name: "minecraft:stone"
+        }, 
+        {
+            Name: "minecraft:glass"
+        }, 
+        {
+            Name: "minecraft:air"
+        }, 
+        {
+            Properties: {
+                delay: "1", 
+                powered: "false", 
+                facing: "north", 
+                locked: "false"
+            }, 
+            Name: "minecraft:repeater"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false", 
+                type: "top"
+            }, 
+            Name: "minecraft:stone_brick_slab"
+        }, 
+        {
+            Properties: {
+                delay: "4", 
+                powered: "false", 
+                facing: "west", 
+                locked: "false"
+            }, 
+            Name: "minecraft:repeater"
+        }, 
+        {
+            Properties: {
+                mode: "start"
+            }, 
+            Name: "minecraft:test_block"
+        }, 
+        {
+            Properties: {
+                conditional: "false", 
+                facing: "up"
+            }, 
+            Name: "minecraft:command_block"
+        }, 
+        {
+            Properties: {
+                conditional: "false", 
+                facing: "east"
+            }, 
+            Name: "minecraft:command_block"
+        }, 
+        {
+            Properties: {
+                mode: "compare", 
+                powered: "false", 
+                facing: "north"
+            }, 
+            Name: "minecraft:comparator"
+        }, 
+        {
+            Properties: {
+                conditional: "false", 
+                facing: "east"
+            }, 
+            Name: "minecraft:chain_command_block"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false", 
+                rotation: "8"
+            }, 
+            Name: "minecraft:oak_sign"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false", 
+                rotation: "0"
+            }, 
+            Name: "minecraft:oak_sign"
+        }, 
+        {
+            Properties: {
+                mode: "fail"
+            }, 
+            Name: "minecraft:test_block"
+        }, 
+        {
+            Properties: {
+                waterlogged: "false", 
+                facing: "south"
+            }, 
+            Name: "minecraft:oak_wall_sign"
+        }, 
+        {
+            Properties: {
+                mode: "accept"
+            }, 
+            Name: "minecraft:test_block"
+        }
+    ], 
+    DataVersion: 4440
+}
