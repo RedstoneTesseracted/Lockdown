@@ -193,10 +193,10 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Flamethrower upgrades on turrets               |      ❌      |
 | Applying drone/turret upgrades                 |      ❓      |
 | Drone targeting and firing                     |      ✅      |
-| Drone targeting and firing w/ codes            |      ❌      |
+| Drone targeting and firing w/ codes            |      ✅      |
 | Drone targeting and firing w/ control towers   |      ❌      |
 | Turret targeting and firing                    |      ✅      |
-| Turret targeting and firing w/ codes           |      ❌      |
+| Turret targeting and firing w/ codes           |      ✅      |
 | Chest key                                      |      ❓      |
 | Encoder dispensing prevention                  |      ✅      |
 
