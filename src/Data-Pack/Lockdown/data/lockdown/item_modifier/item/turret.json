@@ -40,7 +40,10 @@
                 "Tags": [
                     "lockdown.placer",
                     "lockdown.placer.turret"
-                ]
+                ],
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
             }
         }
     },
