@@ -17,6 +17,7 @@
 # Colors: false
 # Extra Parts: lockdown.block.hitbox
 # Placement Rules: nonsolid_entity_placement
+# Destruction Rule: entity_kill
 ###### END INFO BLOCK ######
 
 # Needed for the channel-to-item assignment code in lockdown:place_block/reject/generic

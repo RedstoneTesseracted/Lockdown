@@ -630,7 +630,7 @@ def generate_placer_tests():
             device (str): Name of device to be substituted into command blocks
             properties (dict): Device properties table
         """
-        # Allowed placement rules:
+        # Possible placement rules:
         #   requires_channel
         #   nonsolid_entity_placement
         #   solid_block_placement
@@ -715,6 +715,89 @@ def generate_placer_tests():
             
         return template
         
+    def destroy_from_template(device: str, properties: dict):
+        """
+        Builds a device destruction test structure
+
+        Arguments:
+            device (str): Name of device to be substituted into command blocks
+            properties (dict): Device properties table
+        """
+        # Possible destruction rules:
+        #   block_break
+        #   entity_kill
+        #   interaction_attack
+        
+        # Load template structure
+        template = read_snbt('templates/destroy_test.snbt')
+
+        # Randomly pick channel ID using same rules from placer_from_template
+        random.seed(device)
+        channel = str(random.randint(4096, 2147483647))
+        
+        # Build the snbt of the summoned placer entity
+        summoned_nbt = json_to_nbt(properties['entity_data'])
+        if properties['channels']:
+            if properties['entity'] == 'minecraft:marker':
+                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            elif properties['entity'] == 'minecraft:item_frame':
+                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+
+        if properties['entity'] == 'minecraft:item_frame':
+            summoned_nbt['Facing'] = nbtlib.Byte(1)
+
+        # Build the snbt of the dropped item
+        dropped_item_nbt = json_to_nbt(properties['item_data'])
+        dropped_item_nbt['count'] = nbtlib.Int(1)
+        if properties['channels']:
+            # Update lore on item given channel/code
+            for lore in dropped_item_nbt['components'].get('minecraft:lore', []):
+                if lore.get('translate') == 'item.lockdown.code.no_code':
+                    lore['translate'] = String('item.lockdown.code.code')
+                    lore['color'] = String('green')
+                elif lore.get('translate') == 'item.lockdown.channel.no_channel':
+                    lore['translate'] = String('item.lockdown.channel.channel')
+                    lore['color'] = String('green')
+            # Set channel tag.  Path to tag varies depending on whether the placer is a marker or an item frame
+            if properties['entity'] == 'minecraft:marker':
+                dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            elif properties['entity'] == 'minecraft:item_frame':
+                dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+
+        # Replace templated strings in structure
+        for i, block in enumerate(template['blocks']):
+            if 'nbt' not in block: continue
+
+            # Handle command blocks
+            if block['nbt']['id'] == 'minecraft:command_block':
+                command = block['nbt']['Command']
+                if command is None: continue
+                command = command.replace('<<T:DEVICE>>', device)
+                if '<<T:SUMMON PLACER>>' in command:
+                    command = f'/summon {properties["entity"]} ~1 ~-1 ~1 ' + summoned_nbt.snbt()
+                if '<<T:DROPPED ITEM CHECK>>' in command:
+                    command = f'/execute positioned ~-2 ~0.5 ~3 unless entity @e[distance=..1.5,type=minecraft:item,nbt={{Item:{dropped_item_nbt.snbt()}}}]'
+                if '<<T:DESTROY COMMAND>>' in command:
+                    if properties['destruction_rule'] == 'block_break':
+                        command = '/setblock ~1 ~ ~-1 minecraft:air destroy'
+                    elif properties['destruction_rule'] == 'entity_kill':
+                        command = '/execute positioned ~1 ~ ~-1 run damage @n[distance=..1,tag=lockdown.block.hitbox] 1024 minecraft:generic_kill'
+                    elif properties['destruction_rule'] == 'interaction_attack':
+                        command = '/execute positioned ~1 ~ ~-1 as @n[distance=..1,type=minecraft:interaction] run function lockdown:test/fake_attack_interaction'
+                    else:
+                        assert False, f"Unhandled destruction rule: {properties['destruction_rule']}"
+                
+                command = command.replace('<<T:CHANNEL>>', channel)
+                block['nbt']['Command'] = String(command)
+
+            # Handle test blocks
+            if block['nbt']['id'] == 'minecraft:test_block':
+                message = block['nbt']['message']
+                message = message.replace('<<T:DEVICE>>', device)
+                block['nbt']['message'] = String(message)
+        
+        return template
+
 
 
     # Parse lockdown:place_block/placer to determine which devices need tests
@@ -732,7 +815,8 @@ def generate_placer_tests():
                 'colors': False,
                 'extra_parts': [],
                 'special': False,
-                'placement_rules': []
+                'placement_rules': [],
+                'destruction_rule': 'unknown'
             }
 
     # Use the info block header in the placer functions to obtain information about how each device is processed
@@ -818,19 +902,27 @@ def generate_placer_tests():
     for device, properties in devices.items():
         assert properties['found_recipe'], f'No recipe was found for {device}'
 
+    # Make sure directories for test instances and structures exist
+    for test in ('placer', 'obstruct', 'destroy'):
+        if not path.exists(path.join(test_structure_dir, test)):
+            os.mkdir(path.join(test_structure_dir, test))
+        if not path.exists(path.join(test_instance_dir, test)):
+            os.mkdir(path.join(test_instance_dir, test))
+    
     # Generate files for each placer unit test
     for device, properties in devices.items():
         # Generate appropriate structure files
         placer_nbt_data = placer_from_template(device, properties)
         obstruct_nbt_data = obstruct_from_template(device, properties)
+        destroy_nbt_data = destroy_from_template(device, properties)
 
         # Avoid updating structure files whose only difference is the "last updated" timestamp in the header
         safe_nbt_save(placer_nbt_data, path.join(test_structure_dir, 'placer', f'{device}.nbt'))
         safe_nbt_save(obstruct_nbt_data, path.join(test_structure_dir, 'obstruct', f'{device}.nbt'))
+        safe_nbt_save(destroy_nbt_data, path.join(test_structure_dir, 'destroy', f'{device}.nbt'))
         
         # Generate test instance files for placement, obstructed placement, and destruction
-        #for test in ('placer', 'obstruct', 'destroy'):
-        for test in ('placer', 'obstruct'):
+        for test in ('placer', 'obstruct', 'destroy'):
             test_instance = {
                 "type": "block_based",
                 "environment": "minecraft:default",

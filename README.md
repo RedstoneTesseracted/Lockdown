@@ -169,7 +169,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Wireless transmitter/receiver                  |      ✅      |
 | Block placement                                |      ⚠️      |
 | Block placement when obstructed                |      ✅      |
-| Block breaking                                 |      ❌      |
+| Block breaking                                 |      ✅      |
 | Loot table consistency                         |      ✅      |
 | Legacy block upgrading                         |      ❌      |
 | Encoding (assign code)                         |      ✅      |
@@ -263,20 +263,20 @@ Block obstruction tests need to exist for the following:
     * ✔ Requires channel
 
 Block destruction tests need to exist for the following:
-* Keycard reader (block-based)
-* Alarm (interaction-based)
-* Big button (block-based)
-* Drone (entity-based)
-* Player detector (block-based)
-* Mob detector (block-based)
-* Klaxon (block-based)
-* Laser projector (block-based)
-* Wireless transmitter (block-based)
-* Wireless receiver (block-based)
-* Force field projector (block-based)
-* Turret (entity-based)
-* Encoder (block-based)
-* Control tower (block-based, two-block height)
+* ✔ Keycard reader (block-based)
+* ✔ Alarm (interaction-based)
+* ✔ Big button (block-based)
+* ✔ Drone (entity-based)
+* ✔ Player detector (block-based)
+* ✔ Mob detector (block-based)
+* ✔ Klaxon (block-based)
+* ✔ Laser projector (block-based)
+* ✔ Wireless transmitter (block-based)
+* ✔ Wireless receiver (block-based)
+* ✔ Force field projector (block-based)
+* ✔ Turret (entity-based)
+* ✔ Encoder (block-based)
+* ✔ Control tower (block-based)
 
 
 Tests not covered under the GameTest system:

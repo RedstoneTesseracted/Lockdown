@@ -10,6 +10,7 @@
 # Colors: false
 # Extra Parts: lockdown.force_field_projector.shield
 # Placement Rules: solid_block_placement
+# Destruction Rule: block_break
 ###### END INFO BLOCK ######
 
 # This prevents the channel-to-item assignment code in lockdown:place_block/reject/generic from running

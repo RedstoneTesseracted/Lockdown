@@ -9,6 +9,7 @@
 # Colors: true
 # Extra Parts: lockdown.alarm.glow
 # Placement Rules: requires_channel, nonsolid_entity_placement
+# Destruction Rule: interaction_attack
 ###### END INFO BLOCK ######
 
 # * Directional (check item frame for direction)

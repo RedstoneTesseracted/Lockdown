@@ -11,6 +11,7 @@
 # Extra Parts:
 # Special: true
 # Placement Rules: solid_block_placement
+# Destruction Rule: block_break
 ###### END INFO BLOCK ######
 
 # This prevents the channel-to-item assignment code in lockdown:place_block/reject/generic from running

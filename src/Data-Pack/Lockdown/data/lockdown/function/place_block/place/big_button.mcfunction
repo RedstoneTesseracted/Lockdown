@@ -10,6 +10,7 @@
 # Colors: true
 # Extra Parts:
 # Placement Rules: nonsolid_entity_placement
+# Destruction Rule: block_break
 ###### END INFO BLOCK ######
 
 # Needed for the channel-to-item assignment code in lockdown:place_block/reject/big_button

@@ -21,6 +21,7 @@
 # Extra Parts: lockdown.turret.gantry, lockdown.turret.barrel, lockdown.turret.beam, lockdown.block.hitbox
 # Special: true
 # Placement Rules: nonsolid_entity_placement
+# Destruction Rule: entity_kill
 ###### END INFO BLOCK ######
 
 # Needed for the channel-to-item assignment code in lockdown:place_block/reject/generic

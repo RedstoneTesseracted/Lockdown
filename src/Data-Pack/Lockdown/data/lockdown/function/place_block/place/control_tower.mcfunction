@@ -10,6 +10,7 @@
 # Colors: false
 # Extra Parts:
 # Placement Rules: requires_channel, solid_block_placement, control_tower_special
+# Destruction Rule: block_break
 ###### END INFO BLOCK ######
 
 # Needed for the channel-to-item assignment code in lockdown:place_block/reject/generic
