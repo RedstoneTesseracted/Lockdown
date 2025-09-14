@@ -228,18 +228,18 @@ Block obstruction tests need to exist for the following:
     * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
 * Drone
     * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* Player detector
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Mob detector
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Klaxon
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* Laser projector
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Player detector
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Mob detector
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Klaxon
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Laser projector
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
 * Wireless transmitter
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
@@ -248,14 +248,14 @@ Block obstruction tests need to exist for the following:
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
     * Requires channel
-* Force field projector
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Force field projector
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
 * Turret
     * Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* Encoder
-    * Prevent block overlap (allow #minecraft:replaceable)
-    * Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
+* ✔ Encoder
+    * ✔ Prevent block overlap (allow #minecraft:replaceable)
+    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
 * Control tower
     * Prevent block overlap (allow #minecraft:replaceable)
     * Prevent block overlap one block up (allow #minecraft:replaceable)
