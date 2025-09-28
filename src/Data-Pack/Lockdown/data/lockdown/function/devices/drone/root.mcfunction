@@ -9,10 +9,8 @@ scoreboard players operation lockdown.check lockdown.local = @s lockdown.time
 scoreboard players operation lockdown.check lockdown.local %= lockdown.drone_target_interval lockdown.constant
 execute if score lockdown.check lockdown.local matches 0 run function lockdown:devices/drone/pick_target
 
-# Every 25 ticks, update the visual floating
-scoreboard players operation lockdown.check lockdown.local = @s lockdown.time
-scoreboard players operation lockdown.check lockdown.local %= lockdown.drone_float_interval lockdown.constant
-execute if score lockdown.check lockdown.local matches 0 run function lockdown:devices/drone/update_float
+# Update floating animation
+function lockdown:devices/drone/update_float
 
 # Update visual rotation to match the bee
 execute on vehicle rotated as @s on passengers run rotate @s[tag=lockdown.block.display] ~ 0.0

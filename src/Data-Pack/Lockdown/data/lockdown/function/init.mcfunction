@@ -31,21 +31,32 @@ scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
 scoreboard objectives add lockdown.uuid4 dummy
 
-scoreboard objectives add lockdown.drone.float dummy
+scoreboard objectives add lockdown.drone.float.x dummy
+scoreboard objectives add lockdown.drone.float.y dummy
+scoreboard objectives add lockdown.drone.choose_timestamp dummy
+scoreboard objectives add lockdown.drone.reach_timestamp dummy
+scoreboard objectives add lockdown.home.x dummy
+scoreboard objectives add lockdown.home.y dummy
+scoreboard objectives add lockdown.home.z dummy
 
 # Global configuration scores
-scoreboard players set lockdown.max_laser_distance lockdown.constant 10
+# Turret
 scoreboard players set lockdown.turret_target_interval lockdown.constant 20
 scoreboard players set lockdown.turret_rotate_interval lockdown.constant 5
 scoreboard players set lockdown.turret_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_turret_range lockdown.constant 8
 scoreboard players set lockdown.default_turret_damage lockdown.constant 4
+# Drone
 scoreboard players set lockdown.drone_float_interval lockdown.constant 25
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
+scoreboard players set lockdown.drone_patrol_timeout lockdown.constant 600
+scoreboard players set lockdown.drone_patrol_delay lockdown.constant 40
+scoreboard players set lockdown.drone_approval_expire lockdown.constant 4800
 scoreboard players set lockdown.default_drone_range lockdown.constant 10
 scoreboard players set lockdown.default_drone_damage lockdown.constant 4
-
+# Misc
+scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
 scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
 
@@ -53,6 +64,8 @@ scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
 # Numbers
 scoreboard objectives add lockdown.number dummy
 scoreboard players set -1 lockdown.number -1
+scoreboard players set 10 lockdown.number 10
+scoreboard players set 16 lockdown.number 16
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
@@ -75,7 +88,8 @@ data merge storage lockdown:temp {}
 
 #### Restore entity properties
 execute as @e[tag=lockdown.block.display,tag=lockdown.turret,tag=!lockdown.turret.base,tag=!lockdown.turret.beam] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
-
+scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.x 1000
+scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.y 0
 
 
 #### Versioning
