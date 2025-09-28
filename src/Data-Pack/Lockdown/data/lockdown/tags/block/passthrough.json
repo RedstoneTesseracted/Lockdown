@@ -71,6 +71,18 @@
 	"minecraft:moss_carpet",
 	"#minecraft:replaceable",
 	"minecraft:pink_petals",
-	"minecraft:cobweb"
+	"minecraft:cobweb",
+	"minecraft:open_eyeblossom",
+	"minecraft:closed_eyeblossom",
+	"minecraft:pale_hanging_moss",
+	"minecraft:pale_moss_carpet",
+	"minecraft:resin_clump",
+	"minecraft:leaf_litter",
+	"minecraft:wildflowers",
+	"minecraft:bush",
+	"minecraft:firefly_bush",
+	"minecraft:cactus_flower",
+	"minecraft:short_dry_grass",
+	"minecraft:tall_dry_grass"
    ]
 }
