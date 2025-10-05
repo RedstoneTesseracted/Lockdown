@@ -30,6 +30,7 @@ Below is a table of all planned features currently (re)implemented
 | Laser blaster                 |   ❌   |
 | Key                           |   ✅   |
 | BFG 8000                      |   ❌   |
+| Suspicious Thumb Drive        |   ❌   |
 | Legacy machine migration      |   ❌   |
 
 
@@ -139,7 +140,7 @@ Below is a table of all planned features currently (re)implemented
 
 ## Laser blaster
 
-* Planned for R3
+* Planned for R3 or R4
 
 
 ## Key
@@ -151,7 +152,14 @@ Below is a table of all planned features currently (re)implemented
 
 ## The BFG 8000
 
-* Planned for R3
+* Planned for R4
+
+
+## Suspicious thumb drive
+
+* Planned for R3 or R4
+* Rare item found in chests?
+* When used on a drone or turret, causes said drone/turret to instead target ALL friendly mobs, with priority on players and villagers.
 
 
 ## Removed Features
