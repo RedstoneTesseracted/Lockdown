@@ -21,6 +21,14 @@
       ],
     "attribution": "TODO: Where is this from?"
   },
+  "alarm.spaceship_alarm": {
+    "category": "block",
+    "subtitle": "subtitles.lockdown.alarm",
+      "sounds": [
+        "lockdown:alarm/spaceship_alarm"
+      ],
+    "attribution": "alarm3.WAV by phantastonia -- https://freesound.org/s/270640/ -- License: Creative Commons 0"
+  },
   "entity.drone.target": {
     "category": "neutral",
     "subtitle": "subtitles.lockdown.drone.target",
