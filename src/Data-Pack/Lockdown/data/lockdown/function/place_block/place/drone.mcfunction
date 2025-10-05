@@ -31,8 +31,8 @@ playsound minecraft:block.metal.place block @a ~ ~ ~ 1.0 1.0
 
 
 # Summon hitbox entity
-execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:1b, NoGravity:1b, TicksSincePollination: 2147483647, CannotEnterHiveTicks: 2147483647, PersistenceRequired: 1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.drone", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], Silent: 1b}
-
+execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:0b, NoGravity:1b, TicksSincePollination: 2147483647, CannotEnterHiveTicks: 2147483647, PersistenceRequired: 1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.drone", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], Silent: 1b}
+attribute @n[tag=lockdown.block.hitbox.new] minecraft:attack_damage base set 0.0
 
 # Summon and mount root entity
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {teleport_duration: 2, interpolation_duration: 1, transformation: {translation: [0.0f, -0.3f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.drone","lockdown.drone.body"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:drone/normal","minecraft:custom_model_data":{strings:["standby"]}}}}
@@ -45,7 +45,7 @@ execute as @n[tag=lockdown.block.hitbox] rotated as @s on passengers run rotate 
 # Assign special behavior tags
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.code_hostile
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.upgradeable
-tag @n[tag=lockdown.block.root.new] add lockdown.drone.state.standby
+tag @n[tag=lockdown.block.root.new] add lockdown.drone.state.patrolling
 
 # Set scores
 execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s data.lockdown_data.channel
@@ -58,7 +58,8 @@ scoreboard players set @n[tag=lockdown.block.root.new] lockdown.drone.float.y 0
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.x run data get entity @s Pos[0]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.y run data get entity @s Pos[1]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.z run data get entity @s Pos[2]
-scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_range = lockdown.default_drone_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.pursuit_range = lockdown.default_drone_pursuit_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_range = lockdown.default_drone_firing_range lockdown.constant
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_damage = lockdown.default_drone_damage lockdown.constant
 
 

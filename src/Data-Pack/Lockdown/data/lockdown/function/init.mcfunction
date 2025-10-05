@@ -31,10 +31,13 @@ scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
 scoreboard objectives add lockdown.uuid4 dummy
 
+scoreboard objectives add lockdown.creation_timestamp dummy
+
 scoreboard objectives add lockdown.drone.float.x dummy
 scoreboard objectives add lockdown.drone.float.y dummy
 scoreboard objectives add lockdown.drone.choose_timestamp dummy
 scoreboard objectives add lockdown.drone.reach_timestamp dummy
+scoreboard objectives add lockdown.drone.target_priority dummy
 scoreboard objectives add lockdown.home.x dummy
 scoreboard objectives add lockdown.home.y dummy
 scoreboard objectives add lockdown.home.z dummy
@@ -49,11 +52,13 @@ scoreboard players set lockdown.default_turret_damage lockdown.constant 4
 # Drone
 scoreboard players set lockdown.drone_float_interval lockdown.constant 25
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
+scoreboard players set lockdown.drone_suspect_interval lockdown.constant 10
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
-scoreboard players set lockdown.drone_patrol_timeout lockdown.constant 600
+scoreboard players set lockdown.drone_patrol_timeout lockdown.constant 300
 scoreboard players set lockdown.drone_patrol_delay lockdown.constant 40
 scoreboard players set lockdown.drone_approval_expire lockdown.constant 4800
-scoreboard players set lockdown.default_drone_range lockdown.constant 10
+scoreboard players set lockdown.default_drone_pursuit_range lockdown.constant 16
+scoreboard players set lockdown.default_drone_firing_range lockdown.constant 10
 scoreboard players set lockdown.default_drone_damage lockdown.constant 4
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
@@ -69,6 +74,7 @@ scoreboard players set 16 lockdown.number 16
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
+scoreboard objectives add lockdown.pursuit_range dummy
 scoreboard objectives add lockdown.firing_range dummy
 scoreboard objectives add lockdown.firing_damage dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
