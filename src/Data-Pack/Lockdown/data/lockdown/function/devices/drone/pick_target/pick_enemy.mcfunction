@@ -19,6 +19,7 @@ function lockdown:devices/drone/pick_target/__pick_enemy with storage lockdown:t
 # See lockdown:devices/drone/pick_target/evaluate_suspect for how priority is calculated
 scoreboard players set lockdown.found_highest lockdown.local 0
 execute as @e[tag=lockdown.drone.enemy] run function lockdown:devices/drone/pick_target/choose_highest_priority
+execute if score lockdown.found_highest lockdown.local matches 1 on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
 execute if score lockdown.found_highest lockdown.local matches 1 run function lockdown:devices/drone/pick_target/store_target_uuid
 
 # Restore approval list from temporary copy
