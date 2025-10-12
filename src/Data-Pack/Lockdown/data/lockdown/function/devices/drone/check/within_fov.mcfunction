@@ -17,6 +17,6 @@ scoreboard players operation lockdown.x1 lockdown.local += lockdown.z1 lockdown.
 
 #tellraw @a [{selector: "@s"}, {text:": "}, {score: {name: "lockdown.x1", objective: "lockdown.local"}}]
 
-# Is entity within -70° to 70° (i.e, dot product is in range [0.0, 0.3420] for our precision)
+# Is entity within -70° to 70° (i.e, dot product is in range [0.3420, 1.0000] for our precision)
 execute if score lockdown.x1 lockdown.local matches 3420.. run return 1
 return 0
