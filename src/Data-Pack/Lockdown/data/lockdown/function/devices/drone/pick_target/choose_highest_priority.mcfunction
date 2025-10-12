@@ -14,4 +14,4 @@ data modify storage lockdown:temp chosen_uuid set from entity @s UUID
 scoreboard players reset @s lockdown.drone.target_priority
 
 # Inform other instances of this function that there's no need to do additional processing
-scoreboard players set lockdown.found_highest lockdown.local 0
+scoreboard players set lockdown.found_highest lockdown.local 1

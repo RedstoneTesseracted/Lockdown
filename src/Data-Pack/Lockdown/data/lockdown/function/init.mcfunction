@@ -56,6 +56,8 @@ scoreboard players set lockdown.drone_suspect_interval lockdown.constant 10
 scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
 scoreboard players set lockdown.drone_patrol_timeout lockdown.constant 300
 scoreboard players set lockdown.drone_patrol_delay lockdown.constant 40
+scoreboard players set lockdown.drone_investigate_timeout lockdown.constant 300
+scoreboard players set lockdown.drone_investigate_delay lockdown.constant 300
 scoreboard players set lockdown.drone_approval_expire lockdown.constant 4800
 scoreboard players set lockdown.default_drone_pursuit_range lockdown.constant 16
 scoreboard players set lockdown.default_drone_firing_range lockdown.constant 10

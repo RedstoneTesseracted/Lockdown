@@ -13,7 +13,7 @@ execute if score lockdown.timestamp lockdown.local > lockdown.drone_patrol_timeo
 # Check ticks since last reaching a position
 execute store result score lockdown.timestamp lockdown.local run time query gametime
 scoreboard players operation lockdown.timestamp lockdown.local -= @s lockdown.drone.reach_timestamp
-execute if score lockdown.timestamp lockdown.local > lockdown.drone_patrol_timeout lockdown.constant run return 1
+execute if score lockdown.timestamp lockdown.local > lockdown.drone_patrol_delay lockdown.constant run return 1
 
 # No checks passed
 return 0

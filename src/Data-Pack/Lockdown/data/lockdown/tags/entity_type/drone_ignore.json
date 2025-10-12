@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-        "#lockdown:mob_detector_ignore"
+        "#lockdown:detection_ignore"
     ]
 }

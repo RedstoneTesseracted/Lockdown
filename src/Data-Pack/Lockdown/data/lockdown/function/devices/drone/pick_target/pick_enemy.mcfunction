@@ -2,9 +2,6 @@
 #
 # This is run BY and AT the drone base entity
 
-# Reset state tag
-tag @s remove lockdown.drone.has_target
-
 # Store/prepare some values that will be used in the below functions
 data modify storage lockdown:temp approved set from entity @s data.approved
 execute store result score lockdown.drone.x lockdown.local run data get entity @s Pos[0]
@@ -28,7 +25,6 @@ execute if score lockdown.found_highest lockdown.local matches 1 run function lo
 data modify entity @s data.approved set from storage lockdown:temp approved
 data remove storage lockdown:temp approved
  
-# Update state tag
-execute if score lockdown.found_highest lockdown.local matches 1 run tag @s add lockdown.drone.has_target
-
-scoreboard players reset lockdown.found_highest lockdown.local
+# Return boolean used to signal other functions to change state
+execute if score lockdown.found_highest lockdown.local matches 1 run return 1
+return 0

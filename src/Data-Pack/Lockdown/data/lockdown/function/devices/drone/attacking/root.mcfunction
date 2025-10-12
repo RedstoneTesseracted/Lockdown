@@ -1,4 +1,4 @@
-# This function handles drone behavior when in the "patrolling" state
+# This function handles drone behavior when in the "attacking" state
 #
 # In this state:
 #   * Drone repeatedly fires at target entity

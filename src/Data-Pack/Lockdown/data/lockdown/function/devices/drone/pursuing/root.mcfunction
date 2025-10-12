@@ -1,4 +1,4 @@
-# This function handles drone behavior when in the "patrolling" state
+# This function handles drone behavior when in the "pursuing" state
 #
 # In this state:
 #   * Drone stops firing at target entity

@@ -16,10 +16,12 @@ data modify storage lockdown:temp args set value {range: 16}
 execute store result storage lockdown:temp args.range int 1 run scoreboard players get @s lockdown.pursuit_range
 function lockdown:devices/drone/patrolling/__detect_suspicious with storage lockdown:temp args
 
-# Save position of interest (if one was found)
-execute unless score lockdown.highest_priority lockdown.local matches -2147483648 run data modify entity @s data.suspect_pos set from storage lockdown:temp suspect_pos
-scoreboard players reset lockdown.highest_priority lockdown.local
-
 # Restore approval list from temporary copy
 data modify entity @s data.approved set from storage lockdown:temp approved
 data remove storage lockdown:temp approved
+
+# Save position of interest (if one was found)
+execute unless score lockdown.highest_priority lockdown.local matches -2147483648 run data modify entity @s data.suspect_pos set from storage lockdown:temp suspect_pos
+execute unless score lockdown.highest_priority lockdown.local matches -2147483648 run return 1
+
+return 0

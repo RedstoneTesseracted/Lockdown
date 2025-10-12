@@ -54,9 +54,9 @@ scoreboard players add @s lockdown.time 1
 # The "lockdown.drone.skip_state_function" helps prevent multiple of these from being run in a tick whenever
 # the drone's state changes
 execute if entity @s[tag=lockdown.drone.state.patrolling] run function lockdown:devices/drone/patrolling/root
-execute if entity @s[tag=lockdown.drone.state.investigating,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/state/investigating
-execute if entity @s[tag=lockdown.drone.state.attacking,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/state/attacking
-execute if entity @s[tag=lockdown.drone.state.pursuing,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/state/pursuing
+execute if entity @s[tag=lockdown.drone.state.investigating,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/investigating/root
+execute if entity @s[tag=lockdown.drone.state.attacking,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/attacking/root
+execute if entity @s[tag=lockdown.drone.state.pursuing,tag=!lockdown.drone.skip_state_function] run function lockdown:devices/drone/pursuing/root
 tag @s remove lockdown.drone.skip_state_function
 
 # Update animations
