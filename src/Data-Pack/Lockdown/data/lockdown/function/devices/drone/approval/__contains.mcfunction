@@ -1,4 +1,5 @@
-# Function macro used by is_approved to perform a list lookup
+# Function macro used by contains to perform a list lookup
+# This depends on the drone's approval list being temporarily stored in lockdown:temp
 
 # Retrieve entry from list
 data remove storage lockdown:temp retrieved

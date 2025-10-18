@@ -6,7 +6,7 @@
 # * Hasn't recently been investigated
 
 # Ignore if recently investigated
-execute if function lockdown:devices/drone/check/is_approved run return 0
+execute if function lockdown:devices/drone/approval/contains run return 0
 
 # Definitely investigate if within field of view
 execute if function lockdown:devices/drone/check/within_fov run return run function lockdown:devices/drone/patrolling/flag_anomaly

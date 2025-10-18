@@ -4,7 +4,7 @@
 
 # Add to list of approvals
 data modify storage lockdown:temp approved set from entity @s data.approved
-execute on vehicle on target run function lockdown:devices/drone/pick_target/approve
+execute on vehicle on target run function lockdown:devices/drone/approval/add
 data modify entity @s data.approved set from storage lockdown:temp approved
 
 # Clear target UUID

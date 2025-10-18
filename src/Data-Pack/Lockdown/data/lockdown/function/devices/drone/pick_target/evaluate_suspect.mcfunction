@@ -8,7 +8,7 @@
 #     with the lockdown.behavior.code_hostile tag) with a non-matching channel to be enemies
 
 # Check if entity has already been investigated
-execute if function lockdown:devices/drone/check/is_approved run return 0
+execute if function lockdown:devices/drone/approval/contains run return 0
 
 # Hostile mobs are generally applicable
 execute if entity @s[type=#lockdown:hostile] run return run function lockdown:devices/drone/pick_target/flag_enemy
@@ -17,4 +17,4 @@ execute if entity @s[type=#lockdown:hostile] run return run function lockdown:de
 execute unless score lockdown.channel lockdown.local matches 0 unless score lockdown.channel lockdown.local = @s lockdown.channel if predicate lockdown:channel_failing_targetable run function lockdown:devices/drone/pick_target/flag_enemy
 
 # All checks passed: suspect is approved
-return run function lockdown:devices/drone/pick_target/approve
+return run function lockdown:devices/drone/approval/add
