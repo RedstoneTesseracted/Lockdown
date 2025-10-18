@@ -28,7 +28,7 @@ execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^0.5 summon minecraf
 
 # Create/mount item display
 # 0.25 block offset accounts for sudden shift due to mounting snowball
-summon minecraft:item_display ~ ~0.25 ~ {Tags: ["lockdown.projectile", "lockdown.projectile.root", "lockdown.projectile.new", "lockdown.projectile.display", "lockdown.laser"], teleport_duration: 0, interpolation_duration: 1, transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, item: {id: "minecraft:paper", components: {"minecraft:item_model": "lockdown:laser_beam","minecraft:custom_data":{lockdown_data:{damage_type:"lockdown:drone_laser"}}}}}
+summon minecraft:item_display ~ ~0.25 ~ {data: {projectile_args: {type: "lockdown:drone_laser", damage: 0s, source: [I; 0, 0, 0, 0]}}, Tags: ["lockdown.projectile", "lockdown.projectile.root", "lockdown.projectile.new", "lockdown.projectile.display", "lockdown.laser"], teleport_duration: 0, interpolation_duration: 1, transformation: {translation: [0.0f, 0.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, item: {id: "minecraft:paper", components: {"minecraft:item_model": "lockdown:laser_beam"}}}
 ride @n[tag=lockdown.projectile.new,tag=lockdown.projectile.display] mount @s
 execute on passengers run tag @s remove lockdown.projectile.new
 
@@ -44,14 +44,23 @@ execute on passengers run data modify entity @s[tag=lockdown.projectile.display]
 # Set scores
 # Note: see lockdown:projectile/damage_id_to_string for the conversion between numeric damage types and strings
 execute on passengers run scoreboard players set @s[tag=lockdown.projectile.root] lockdown.time 50
-execute on passengers run scoreboard players operation @s[tag=lockdown.projectile.root] lockdown.firing_damage = lockdown.damage lockdown.local
 execute on passengers run scoreboard players set @s[tag=lockdown.projectile.root] lockdown.left_origin 0
+
+# Save damage value
+execute on passengers store result entity @s[tag=lockdown.projectile.root] data.projectile_args.damage int 1 run scoreboard players get lockdown.damage lockdown.local
 
 # Save origin UUID to avoid colliding with origin
 execute on passengers if entity @s[tag=lockdown.projectile.root] run scoreboard players operation @s lockdown.origin_uuid1 = lockdown.uuid1 lockdown.local
 execute on passengers if entity @s[tag=lockdown.projectile.root] run scoreboard players operation @s lockdown.origin_uuid2 = lockdown.uuid2 lockdown.local
 execute on passengers if entity @s[tag=lockdown.projectile.root] run scoreboard players operation @s lockdown.origin_uuid3 = lockdown.uuid3 lockdown.local
 execute on passengers if entity @s[tag=lockdown.projectile.root] run scoreboard players operation @s lockdown.origin_uuid4 = lockdown.uuid4 lockdown.local
+data modify storage lockdown:temp origin set value [I; 0, 0, 0, 0]
+execute store result storage lockdown:temp origin[0] int 1 run scoreboard players get lockdown.uuid1 lockdown.local
+execute store result storage lockdown:temp origin[1] int 1 run scoreboard players get lockdown.uuid2 lockdown.local
+execute store result storage lockdown:temp origin[2] int 1 run scoreboard players get lockdown.uuid3 lockdown.local
+execute store result storage lockdown:temp origin[3] int 1 run scoreboard players get lockdown.uuid4 lockdown.local
+execute on passengers if entity @s[tag=lockdown.projectile.root] run data modify entity @s data.projectile_args.origin set from storage lockdown:temp origin
+data remove storage lockdown:temp origin
 
 # Save motion data for use in subsequent ticks
 execute store result score @s lockdown.motion.x run data get storage lockdown:temp pos.x 10000.0

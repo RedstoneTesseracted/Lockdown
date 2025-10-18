@@ -3,10 +3,8 @@
 # In this state:
 #   * Drone periodically picks random position within range of home position
 #   * Drone navigates towards chosen position
-#   * Drone enters "investigating" state if another entity meets the following conditions:
-#       * Is within pursuit range
-#       * Is within field-of-view OR is moving quickly
-#       * Hasn't recently been investigated
+#   * Drone enters "investigating" state if it detects anomalous activity
+#     (see evaluate_activity) within pursuit range
 #   * Done enters either "pursuing" or "attacking" state if attacked
 
 # Update patrolling behavior

@@ -1,8 +1,7 @@
 # This function runs when the laser projectile impacts a surface
 
 # Do damage
-execute store result storage lockdown:temp args.damage int 1 run scoreboard players get @s lockdown.firing_damage
-data modify storage lockdown:temp args.type set from entity @s item.components."minecraft:custom_data".lockdown_data.damage_type
+data modify storage lockdown:temp args set from entity @s data.projectile_args
 execute store success score lockdown.macro_status lockdown.local as @e[tag=lockdown.collide] run function lockdown:projectile/damage_macro with storage lockdown:temp args
 tag @e[tag=lockdown.collide] remove lockdown.collide
 execute if score lockdown.macro_status lockdown.local matches 0 run title @p actionbar {translate: "lockdown.messages.bug.macro.generic",color: "red", with: [{text: "lockdown:projectile/damage_macro", color: "gray", underlined: true}]}
