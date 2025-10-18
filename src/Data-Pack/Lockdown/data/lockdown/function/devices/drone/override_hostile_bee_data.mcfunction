@@ -1,4 +1,4 @@
-# Called by lockdown:devices/drone/hostile to override the hitbox bee's NBT data and keep it "behaving"
+# Called by several root state functions to override the hitbox bee's NBT data and keep it "beehaving"
 
 # Force stung status
 data modify entity @s HasStung set value 0b
