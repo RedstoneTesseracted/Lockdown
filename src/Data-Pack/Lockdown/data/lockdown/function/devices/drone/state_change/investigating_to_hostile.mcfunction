@@ -3,7 +3,7 @@
 # is close enough.
 # This is run BY and AT the root drone entity
 
-#say investigating -> hostile
+say investigating -> hostile
 
 # Clear any patrol markers, if they exist
 execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
