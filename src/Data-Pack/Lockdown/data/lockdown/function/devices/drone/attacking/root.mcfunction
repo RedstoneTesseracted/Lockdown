@@ -21,7 +21,7 @@ execute unless score @s lockdown.channel matches 0 if function lockdown:devices/
 execute unless function lockdown:devices/drone/check/target_within_pursuit_range run return run function lockdown:devices/drone/state_change/attacking_to_patrolling
 
 # Fire laser at target
-execute if function lockdown:devices/drone/check/periodic_fire_check run function lockdown:devices/drone/fire
+execute if predicate lockdown:periodic_drone_fire run function lockdown:devices/drone/fire
 
 # Enter "pursuing" state if target leaves firing range
 # TODO: Reduce frequency of this check
