@@ -24,4 +24,4 @@ scoreboard players operation lockdown.threshold_timestamp lockdown.local -= lock
 execute as @e[tag=lockdown.drone.patrol_marker] if score @s lockdown.creation_timestamp < lockdown.threshold_timestamp lockdown.local run kill @s
 
 # Schedule this function to run again
-schedule function lockdown:periodic_fix 0.5d replace
+schedule function lockdown:periodic_fix 20s replace
