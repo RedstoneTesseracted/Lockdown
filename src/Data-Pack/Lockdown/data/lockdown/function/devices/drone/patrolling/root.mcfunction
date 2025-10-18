@@ -10,7 +10,7 @@
 #   * Done enters either "pursuing" or "attacking" state if attacked
 
 # Update patrolling behavior
-execute if function lockdown:devices/drone/check/can_pick_new_position if function lockdown:devices/drone/choose_patrol_position run function lockdown:devices/drone/patrolling/create_patrol_point with storage lockdown:temp candidate_pos
+execute if function lockdown:devices/drone/check/can_pick_new_position if function lockdown:devices/drone/patrolling/choose_patrol_position run function lockdown:devices/drone/patrolling/create_patrol_point with storage lockdown:temp candidate_pos
 execute if predicate lockdown:near_target if function lockdown:devices/drone/check/target_exists run function lockdown:devices/drone/patrolling/reach_patrol_position
 
 # Update bee data
