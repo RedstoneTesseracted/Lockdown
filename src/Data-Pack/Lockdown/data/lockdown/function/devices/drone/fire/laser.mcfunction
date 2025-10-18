@@ -1,4 +1,6 @@
 # This function launches a laser projectile at the drone's target
+# This is run BY and AT the drone base entity, and is called from
+# lockdown:devices/drone/fire when the drone's weapon is a laser.
 
 # Summon laser beam entity
 execute store result score lockdown.damage lockdown.local run scoreboard players get @s lockdown.firing_damage

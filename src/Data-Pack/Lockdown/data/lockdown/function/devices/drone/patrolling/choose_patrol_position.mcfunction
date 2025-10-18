@@ -24,7 +24,7 @@ data modify storage lockdown:temp candidate_pos set value {x: 0, y: 0, z: 0}
 execute store result storage lockdown:temp candidate_pos.x int 1 run scoreboard players get lockdown.block.x lockdown.local
 execute store result storage lockdown:temp candidate_pos.y int 1 run scoreboard players get lockdown.block.y lockdown.local
 execute store result storage lockdown:temp candidate_pos.z int 1 run scoreboard players get lockdown.block.z lockdown.local
-execute store result score lockdown.result lockdown.local run function lockdown:devices/drone/__choose_patrol_position with storage lockdown:temp candidate_pos
+execute store result score lockdown.result lockdown.local run function lockdown:devices/drone/patrolling/__choose_patrol_position with storage lockdown:temp candidate_pos
 execute if score lockdown.result lockdown.local matches 0 run return 0
 
 # Update storage and scores
