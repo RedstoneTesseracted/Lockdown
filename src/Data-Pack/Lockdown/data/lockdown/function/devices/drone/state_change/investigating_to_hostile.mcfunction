@@ -3,7 +3,7 @@
 # is close enough.
 # This is run BY and AT the root drone entity
 
-say investigating -> hostile
+#say investigating -> hostile
 
 # Clear any patrol markers, if they exist
 execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
@@ -16,7 +16,7 @@ playsound lockdown:entity.drone.identify.target neutral @a ~ ~ ~ 1.0 1.0
 
 # Decide whether to enter "pursuing" or "attacking" state
 scoreboard players set lockdown.result lockdown.local 0
-execute if predicate lockdown:vehicle_near_target run scoreboard players set lockdown.result lockdown.local 1
+execute if function lockdown:devices/drone/check/target_within_firing_range run scoreboard players set lockdown.result lockdown.local 1
 execute if score lockdown.result lockdown.local matches 0 run tag @s add lockdown.drone.state.pursuing
 execute if score lockdown.result lockdown.local matches 1 run tag @s add lockdown.drone.state.attacking
 

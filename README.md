@@ -299,7 +299,11 @@ Tests not covered under the GameTest system:
 | Translation key existence checks               |      ✅      |
 | JSON text resolution errors                    |      ❓      |
 
-
+To enable debug error messages, enter creative mode and give yourself the "lockdown.enable_messages" tag:
+```
+gamemode creative
+tag @s add lockdown.enable_messages
+```
 
 # Known Bugs
 

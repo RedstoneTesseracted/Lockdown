@@ -1,4 +1,4 @@
-# This function switches the drone from a "investigating" to an "patrolling" state
+# This function switches the drone from a "investigating" to a "patrolling" state
 # This is run BY and AT the root drone entity
 
 say investigating -> patrolling

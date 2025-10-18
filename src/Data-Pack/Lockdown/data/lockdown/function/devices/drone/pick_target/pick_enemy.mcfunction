@@ -25,7 +25,7 @@ execute if score lockdown.found_highest lockdown.local matches 1 run function lo
 # Restore approval list from temporary copy
 data modify entity @s data.approved set from storage lockdown:temp approved
 data remove storage lockdown:temp approved
- 
+
 # Return boolean used to signal other functions to change state
 execute if score lockdown.found_highest lockdown.local matches 1 run return 1
 return 0

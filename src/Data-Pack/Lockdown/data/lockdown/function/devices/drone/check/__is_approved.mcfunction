@@ -12,8 +12,8 @@ execute store result score lockdown.timestamp lockdown.local run time query game
 execute store result score lockdown.approved_timestamp lockdown.local run data get storage lockdown:temp retrieved.timestamp
 scoreboard players operation lockdown.timestamp lockdown.local -= lockdown.approved_timestamp lockdown.local
 
-$execute if score lockdown.approved_timestamp lockdown.local > lockdown.drone_approval_expire lockdown.constant run data remove storage lockdown:temp approved[{uuid:$(UUID)}]
-execute if score lockdown.approved_timestamp lockdown.local > lockdown.drone_approval_expire lockdown.constant run return -1
+$execute if score lockdown.timestamp lockdown.local > lockdown.drone_approval_expire lockdown.constant run data remove storage lockdown:temp approved[{uuid:$(UUID)}]
+execute if score lockdown.timestamp lockdown.local > lockdown.drone_approval_expire lockdown.constant run return -1
 
 # All checks passed
 return 1
