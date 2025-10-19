@@ -419,3 +419,9 @@ tag @s add lockdown.enable_messages
 
 * Certain devices could feasibly be placed in the same position twice if done so on the same tick.
 * It is possible to apply most placeable devices to spawners
+
+# TODO:
+
+* Make force-field projectors work horizontally
+* Inconsistent presentation of macro errors
+* Implement legacy machine upgrading
