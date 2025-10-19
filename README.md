@@ -191,7 +191,7 @@ Below is a table of all planned features currently (re)implemented
 
 ### History
 
-* Added in R1
+* Added in R3
 
 
 ## Durability upgrade
@@ -203,7 +203,8 @@ Below is a table of all planned features currently (re)implemented
 
 ### History
 
-* Added in R1
+* Added in R2
+* Increased maximum upgrades to 3 in R3
 
 
 ## Flamethrower upgrade
@@ -214,7 +215,7 @@ Below is a table of all planned features currently (re)implemented
 
 ### History
 
-* Added in R1
+* Added in R2
 
 
 ## Drone control tower upgrade
@@ -226,7 +227,7 @@ Below is a table of all planned features currently (re)implemented
 
 ### History
 
-* Added in R1
+* Added in R2
 * Removed in R3 due to drone AI overhaul
 
 
@@ -266,6 +267,54 @@ Below is a table of all planned features currently (re)implemented
 ### History
 
 * Planned for R4
+
+
+## Legacy Wand
+
+* Tool used to drop pre-R3 blocks/items and replace them with their post-R3 counterparts
+* Right click to upgrade all items in player inventory
+* Right click while facing block to upgrade block
+* Upgradeable devices:
+    * ✔ Big button
+    * ✔ Alarm
+    * ✔ Keycard reader
+    * ✔ Player detector
+    * ✔ Mob detector
+    * ✔ Klaxon
+    * ✔ Laser projector
+    * ✔ Transmitter
+    * ✔ Receiver
+    * ✔ Force field projector
+    * ✔ Control tower
+    * ✔ Drone
+    * ✔ Turret
+    * ✔ Encoder
+    * ✔ Crafter
+* Upgradeable items:
+    * Big button
+    * Alarm
+    * Keycard reader
+    * Player detector
+    * Mob detector
+    * Klaxon
+    * Laser projector
+    * Transmitter
+    * Receiver
+    * Force field projector
+    * Control tower
+    * Drone
+    * Turret
+    * Encoder
+    * Crafter
+    * Recipe book
+    * Flamethrower upgrade
+    * Durability upgrade
+    * Armor upgrade
+    * Drone control tower upgrade
+
+### History
+
+* Planned for R3
 
 
 ## Removed Features
@@ -425,3 +474,5 @@ tag @s add lockdown.enable_messages
 * Make force-field projectors work horizontally
 * Inconsistent presentation of macro errors
 * Implement legacy machine upgrading
+    * Ok, maybe this isn't as practical as I hoped...  perhaps it'd make more sense to implement a 
+      tool that drops legacy blocks instead of trying to upgrade them?
