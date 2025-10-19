@@ -311,3 +311,4 @@ tag @s add lockdown.enable_messages
 * It is possible to apply most placeable devices to spawners
 * There is no active cleanup of drone approval lists
 * Drone flamethrower does not take target motion into account like their laser does
+* Drones immediately enter their "investigating" state when spawned due to the presence of the player that placed them
