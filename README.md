@@ -20,7 +20,7 @@ Below is a table of all planned features currently (re)implemented
 | Player detector               |   ✅   |
 | Mob detector                  |   ✅   |
 | Defense turret                |   ✅   |
-| Defense drone                 |   ❌   |
+| Defense drone                 |   ✅   |
 | ~~Drone control tower~~       |   ✅   |
 | Encoding station              |   ✅   |
 | Range upgrade                 |   ✅   |
@@ -73,6 +73,7 @@ Below is a table of all planned features currently (re)implemented
 ### History
 
 * Added in R1
+* Force field projectors can now be placed horizontally in R3
 
 
 ## Keycard reader w/ keycard
@@ -291,26 +292,26 @@ Below is a table of all planned features currently (re)implemented
     * ✔ Encoder
     * ✔ Crafter
 * Upgradeable items:
-    * Big button
-    * Alarm
-    * Keycard reader
-    * Player detector
-    * Mob detector
-    * Klaxon
-    * Laser projector
-    * Transmitter
-    * Receiver
-    * Force field projector
-    * Control tower
-    * Drone
-    * Turret
-    * Encoder
-    * Crafter
-    * Recipe book
-    * Flamethrower upgrade
-    * Durability upgrade
-    * Armor upgrade
-    * Drone control tower upgrade
+    * ✔ Big button
+    * ✔ Alarm
+    * ✔ Keycard reader
+    * ✔ Player detector
+    * ✔ Mob detector
+    * ✔ Klaxon
+    * ✔ Laser projector
+    * ✔ Transmitter
+    * ✔ Receiver
+    * ✔ Force field projector
+    * ✔ Control tower
+    * ✔ Drone
+    * ✔ Turret
+    * ✔ Encoder
+    * ✔ Crafter
+    * ✔ Recipe book
+    * ✔ Flamethrower upgrade
+    * ✔ Durability upgrade
+    * ✔ Armor upgrade
+    * ✔ Drone control tower upgrade
 
 ### History
 
@@ -455,6 +456,7 @@ Tests not covered under the GameTest system:
 | Static code analysis                           |      ❌      |
 | Data pack load errors                          |      ❌      |
 | Resource pack load errors                      |      ❌      |
+| Advancements                                   |      ❌      |
 | Translation key existence checks               |      ✅      |
 | JSON text resolution errors                    |      ❓      |
 
@@ -476,3 +478,48 @@ tag @s add lockdown.enable_messages
 * Implement legacy machine upgrading
     * Ok, maybe this isn't as practical as I hoped...  perhaps it'd make more sense to implement a 
       tool that drops legacy blocks instead of trying to upgrade them?
+* Create wiki
+
+---
+
+# Changes in Release 3:
+
+* Complete rewrite of the data pack
+* Completely overhauled drones
+    * Rewrote drone AI
+    * New drone model
+    * New sound effects
+    * Drones can now be dyed
+    * Drone lasers now have a custom model
+* Improvements to turrets:
+    * Turrets now rotate around two axes of rotation
+    * Turrets can now be placed on any side of a block
+    * Turret lasers now have a custom model
+* Improvements to shield projector:
+    * Can now be placed in any direction
+    * Added brief shield raising/lowering animation
+* Improvements to laser projectors
+    * Greatly increased range of laser projectors
+    * Laser projectors can now be blocked by solid blocks
+    * Laser projectors can now be placed vertically
+* Multiple upgrades can now be applied to drones/turrets
+* Removed drone control tower and drone control tower upgrade, as they are now obsolete.  Use the legacy wand to return materials
+* Upgrades are no longer mutually exclusive on drones/turrets
+* Durability upgrade can now be stacked up to 3
+* Added turret/drone range upgrade (can be stacked up to 3)
+* Added container key
+    * Brings container locking to survival
+* Keycards now come in sixteen new colors
+* Changes to keycard readers:
+    * Keycard readers are now full blocks
+    * Encoding is now optional
+    * Now emit a redstone signal when they detect a valid keycard
+* Added new alarm sounds to the klaxon
+* All recipes now use the crafting table, now that vanilla supports custom components in recipe outputs
+* Removed the secure crafter and secure recipe book, as they are no longer needed.  Use the legacy wand to return materials
+* Text now uses translation keys instead of being hardcoded
+
+## Migrating Legacy Machines to Release 3
+
+* Added legacy wand for updating old blocks/items to their R3 equivalent
+* Right-click wand to update all legacy items in your inventory, as well as whatever legacy device you're looking at

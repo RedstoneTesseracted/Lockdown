@@ -1,4 +1,4 @@
-# This function handles assigning the code/channel to the item in the slot
+# This function handles assigning the code/channel to the item in the slot.
 # Channel implementation varies by the item due to technical limitations,
 # so this wraps all the branching logic.
 
