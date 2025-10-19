@@ -35,7 +35,7 @@ execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:0b, NoGravity:1b
 attribute @n[tag=lockdown.block.hitbox.new] minecraft:attack_damage base set 0.0
 
 # Summon and mount root entity
-execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {teleport_duration: 2, interpolation_duration: 1, transformation: {translation: [0.0f, -0.3f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.drone","lockdown.drone.body"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:drone/normal","minecraft:custom_model_data":{strings:["standby"]}}}}
+execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {data: {approved: []}, teleport_duration: 2, interpolation_duration: 1, transformation: {translation: [0.0f, -0.3f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.drone","lockdown.drone.body"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:drone/normal","minecraft:custom_model_data":{strings:["standby"]}}}}
 ride @n[tag=lockdown.block.root.new] mount @n[tag=lockdown.block.hitbox.new]
 
 # Rotate item display to match bee
@@ -66,3 +66,10 @@ scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_exi
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_damage = lockdown.default_drone_damage lockdown.constant
 
 
+# If the drone doesn't have a channel, it's safe to include the player who placed it
+# in the list of "approved" entities such that it never expires.  This prevents drones
+# from immediately investigating the player who spawned it
+data modify storage lockdown:temp pre_approved set value {uuid: [I; 0, 0, 0, 0], timestamp: 2147483647}
+data modify storage lockdown:temp pre_approved.uuid set from entity @p[tag=lockdown.placer.source] UUID
+execute if score lockdown.channel lockdown.local matches 0 run data modify entity @n[tag=lockdown.block.root.new] data.approved append from storage lockdown:temp pre_approved
+data remove storage lockdown:temp pre_approved
