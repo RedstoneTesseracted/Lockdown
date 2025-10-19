@@ -310,4 +310,4 @@ tag @s add lockdown.enable_messages
 * Certain devices could feasibly be placed in the same position twice if done so on the same tick.
 * It is possible to apply most placeable devices to spawners
 * There is no active cleanup of drone approval lists
-* Drones are still bad with mild strafing
+* Drone flamethrower does not take target motion into account like their laser does

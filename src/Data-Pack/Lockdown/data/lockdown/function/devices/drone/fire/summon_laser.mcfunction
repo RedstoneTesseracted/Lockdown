@@ -19,8 +19,7 @@ attribute @s minecraft:gravity base set 0.0
 attribute @s minecraft:scale base set 0.12658227848101264
 
 # Rotate to face target
-rotate @s facing entity @e[tag=lockdown.drone.target,limit=1] feet
-rotate @s ~ ~-1
+function lockdown:devices/drone/fire/__summon_laser with storage lockdown:temp target_pos
 
 # Obtain vector from drone to target - we use this as the motion vector
 # The laser speed can be adjusted by changing the 0.75 below

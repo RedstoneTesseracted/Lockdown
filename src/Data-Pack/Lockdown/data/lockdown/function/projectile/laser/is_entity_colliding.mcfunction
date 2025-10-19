@@ -25,10 +25,10 @@ scoreboard players operation lockdown.left_origin lockdown.local = @s lockdown.l
 # it is visually.  So, it'll still appear to collide early
 scoreboard players set lockdown.total_collisions lockdown.local 0
 scoreboard players set lockdown.collided_with_origin lockdown.local 0
-# execute on vehicle at @s run particle minecraft:bubble ~ ~ ~ 0.0 0.0 0.0 1.0 4
-# execute on vehicle at @s positioned ~-0.1 ~-0.1 ~-0.1 run function lockdown:debug/red_cube
-# execute on vehicle at @s positioned ~-0.1 ~-0.1 ~-0.1 positioned ~-0.9 ~-0.9 ~-0.9 run function lockdown:debug/green_cube
-execute on vehicle at @s positioned ~-0.1 ~-0.1 ~-0.1 as @e[type=!#lockdown:laser_ignore,dx=0,dy=0,dz=0,tag=!lockdown.laser] positioned ~-0.9 ~-0.9 ~-0.9 if entity @s[dx=0,dy=0,dz=0] run function lockdown:projectile/laser/decide_collision
+#execute on vehicle at @s run particle minecraft:bubble ~ ~ ~ 0.0 0.0 0.0 1.0 4
+#execute on vehicle at @s run function lockdown:debug/collision_cube
+execute on vehicle at @s positioned ~-0.1 ~-0.1 ~-0.1 as @e[type=!#lockdown:laser_ignore,dx=0,dy=0,dz=0,tag=!lockdown.laser] positioned ~-0.8 ~-0.8 ~-0.8 if entity @s[dx=0,dy=0,dz=0] run function lockdown:projectile/laser/decide_collision
+execute on vehicle at @s positioned ^ ^ ^-0.375 positioned ~-0.1 ~-0.1 ~-0.1 as @e[type=!#lockdown:laser_ignore,dx=0,dy=0,dz=0,tag=!lockdown.laser] positioned ~-0.8 ~-0.8 ~-0.8 if entity @s[dx=0,dy=0,dz=0] run function lockdown:projectile/laser/decide_collision
 
 # Update collision with origin status
 execute if score @s lockdown.left_origin matches 0 if score lockdown.collided_with_origin lockdown.local matches 0 run scoreboard players set @s lockdown.left_origin 1

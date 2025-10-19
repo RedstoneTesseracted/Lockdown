@@ -73,6 +73,7 @@ scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
 # Numbers
 scoreboard objectives add lockdown.number dummy
 scoreboard players set -1 lockdown.number -1
+scoreboard players set 2 lockdown.number 2
 scoreboard players set 10 lockdown.number 10
 scoreboard players set 16 lockdown.number 16
 

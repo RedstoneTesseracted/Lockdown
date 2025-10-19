@@ -939,6 +939,69 @@ def generate_placer_tests():
             with open(path.join(test_instance_dir, test, f'{device}.json'), mode='w') as wf:
                 dump(test_instance, wf, indent=4)
             
+
+
+def generate_drone_distance_lookup_table(L):
+    """Generates a lookup table used by drones when compensating for target motion"""
+    # Declare paths used below
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    function_path = path.join(datapack_dir, 'function', 'devices', 'drone', 'fire', 'lookup_distance_multiplier.mcfunction')
+    ranges_dir = path.join(datapack_dir, 'predicate', 'ranges')
+
+    lower, upper = 0, 0
+    ranges = []
+    while upper <= 30:
+        lower = upper
+        upper = lower + L
+        ranges.append([lower, upper])
+    ranges[-1][-1] = ''
+
+    # Remove any existing range predicates
+    expected_files = [f'{str(i).replace(".", "_")}_{str(j).replace(".", "_")}.json' for i, j in ranges]
+    for file in os.listdir(ranges_dir):
+        if re.match(r'([0-9\.]+)-([0-9\.]*).json', file) and file not in expected_files:
+            os.remove(os.path.join(ranges_dir, file))
+
+    # Write the predicates referenced by the function
+    for lower, upper in ranges:
+        upper_txt = upper
+        if upper == '':
+            upper = 1024
+        data = {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "targeted_entity": {
+                    "distance": {
+                        "absolute": {
+                            "min": lower,
+                            "max": upper
+                        }
+                    }
+                }
+            }
+        }
+        with open(os.path.join(ranges_dir, f'{str(lower).replace(".", "_")}-{str(upper_txt).replace(".", "_")}.json'), mode='w') as wf:
+            dump(data, wf, indent=4)
+
+    # Write the function itself
+    with open(function_path, mode='w') as wf:
+        wf.write("""\
+# Lookup table used to determine how much to scale motion compensation based on distance
+# These are obtained using the formula:
+#   multiplier = distance / projectile velocity * precision factor
+#   
+#   Where velocity = 0.75 b/t (set in lockdown:devices/drone/fire/summon_laser)
+#         precision factor = 10
+#
+
+""")
+        for lower, upper in ranges:
+            upper_txt = upper
+            if upper == '':
+                upper = lower
+            multiplier = (upper + lower) / 2 / 0.75 * 10
+            wf.write(f'execute if predicate lockdown:ranges/{str(lower).replace(".", "_")}-{str(upper_txt).replace(".", "_")} run return {round(multiplier)}\n')
             
 
 
@@ -954,6 +1017,7 @@ def main():
     generate_beam_models()
     generate_grouped_loot_tables()
     generate_placer_tests()
+    generate_drone_distance_lookup_table(3)
 
 
 if __name__ == "__main__":
