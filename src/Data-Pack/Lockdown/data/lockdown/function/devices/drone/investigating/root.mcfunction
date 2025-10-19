@@ -12,6 +12,9 @@
 execute if function lockdown:devices/drone/check/has_investigated_long_enough run return run function lockdown:devices/drone/state_change/investigating_to_patrolling
 execute if predicate lockdown:near_target if function lockdown:devices/drone/check/target_exists run function lockdown:devices/drone/investigating/reach_anomaly_position
 
+# Look around if at anomaly position
+execute if entity @s[tag=!lockdown.drone.has_target] on vehicle run rotate @s ~5 ~
+
 # Update bee data
 execute if entity @s[tag=lockdown.drone.has_target] on vehicle run function lockdown:devices/drone/override_hostile_bee_data
 execute unless entity @s[tag=lockdown.drone.has_target] on vehicle run function lockdown:devices/drone/override_nonhostile_bee_data

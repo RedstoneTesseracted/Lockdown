@@ -19,7 +19,7 @@
                 },
                 "movement": {
                     "speed": {
-                        "min": 0.1
+                        "min": 2.0
                     }
                 }
             }
@@ -30,7 +30,7 @@
             "predicate": {
                 "movement": {
                     "speed": {
-                        "min": 0.2
+                        "min": 4.0
                     }
                 }
             }

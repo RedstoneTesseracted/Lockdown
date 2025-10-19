@@ -13,7 +13,9 @@ scoreboard players set lockdown.highest_priority lockdown.local -2147483648
 data remove storage lockdown:temp args
 data modify storage lockdown:temp args set value {range: 0} 
 execute store result storage lockdown:temp args.range int 1 run scoreboard players get @s lockdown.pursuit_enter_range
+tag @s add lockdown.exclude
 function lockdown:devices/drone/pick_target/__pick_enemy with storage lockdown:temp args
+tag @s remove lockdown.exclude
 
 # Pick the enemy with the highest priority
 # See lockdown:devices/drone/pick_target/evaluate_suspect for how priority is calculated
