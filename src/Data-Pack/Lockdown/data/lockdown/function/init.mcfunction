@@ -92,6 +92,7 @@ scoreboard objectives add lockdown.upgrades.durability dummy
 
 #### Scheduled timers
 function lockdown:periodic_fix
+function lockdown:rare_periodic_fix
 function lockdown:periodic_break_check
 function lockdown:lazy_tick
 

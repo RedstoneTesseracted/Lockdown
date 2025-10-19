@@ -1,5 +1,4 @@
-# This function contains various fixes for unlikely problems that would
-# ordinarily soft-lock the player.
+# This function contains various fixes for unlikely problems that could conceivably happen
 # The necessity of this is questionable, but we check anyways just to be safe.
 
 # You shouldn't have those
