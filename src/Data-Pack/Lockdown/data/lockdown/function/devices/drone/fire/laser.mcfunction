@@ -11,7 +11,6 @@ execute store result score lockdown.uuid1 lockdown.local on vehicle run data get
 execute store result score lockdown.uuid2 lockdown.local on vehicle run data get entity @s UUID[1]
 execute store result score lockdown.uuid3 lockdown.local on vehicle run data get entity @s UUID[2]
 execute store result score lockdown.uuid4 lockdown.local on vehicle run data get entity @s UUID[3]
-#execute facing entity @e[tag=lockdown.drone.target,limit=1] eyes positioned ^ ^-0.6 ^0.1 summon minecraft:armor_stand run function lockdown:devices/drone/fire/summon_laser
 execute positioned ^ ^-0.6 ^0.1 summon minecraft:armor_stand run function lockdown:devices/drone/fire/summon_laser
 
 # Play effects
