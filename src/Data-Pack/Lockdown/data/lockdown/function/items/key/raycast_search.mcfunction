@@ -6,6 +6,6 @@
 execute store result score lockdown.range lockdown.local run attribute @s minecraft:block_interaction_range get 2.0
 
 # Run raycast loop
-execute anchored eyes run return run function lockdown:items/key/__raycast_search
+execute anchored eyes positioned ^ ^ ^ run return run function lockdown:items/key/__raycast_search
 
 
