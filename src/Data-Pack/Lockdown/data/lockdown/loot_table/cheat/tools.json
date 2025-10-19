@@ -8,6 +8,15 @@
                     "value": "lockdown:item/key"
                 }
             ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:item/legacy_wand"
+                }
+            ]
         }
     ]
 }

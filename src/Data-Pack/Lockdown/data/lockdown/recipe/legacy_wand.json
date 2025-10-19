@@ -1,0 +1,52 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "r",
+        "i",
+        "i"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "r": [
+            "minecraft:redstone_torch"
+        ]
+    },
+    "result": {
+        "id": "minecraft:carrot_on_a_stick",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.legacy_wand"
+            },
+            "minecraft:item_model": "lockdown:legacy_wand",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "legacy_wand"
+                }
+            },
+            "!minecraft:tool": {},
+            "!minecraft:damage": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {},
+            "!minecraft:attribute_modifiers": {},
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "uncommon",
+            "minecraft:lore": [
+                {
+                    "translate":"item.lockdown.legacy_wand.hint1",
+                    "color":"gray",
+                    "italic":false
+                },
+                {
+                    "translate":"item.lockdown.legacy_wand.hint2",
+                    "color":"gray",
+                    "italic":false
+                }
+            ]
+        }
+    }
+}
