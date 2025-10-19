@@ -55,6 +55,7 @@ scoreboard players set @n[tag=lockdown.block.root.new] lockdown.upgrades.durabil
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.upgrades.range 0
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.drone.float.x 1000
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.drone.float.y 0
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.firing_cooldown 0
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.x run data get entity @s Pos[0]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.y run data get entity @s Pos[1]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.z run data get entity @s Pos[2]

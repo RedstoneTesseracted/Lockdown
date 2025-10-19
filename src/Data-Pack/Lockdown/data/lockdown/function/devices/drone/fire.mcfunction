@@ -1,5 +1,7 @@
 # This function handles firing the drone's laser at a target entity.
-# This is run BY and AT the root drone entity, and is called from lockdown:devices/drone/hostile
+# This is run BY and AT the root drone entity, and is called from lockdown:devices/drone/attacking/root
+
+scoreboard players operation @s lockdown.firing_cooldown = lockdown.drone_fire_cooldown lockdown.constant
 
 # Mark target entity with a tag
 execute at @s on vehicle on target run tag @s add lockdown.drone.target

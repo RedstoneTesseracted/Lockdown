@@ -53,7 +53,7 @@ scoreboard players set lockdown.default_turret_damage lockdown.constant 4
 scoreboard players set lockdown.drone_float_interval lockdown.constant 25
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
 scoreboard players set lockdown.drone_suspect_interval lockdown.constant 10
-scoreboard players set lockdown.drone_fire_interval lockdown.constant 30
+scoreboard players set lockdown.drone_fire_cooldown lockdown.constant 30
 scoreboard players set lockdown.drone_patrol_timeout lockdown.constant 300
 scoreboard players set lockdown.drone_patrol_delay lockdown.constant 40
 scoreboard players set lockdown.drone_investigate_timeout lockdown.constant 300
@@ -85,6 +85,7 @@ scoreboard objectives add lockdown.firing_range dummy
 scoreboard objectives add lockdown.firing_exit_range dummy
 scoreboard objectives add lockdown.firing_enter_range dummy
 scoreboard objectives add lockdown.firing_damage dummy
+scoreboard objectives add lockdown.firing_cooldown dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add lockdown.upgrades.range dummy
 scoreboard objectives add lockdown.upgrades.durability dummy
