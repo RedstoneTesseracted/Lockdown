@@ -23,7 +23,8 @@ rotate @s facing entity @e[tag=lockdown.drone.target,limit=1] feet
 rotate @s ~ ~-1
 
 # Obtain vector from drone to target - we use this as the motion vector
-execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^0.5 summon minecraft:marker run function lockdown:devices/drone/fire/store_vector
+# The laser speed can be adjusted by changing the 0.75 below
+execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^0.75 summon minecraft:marker run function lockdown:devices/drone/fire/store_vector
 
 
 # Create/mount item display

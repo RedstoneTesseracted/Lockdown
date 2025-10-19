@@ -11,7 +11,6 @@ scoreboard players add lockdown.attempts lockdown.local 1
 execute unless block ~ ~ ~ #lockdown:passthrough run return 0
 
 # Stop if we've hit the maximum number of attempts
-# execute if score lockdown.attempts lockdown.local > @s lockdown.firing_range run say stop due to max attempts
 execute if score lockdown.attempts lockdown.local > @s lockdown.firing_range run return 0
 
 # Stop if beam hit entity

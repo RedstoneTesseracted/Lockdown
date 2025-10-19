@@ -1,4 +1,4 @@
-# Function macro used by target_within_firing_range and target_within_pursuit_range
+# Macro used by several target_within_*_range functions
 
 $execute on vehicle on target if entity @s[distance=..$(r)] unless data entity @s {Health: 0.0f} run return 1
 return 0

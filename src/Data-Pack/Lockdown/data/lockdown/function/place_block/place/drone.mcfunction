@@ -58,8 +58,10 @@ scoreboard players set @n[tag=lockdown.block.root.new] lockdown.drone.float.y 0
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.x run data get entity @s Pos[0]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.y run data get entity @s Pos[1]
 execute as @n[tag=lockdown.block.root.new] store result score @s lockdown.home.z run data get entity @s Pos[2]
-scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.pursuit_range = lockdown.default_drone_pursuit_range lockdown.constant
-scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_range = lockdown.default_drone_firing_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.pursuit_enter_range = lockdown.default_drone_pursuit_enter_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.pursuit_exit_range = lockdown.default_drone_pursuit_exit_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_enter_range = lockdown.default_drone_firing_enter_range lockdown.constant
+scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_exit_range = lockdown.default_drone_firing_exit_range lockdown.constant
 scoreboard players operation @n[tag=lockdown.block.root.new] lockdown.firing_damage = lockdown.default_drone_damage lockdown.constant
 
 

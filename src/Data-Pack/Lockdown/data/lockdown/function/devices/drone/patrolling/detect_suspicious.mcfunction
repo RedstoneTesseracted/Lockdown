@@ -13,7 +13,7 @@ scoreboard players set lockdown.highest_priority lockdown.local -2147483648
 
 # Evaluate all entities within range
 data modify storage lockdown:temp args set value {range: 16}
-execute store result storage lockdown:temp args.range int 1 run scoreboard players get @s lockdown.pursuit_range
+execute store result storage lockdown:temp args.range int 1 run scoreboard players get @s lockdown.pursuit_enter_range
 function lockdown:devices/drone/patrolling/__detect_suspicious with storage lockdown:temp args
 
 # Restore approval list from temporary copy

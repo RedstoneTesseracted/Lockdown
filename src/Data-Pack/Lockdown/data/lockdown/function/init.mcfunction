@@ -59,8 +59,10 @@ scoreboard players set lockdown.drone_patrol_delay lockdown.constant 40
 scoreboard players set lockdown.drone_investigate_timeout lockdown.constant 300
 scoreboard players set lockdown.drone_investigate_delay lockdown.constant 100
 scoreboard players set lockdown.drone_approval_expire lockdown.constant 4800
-scoreboard players set lockdown.default_drone_pursuit_range lockdown.constant 14
-scoreboard players set lockdown.default_drone_firing_range lockdown.constant 7
+scoreboard players set lockdown.default_drone_pursuit_enter_range lockdown.constant 14
+scoreboard players set lockdown.default_drone_pursuit_exit_range lockdown.constant 16
+scoreboard players set lockdown.default_drone_firing_enter_range lockdown.constant 6
+scoreboard players set lockdown.default_drone_firing_exit_range lockdown.constant 11
 scoreboard players set lockdown.default_drone_damage lockdown.constant 4
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
@@ -76,8 +78,11 @@ scoreboard players set 16 lockdown.number 16
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy
-scoreboard objectives add lockdown.pursuit_range dummy
+scoreboard objectives add lockdown.pursuit_exit_range dummy
+scoreboard objectives add lockdown.pursuit_enter_range dummy
 scoreboard objectives add lockdown.firing_range dummy
+scoreboard objectives add lockdown.firing_exit_range dummy
+scoreboard objectives add lockdown.firing_enter_range dummy
 scoreboard objectives add lockdown.firing_damage dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add lockdown.upgrades.range dummy
