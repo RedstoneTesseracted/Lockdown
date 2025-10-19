@@ -90,6 +90,19 @@ scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraf
 scoreboard objectives add lockdown.upgrades.range dummy
 scoreboard objectives add lockdown.upgrades.durability dummy
 
+
+#### Versioning
+
+# R1   -> 1
+# R1.1 -> 2
+# R2   -> 3
+# R2.1 -> 4
+# R3   -> 5
+
+scoreboard objectives add lockdown.creation_version dummy
+scoreboard players set lockdown.pack_version lockdown.constant 5
+
+
 #### Scheduled timers
 function lockdown:periodic_fix
 function lockdown:rare_periodic_fix
@@ -106,9 +119,6 @@ data merge storage lockdown:temp {}
 execute as @e[tag=lockdown.block.display,tag=lockdown.turret,tag=!lockdown.turret.base,tag=!lockdown.turret.beam] store result entity @s interpolation_duration int 1 run scoreboard players get lockdown.turret_rotate_interval lockdown.constant
 scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.x 1000
 scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.y 0
-
-
-#### Versioning
 
 
 

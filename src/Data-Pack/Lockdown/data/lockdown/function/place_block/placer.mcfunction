@@ -21,6 +21,9 @@ execute if entity @s[tag=lockdown.placer.turret] run function lockdown:place_blo
 execute if entity @s[tag=lockdown.placer.encoder] run function lockdown:place_block/place/encoder
 execute if entity @s[tag=lockdown.placer.control_tower] run function lockdown:place_block/place/control_tower
 
+# Set pack version at creation
+function lockdown:place_block/place/common_version
+
 # Clear all "new" statuses
 function lockdown:place_block/place/common_new_clear
 
