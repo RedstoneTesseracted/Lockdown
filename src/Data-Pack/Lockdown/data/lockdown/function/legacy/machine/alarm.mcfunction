@@ -25,5 +25,6 @@ execute if score lockdown.legacy_model_id lockdown.local matches 10057 run tag @
 # Spawn the intended item
 function lockdown:drop/alarm
 
-# Cleanup legacy entities
+# Clean up legacy block/entity
+setblock ~ ~ ~ minecraft:air
 kill @s[type=minecraft:armor_stand]

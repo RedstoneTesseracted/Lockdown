@@ -1,7 +1,7 @@
 # Recursive loop that tries to find the legacy block that the player tried to use the wand on
 
 # Attempt to upgrade legacy device at current position (if applicable)
-execute as @e[dx=0,dy=0,dz=0,tag=ld_block] if function lockdown:legacy/drop_legacy_device run return 1
+execute as @n[distance=..1,tag=ld_block] at @s run return run function lockdown:legacy/drop_legacy_device
 
 # Try again if we haven't found anything yet
 scoreboard players remove lockdown.range lockdown.local 1

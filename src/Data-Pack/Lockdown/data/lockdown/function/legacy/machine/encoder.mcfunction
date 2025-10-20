@@ -3,6 +3,7 @@
 # Destroy the block so that contents are ejected
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,nbt={Item:{components: {"minecraft:custom_data": {LockdownDelete: 1b}}}}]
+kill @e[type=minecraft:item,nbt={Item:{components: {"minecraft:custom_name": {text: "Encoding Station", bold: 1b, color: green}}}}, limit=1, sort=nearest, distance=..1]
 
 # Spawn the intended item
 function lockdown:drop/encoder

@@ -16,6 +16,8 @@ execute positioned ~ ~0.23 ~ if entity @s[tag=ld_receiver] run function lockdown
 execute positioned ~ ~0.23 ~ if entity @s[tag=ld_force_field] run function lockdown:legacy/machine/force_field
 execute positioned ~ ~0.23 ~ if entity @s[tag=ld_control_tower] run function lockdown:legacy/machine/control_tower
 execute positioned ~ ~0.23 ~ if entity @s[tag=ld_drone] run function lockdown:legacy/machine/drone
-execute positioned ~ ~0.23 ~ if entity @s[tag=ld_turret] run function lockdown:legacy/machine/turret
+execute positioned ~ ~ ~ if entity @s[tag=ld_turret] run function lockdown:legacy/machine/turret
 execute positioned ~ ~0.23 ~ if entity @s[tag=ld_encoder] run function lockdown:legacy/machine/encoder
 execute positioned ~ ~0.23 ~ if entity @s[tag=ld_crafter] run function lockdown:legacy/machine/crafter
+
+return 1

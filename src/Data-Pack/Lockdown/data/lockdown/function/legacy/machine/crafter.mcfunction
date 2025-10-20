@@ -2,7 +2,8 @@
 
 # Destroy block to ensure contents are ejected
 setblock ~ ~ ~ minecraft:air destroy
-kill @e[type=minecraft:item,nbt={Item:{components: {"minecraft:custom_data": {LockdownDelete: 1b}}}}]
+kill @e[type=minecraft:item,nbt={Item:{components: {"minecraft:custom_data": {LockdownDelete: 2b}}}}]
+kill @e[type=minecraft:item,nbt={Item:{components: {"minecraft:custom_name": {text: "Secure Crafting Table", bold: 1b, color: green}}}}, limit=1, sort=nearest, distance=..1]
 
 # Return ingredients
 loot spawn ~ ~ ~ loot lockdown:legacy/crafter_return

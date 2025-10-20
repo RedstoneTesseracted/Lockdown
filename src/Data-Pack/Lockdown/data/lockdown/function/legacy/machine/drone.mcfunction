@@ -10,5 +10,5 @@ execute if entity @s[tag=ld_durable] run loot spawn ~ ~ ~ loot lockdown:item/dur
 execute if entity @s[tag=ld_flamethrower] run loot spawn ~ ~ ~ loot lockdown:item/flamethrower_upgrade
 
 # Remove legacy entities
-execute on passengers run kill @s[tag=ld_drone_hitbox]
+execute on vehicle run kill @s[tag=ld_drone_hitbox]
 kill @s[type=minecraft:armor_stand]
