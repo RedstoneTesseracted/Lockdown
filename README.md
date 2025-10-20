@@ -475,9 +475,6 @@ tag @s add lockdown.enable_messages
 
 * Make force-field projectors work horizontally
 * Inconsistent presentation of macro errors
-* Implement legacy machine upgrading
-    * Ok, maybe this isn't as practical as I hoped...  perhaps it'd make more sense to implement a 
-      tool that drops legacy blocks instead of trying to upgrade them?
 * Create wiki
 
 ---
