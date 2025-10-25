@@ -31,7 +31,7 @@ playsound minecraft:block.metal.place block @a ~ ~ ~ 1.0 1.0
 
 
 # Summon hitbox entity
-execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:0b, NoGravity:1b, TicksSincePollination: 2147483647, CannotEnterHiveTicks: 2147483647, PersistenceRequired: 1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.drone", "lockdown.block.hitbox", "lockdown.block.hitbox.new"], Silent: 1b, CustomName: {translate: "item.lockdown.drone"}}
+execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:0b, NoGravity:1b, TicksSincePollination: 2147483647, CannotEnterHiveTicks: 2147483647, PersistenceRequired: 1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}, {id: "minecraft:regeneration", duration: 1000000, amplifier: 0, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.drone", "lockdown.block.hitbox", "lockdown.block.hitbox.new", "lockdown.behavior.regenerates"], Silent: 1b, CustomName: {translate: "item.lockdown.drone"}}
 attribute @n[tag=lockdown.block.hitbox.new] minecraft:attack_damage base set 0.0
 
 # Summon and mount root entity

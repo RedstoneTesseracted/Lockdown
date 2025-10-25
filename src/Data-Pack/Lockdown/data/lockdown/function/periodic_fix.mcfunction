@@ -10,11 +10,6 @@ advancement revoke @a through lockdown:hidden/root
 # Eliminate temporary beam entities that somehow got left over
 function lockdown:devices/turret/fire/scheduled_beam_destroy
 
-# Maintain invisible bees
-effect give @e[type=minecraft:bee,tag=lockdown.block.hitbox] invisibility infinite 1 true
-execute as @e[type=minecraft:bee,tag=lockdown.block.hitbox] run data modify entity @s CannotEnterHiveTicks set value 2147483647
-execute as @e[type=minecraft:bee,tag=lockdown.block.hitbox] run data modify entity @s TicksSincePollination set value 2147483647
-
 # Eliminate drone patrol points that are too old to exist
 execute store result score lockdown.threshold_timestamp lockdown.local run time query gametime
 scoreboard players operation lockdown.threshold_timestamp lockdown.local -= lockdown.drone_patrol_timeout lockdown.constant
