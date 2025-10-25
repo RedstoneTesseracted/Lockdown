@@ -1054,7 +1054,7 @@ def main():
     generate_beam_models()
     generate_grouped_loot_tables()
     generate_placer_tests()
-    generate_drone_distance_lookup_table(3)
+    generate_drone_distance_lookup_table(2)
 
 
 if __name__ == "__main__":

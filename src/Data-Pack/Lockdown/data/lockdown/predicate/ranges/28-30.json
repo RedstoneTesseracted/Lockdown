@@ -5,8 +5,8 @@
         "targeted_entity": {
             "distance": {
                 "absolute": {
-                    "min": 15,
-                    "max": 18
+                    "min": 28,
+                    "max": 30
                 }
             }
         }
