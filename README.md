@@ -466,7 +466,7 @@ Tests not covered under the GameTest system:
 
 # TODO:
 
-* Make force-field projectors work horizontally
+* Make force-field projectors work in all directions
 * Optimize drone AI
 * Create wiki
 
