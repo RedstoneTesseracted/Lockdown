@@ -468,12 +468,13 @@ tag @s add lockdown.enable_messages
 
 # Known Bugs
 
-* Certain devices could feasibly be placed in the same position twice if done so on the same tick.
 * It is possible to apply most placeable devices to spawners
+* Attacking a drone in a hostile state bypasses friendliness checks
 
 # TODO:
 
 * Make force-field projectors work horizontally
+* Optimize drone AI
 * Inconsistent presentation of macro errors
 * Create wiki
 

@@ -21,11 +21,6 @@ scoreboard objectives add lockdown.origin_uuid2 dummy
 scoreboard objectives add lockdown.origin_uuid3 dummy
 scoreboard objectives add lockdown.origin_uuid4 dummy
 
-scoreboard objectives add lockdown.target_uuid1 dummy
-scoreboard objectives add lockdown.target_uuid2 dummy
-scoreboard objectives add lockdown.target_uuid3 dummy
-scoreboard objectives add lockdown.target_uuid4 dummy
-
 scoreboard objectives add lockdown.uuid1 dummy
 scoreboard objectives add lockdown.uuid2 dummy
 scoreboard objectives add lockdown.uuid3 dummy
