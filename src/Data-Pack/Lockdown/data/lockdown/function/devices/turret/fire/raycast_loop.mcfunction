@@ -14,9 +14,9 @@ execute unless block ~ ~ ~ #lockdown:passthrough run return 0
 execute if score lockdown.attempts lockdown.local > @s lockdown.firing_range run return 0
 
 # Stop if beam hit entity
-# execute as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.hit_exception,type=!#lockdown:laser_ignore] run say hit entity
-execute if entity @s[tag=lockdown.behavior.flamethrower] as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.hit_exception,type=!#lockdown:laser_ignore] run return run function lockdown:devices/turret/fire/impact_flamethrower with storage lockdown:temp args
-execute if entity @s[tag=!lockdown.behavior.flamethrower] as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.hit_exception,type=!#lockdown:laser_ignore] run return run function lockdown:devices/turret/fire/impact_normal with storage lockdown:temp args
+# execute as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.source,type=!#lockdown:laser_ignore] run say hit entity
+execute if entity @s[tag=lockdown.behavior.flamethrower] as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.source,type=!#lockdown:laser_ignore] run return run function lockdown:devices/turret/fire/impact_flamethrower with storage lockdown:temp args
+execute if entity @s[tag=!lockdown.behavior.flamethrower] as @e[dx=0,dy=0,dz=0,tag=!lockdown.turret.source,type=!#lockdown:laser_ignore] run return run function lockdown:devices/turret/fire/impact_normal with storage lockdown:temp args
 
 # Increment position and try again
 execute positioned ^ ^ ^1 run return run function lockdown:devices/turret/fire/raycast_loop

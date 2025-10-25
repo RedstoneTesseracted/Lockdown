@@ -7,9 +7,9 @@ execute unless function lockdown:devices/turret/set_target_context run return 0
 execute store result storage lockdown:temp args.damage int 1 run scoreboard players get @s lockdown.firing_damage
 
 # Perform laser beam raycast
-execute on passengers run tag @s add lockdown.turret.hit_exception
+execute on passengers run tag @s add lockdown.turret.source
 execute facing entity @e[tag=lockdown.turret.target,limit=1] eyes run function lockdown:devices/turret/fire/raycast
-execute on passengers run tag @s remove lockdown.turret.hit_exception
+execute on passengers run tag @s remove lockdown.turret.source
 
 # Play effects
 execute unless entity @s[tag=lockdown.behavior.flamethrower] run playsound lockdown:laser.strong neutral @a ~ ~ ~ 1.5 2.0

@@ -5,7 +5,7 @@
 execute summon minecraft:marker run function lockdown:devices/turret/fire/save_position
 
 # Apply damage
-$damage @s $(damage) lockdown:turret_laser
+$damage @s $(damage) lockdown:turret_laser by @e[tag=lockdown.turret.source,limit=1,type=minecraft:bee]
 
 # Play effects
 execute at @s run particle minecraft:dust{color:[1.0f, 0.0f, 0.0f],scale:1.0f} ~ ~ ~ 0.25 0.4 0.25 0.3 20
