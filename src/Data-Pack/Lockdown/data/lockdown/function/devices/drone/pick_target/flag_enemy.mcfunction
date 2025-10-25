@@ -37,3 +37,6 @@ execute if score @s lockdown.drone.target_priority > lockdown.highest_priority l
 
 # Record highest priority thus far
 scoreboard players operation lockdown.highest_priority lockdown.local > @s lockdown.drone.target_priority
+
+# Always return 1 so evaluate_suspect can return the correct exit code
+return 1

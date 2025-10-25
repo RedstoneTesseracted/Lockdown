@@ -469,7 +469,6 @@ tag @s add lockdown.enable_messages
 # Known Bugs
 
 * It is possible to apply most placeable devices to spawners
-* Attacking a drone in a hostile state bypasses friendliness checks
 
 # TODO:
 
