@@ -7,6 +7,9 @@ execute summon minecraft:marker run function lockdown:devices/turret/fire/save_p
 # Apply damage
 $damage @s $(damage) lockdown:firey_turret_laser by @e[tag=lockdown.turret.source,limit=1,type=minecraft:bee]
 
+# Ignite creepers
+data modify entity @s[type=minecraft:creeper] ignited set value 1b
+
 # Play effects
 execute at @s run particle minecraft:flame ~ ~ ~ 0.25 0.4 0.25 0.3 20
 execute at @s if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:fire
