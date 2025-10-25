@@ -42,7 +42,7 @@
       "sounds": [
         "lockdown:drone/notice"
       ],
-	"attribution": "Permission Denied.wav by ironcross32 -- https://freesound.org/s/582632/ -- License: Creative Commons 0"
+	  "attribution": "Permission Denied.wav by ironcross32 -- https://freesound.org/s/582632/ -- License: Creative Commons 0"
   },
   "entity.drone.identify.target": {
     "category": "neutral",
@@ -50,25 +50,45 @@
       "sounds": [
         "lockdown:drone/identify_target"
       ],
-	"attribution": "Beep Bad by unfa -- https://freesound.org/s/154888/ -- License: Creative Commons 0"
+	  "attribution": "Beep Bad by unfa -- https://freesound.org/s/154888/ -- License: Creative Commons 0"
   },
-  "entity.drone.identify.friendly": {
+  "entity.drone.confirm": {
     "category": "neutral",
-    "subtitle": "subtitles.lockdown.drone.identify.friendly",
+    "subtitle": "subtitles.lockdown.drone.confirm",
 	  "sounds": [
-		"lockdown:drone/identify_friendly"
+		"lockdown:drone/confirm"
 	  ],
-	"attribution": ""
+	  "attribution": ""
   },
   "laser.quick": {
     "category": "neutral",
     "subtitle": "subtitles.lockdown.laser",
-      "sounds": [
-        "lockdown:laser/quick1",
-        "lockdown:laser/quick2",
-        "lockdown:laser/quick3",
-        "lockdown:laser/quick4"
-      ],
-    "attribution": "TODO: Where is this from?"
+    "sounds": [
+      "lockdown:laser/quick1",
+      "lockdown:laser/quick2",
+      "lockdown:laser/quick3",
+      "lockdown:laser/quick4"
+    ],
+    "attribution": "https://freesound.org/s/514058/ -- License: Attribution 4.0"
+  },
+  "laser.mild": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.laser",
+    "sounds": [
+      "lockdown:laser/mild1",
+      "lockdown:laser/mild2",
+      "lockdown:laser/mild3",
+      "lockdown:laser/mild4"
+    ],
+    "attribution": "https://freesound.org/s/514050/ -- License: Attribution 4.0"
+  },
+  "laser.strong": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.laser",
+    "sounds": [
+      "lockdown:laser/strong1",
+      "lockdown:laser/strong2"
+    ],
+    "attribution": "https://freesound.org/s/557513/,https://freesound.org/s/557514/ -- License: Attribution 4.0"
   }
 }

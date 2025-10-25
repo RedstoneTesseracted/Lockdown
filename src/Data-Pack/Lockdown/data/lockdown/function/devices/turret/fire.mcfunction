@@ -12,5 +12,5 @@ execute facing entity @e[tag=lockdown.turret.target,limit=1] eyes run function l
 execute on passengers run tag @s remove lockdown.turret.hit_exception
 
 # Play effects
-execute unless entity @s[tag=lockdown.behavior.flamethrower] run playsound minecraft:entity.illusioner.prepare_mirror neutral @a ~ ~ ~ 1 2.0
+execute unless entity @s[tag=lockdown.behavior.flamethrower] run playsound lockdown:laser.strong neutral @a ~ ~ ~ 1.5 2.0
 execute if entity @s[tag=lockdown.behavior.flamethrower] run playsound minecraft:item.firecharge.use neutral @a ~ ~ ~ 1 0.75

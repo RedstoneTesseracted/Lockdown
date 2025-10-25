@@ -10,7 +10,7 @@ execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "standby"
 
 # Play effects
-#playsound lockdown:entity.drone.notice neutral @a ~ ~ ~ 1.0 1.0
+playsound lockdown:entity.drone.confirm neutral @a ~ ~ ~ 1.0 1.0
 
 # Update scores
 execute store result score @s lockdown.drone.choose_timestamp run time query gametime
