@@ -18,5 +18,5 @@ execute store result score lockdown.result lockdown.local run function lockdown:
 execute if score lockdown.result lockdown.local matches -1 run return 0
 execute if score lockdown.result lockdown.local matches 1 run return 1
 # A return value of "0" indicates the function did not run
-execute if score lockdown.result lockdown.local matches 0 run tellraw @a[gamemode=creative,tag=lockdown.enable_messages] {text: "Function macro lockdown:devices/drone/approval/__contains did not run", color: "red"}
+execute if score lockdown.result lockdown.local matches 0 run tellraw @p {translate: "lockdown.messages.bug.macro.generic", color: "red", with: [{text: "lockdown:devices/drone/approval/__contains", color:"gray", underlined: true}]}
 execute if score lockdown.result lockdown.local matches 0 run return 0

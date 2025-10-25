@@ -460,12 +460,6 @@ Tests not covered under the GameTest system:
 | Translation key existence checks               |      ✅      |
 | JSON text resolution errors                    |      ❓      |
 
-To enable debug error messages, enter creative mode and give yourself the "lockdown.enable_messages" tag:
-```
-gamemode creative
-tag @s add lockdown.enable_messages
-```
-
 # Known Bugs
 
 * It is possible to apply most placeable devices to spawners
@@ -474,7 +468,6 @@ tag @s add lockdown.enable_messages
 
 * Make force-field projectors work horizontally
 * Optimize drone AI
-* Inconsistent presentation of macro errors
 * Create wiki
 
 ---
