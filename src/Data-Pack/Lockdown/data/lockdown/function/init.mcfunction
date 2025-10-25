@@ -43,7 +43,7 @@ scoreboard players set lockdown.turret_target_interval lockdown.constant 20
 scoreboard players set lockdown.turret_rotate_interval lockdown.constant 5
 scoreboard players set lockdown.turret_fire_interval lockdown.constant 30
 scoreboard players set lockdown.default_turret_range lockdown.constant 8
-scoreboard players set lockdown.default_turret_damage lockdown.constant 4
+scoreboard players set lockdown.default_turret_damage lockdown.constant 6
 # Drone
 scoreboard players set lockdown.drone_float_interval lockdown.constant 25
 scoreboard players set lockdown.drone_target_interval lockdown.constant 31
@@ -58,7 +58,7 @@ scoreboard players set lockdown.default_drone_pursuit_enter_range lockdown.const
 scoreboard players set lockdown.default_drone_pursuit_exit_range lockdown.constant 16
 scoreboard players set lockdown.default_drone_firing_enter_range lockdown.constant 6
 scoreboard players set lockdown.default_drone_firing_exit_range lockdown.constant 11
-scoreboard players set lockdown.default_drone_damage lockdown.constant 4
+scoreboard players set lockdown.default_drone_damage lockdown.constant 6
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
