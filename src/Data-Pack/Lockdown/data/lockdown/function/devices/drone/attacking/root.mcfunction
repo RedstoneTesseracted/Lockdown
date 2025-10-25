@@ -15,7 +15,7 @@ execute on vehicle run function lockdown:devices/drone/attacking/override_bee_da
 # TODO: Drone strafes around target
 
 # Return to investigating state if target found their keycard
-execute unless score @s lockdown.channel matches 0 if function lockdown:devices/drone/check/target_has_matching_channel run function lockdown:devices/drone/attacking/approve_and_stand_down
+execute unless score @s lockdown.channel matches 0 if function lockdown:devices/drone/check/target_has_matching_channel run return run function lockdown:devices/drone/attacking/approve_and_stand_down
 
 # Enter "patrolling" state if target is lost
 execute unless function lockdown:devices/drone/check/target_left_pursuit_range run return run function lockdown:devices/drone/state_change/attacking_to_patrolling

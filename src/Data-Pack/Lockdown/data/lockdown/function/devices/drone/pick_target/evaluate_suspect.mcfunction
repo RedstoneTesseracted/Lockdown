@@ -19,7 +19,8 @@ execute if predicate lockdown:is_invisible run return 0
 execute if entity @s[type=#lockdown:hostile] run return run function lockdown:devices/drone/pick_target/flag_enemy
 
 # Deny targetable entities with non-matching channel (if applicable)
-execute unless score lockdown.channel lockdown.local matches 0 unless score lockdown.channel lockdown.local = @s lockdown.channel if predicate lockdown:channel_failing_targetable run function lockdown:devices/drone/pick_target/flag_enemy
+execute if score lockdown.channel lockdown.local matches 0 if entity @s[tag=lockdown.behavior.code_hostile] unless score @s lockdown.channel matches 0 run function lockdown:devices/drone/pick_target/flag_enemy
+execute unless score lockdown.channel lockdown.local matches 0 unless predicate lockdown:local_channel_matches if predicate lockdown:channel_failing_targetable run function lockdown:devices/drone/pick_target/flag_enemy
 
 # All checks passed: suspect is approved
 return run function lockdown:devices/drone/approval/add

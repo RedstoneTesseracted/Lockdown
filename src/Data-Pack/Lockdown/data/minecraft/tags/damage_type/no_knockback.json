@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "#lockdown:laser"
+        "#lockdown:laser",
+        "lockdown:drone_internal_whip"
     ]
 }

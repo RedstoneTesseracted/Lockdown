@@ -13,6 +13,8 @@ execute on attacker if function lockdown:devices/drone/pick_target/evaluate_susp
 data modify entity @s data.approved set from storage lockdown:temp approved
 execute if score lockdown.is_enemy lockdown.local matches 0 run return 0
 
+say confirmed: retaliating
+
 # Clear any patrol markers, if they exist
 execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
 

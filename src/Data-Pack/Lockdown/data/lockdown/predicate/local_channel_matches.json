@@ -1,24 +1,53 @@
 {
-    "condition": "minecraft:entity_scores",
-    "entity": "this",
-    "scores": {
-        "lockdown.channel": {
-            "min": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "lockdown.channel"
-                },
-                "score": "lockdown.local"
-            },
-            "max": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "lockdown.channel"
-                },
-                "score": "lockdown.local"
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+                "lockdown.channel": {
+                    "min": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "lockdown.channel"
+                        },
+                        "score": "lockdown.local"
+                    },
+                    "max": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "lockdown.channel"
+                        },
+                        "score": "lockdown.local"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+                "lockdown.held_channel": {
+                    "min": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "lockdown.channel"
+                        },
+                        "score": "lockdown.local"
+                    },
+                    "max": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "lockdown.channel"
+                        },
+                        "score": "lockdown.local"
+                    }
+                }
             }
         }
-    }
+    ]
 }
