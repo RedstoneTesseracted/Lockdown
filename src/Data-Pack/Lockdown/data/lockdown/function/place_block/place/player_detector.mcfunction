@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:red_terracotta
 # Entity: item_frame
-# Directions 0
+# Directions: 0
 # Channels: false
 # Colors: false
 # Extra Parts:

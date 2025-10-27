@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:redstone_lamp
 # Entity: item_frame
-# Directions 6
+# Directions: 6
 # Channels: false
 # Colors: false
 # Extra Parts: lockdown.laser_projector.beam

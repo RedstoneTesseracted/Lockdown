@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:note_block
 # Entity: item_frame
-# Directions 4
+# Directions: 4
 # Channels: false
 # Colors: false
 # Extra Parts: lockdown.force_field_projector.shield

@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:glass
 # Entity: item_frame
-# Directions 0
+# Directions: 0
 # Channels: true
 # Colors: false
 # Extra Parts:

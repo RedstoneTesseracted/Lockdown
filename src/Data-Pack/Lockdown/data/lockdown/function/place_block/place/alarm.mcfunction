@@ -4,7 +4,7 @@
 # > when automatically generating the device placer unit tests.  Change it with caution!
 # Solid: false
 # Entity: item_frame
-# Directions 6
+# Directions: 6
 # Channels: true
 # Colors: true
 # Extra Parts: lockdown.alarm.glow

@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:note_block
 # Entity: item_frame
-# Directions 0
+# Directions: 0
 # Channels: false
 # Colors: false
 # Extra Parts:

@@ -5,7 +5,7 @@
 # Solid: true
 # Block: minecraft:acacia_button
 # Entity: item_frame
-# Directions 6
+# Directions: 6
 # Channels: true
 # Colors: true
 # Extra Parts:
