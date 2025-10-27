@@ -236,6 +236,16 @@ Below is a table of all planned features currently (re)implemented
 ## Laser blaster
 
 * Pew pew
+* Consumes redstone batteries
+
+### History
+
+* Planned for R4
+
+
+## Redstone Batteries
+
+* Used to fuel the laser blaster
 
 ### History
 
