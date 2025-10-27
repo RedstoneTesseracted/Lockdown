@@ -1,0 +1,1 @@
+$execute as @e[distance=..$(r),tag=lockdown.force_field_projector,tag=lockdown.block.root] at @s if function lockdown:devices/force_field_projector/update_current_mode run function lockdown:devices/force_field_projector/outline

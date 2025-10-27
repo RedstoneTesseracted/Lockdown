@@ -1,0 +1,19 @@
+{
+    "parent": "lockdown:hidden/root",
+    "criteria": {
+        "punch_hitbox": {
+            "trigger": "minecraft:default_block_use",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:block_state_property",
+                        "block": "minecraft:note_block"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:devices/force_field_projector/note_block_callback"
+    }
+}

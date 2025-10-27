@@ -6,7 +6,8 @@ scoreboard objectives add lockdown.time dummy
 scoreboard objectives add lockdown.press_time dummy
 scoreboard objectives add lockdown.constant dummy
 scoreboard objectives add lockdown.rotation dummy
-scoreboard objectives add lockdown.mode dummy
+scoreboard objectives add lockdown.current_mode dummy
+scoreboard objectives add lockdown.active_mode dummy
 scoreboard objectives add lockdown.channel.sources dummy
 scoreboard objectives add lockdown.range dummy
 scoreboard objectives add lockdown.held_channel dummy
