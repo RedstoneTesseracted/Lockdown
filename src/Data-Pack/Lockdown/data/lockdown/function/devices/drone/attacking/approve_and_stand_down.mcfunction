@@ -11,5 +11,5 @@ data modify entity @s data.approved set from storage lockdown:temp approved
 execute on vehicle run data modify entity @s data.angry_at set value [I; 0, 0, 0, 0]
 execute on vehicle run data modify entity @s AngryAt set value [I; 0, 0, 0, 0]
 
-# Return to patrolling state
-function lockdown:devices/drone/state_change/attacking_to_patrolling
+# Return to investigating state
+function lockdown:devices/drone/state_change/attacking_to_investigating

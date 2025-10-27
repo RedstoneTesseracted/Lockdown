@@ -481,7 +481,6 @@ Tests not covered under the GameTest system:
 * Create wiki
 * Either remove control tower or repurpose it
 * Redo upgrade textures
-* Make drones go to an intermediate state when approving a target they're attacking, instead of immediately going to patrolling state
 * Run game tests
 * Port to more versions:
     * 1.21.5
@@ -490,6 +489,7 @@ Tests not covered under the GameTest system:
     * 1.21.9
     * 1.21.10
 * Set up github workflow to create multi-version data pack
+* Make drones dyeable
 
 ---
 
