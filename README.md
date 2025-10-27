@@ -463,7 +463,6 @@ Tests not covered under the GameTest system:
 
 # Known Bugs
 
-* It is possible to apply most placeable devices to spawners
 * Drone approval carries over from creative to survival mode
 
 # TODO:

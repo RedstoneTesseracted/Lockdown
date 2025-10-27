@@ -25,7 +25,7 @@
                 }
             ],
             "minecraft:entity_data": {
-                "id": "minecraft:marker",
+                "id": "minecraft:item_frame",
                 "data": {
                     "lockdown_data": {
                         "channel": 0
@@ -34,12 +34,15 @@
                 "Tags": [
                     "lockdown.placer",
                     "lockdown.placer.drone"
-                ]
+                ],
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
             }
         }
     },
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:pig_spawn_egg"
+        "item": "minecraft:item_frame"
     }
 ]

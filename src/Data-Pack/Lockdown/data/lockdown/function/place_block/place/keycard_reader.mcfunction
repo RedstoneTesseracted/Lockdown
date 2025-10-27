@@ -4,7 +4,7 @@
 # > when automatically generating the device placer unit tests.  Change it with caution!
 # Solid: true
 # Block: minecraft:acacia_button
-# Entity: marker
+# Entity: item_frame
 # Directions 4
 # Channels: true
 # Colors: false

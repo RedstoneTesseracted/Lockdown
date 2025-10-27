@@ -6,7 +6,7 @@
 tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
 
 # Spawn the base item to be configured
-execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:pig_spawn_egg",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
+execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
 item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/keycard_reader
 
 # Assign code

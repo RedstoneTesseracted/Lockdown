@@ -4,7 +4,7 @@
 # > when automatically generating the device placer unit tests.  Change it with caution!
 # Solid: true
 # Block: minecraft:red_terracotta
-# Entity: marker
+# Entity: item_frame
 # Directions 0
 # Channels: false
 # Colors: false

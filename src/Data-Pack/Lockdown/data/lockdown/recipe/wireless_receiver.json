@@ -24,7 +24,7 @@
         ]
     },
     "result": {
-        "id": "minecraft:pig_spawn_egg",
+        "id": "minecraft:item_frame",
         "components": {
             "minecraft:item_name": {
                 "translate": "item.lockdown.wireless_receiver"
@@ -37,7 +37,7 @@
                 }
             },
             "minecraft:entity_data": {
-                "id": "minecraft:marker",
+                "id": "minecraft:item_frame",
                 "data": {
                     "lockdown_data": {
                         "channel": 0
@@ -46,7 +46,10 @@
                 "Tags": [
                     "lockdown.placer",
                     "lockdown.placer.wireless_receiver"
-                ]
+                ],
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
             },
             "minecraft:lore": [
                 {

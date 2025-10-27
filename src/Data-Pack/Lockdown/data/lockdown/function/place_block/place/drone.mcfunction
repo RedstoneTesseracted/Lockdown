@@ -11,7 +11,7 @@
 # > WARNING: This block is used by generate_templates.py to fill in certain details
 # > when automatically generating the device placer unit tests.  Change it with caution!
 # Solid: false
-# Entity: marker
+# Entity: item_frame
 # Directions 0
 # Channels: true
 # Colors: false
