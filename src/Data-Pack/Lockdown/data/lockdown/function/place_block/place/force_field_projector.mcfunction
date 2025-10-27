@@ -33,9 +33,15 @@ execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {brightness:{
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {interpolation_duration: 4, brightness:{block: 15, sky: 15}, transformation:[0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f], Tags:["lockdown.block", "lockdown.force_field_projector", "lockdown.force_field_projector.shield", "lockdown.force_field_projector.shield.new"],item:{id:"minecraft:paper",components:{"minecraft:item_model":"lockdown:force_field","minecraft:custom_model_data": {floats:[0.0f]}}}}
 ride @n[tag=lockdown.force_field_projector.shield.new] mount @n[tag=lockdown.block.root.new]
 
-# Rotate secondary display entity according to the source player's rotation
+# Rotate primary display entity according to the source player's rotation
 execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=-45..45] run rotate @n[tag=lockdown.force_field_projector.shield.new] 0.0 0.0
 execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=45..135] run rotate @n[tag=lockdown.force_field_projector.shield.new] 90.0 0.0
 execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=135..-135] run rotate @n[tag=lockdown.force_field_projector.shield.new] 180.0 0.0
 execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=-135..-45] run rotate @n[tag=lockdown.force_field_projector.shield.new] -90.0 0.0
+
+# Rotate secondary display entity according to the source player's rotation
+execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=-45..45] run rotate @n[tag=lockdown.block.display.new] 0.0 0.0
+execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=45..135] run rotate @n[tag=lockdown.block.display.new] 90.0 0.0
+execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=135..-135] run rotate @n[tag=lockdown.block.display.new] 180.0 0.0
+execute if entity @a[limit=1,tag=lockdown.placer.source,y_rotation=-135..-45] run rotate @n[tag=lockdown.block.display.new] -90.0 0.0
 
