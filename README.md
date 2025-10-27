@@ -479,6 +479,7 @@ Tests not covered under the GameTest system:
 
 * Optimize drone AI
 * Create wiki
+* Either remove control tower or repurpose it
 * Redo upgrade textures
 * Make drones go to an intermediate state when approving a target they're attacking, instead of immediately going to patrolling state
 * Run game tests
