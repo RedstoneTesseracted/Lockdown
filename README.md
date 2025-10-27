@@ -467,7 +467,6 @@ Tests not covered under the GameTest system:
 
 # TODO:
 
-* Make force-field projectors work in all directions
 * Optimize drone AI
 * Create wiki
 * Test that the legacy wand works on active force field projectors
