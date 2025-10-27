@@ -14,7 +14,7 @@
 ###### END INFO BLOCK ######
 
 # Needed for the channel-to-item assignment code in lockdown:place_block/reject/big_button
-execute store result score lockdown.channel lockdown.local run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
+execute store result score lockdown.channel lockdown.local run data get entity @s data.lockdown_data.channel
 
 # Prevent overlap with an existing entity
 execute align xyz if entity @e[dx=0.1, dy=0.1, dz=0.1,type=#lockdown:blocks_nonsolid_placement,tag=!lockdown.placer] run return run function lockdown:place_block/reject/big_button {msg: "lockdown.placer.reject.not_enough_space"}
@@ -53,4 +53,4 @@ execute if score lockdown.direction lockdown.local matches 4 run setblock ~ ~ ~ 
 execute if score lockdown.direction lockdown.local matches 5 run setblock ~ ~ ~ minecraft:acacia_button[face=wall,powered=false,facing=east] destroy
 
 # This item may optionally have a channel assigned
-execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s Item.components."minecraft:custom_data".lockdown_data.channel
+execute store result score @n[tag=lockdown.block.root.new] lockdown.channel run data get entity @s data.lockdown_data.channel

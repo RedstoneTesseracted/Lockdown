@@ -637,10 +637,7 @@ def generate_placer_tests():
         # Build the snbt of the summoned placer entity
         summoned_nbt = json_to_nbt(properties['entity_data'])
         if properties['channels']:
-            if properties['entity'] == 'minecraft:marker':
-                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-            elif properties['entity'] == 'minecraft:item_frame':
-                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
         if properties['entity'] == 'minecraft:item_frame':
             summoned_nbt['Facing'] = nbtlib.Byte(1)
@@ -681,10 +678,7 @@ def generate_placer_tests():
         summoned_nbt_channelless = json_to_nbt(properties['entity_data'])
         summoned_nbt = json_to_nbt(properties['entity_data'])
         if properties['channels']:
-            if properties['entity'] == 'minecraft:marker':
-                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-            elif properties['entity'] == 'minecraft:item_frame':
-                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
         if properties['entity'] == 'minecraft:item_frame':
             summoned_nbt['Facing'] = nbtlib.Byte(1)
@@ -704,11 +698,8 @@ def generate_placer_tests():
                 elif lore.get('translate') == 'item.lockdown.channel.no_channel':
                     lore['translate'] = String('item.lockdown.channel.channel')
                     lore['color'] = String('green')
-            # Set channel tag.  Path to tag varies depending on whether the placer is a marker or an item frame
-            if properties['entity'] == 'minecraft:marker':
-                dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-            elif properties['entity'] == 'minecraft:item_frame':
-                dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            # Set channel tag
+            dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
         # Activate subtests according to placement rules.
         # We do this by replacing stained glass blocks with regular glass.
@@ -774,10 +765,7 @@ def generate_placer_tests():
         # Build the snbt of the summoned placer entity
         summoned_nbt = json_to_nbt(properties['entity_data'])
         if properties['channels']:
-            if properties['entity'] == 'minecraft:marker':
-                summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-            elif properties['entity'] == 'minecraft:item_frame':
-                summoned_nbt['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            summoned_nbt['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
         if properties['entity'] == 'minecraft:item_frame':
             summoned_nbt['Facing'] = nbtlib.Byte(1)
@@ -794,11 +782,8 @@ def generate_placer_tests():
                 elif lore.get('translate') == 'item.lockdown.channel.no_channel':
                     lore['translate'] = String('item.lockdown.channel.channel')
                     lore['color'] = String('green')
-            # Set channel tag.  Path to tag varies depending on whether the placer is a marker or an item frame
-            if properties['entity'] == 'minecraft:marker':
-                dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
-            elif properties['entity'] == 'minecraft:item_frame':
-                dropped_item_nbt['components']['minecraft:entity_data']['Item']['components']['minecraft:custom_data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            # Set channel tag
+            dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
 
         # Replace templated strings in structure
         for i, block in enumerate(template['blocks']):

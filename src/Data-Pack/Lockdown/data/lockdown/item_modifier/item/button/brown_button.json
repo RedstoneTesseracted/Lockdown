@@ -24,22 +24,16 @@
             ],
             "minecraft:entity_data": {
                 "id": "minecraft:item_frame",
+                "data": {
+                    "lockdown_data": {
+                        "channel": 0
+                    }
+                },
                 "Tags": [
                     "lockdown.placer",
                     "lockdown.placer.big_button",
                     "lockdown.color.brown"
                 ],
-                "Item": {
-                    "id": "minecraft:paper",
-                    "components": {
-                        "minecraft:custom_data": {
-                            "lockdown_data": {
-                                "channel": 0
-                            }
-                        },
-                        "minecraft:item_model": "lockdown:invisible"
-                    }
-                },
                 "Invisible": true,
                 "CustomName": "If you can read this, something has gone wrong",
                 "CustomNameVisible": true

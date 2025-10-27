@@ -22,15 +22,9 @@
             ],
             "minecraft:entity_data": {
                 "id": "minecraft:item_frame",
-                "Item": {
-                    "id": "minecraft:paper",
-                    "components": {
-                        "minecraft:custom_data": {
-                            "lockdown_data": {
-                                "channel": 0
-                            }
-                        },
-                        "minecraft:item_model": "lockdown:invisible"
+                "data": {
+                    "lockdown_data": {
+                        "channel": 0
                     }
                 },
                 "Tags": [
