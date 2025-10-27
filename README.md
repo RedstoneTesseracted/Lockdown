@@ -470,6 +470,7 @@ Tests not covered under the GameTest system:
 * Optimize drone AI
 * Create wiki
 * Test that the legacy wand works on active force field projectors
+* Redo upgrade textures
 
 ---
 
