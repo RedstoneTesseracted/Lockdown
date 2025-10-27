@@ -10,6 +10,11 @@
                         "type": "minecraft:custom_model_data",
                         "index": 0,
                         "default": [1.0, 1.0, 1.0]
+                    },
+                    {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": [0.200, 0.604, 0.988]
                     }
                 ]
             },
