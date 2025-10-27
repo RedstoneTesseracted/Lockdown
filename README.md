@@ -73,6 +73,7 @@ Below is a table of all planned features currently (re)implemented
 ### History
 
 * Added in R1
+* Tweaked force field projector texture in R3
 * Force field projectors can now be placed horizontally in R3
 
 
@@ -487,6 +488,7 @@ Tests not covered under the GameTest system:
     * Turrets can now be placed on any side of a block
     * Turret lasers now have a custom model
 * Improvements to shield projector:
+    * Tweaked texture to show directionality
     * Can now be placed in any direction
     * Added brief shield raising/lowering animation
 * Improvements to laser projectors
