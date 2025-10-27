@@ -31,7 +31,7 @@ Below is a table of all planned features currently (re)implemented
 | Key                           |   ✅   |
 | BFG 8000                      |   ❌   |
 | Suspicious Thumb Drive        |   ❌   |
-| Legacy machine migration      |   ❌   |
+| Legacy machine migration      |   ✅   |
 
 
 ## Redstone wireless transmitter
