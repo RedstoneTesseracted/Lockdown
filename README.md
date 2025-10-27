@@ -464,12 +464,12 @@ Tests not covered under the GameTest system:
 # Known Bugs
 
 * Drone approval carries over from creative to survival mode
+* Drone still struggles with invisible entities
 
 # TODO:
 
 * Optimize drone AI
 * Create wiki
-* Test that the legacy wand works on active force field projectors
 * Redo upgrade textures
 
 ---
