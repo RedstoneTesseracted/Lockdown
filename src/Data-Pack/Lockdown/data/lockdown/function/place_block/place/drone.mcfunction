@@ -41,6 +41,8 @@ ride @n[tag=lockdown.block.root.new] mount @n[tag=lockdown.block.hitbox.new]
 # Rotate item display to match bee
 execute as @n[tag=lockdown.block.hitbox] rotated as @s on passengers run rotate @s[tag=lockdown.block.display] ~ ~
 
+# Set colors (if supplied)
+execute if data entity @s data.lockdown_data.colors run data modify entity @n[tag=lockdown.block.display.new] item.components."minecraft:custom_model_data".colors set from entity @s data.lockdown_data.colors
 
 # Assign special behavior tags
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.code_hostile

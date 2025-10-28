@@ -15,6 +15,11 @@ execute if score lockdown.channel lockdown.local matches 1.. store result entity
 execute if score lockdown.channel lockdown.local matches 0 run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_no_code_lore
 execute if score lockdown.channel lockdown.local matches 1.. run item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:set_code_lore
 
+# Set colors (if supplied)
+execute if entity @s[tag=lockdown.placer] if data entity @s data.lockdown_data.colors run data modify entity @n[tag=lockdown.item.configure] Item.components."minecraft:custom_model_data".colors set from entity @s data.lockdown_data.colors
+execute if entity @s[tag=lockdown.block.root] if data entity @s item.components."minecraft:custom_model_data".colors run data modify entity @n[tag=lockdown.item.configure] Item.components."minecraft:custom_model_data".colors set from entity @s item.components."minecraft:custom_model_data".colors
+execute if entity @s[tag=lockdown.block.root] if data entity @s item.components."minecraft:custom_model_data".colors run data modify entity @n[tag=lockdown.item.configure] Item.components."minecraft:entity_data".data.lockdown_data.colors set from entity @s item.components."minecraft:custom_model_data".colors
+
 # Randomize motion
 execute as @n[tag=lockdown.item.configure] run function lockdown:drop/util/set_random_motion
 
