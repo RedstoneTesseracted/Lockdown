@@ -452,6 +452,7 @@ Items not covered under the GameTest system:
     * 1.21.9
     * 1.21.10
 * Set up github workflow to create multi-version data pack
+* Auto-generate device-placing functions for use in unit tests
 
 # Future Plans:
 

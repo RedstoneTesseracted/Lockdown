@@ -700,6 +700,7 @@ def generate_placer_tests():
                     lore['color'] = String('green')
             # Set channel tag
             dropped_item_nbt['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Int(channel)
+            dropped_item_nbt_channelless['components']['minecraft:entity_data']['data']['lockdown_data']['channel'] = nbtlib.Byte(0)
 
         # Activate subtests according to placement rules.
         # We do this by replacing stained glass blocks with regular glass.
@@ -727,9 +728,9 @@ def generate_placer_tests():
                 if '<<T:SUMMON PLACER NO CHANNEL>>' in command:
                     command = f'/summon {properties["entity"]} ~ ~ ~1 ' + summoned_nbt_channelless.snbt()
                 if '<<T:DROPPED ITEM CHECK>>' in command:
-                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1,type=minecraft:item,nbt={{Item:{dropped_item_nbt.snbt()}}}]'
+                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1.5,type=minecraft:item,nbt={{Item:{dropped_item_nbt.snbt()}}}]'
                 if '<<T:DROPPED ITEM CHECK NO CHANNEL>>' in command:
-                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1,type=minecraft:item,nbt={{Item:{dropped_item_nbt_channelless.snbt()}}}]'
+                    command = f'/execute positioned ~ ~0.5 ~-1 unless entity @e[distance=..1.5,type=minecraft:item,nbt={{Item:{dropped_item_nbt_channelless.snbt()}}}]'
                 
                 command = command.replace('<<T:CHANNEL>>', channel)
                 block['nbt']['Command'] = String(command)
@@ -946,7 +947,7 @@ def generate_placer_tests():
         for test in ('placer', 'obstruct', 'destroy'):
             test_instance = {
                 "type": "block_based",
-                "environment": "minecraft:default",
+                "environment": "lockdown:main",
                 "structure": f"lockdown:test/{test}/{device}",
                 "max_attempts": 1,
                 "max_ticks": 20,

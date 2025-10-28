@@ -1,6 +1,6 @@
 {
     "type": "block_based",
-    "environment": "minecraft:default",
+    "environment": "lockdown:main",
     "structure": "lockdown:test/obstruct/laser_projector",
     "max_attempts": 1,
     "max_ticks": 20,

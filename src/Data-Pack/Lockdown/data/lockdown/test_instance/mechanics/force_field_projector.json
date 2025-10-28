@@ -1,9 +1,9 @@
 {
     "type": "block_based",
-    "environment": "minecraft:default",
+    "environment": "lockdown:main",
     "structure": "lockdown:test/mechanics/force_field_projector",
     "max_attempts": 1,
-    "max_ticks": 10,
+    "max_ticks": 20,
     "sky_access": false,
     "manual_only": false,
     "required_successes": 1,

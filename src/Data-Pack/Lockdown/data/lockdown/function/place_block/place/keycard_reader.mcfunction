@@ -3,7 +3,7 @@
 # > WARNING: This block is used by generate_templates.py to fill in certain details
 # > when automatically generating the device placer unit tests.  Change it with caution!
 # Solid: true
-# Block: minecraft:acacia_button
+# Block: minecraft:red_terracotta
 # Entity: item_frame
 # Directions: 4
 # Channels: true

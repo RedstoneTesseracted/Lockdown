@@ -1,5 +1,5 @@
 # Remove the incorrect item
-kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:redstone_lamp"}}]
+kill @n[type=minecraft:item,distance=..1,nbt={Item:{id:"minecraft:note_block"}}]
 
 # Spawn the correct item
 function lockdown:drop/klaxon
