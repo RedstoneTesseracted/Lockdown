@@ -475,7 +475,7 @@ Items not covered under the GameTest system:
 
 * Drone approval carries over from creative to survival mode
 
-# TODO:
+# Near-Term TODO:
 
 * Optimize drone AI
 * Create wiki
@@ -499,48 +499,19 @@ Items not covered under the GameTest system:
 * Suspicious thumb drive
 * Air Defense Cannon
 
+# Version Support
 
----
+This datapack uses overlays to support multiple versions of the game with a single ZIP file.  However, some features will not be backported to older versions.  Below is a table showing what features are available for each game version.
 
-# Changes in Release 3:
+| Game Version  | Data Pack Version |
+| ------------- | ----------------- |
+| 1.20-1.20.1   | R2.X              |
+| 1.20.2-1.20.6 | ❌               |
+| 1.21-1.21.4   | ❌               |
+| 1.21.5        | ❌               |
+| 1.21.6        | ❌               |
+| 1.21.7        | ❌               |
+| 1.21.8        | R3                |
+| 1.21.9        | ❌               |
+| 1.21.10       | ❌               |
 
-* Complete rewrite of the data pack
-* Completely overhauled drones
-    * Rewrote drone AI
-    * New drone model
-    * New sound effects
-    * Drones can now be dyed
-    * Drone lasers now have a custom model
-* Improvements to turrets:
-    * Turrets now rotate around two axes of rotation
-    * Turrets can now be placed on any side of a block
-    * Turret lasers now have a custom model
-* Improvements to shield projector:
-    * Tweaked texture to show directionality
-    * Can now be placed in any direction
-    * Added brief shield raising/lowering animation
-* Improvements to laser projectors
-    * Greatly increased range of laser projectors
-    * Laser projectors can now be blocked by solid blocks
-    * Laser projectors can now be placed vertically
-* Multiple upgrades can now be applied to drones/turrets
-* Removed drone control tower and drone control tower upgrade, as they are now obsolete.  Use the legacy wand to return materials
-* Upgrades are no longer mutually exclusive on drones/turrets
-* Durability upgrade can now be stacked up to 3
-* Added turret/drone range upgrade (can be stacked up to 3)
-* Added container key
-    * Brings container locking to survival
-* Keycards now come in sixteen new colors
-* Changes to keycard readers:
-    * Keycard readers are now full blocks
-    * Encoding is now optional
-    * Now emit a redstone signal when they detect a valid keycard
-* Added new alarm sounds to the klaxon
-* All recipes now use the crafting table, now that vanilla supports custom components in recipe outputs
-* Removed the secure crafter and secure recipe book, as they are no longer needed.  Use the legacy wand to return materials
-* Text now uses translation keys instead of being hardcoded
-
-## Migrating Legacy Machines to Release 3
-
-* Added legacy wand for updating old blocks/items to their R3 equivalent
-* Right-click wand to update all legacy items in your inventory, as well as whatever legacy device you're looking at
