@@ -29,7 +29,7 @@ Below is a table of all planned features currently (re)implemented
 | ~~Drone control tower upgrade~~ |   ✅   |
 | Laser blaster                 |   ❌   |
 | Key                           |   ✅   |
-| BFG 8000                      |   ❌   |
+| Air Defense Cannon            |   ❌   |
 | Suspicious Thumb Drive        |   ❌   |
 | Legacy machine migration      |   ✅   |
 
@@ -262,7 +262,7 @@ Below is a table of all planned features currently (re)implemented
 * Added in R3
 
 
-## The BFG 8000
+## Air Defense Cannon
 
 * What if laser, but big?
 
@@ -461,7 +461,7 @@ Block destruction tests need to exist for the following:
 * ✔ Control tower (block-based)
 
 
-Tests not covered under the GameTest system:
+Items not covered under the GameTest system:
 |                   Test Name                    | Implemented? |
 | ---------------------------------------------- | ------------ |
 | Static code analysis                           |      ❌      |
@@ -489,7 +489,16 @@ Tests not covered under the GameTest system:
     * 1.21.9
     * 1.21.10
 * Set up github workflow to create multi-version data pack
+
+# Future Plans:
+
+* Give drones the option to follow/guard
 * Make drones dyeable
+* Some way to configure drones
+* Laser blaster + redstone energy cells
+* Suspicious thumb drive
+* Air Defense Cannon
+
 
 ---
 
