@@ -286,43 +286,6 @@ Below is a table of all planned features currently (re)implemented
 * Tool used to drop pre-R3 blocks/items and replace them with their post-R3 counterparts
 * Right click to upgrade all items in player inventory
 * Right click while facing block to upgrade block
-* Upgradeable devices:
-    * ✔ Big button
-    * ✔ Alarm
-    * ✔ Keycard reader
-    * ✔ Player detector
-    * ✔ Mob detector
-    * ✔ Klaxon
-    * ✔ Laser projector
-    * ✔ Transmitter
-    * ✔ Receiver
-    * ✔ Force field projector
-    * ✔ Control tower
-    * ✔ Drone
-    * ✔ Turret
-    * ✔ Encoder
-    * ✔ Crafter
-* Upgradeable items:
-    * ✔ Big button
-    * ✔ Alarm
-    * ✔ Keycard reader
-    * ✔ Player detector
-    * ✔ Mob detector
-    * ✔ Klaxon
-    * ✔ Laser projector
-    * ✔ Transmitter
-    * ✔ Receiver
-    * ✔ Force field projector
-    * ✔ Control tower
-    * ✔ Drone
-    * ✔ Turret
-    * ✔ Encoder
-    * ✔ Crafter
-    * ✔ Recipe book
-    * ✔ Flamethrower upgrade
-    * ✔ Durability upgrade
-    * ✔ Armor upgrade
-    * ✔ Drone control tower upgrade
 
 ### History
 
