@@ -5,6 +5,7 @@ execute store result score @s lockdown.uuid1 run data get entity @s UUID[0]
 execute store result score @s lockdown.uuid2 run data get entity @s UUID[1]
 execute store result score @s lockdown.uuid3 run data get entity @s UUID[2]
 execute store result score @s lockdown.uuid4 run data get entity @s UUID[3]
+scoreboard players enable @s lockdown.show_info
 
 # Welcome message/advancement
 advancement grant @s only lockdown:lockdown/root

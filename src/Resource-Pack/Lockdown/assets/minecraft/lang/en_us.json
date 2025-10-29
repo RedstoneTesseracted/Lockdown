@@ -152,7 +152,10 @@
   "gui.lockdown.encoder.confirm": "Assign Code",
   "lockdown.messages.welcome": "Welcome to %1$s—the datapack for all your security needs!  Open your advancements with '%2$s' for a roadmap ahead.",
   "lockdown.messages.welcome.hidden": "",
-  "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Running '/reload' will automatically update any pre-existing Lockdown blocks/items in the world and in your inventory.",
+  "lockdown.messages.welcome.version": "Lockdown is running on version: %1$s",
+  "lockdown.messages.welcome.incompatible_game_version": "Warning: you are playing on a game version that has not been tested with Lockdown.  You may experience bugs!",
+  "lockdown.messages.legacy_detected": "A legacy version of Lockdown was previously installed on your world.  Use the legacy wand to convert old blocks/items.  %1$s to hide this message.",
+  "lockdown.messages.legacy_detected.click_here": "Click here",
   "lockdown.messages.encoder.error.no_item": "No item was provided for encoding",
   "lockdown.messages.encoder.error.not_encodable": "This item is not encodable",
   "lockdown.messages.encoder.error.missing_dye": "Missing dye in dye slot(s)",
@@ -167,5 +170,10 @@
   "lockdown.messages.key.unlocked": "Removed Lock on Container",
   "lockdown.messages.bug.macro.generic": "If you can read this, something has gone wrong with %1$s",
   "lockdown.messages.upgrade.not_eligible": "%1$s does not apply to this device",
-  "lockdown.messages.upgrade.max_upgraded": "Device already at max level for %1$s"
+  "lockdown.messages.upgrade.max_upgraded": "Device already at max level for %1$s",
+  "lockdown.info.header": "Lockdown Pack Information:",
+  "lockdown.info.resource_pack": "Resource Pack: %s",
+  "lockdown.info.resource_pack.enabled": "Enabled",
+  "lockdown.info.version": "Feature Release: %s",
+  "lockdown.info.version_number": "Version Number: %s"
 }

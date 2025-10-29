@@ -7,6 +7,9 @@ function lockdown:clear_forbidden
 # Reset advancement triggers
 advancement revoke @a through lockdown:hidden/root
 
+# Reset scoreboard triggers
+scoreboard players enable @a lockdown.show_info
+
 # Eliminate temporary beam entities that somehow got left over
 function lockdown:devices/turret/fire/scheduled_beam_destroy
 

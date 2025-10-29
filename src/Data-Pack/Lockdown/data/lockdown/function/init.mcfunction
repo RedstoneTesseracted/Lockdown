@@ -64,7 +64,7 @@ scoreboard players set lockdown.default_drone_damage lockdown.constant 6
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
 scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
-
+execute unless score lockdown.legacy_hint lockdown.constant matches -2147483648.. run scoreboard players set lockdown.legacy_hint lockdown.constant 1
 
 # Numbers
 scoreboard objectives add lockdown.number dummy
@@ -86,6 +86,10 @@ scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraf
 scoreboard objectives add lockdown.upgrades.range dummy
 scoreboard objectives add lockdown.upgrades.durability dummy
 
+# Triggers
+scoreboard objectives add lockdown.show_info trigger {text:"Show Info", color:"aqua"}
+
+
 
 #### Versioning
 
@@ -98,6 +102,9 @@ scoreboard objectives add lockdown.upgrades.durability dummy
 scoreboard objectives add lockdown.creation_version dummy
 scoreboard players set lockdown.pack_version lockdown.constant 5
 
+#tellraw @a {translate: "lockdown.messages.welcome.version", color: "green", with: [{text: "R3", color: "blue"}]}
+
+execute if score lockdown.legacy_hint lockdown.constant matches 1 if score $ld_version ld_version matches 1.. run tellraw @a {translate: "lockdown.messages.legacy_detected", color: "green", with: [{translate: "lockdown.messages.legacy_detected.click_here", click_event: {action: "suggest_command", command: "/scoreboard players set lockdown.legacy_hint lockdown.constant 0"}, hover_event: {action: "show_text", value: "/scoreboard players set lockdown.legacy_hint lockdown.constant 0"}, color: "gold", underlined: true}]}
 
 #### Scheduled timers
 function lockdown:periodic_fix
