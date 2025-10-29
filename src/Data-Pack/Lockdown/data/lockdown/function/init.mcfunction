@@ -93,14 +93,10 @@ scoreboard objectives add lockdown.show_info trigger {text:"Show Info", color:"a
 
 #### Versioning
 
-# R1   -> 1
-# R1.1 -> 2
-# R2   -> 3
-# R2.1 -> 4
-# R3   -> 5
-
-scoreboard objectives add lockdown.creation_version dummy
-scoreboard players set lockdown.pack_version lockdown.constant 5
+scoreboard objectives add lockdown.creation_version.major dummy
+scoreboard objectives add lockdown.creation_version.minor dummy
+scoreboard players set lockdown.pack_version.major lockdown.constant 3
+scoreboard players set lockdown.pack_version.minor lockdown.constant 0
 
 #tellraw @a {translate: "lockdown.messages.welcome.version", color: "green", with: [{text: "R3", color: "blue"}]}
 
