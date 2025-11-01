@@ -337,7 +337,6 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Applying drone/turret upgrades                 |      ❓      |
 | Drone targeting and firing                     |      ✅      |
 | Drone targeting and firing w/ codes            |      ✅      |
-| Drone targeting and firing w/ control towers   |      ✅      |
 | Turret targeting and firing                    |      ✅      |
 | Turret targeting and firing w/ codes           |      ✅      |
 | Chest key                                      |      ❓      |
@@ -359,7 +358,6 @@ Block placement tests need to exist for the following devices:
 * ✔ Force field projector (❌ multi-directional)
 * ✔ Turret (multi-directional, ✔ channel)
 * ✔ Encoder (✔ inventory)
-* ✔ Control tower (✔ channel)
 
 Block obstruction tests need to exist for the following:
 * ✔ Keycard reader
@@ -401,11 +399,6 @@ Block obstruction tests need to exist for the following:
 * ✔ Encoder
     * ✔ Prevent block overlap (allow #minecraft:replaceable)
     * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ❌ Control tower
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ❌ Prevent block overlap one block up (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * ✔ Requires channel
 
 Block destruction tests need to exist for the following:
 * ✔ Keycard reader (block-based)
@@ -421,7 +414,6 @@ Block destruction tests need to exist for the following:
 * ✔ Force field projector (block-based)
 * ✔ Turret (entity-based)
 * ✔ Encoder (block-based)
-* ✔ Control tower (block-based)
 
 
 Items not covered under the GameTest system:
@@ -442,9 +434,7 @@ Items not covered under the GameTest system:
 
 * Optimize drone AI
 * Create wiki
-* Either remove control tower or repurpose it
 * Redo upgrade textures
-* Run game tests
 * Port to more versions:
     * 1.21.5
     * 1.21.6

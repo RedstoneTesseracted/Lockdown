@@ -19,7 +19,6 @@ execute if entity @s[tag=lockdown.placer.wireless_receiver] run function lockdow
 execute if entity @s[tag=lockdown.placer.force_field_projector] run function lockdown:place_block/place/force_field_projector
 execute if entity @s[tag=lockdown.placer.turret] run function lockdown:place_block/place/turret
 execute if entity @s[tag=lockdown.placer.encoder] run function lockdown:place_block/place/encoder
-execute if entity @s[tag=lockdown.placer.control_tower] run function lockdown:place_block/place/control_tower
 
 # Set pack version at creation
 function lockdown:place_block/place/common_version

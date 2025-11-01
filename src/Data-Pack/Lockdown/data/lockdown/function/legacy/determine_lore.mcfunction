@@ -11,7 +11,6 @@ execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{g
 execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{group:"keycards"}}] run return 1
 
 # By item name
-execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{name:"control_tower"}}] run return 1
 execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{name:"drone"}}] run return 1
 execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{name:"key"}}] run return 1
 execute if items entity @s container.0 *[minecraft:custom_data~{lockdown_data:{name:"keycard_reader"}}] run return 1

@@ -9,7 +9,6 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.laser_projector] at @s run fu
 execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_transmitter] at @s run function lockdown:devices/wireless_transmitter/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.wireless_receiver] at @s run function lockdown:devices/wireless_receiver/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s run function lockdown:devices/force_field_projector/root
-execute as @e[tag=lockdown.block.root,tag=lockdown.control_tower] at @s run function lockdown:devices/control_tower/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.drone] at @s run function lockdown:devices/drone/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.turret] at @s run function lockdown:devices/turret/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root

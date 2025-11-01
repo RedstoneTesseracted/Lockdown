@@ -5,15 +5,6 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "lockdown:item/control_tower_upgrade"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
                     "value": "lockdown:item/durability_upgrade"
                 }
             ]

@@ -5,15 +5,6 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "lockdown:item/control_tower"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
                     "value": "lockdown:item/drone"
                 }
             ]
