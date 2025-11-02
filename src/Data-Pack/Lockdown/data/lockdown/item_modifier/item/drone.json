@@ -6,6 +6,7 @@
                 "translate": "item.lockdown.drone"
             },
             "minecraft:item_model": "lockdown:drone/normal",
+            "minecraft:rarity": "uncommon",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "drone",

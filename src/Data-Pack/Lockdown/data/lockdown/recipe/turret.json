@@ -33,6 +33,7 @@
                 "translate": "item.lockdown.turret"
             },
             "minecraft:item_model": "lockdown:turret/item",
+            "minecraft:rarity": "uncommon",
             "minecraft:custom_data": {
                 "lockdown_data": {
                     "name": "turret",
