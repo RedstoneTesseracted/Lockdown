@@ -34,17 +34,6 @@ Below is a table of all planned features currently (re)implemented
 | Legacy machine migration      |   ✅   |
 
 
-## Removed Features
-
-These features existed prior to the 1.21.4 update due to technical limitations.  However, they are now obsolete:
-* Secure crafting table
-* Secure recipe book
-
-R3 overhauled drone AI, rendering the following features obsolete:
-* Drone control tower
-* Drone control tower upgrade
-
-
 # Wiki Pages
 
 * ✔ Wireless transmitter
@@ -61,9 +50,9 @@ R3 overhauled drone AI, rendering the following features obsolete:
 * ✔ Defense turret
 * ✔ Defense drone
 * ✔ Encoding station
-* Range upgrade
-* Durability upgrade
-* Flamethrower upgrade
+* ✔ Range upgrade
+* ✔ Durability upgrade
+* ✔ Flamethrower upgrade
 * ✔ Key
 * ✔ Legacy wand
 * ✔ Control tower
