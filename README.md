@@ -35,33 +35,6 @@ Below is a table of all planned features currently (re)implemented
 | Legacy machine migration      |   ✅   |
 
 
-# Wiki Pages
-
-* ✔ Wireless transmitter
-* ✔ Wireless receiver
-* ✔ Alarm lights
-* ✔ Force field projector
-* ✔ Keycard reader
-* ✔ Keycard
-* ✔ Big buttons
-* ✔ Klaxon block
-* ✔ Laser projector
-* ✔ Player detector
-* ✔ Mob detector
-* ✔ Defense turret
-* ✔ Defense drone
-* ✔ Encoding station
-* ✔ Range upgrade
-* ✔ Durability upgrade
-* ✔ Flamethrower upgrade
-* ✔ Key
-* ✔ Legacy wand
-* ✔ Control tower
-* ✔ Control tower upgrade
-* ✔ Secure crafting table
-* ✔ Secure recipe book
-* Channels
-
 
 # Test Coverage
 
