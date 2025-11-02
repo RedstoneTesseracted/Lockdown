@@ -198,7 +198,6 @@ Items not covered under the GameTest system:
     * 1.21.7
     * 1.21.9
     * 1.21.10
-* Add sound credits to README
 * Create front-page document
 * Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
@@ -229,3 +228,17 @@ This datapack uses overlays to support multiple versions of the game with a sing
 | 1.21.9        | ❌               |
 | 1.21.10       | ❌               |
 
+
+# Credits
+
+This datapack makes use of the following sound effects:
+
+|                           Name                             |    Author    |              Link               |       License      |
+| ---------------------------------------------------------- | ------------ | ------------------------------- | ------------------ |
+| alarm3.WAV                                                 | phantastonia | https://freesound.org/s/270640/ | Creative Commons 0 |
+| Permission Denied.wav                                      | ironcross32  | https://freesound.org/s/582632/ | Creative Commons 0 |
+| Beep Bad                                                   | unfa         | https://freesound.org/s/154888/ | Creative Commons 0 |
+| blaster shot 8_1(Sytrus,rsmpl,multiprcsng)single.wav       | newlocknew   | https://freesound.org/s/514058/ | Attribution 4.0    |
+| blaster shot 11_2(Sytrus,rsmpl,3lrs,multiprcsng)single.wav | newlocknew   | https://freesound.org/s/514050/ | Attribution 4.0    |
+| Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew   | https://freesound.org/s/557513/ | Attribution 4.0    |
+| Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew   | https://freesound.org/s/557514/ | Attribution 4.0    |
