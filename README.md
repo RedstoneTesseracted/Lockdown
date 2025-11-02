@@ -203,7 +203,6 @@ Items not covered under the GameTest system:
 # Near-Term TODO:
 
 * Optimize drone AI
-* Create wiki
 * Redo upgrade textures
 * Port to more versions:
     * 1.21.5
@@ -211,6 +210,8 @@ Items not covered under the GameTest system:
     * 1.21.7
     * 1.21.9
     * 1.21.10
+* Add sound credits to README
+* Create front-page document
 * Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
 * Make turrets remember approved entities similar to drones?
