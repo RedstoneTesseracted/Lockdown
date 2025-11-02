@@ -1,6 +1,6 @@
 From laser turrets to force fields, Lockdown adds security-themed blocks/items to secure your base against intruders!
 
-![preview](images/Preview.png)
+![preview](images/Title.png)
 
 A more complete wiki is available [here]()
 
