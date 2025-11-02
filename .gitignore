@@ -1,0 +1,6 @@
+.vscode
+.venv
+__pycache__
+/Sounds/
+/game-tests/
+/Removed/
