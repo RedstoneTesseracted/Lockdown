@@ -12,7 +12,7 @@ execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "hostile"
 
 # Play effects
-playsound lockdown:entity.drone.identify.target neutral @a ~ ~ ~ 1.0 1.0
+playsound lockdown:entity.drone.target neutral @a ~ ~ ~ 1.0 1.0
 
 # Decide whether to enter "pursuing" or "attacking" state
 scoreboard players set lockdown.result lockdown.local 0

@@ -29,7 +29,7 @@
       ],
     "attribution": "alarm3.WAV by phantastonia -- https://freesound.org/s/270640/ -- License: Creative Commons 0"
   },
-  "entity.drone.target": {
+  "entity.drone.target_old": {
     "category": "neutral",
     "subtitle": "subtitles.lockdown.drone.target",
       "sounds": [
@@ -44,9 +44,9 @@
       ],
 	  "attribution": "Permission Denied.wav by ironcross32 -- https://freesound.org/s/582632/ -- License: Creative Commons 0"
   },
-  "entity.drone.identify.target": {
+  "entity.drone.target": {
     "category": "neutral",
-    "subtitle": "subtitles.lockdown.drone.identify.target",
+    "subtitle": "subtitles.lockdown.drone.target",
       "sounds": [
         "lockdown:drone/identify_target"
       ],
