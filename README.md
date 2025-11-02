@@ -187,7 +187,6 @@ Items not covered under the GameTest system:
 
 # Known Bugs
 
-* Drone approval carries over from creative to survival mode
 
 # Near-Term TODO:
 
