@@ -203,7 +203,6 @@ Items not covered under the GameTest system:
 # Near-Term TODO:
 
 * Optimize drone AI
-* Redo upgrade textures
 * Port to more versions:
     * 1.21.5
     * 1.21.6
