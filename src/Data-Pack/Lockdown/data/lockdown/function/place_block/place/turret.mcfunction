@@ -106,7 +106,7 @@ execute if score lockdown.direction lockdown.local matches 3 as @e[tag=lockdown.
 # Summon the damage box entity
 execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:1b, NoGravity:1b, TicksSincePollination: 2147483647, PersistenceRequired: 1b, CannotEnterHiveTicks: 2147483647, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}, {id: "minecraft:regeneration", duration: 1000000, amplifier: 0, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.turret", "lockdown.block.hitbox", "lockdown.block.hitbox.new", "lockdown.behavior.regenerates"], Silent: 1b, CustomName: {translate: "item.lockdown.turret"}}
 ride @n[tag=lockdown.block.hitbox.new] mount @n[tag=lockdown.block.root.new]
-
+attribute @n[tag=lockdown.block.hitbox.new] minecraft:max_health base set 18.0
 
 # Assign special behavior tags
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.code_hostile

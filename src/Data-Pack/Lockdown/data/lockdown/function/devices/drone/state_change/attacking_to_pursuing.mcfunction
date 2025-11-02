@@ -1,6 +1,6 @@
 # This function switches the drone from the "attacking" state to the "pursuing" state
 
-say attacking -> pursuing
+#say attacking -> pursuing
 
 # Ok bee, you'll need to move again
 function lockdown:devices/drone/unfreeze_bee

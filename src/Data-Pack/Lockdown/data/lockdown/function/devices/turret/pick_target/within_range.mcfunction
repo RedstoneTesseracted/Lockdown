@@ -8,4 +8,4 @@ $tag @e[type=#lockdown:hostile,distance=..$(range)] add lockdown.turret.candidat
 execute if score @s lockdown.channel matches 0 run return 0
 scoreboard players operation lockdown.channel lockdown.local = @s lockdown.channel
 $execute as @e[tag=lockdown.behavior.code_hostile,distance=..$(range)] unless score @s lockdown.channel = lockdown.channel lockdown.local run tag @s add lockdown.turret.candidate
-$execute as @a[distance=..$(range)] unless score @s lockdown.held_channel = lockdown.channel lockdown.local run tag @s add lockdown.turret.candidate
+$execute as @a[distance=..$(range),gamemode=!creative,gamemode=!spectator] unless score @s lockdown.held_channel = lockdown.channel lockdown.local run tag @s add lockdown.turret.candidate

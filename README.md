@@ -34,264 +34,6 @@ Below is a table of all planned features currently (re)implemented
 | Legacy machine migration      |   ✅   |
 
 
-## Redstone wireless transmitter
-
-* Transmits a redstone signal to other receivers on the same channel
-* Encodable (required)
-
-### History
-
-* Added in R1
-
-
-## Redstone wireless receiver
-
-* Emits a redstone signal whenever it receives a wireless signal from its channel
-* Encodable (required)
-
-### History
-
-* Added in R1
-
-
-## Alarm lights
-
-* Emits a glowing effect whenever it receives a wireless signal from its channel
-* Available in sixteen colors!
-* Encodable (required)
-
-### History
-
-* Added in R1
-
-
-## Force field projector
-
-* Creates an indestructible energy shield when powered by redstone
-* Right-click to change size
-
-### History
-
-* Added in R1
-* Tweaked force field projector texture in R3
-* Force field projectors can now be placed horizontally in R3
-
-
-## Keycard reader w/ keycard
-
-* Emits a redstone signal whenever a nearby player is holding a keycard with a matching code
-* Comes in seventeen colors!
-* Encodable (required)
-
-### History
-
-* Added in R1
-
-
-## Big buttons
-
-* Big fancy buttons!
-* Comes in sixteen colors!
-* Emits a wireless signal if encoded
-* Encodable (optional)
-
-### History
-
-* Added in R1
-
-
-## Klaxon block
-
-* Makes a noise on loop when powered by redstone
-* Right-click to change sound effect
-
-### History
-
-* Added in R1
-
-
-## Laser projector
-
-* Projects a laser when powered by redstone
-* Laser deals damage and can be blocked by solid blocks
-* Directional!
-
-### History
-
-* Added in R1
-
-
-## Player detector
-
-* Emits a redstone signal whenever a player is within five blocks
-
-### History
-
-* Added in R1
-
-
-## Mob detector
-
-* Emits a redstone signal whenever a non-player mob is within five blocks
-
-### History
-
-* Added in R1
-
-
-## Defense turret
-
-* Blasts hostile mobs and, optionally, players with a laser
-* When given a code, turrets will target players with a non-matching code
-* Encodable (optional)
-
-### History
-
-* Added in R1
-* Firing range buffed, reload time lowered, and recipe made less expensive in R2
-* Added turret upgrades in R2
-
-
-## Defense drone
-
-* Patrols the area around its home position for any suspicious activity
-* When an enemy is detected, drones will enter pursuit and begin firing their laser once in range
-* When given a code, drones will target players with a non-matching code
-* Encodable (optional)
-
-### History
-
-* Added in R1
-* Added drone upgrades in R2
-
-
-## Drone control tower
-
-* Used to shift the drone's detection area to the position of the tower
-* Encodable (required)
-
-### History
-
-* Added in R2
-* Removed in R3 due to drone AI overhaul
-
-
-## Encoding station
-
-* Used to apply codes/channels to items
-
-### History
-
-* Added in R1
-
-
-## Range upgrade
-
-* Increases firing/detection ranges for drones and turrets
-* Right-click on drone/turret to apply
-* Maximum of three
-
-### History
-
-* Added in R3
-
-
-## Durability upgrade
-
-* Increases max health of drones and turrets
-* Right-click on drone/turret to apply
-* Maximum of three
-
-
-### History
-
-* Added in R2
-* Increased maximum upgrades to 3 in R3
-
-
-## Flamethrower upgrade
-
-* Causes drones and turrets to shoot fireballs instead of lasers
-* Right-click on drone/turret to apply
-* Maximum of one
-
-### History
-
-* Added in R2
-
-
-## Drone control tower upgrade
-
-* Used to pair a drone with the nearest control tower of a matching code
-* When applied, the drone will use the tower's position as the center of its search radius
-* Right-click on drone to apply
-* Maximum of one
-
-### History
-
-* Added in R2
-* Removed in R3 due to drone AI overhaul
-
-
-## Laser blaster
-
-* Pew pew
-* Consumes redstone batteries
-
-### History
-
-* Planned for R4
-
-
-## Redstone Batteries
-
-* Used to fuel the laser blaster
-
-### History
-
-* Planned for R4
-
-
-## Key
-
-* Brings container locking to survival
-* Encodable (required)
-
-### History
-
-* Added in R3
-
-
-## Air Defense Cannon
-
-* What if laser, but big?
-
-### History
-
-* Planned for R4
-
-
-## Suspicious thumb drive
-
-* Rare item found in chests?
-* When used on a drone or turret, causes said drone/turret to instead target ALL friendly mobs, with priority on players and villagers.
-
-### History
-
-* Planned for R4
-
-
-## Legacy Wand
-
-* Tool used to drop pre-R3 blocks/items and replace them with their post-R3 counterparts
-* Right click to upgrade all items in player inventory
-* Right click while facing block to upgrade block
-
-### History
-
-* Planned for R3
-
-
 ## Removed Features
 
 These features existed prior to the 1.21.4 update due to technical limitations.  However, they are now obsolete:
@@ -301,6 +43,34 @@ These features existed prior to the 1.21.4 update due to technical limitations. 
 R3 overhauled drone AI, rendering the following features obsolete:
 * Drone control tower
 * Drone control tower upgrade
+
+
+# Wiki Pages
+
+* ✔ Wireless transmitter
+* ✔ Wireless receiver
+* ✔ Alarm lights
+* ✔ Force field projector
+* ✔ Keycard reader
+* ✔ Keycard
+* ✔ Big buttons
+* ✔ Klaxon block
+* ✔ Laser projector
+* ✔ Player detector
+* ✔ Mob detector
+* ✔ Defense turret
+* ✔ Defense drone
+* ✔ Encoding station
+* Range upgrade
+* Durability upgrade
+* Flamethrower upgrade
+* ✔ Key
+* ✔ Legacy wand
+* ✔ Control tower
+* ✔ Control tower upgrade
+* ✔ Secure crafting table
+* ✔ Secure recipe book
+* Channels
 
 
 # Test Coverage
@@ -443,6 +213,7 @@ Items not covered under the GameTest system:
     * 1.21.10
 * Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
+* Make turrets remember approved entities similar to drones?
 
 # Future Plans:
 

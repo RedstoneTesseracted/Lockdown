@@ -13,12 +13,8 @@
         "r": [
             "minecraft:redstone"
         ],
-        "h": [
-            "minecraft:beef"
-        ],
-        "c": [
-            "minecraft:rotten_flesh"
-        ],
+        "h": "#lockdown:detector_meats",
+        "c": "#lockdown:detector_hostiles",
         "e": [
             "minecraft:ender_eye"
         ]

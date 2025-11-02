@@ -72,7 +72,7 @@ execute if score lockdown.facing lockdown.local matches 0 run scoreboard players
 execute if score lockdown.facing lockdown.local matches 1 run scoreboard players set lockdown.side lockdown.local 2
 execute if score lockdown.facing lockdown.local matches 2.. run scoreboard players set lockdown.side lockdown.local 1
 
-tellraw @a [{text: "Side: "}, {score: {name: "lockdown.side", objective: "lockdown.local"}}, {text: ", Direction: "}, {score: {name: "lockdown.direction", objective: "lockdown.local"}}]
+#tellraw @a [{text: "Side: "}, {score: {name: "lockdown.side", objective: "lockdown.local"}}, {text: ", Direction: "}, {score: {name: "lockdown.direction", objective: "lockdown.local"}}]
 
 ## Upright
 # Rotate primary display entity according to the source player's rotation

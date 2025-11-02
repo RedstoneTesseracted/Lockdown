@@ -4,7 +4,7 @@
 #
 # The state change will be canceled of the attacker is not a valid target
 
-say retaliating
+#say retaliating
 
 # Check if the attacker is a valid target and only proceed if they are
 scoreboard players set lockdown.is_enemy lockdown.local 0
@@ -13,7 +13,7 @@ execute on attacker if function lockdown:devices/drone/pick_target/evaluate_susp
 data modify entity @s data.approved set from storage lockdown:temp approved
 execute if score lockdown.is_enemy lockdown.local matches 0 run return 0
 
-say confirmed: retaliating
+#say confirmed: retaliating
 
 # Clear any patrol markers, if they exist
 execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]

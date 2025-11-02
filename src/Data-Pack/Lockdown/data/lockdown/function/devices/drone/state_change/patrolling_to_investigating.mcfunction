@@ -1,7 +1,7 @@
 # This function switches the drone from a "patrolling" to an "investigating" state
 # This is run BY and AT the root drone entity
 
-say patrolling -> investigating
+#say patrolling -> investigating
 
 # Clear any patrol markers, if they exist
 execute on vehicle on target run kill @s[tag=lockdown.drone.patrol_marker]

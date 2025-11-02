@@ -1,7 +1,7 @@
 # This function switches the drone from an "attacking" to a "patrolling" state
 # This is run BY and AT the root drone entity
 
-say attacking -> patrolling
+#say attacking -> patrolling
 
 # Update model
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "standby"

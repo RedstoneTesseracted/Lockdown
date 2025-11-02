@@ -2,19 +2,13 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-        "lol",
-        "bcb",
+        "ioi",
+        "ici",
         "idi"
     ],
     "key": {
         "i": [
             "minecraft:iron_ingot"
-        ],
-        "l": [
-            "minecraft:light_gray_concrete"
-        ],
-        "b": [
-            "minecraft:black_concrete"
         ],
         "o": [
             "minecraft:observer"

@@ -3,9 +3,9 @@
     "group": "lockdown:keycards",
     "category": "misc",
     "pattern": [
-        "eop",
-        "dcd",
-        "pap"
+        "eoe",
+        "pap",
+        "pdp"
     ],
     "key": {
         "p": [
@@ -13,9 +13,6 @@
         ],
         "o": [
             "minecraft:observer"
-        ],
-        "c": [
-            "minecraft:comparator"
         ],
         "d": [
             "minecraft:diamond"

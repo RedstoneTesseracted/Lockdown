@@ -1,6 +1,6 @@
 # This function switches the drone from the "pursuing" state to the "attacking" state
 
-say pursuing -> attacking
+#say pursuing -> attacking
 
 # Stop trusting the bee's AI at this distance
 function lockdown:devices/drone/freeze_bee

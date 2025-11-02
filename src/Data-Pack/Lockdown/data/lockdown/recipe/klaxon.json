@@ -3,7 +3,7 @@
     "category": "misc",
     "pattern": [
         "iri",
-        "njn",
+        "rnr",
         "iri"
     ],
     "key": {
@@ -15,9 +15,6 @@
         ],
         "n": [
             "minecraft:note_block"
-        ],
-        "j": [
-            "minecraft:jukebox"
         ]
     },
     "result": {

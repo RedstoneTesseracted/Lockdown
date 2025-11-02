@@ -6,8 +6,10 @@
 tag @e[tag=lockdown.item.configure] remove lockdown.item.configure
 
 # Spawn the base item to be configured
-execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_model":"lockdown:invisible","minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
-item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/control_tower
+#execute align xyz run summon minecraft:item ~0.5 ~0.5 ~0.5 {Item:{id:"minecraft:item_frame",components:{"minecraft:item_model":"lockdown:invisible","minecraft:item_name":'"If you can read this, something has gone wrong!"'}},Tags:["lockdown.item.configure"]}
+#item modify entity @n[tag=lockdown.item.configure] container.0 lockdown:item/control_tower
+execute align xyz run loot spawn ~0.5 ~0.5 ~0.5 loot lockdown:legacy/control_tower_return
+
 
 # Assign code
 execute if score lockdown.channel lockdown.local matches 0 run data modify entity @n[tag=lockdown.item.configure] Item.components."minecraft:entity_data".data.lockdown_data.channel set value 0b

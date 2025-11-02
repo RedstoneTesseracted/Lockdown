@@ -1027,6 +1027,39 @@ def generate_drone_distance_lookup_table(L):
             wf.write(f'execute if predicate lockdown:ranges/{str(lower).replace(".", "_")}-{str(upper_txt).replace(".", "_")} run return {round(multiplier)}\n')
 
 
+def generate_recipe_giver():
+    """
+    This generates a function capable of giving the player every recipe in the datapack
+    """
+    # Declare paths used below
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    recipe_dir = path.join(datapack_dir, 'recipe')
+    function_path = path.join(datapack_dir, 'function', 'grant_recipes.mcfunction')
+
+    # Scan for all recipes
+    recipes = []
+    for dirpath, dirnames, filenames in os.walk(recipe_dir):
+        for file in filenames:
+            recipe_name, extension = path.splitext(file)
+            if extension != '.json': continue   # Ignore non-JSON files
+            recipes.append('lockdown:' + path.join(dirpath.removeprefix(recipe_dir), recipe_name).replace(path.sep, '/').removeprefix('/'))
+
+    # Write the function
+    with open(function_path, mode='w') as wf:
+        wf.write("""\
+# THIS FILE IS AUTO-GENERATED
+# This function grants the player ALL recipes in the pack.
+# lockdown:player_init calls this to grant players recipes
+# so they don't have to guess them.
+
+""")
+        for recipe in recipes:
+            wf.write(f'recipe give @s {recipe}\n')
+    
+    
+
+
+
 
 def main():
     os.chdir(path.split(__file__)[0])
@@ -1041,6 +1074,7 @@ def main():
     generate_grouped_loot_tables()
     generate_placer_tests()
     generate_drone_distance_lookup_table(2)
+    generate_recipe_giver()
 
 
 if __name__ == "__main__":

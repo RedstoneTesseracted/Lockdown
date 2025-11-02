@@ -33,6 +33,7 @@ playsound minecraft:block.metal.place block @a ~ ~ ~ 1.0 1.0
 # Summon hitbox entity
 execute align xyz run summon minecraft:bee ~0.5 ~0.5 ~0.5 {NoAI:0b, NoGravity:1b, TicksSincePollination: 2147483647, CannotEnterHiveTicks: 2147483647, PersistenceRequired: 1b, active_effects:[{id:"minecraft:invisibility", duration: 1000000, amplifier: 1, show_particles: 0b}, {id: "minecraft:regeneration", duration: 1000000, amplifier: 0, show_particles: 0b}], Tags: ["lockdown.block", "lockdown.drone", "lockdown.block.hitbox", "lockdown.block.hitbox.new", "lockdown.behavior.regenerates"], Silent: 1b, CustomName: {translate: "item.lockdown.drone"}}
 attribute @n[tag=lockdown.block.hitbox.new] minecraft:attack_damage base set 0.0
+attribute @n[tag=lockdown.block.hitbox.new] minecraft:max_health base set 10.0
 
 # Summon and mount root entity
 execute align xyz run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {data: {approved: []}, teleport_duration: 2, interpolation_duration: 1, transformation: {translation: [0.0f, -0.3f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.drone","lockdown.drone.body"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:drone/normal","minecraft:custom_model_data":{strings:["standby"]}}}}

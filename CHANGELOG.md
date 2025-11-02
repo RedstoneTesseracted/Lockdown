@@ -8,13 +8,15 @@
     * Rewrote drone AI
     * New drone model
     * New sound effects
-    * Drones can now be dyed
     * Drone lasers now have a custom model
+    * Tweaked recipe
 * Improvements to turrets:
     * Turrets now rotate around two axes of rotation
     * Turrets can now be placed on any side of a block
     * Turret lasers now have a custom model
-* Improvements to shield projector:
+    * New sound effects
+    * Reduced recipe cost to be more in line with that of drones
+* Improvements to force field projector:
     * Tweaked texture to show directionality
     * Can now be placed in any direction
     * Added brief shield raising/lowering animation
@@ -28,13 +30,18 @@
     * Durability upgrade can now be stacked up to 3
     * Added turret/drone range upgrade (can be stacked up to 3)
     * Added new textures for upgrades
+    * Flamethrower upgrade now causes drones/turrets to shoot fireballs, instead of lighting the ground underneath their targets on fire.
 * Added container key
     * Brings container locking to survival
 * Keycards now come in sixteen new colors
+* Tweaked base keycard recipe to be slightly simpler
 * Changes to keycard readers:
     * Keycard readers are now full blocks
-    * Encoding is now optional
     * Now emit a redstone signal when they detect a valid keycard
+    * Changed recipe to require fewer types of materials
+* Adding a code to big buttons is now optional
+* Changed klaxon recipe to require fewer types of materials
+* Tweaked mob detector recipe to allow more item substitutes
 * Added new alarm sounds to the klaxon
 * All recipes now use the crafting table, now that vanilla supports custom components in recipe outputs
 * Removed the secure crafter and secure recipe book, as they are no longer needed.  Use the legacy wand to return materials

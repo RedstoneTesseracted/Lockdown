@@ -16,7 +16,7 @@ colors = {
         'purple': 0x9046B9,
         'lime': 0x87C536,
         'green': 0X6D8534,
-        'white': 0xF8F8F8,
+#        'white': 0xF8F8F8,
         'gray': 0x53565A,
         'light_gray': 0x92938C,
         'brown': 0x8A6246,
@@ -27,7 +27,7 @@ colors = {
 
 
 # Load regular keycard as a template
-with open('keycard.json', mode='r') as rf:
+with open('white_keycard.json', mode='r') as rf:
     template = json.load(rf)
 
 # Generate all variants

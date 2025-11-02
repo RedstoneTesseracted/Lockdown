@@ -10,7 +10,7 @@
         "w": [
             "minecraft:white_concrete"
         ],
-        "b": "#minecraft:stone_buttons",
+        "b": "#minecraft:buttons",
         "t": [
             "minecraft:gray_concrete"
         ]

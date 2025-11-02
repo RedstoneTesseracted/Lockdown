@@ -59,15 +59,6 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "lockdown:item/keycard/keycard"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
                     "value": "lockdown:item/keycard/light_blue_keycard"
                 }
             ]

@@ -2,13 +2,13 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-        "oie",
+        "iie",
         "mbd",
-        "oii"
+        "ooo"
     ],
     "key": {
         "i": [
-            "minecraft:iron_block"
+            "minecraft:iron_ingot"
         ],
         "e": [
             "minecraft:ender_eye"

@@ -1,7 +1,7 @@
 # This function switches the drone from a "pursuing" to a "patrolling" state
 # This is run BY and AT the root drone entity
 
-say pursuing -> patrolling
+#say pursuing -> patrolling
 
 # Update model
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "standby"

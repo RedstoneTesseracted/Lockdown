@@ -1,7 +1,7 @@
 # This function switches the drone from an "attacking" to an "investigating" state
 # This is run BY and AT the root drone entity
 
-say attacking -> investigating
+#say attacking -> investigating
 
 # Update model
 data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "alert"

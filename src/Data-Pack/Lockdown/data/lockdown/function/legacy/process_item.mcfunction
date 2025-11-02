@@ -40,7 +40,7 @@ execute store result score lockdown.legacy_upgrade_id lockdown.local run data ge
 
 # Handle regular items
 execute if score lockdown.legacy_item_id lockdown.local matches 3 run loot replace entity @s container.0 loot lockdown:item/keycard_reader
-execute if score lockdown.legacy_item_id lockdown.local matches 4 run loot replace entity @s container.0 loot lockdown:item/keycard/keycard
+execute if score lockdown.legacy_item_id lockdown.local matches 4 run loot replace entity @s container.0 loot lockdown:item/keycard/blue_keycard
 execute if score lockdown.legacy_item_id lockdown.local matches 5 run function lockdown:legacy/process_alarm
 execute if score lockdown.legacy_item_id lockdown.local matches 6 run function lockdown:legacy/process_button
 execute if score lockdown.legacy_item_id lockdown.local matches 7 run loot replace entity @s container.0 loot lockdown:item/drone
