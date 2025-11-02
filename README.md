@@ -2,6 +2,7 @@
 
 This repository contains the source for the Lockdown datapack
 
+![Preview](images/Preview.png)
 
 # Features
 
