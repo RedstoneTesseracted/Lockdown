@@ -1,0 +1,7 @@
+{
+    "parent": "lockdown:gui/smaller_upper_section",
+    "textures": {
+        "texture": "lockdown:gui/encoder_gui",
+        "particle": "lockdown:gui/encoder_gui"
+    }
+}

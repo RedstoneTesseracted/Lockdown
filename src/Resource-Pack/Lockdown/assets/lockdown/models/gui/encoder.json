@@ -1,7 +1,59 @@
 {
-    "parent": "lockdown:gui/smaller_upper_section",
-    "textures": {
-        "texture": "lockdown:gui/encoder_gui",
-        "particle": "lockdown:gui/encoder_gui"
-    }
+	"format_version": "1.21.6",
+	"credit": "Adapted from SimplySarc's custom GUI model",
+	"textures": {
+		"texture": "lockdown:gui/encoder_gui",
+		"particle": "lockdown:gui/waveform",
+		"waveform": "lockdown:gui/waveform"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 15.937],
+			"to": [16, 16, 15.9995],
+			"faces": {
+				"north": {"uv": [13.5, 13.75, 0, 0.25], "rotation": 180, "texture": "#texture"},
+				"south": {"uv": [0, 0.25, 13.5, 13.75], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [1.48148, 12.14815, 15.937],
+			"to": [6.22222, 14.81481, 15.9995],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12.525, 12.15, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 9], "texture": "#waveform"},
+				"south": {"uv": [16, 0, 0, 9], "texture": "#waveform"}
+			}
+		},
+		{
+			"from": [6.22222, 12.14815, 15.937],
+			"to": [10.37037, 14.81481, 15.9995],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12.525, 12.15, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 14, 9], "texture": "#waveform"},
+				"south": {"uv": [14, 0, 0, 9], "texture": "#waveform"}
+			}
+		},
+		{
+			"from": [10.37037, 12.14815, 15.9375],
+			"to": [14.51852, 14.81481, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12.525, 12.15, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 14, 9], "texture": "#waveform"},
+				"south": {"uv": [14, 0, 0, 9], "texture": "#waveform"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"firstperson_lefthand": {
+			"scale": [0, 0, 0]
+		},
+		"ground": {
+			"scale": [0, 0, 0]
+		},
+		"gui": {
+			"translation": [18, -18, -80],
+			"scale": [3.375, 3.375, 3.375]
+		}
+	}
 }
