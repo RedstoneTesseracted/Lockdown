@@ -8,6 +8,9 @@
 #   * If the drone has a non-zero channel, it also considers targetables (players + entities
 #     with the lockdown.behavior.code_hostile tag) with a non-matching channel to be enemies
 
+# Ignore creative/spectator mode players
+execute if predicate lockdown:creative_or_spectator run return 0
+
 # Check if entity has already been investigated
 execute if function lockdown:devices/drone/approval/contains run return 0
 
@@ -19,8 +22,8 @@ execute if predicate lockdown:is_invisible run return 0
 execute if entity @s[type=#lockdown:hostile] run return run function lockdown:devices/drone/pick_target/flag_enemy
 
 # Deny targetable entities with non-matching channel (if applicable)
-execute if score lockdown.channel lockdown.local matches 0 if entity @s[tag=lockdown.behavior.code_hostile] unless score @s lockdown.channel matches 0 run function lockdown:devices/drone/pick_target/flag_enemy
-execute unless score lockdown.channel lockdown.local matches 0 unless predicate lockdown:local_channel_matches if predicate lockdown:channel_failing_targetable run function lockdown:devices/drone/pick_target/flag_enemy
+execute if score lockdown.channel lockdown.local matches 0 if entity @s[tag=lockdown.behavior.code_hostile] unless score @s lockdown.channel matches 0 run return run function lockdown:devices/drone/pick_target/flag_enemy
+execute unless score lockdown.channel lockdown.local matches 0 unless predicate lockdown:local_channel_matches if predicate lockdown:channel_failing_targetable run return run function lockdown:devices/drone/pick_target/flag_enemy
 
 # All checks passed: suspect is approved
 return run function lockdown:devices/drone/approval/add

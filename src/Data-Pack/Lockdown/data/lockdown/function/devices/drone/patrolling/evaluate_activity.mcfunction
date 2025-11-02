@@ -5,6 +5,9 @@
 # * Is within field-of-view OR is moving quickly OR is very close
 # * Hasn't recently been investigated
 
+# Ignore creative/spectator mode players
+execute if predicate lockdown:creative_or_spectator run return 0
+
 # Ignore if recently investigated
 execute if function lockdown:devices/drone/approval/contains run return 0
 
