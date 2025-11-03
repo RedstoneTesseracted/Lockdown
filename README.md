@@ -165,12 +165,6 @@ Items not covered under the GameTest system:
 # Near-Term TODO:
 
 * Optimize drone AI
-* Port to more versions:
-    * 1.21.5
-    * 1.21.6
-    * 1.21.7
-    * 1.21.9
-    * 1.21.10
 * Create front-page document
 * Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
