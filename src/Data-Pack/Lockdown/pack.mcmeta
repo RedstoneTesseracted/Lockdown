@@ -5,6 +5,8 @@
       "min_inclusive": 71,
       "max_inclusive": 81
     },
+    "min_format": 71,
+    "max_format": 88,
     "description": [{"text":"Lockdown: ","color":"green"},{"text":"By Redstone⁴","color":"red"}]
   },
   "overlays": {
@@ -19,6 +21,12 @@
         "min_format": 62,
         "max_format": 70,
         "formats": [62, 70],
+        "directory": "untested_version"
+      },
+      {
+        "min_format": 82,
+        "max_format": 1024,
+        "formats": [82, 1024],
         "directory": "untested_version"
       }
     ]
