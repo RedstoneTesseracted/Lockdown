@@ -28,6 +28,12 @@
         "max_format": 1024,
         "formats": [82, 1024],
         "directory": "untested_version"
+      },
+      {
+        "min_format": 88,
+        "max_format": 1024,
+        "formats": [88, 1024],
+        "directory": "1.21.9"
       }
     ]
   }
