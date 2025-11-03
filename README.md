@@ -191,12 +191,13 @@ This datapack uses overlays to support multiple versions of the game with a sing
 
 | Game Version  | Data Pack Version |
 | ------------- | ----------------- |
-| 1.20-1.20.1   | R2.X              |
-| 1.20.2-1.20.6 | ❌               |
-| 1.21-1.21.4   | ❌               |
 | 1.21.5-1.21.8 | R3               |
 | 1.21.9        | ❌               |
 | 1.21.10       | ❌               |
+
+## Older Versions
+
+Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [here](https://github.com/RedstoneTesseracted/Lockdown/releases)
 
 
 # Credits

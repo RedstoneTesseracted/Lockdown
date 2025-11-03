@@ -96,4 +96,4 @@ You can give yourself all blocks/items in the data pack with the following comma
 
 # Older Versions
 
-Old 1.16 and 1.17 versions are available on the project's GitHub page [here](https://github.com/RedstoneTesseracted/Lockdown/releases)
+Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [here](https://github.com/RedstoneTesseracted/Lockdown/releases)
