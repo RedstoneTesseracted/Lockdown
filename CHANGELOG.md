@@ -30,7 +30,7 @@
     * Durability upgrade can now be stacked up to 3
     * Added turret/drone range upgrade (can be stacked up to 3)
     * Added new textures for upgrades
-    * Flamethrower upgrade now causes drones/turrets to shoot fireballs, instead of lighting the ground underneath their targets on fire.
+    * Flamethrower upgrade now causes drones to shoot fireballs, instead of lighting the ground underneath their targets on fire.
 * Added container key
     * Brings container locking to survival
 * Keycards now come in sixteen new colors

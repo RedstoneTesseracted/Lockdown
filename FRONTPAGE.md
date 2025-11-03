@@ -48,7 +48,7 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 **Durability Upgrade**: Increases the health of a drone or turret.
 
-**Flamethrower Upgrade**: Allows drones and turrets to shoot fireballs instead of lasers.
+**Flamethrower Upgrade**: Allows drones to shoot fireballs and turrets to shoot bolts of fire instead of lasers.
 
 **Range Upgrade**: Increases the effective range of a drone or turret.
 

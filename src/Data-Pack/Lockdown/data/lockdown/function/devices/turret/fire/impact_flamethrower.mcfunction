@@ -11,7 +11,7 @@ $damage @s $(damage) lockdown:firey_turret_laser by @e[tag=lockdown.turret.sourc
 data modify entity @s[type=minecraft:creeper] ignited set value 1b
 
 # Play effects
-execute at @s run particle minecraft:flame ~ ~ ~ 0.25 0.4 0.25 0.3 20
+execute at @s run particle minecraft:flame ~ ~ ~ 0.25 0.4 0.25 0.15 40
 execute at @s if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:fire
 
 # Success!

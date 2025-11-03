@@ -7,4 +7,4 @@ scoreboard players set lockdown.attempts lockdown.local 0
 function lockdown:devices/turret/fire/raycast_loop
 
 # Update the visual beam
-execute on passengers if entity @s[tag=lockdown.turret.beam] run function lockdown:devices/turret/fire/configure_beam
+execute if entity @s[tag=!lockdown.behavior.flamethrower] on passengers if entity @s[tag=lockdown.turret.beam] run function lockdown:devices/turret/fire/configure_beam
