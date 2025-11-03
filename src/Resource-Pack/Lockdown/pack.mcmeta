@@ -1,10 +1,12 @@
 {
   "pack": {
-    "pack_format": 64,
+    "pack_format": 69,
     "supported_formats": {
       "min_inclusive": 46,
-      "max_inclusive": 64
+      "max_inclusive": 70
     },
+    "min_format": 46,
+    "max_format": 70,
     "description": [{"text":"Lockdown: ","color":"green"},{"text":"By Redstone⁴","color":"red"}]
   }
 }
