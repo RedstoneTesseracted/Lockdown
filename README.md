@@ -189,11 +189,9 @@ Items not covered under the GameTest system:
 
 This datapack uses overlays to support multiple versions of the game with a single ZIP file.  However, some features will not be backported to older versions.  Below is a table showing what features are available for each game version.
 
-| Game Version  | Data Pack Version |
-| ------------- | ----------------- |
-| 1.21.5-1.21.8 | R3               |
-| 1.21.9        | ❌               |
-| 1.21.10       | ❌               |
+|  Game Version  | Data Pack Version |
+| -------------- | ----------------- |
+| 1.21.5-1.21.10 | R3                |
 
 ## Older Versions
 
