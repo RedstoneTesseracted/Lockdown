@@ -2,7 +2,7 @@ From laser turrets to force fields, Lockdown adds security-themed blocks/items t
 
 ![preview](images/Title.png)
 
-A more complete wiki is available [here]()
+A more complete wiki is available [here](https://redstonetesseracted.github.io/Lockdown-Wiki/)
 
 ---
 
