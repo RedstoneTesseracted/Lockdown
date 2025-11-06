@@ -77,77 +77,6 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 
 > **Note**: Tests marked with "❓" involve a feature that *requires* player interaction.  As such, I'm not yet sure how to implement automated tests for them.
 
-Block placement tests need to exist for the following devices:
-* ✔ Keycard reader (❌ multi-directional, ✔ channel)
-* ~ Alarm (❌ multi-directional, ✔ channel)
-* ~ Big button (❌ multi-directional, ✔ channel)
-* ✔ Drone (✔ channel)
-* ✔ Player detector
-* ✔ Mob detector
-* ✔ Klaxon
-* ~ Laser projector (❌ multi-directional)
-* ✔ Wireless transmitter (✔ channel)
-* ✔ Wireless receiver (✔ channel)
-* ✔ Force field projector (❌ multi-directional)
-* ✔ Turret (multi-directional, ✔ channel)
-* ✔ Encoder (✔ inventory)
-
-Block obstruction tests need to exist for the following:
-* ✔ Keycard reader
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * ✔ Requires channel
-* ✔ Alarm
-    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-    * ✔ Requires channel
-* ✔ Big button
-    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* ✔ Drone
-    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* ✔ Player detector
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Mob detector
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Klaxon
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Laser projector
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Wireless transmitter
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * ✔ Requires channel
-* ✔ Wireless receiver
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-    * ✔ Requires channel
-* ✔ Force field projector
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-* ✔ Turret
-    * ✔ Prevent entity overlap (deny #lockdown:blocks_nonsolid_placement)
-* ✔ Encoder
-    * ✔ Prevent block overlap (allow #minecraft:replaceable)
-    * ✔ Prevent entity overlap (allow #lockdown:strict_placement_nonblocking)
-
-Block destruction tests need to exist for the following:
-* ✔ Keycard reader (block-based)
-* ✔ Alarm (interaction-based)
-* ✔ Big button (block-based)
-* ✔ Drone (entity-based)
-* ✔ Player detector (block-based)
-* ✔ Mob detector (block-based)
-* ✔ Klaxon (block-based)
-* ✔ Laser projector (block-based)
-* ✔ Wireless transmitter (block-based)
-* ✔ Wireless receiver (block-based)
-* ✔ Force field projector (block-based)
-* ✔ Turret (entity-based)
-* ✔ Encoder (block-based)
-
 
 Items not covered under the GameTest system:
 |                   Test Name                    | Implemented? |
@@ -165,7 +94,6 @@ Items not covered under the GameTest system:
 # Near-Term TODO:
 
 * Optimize drone AI
-* Create front-page document
 * Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
 * Make turrets remember approved entities similar to drones?
