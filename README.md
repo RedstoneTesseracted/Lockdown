@@ -4,36 +4,6 @@ This repository contains the source for the Lockdown datapack
 
 ![Preview](images/Preview.png)
 
-# Features
-
-Below is a table of all planned features currently (re)implemented
-
-|             Name              | Status |
-| ----------------------------- | ------ |
-| Redstone wireless transmitter |   ✅   |
-| Redstone wireless receiver    |   ✅   |
-| Alarm lights                  |   ✅   |
-| Force field projector         |   ✅   |
-| Keycard reader w/ keycard     |   ✅   |
-| Big buttons                   |   ✅   |
-| Klaxon block                  |   ✅   |
-| Laser projector               |   ✅   |
-| Player detector               |   ✅   |
-| Mob detector                  |   ✅   |
-| Defense turret                |   ✅   |
-| Defense drone                 |   ✅   |
-| ~~Drone control tower~~       |   ✅   |
-| Encoding station              |   ✅   |
-| Range upgrade                 |   ✅   |
-| Durability upgrade            |   ✅   |
-| Flamethrower upgrade          |   ✅   |
-| ~~Drone control tower upgrade~~ |   ✅   |
-| Laser blaster                 |   ❌   |
-| Key                           |   ✅   |
-| Air Defense Cannon            |   ❌   |
-| Suspicious Thumb Drive        |   ❌   |
-| Legacy machine migration      |   ✅   |
-
 
 
 # Test Coverage
