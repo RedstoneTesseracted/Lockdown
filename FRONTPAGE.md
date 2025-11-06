@@ -8,7 +8,7 @@ A more complete wiki is available [here](https://redstonetesseracted.github.io/L
 
 # Version Support
 
-This datapack uses overlays to support multiple versions of the game with a single ZIP file.  However, some features will not be backported to older versions.  Below is a table showing what features are available for each game version.
+This datapack uses overlays to support multiple versions of the game with a single ZIP file.
 
 |  Game Version  | Data Pack Version |
 | -------------- | ----------------- |
