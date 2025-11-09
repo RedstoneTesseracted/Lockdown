@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.big_buttons.description",
-            "fallback": "Craft a wireless big button.  Outputs a wireless signal when powered."
+            "fallback": "Craft a big button"
         },
         "show_toast": true,
         "announce_to_chat": true

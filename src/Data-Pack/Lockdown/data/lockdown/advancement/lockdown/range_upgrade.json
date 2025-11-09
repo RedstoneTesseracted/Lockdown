@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.range_upgrade.description",
-            "fallback": "Increase the range of a drone or turret by throwing a range upgrade at it."
+            "fallback": "Increase the range of a drone or turret by using a range upgrade on it."
         },
         "show_toast": true,
         "announce_to_chat": true

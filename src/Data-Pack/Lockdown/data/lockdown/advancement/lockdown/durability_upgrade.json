@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.durability_upgrade.description",
-            "fallback": "Increase the durability of a drone or turret by throwing a durability upgrade at it."
+            "fallback": "Increase the durability of a drone or turret by using a durability upgrade on it."
         },
         "show_toast": true,
         "announce_to_chat": true

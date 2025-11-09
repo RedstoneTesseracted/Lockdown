@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.keycard_reader.description",
-            "fallback": "Craft a wireless keycard reader.  Outputs a wireless signal when powered."
+            "fallback": "Craft a keycard reader.  Outputs a redstone signal when powered."
         },
         "show_toast": true,
         "announce_to_chat": true

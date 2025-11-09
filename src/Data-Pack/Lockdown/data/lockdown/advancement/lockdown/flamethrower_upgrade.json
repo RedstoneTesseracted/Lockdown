@@ -13,7 +13,7 @@
         },
         "description": {
             "translate": "advancement.lockdown.flamethrower_upgrade.description",
-            "fallback": "Supercharge a drone/turret's laser to set targets on fire by throwing a flamethrower upgrade at it."
+            "fallback": "Turn up the heat on a drone/turret's laser by using a flamethrower upgrade on it."
         },
         "show_toast": true,
         "announce_to_chat": true
