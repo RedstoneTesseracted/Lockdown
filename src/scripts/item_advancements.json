@@ -21,20 +21,6 @@
             "name": "black_alarm_light"
         }
     },
-    "control_tower_upgrade": {
-        "item": "lockdown:control_tower_upgrade",
-        "parent": "lockdown:lockdown/control_tower",
-        "condition": {
-            "name": "control_tower_upgrade"
-        }
-    },
-    "control_tower": {
-        "item": "lockdown:machine/control_tower",
-        "parent": "lockdown:lockdown/encoder",
-        "condition": {
-            "name": "control_tower"
-        }
-    },
     "drone": {
         "item": "lockdown:drone/normal",
         "parent": "lockdown:lockdown/encoder",
