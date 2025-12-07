@@ -35,7 +35,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Range upgrades on turrets                      |      ❌      |
 | Durability upgrades on drones                  |      ✅      |
 | Durability upgrades on turrets                 |      ✅      |
-| Flamethrower upgrades on drones                |      ❌      |
+| Flamethrower upgrades on drones                |      ✅      |
 | Flamethrower upgrades on turrets               |      ✅      |
 | Applying drone/turret upgrades                 |      ❓      |
 | Drone targeting and firing                     |      ✅      |
