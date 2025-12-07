@@ -14,8 +14,8 @@ for width in range(1, 6):
         model = {
                     "parent": "minecraft:block/block",
                     "textures": {
-                        "field": "lockdown:block/force_field",
-                        "particle": "lockdown:block/force_field"
+                        "field": "lockdown:item/effects/force_field",
+                        "particle": "lockdown:item/effects/force_field"
                     },
                     "elements": [
                         {

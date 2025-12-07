@@ -1,7 +1,7 @@
 {
     "parent": "lockdown:item/glows/glow",
     "textures": {
-        "glow": "lockdown:block/magenta_glow",
-        "particle": "lockdown:block/magenta_glow"
+        "glow": "lockdown:item/effects/glow/magenta_glow",
+        "particle": "lockdown:item/effects/glow/magenta_glow"
     }
 }
