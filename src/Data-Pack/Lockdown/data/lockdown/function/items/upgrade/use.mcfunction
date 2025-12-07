@@ -12,6 +12,8 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_dat
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"range_upgrade"}}] unless function lockdown:items/upgrade/apply/range run scoreboard players set lockdown.success lockdown.local 1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"flamethrower_upgrade"}}] unless function lockdown:items/upgrade/apply/flamethrower run scoreboard players set lockdown.success lockdown.local 1
 
+tag @e[tag=lockdown.context] remove lockdown.context
+
 # Consume item if upgrade applied
 execute if score lockdown.success lockdown.local matches 1 run item modify entity @s weapon.mainhand lockdown:consume_item
 execute if score lockdown.success lockdown.local matches 1 run playsound minecraft:block.anvil.use player @a ~ ~ ~ 1.0 2.0
