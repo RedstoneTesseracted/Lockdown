@@ -1,7 +1,6 @@
 {
     "parent": "lockdown:item/alarm/alarm_light",
     "textures": {
-        "glass": "minecraft:block/green_stained_glass",
-        "source": "minecraft:block/green_concrete"
+        "color": "lockdown:item/devices/green_alarm"
     }
 }
