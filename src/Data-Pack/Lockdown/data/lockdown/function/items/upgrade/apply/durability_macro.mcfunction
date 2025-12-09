@@ -3,4 +3,4 @@
 # that would cause it to fail to compile
 
 execute store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/__durability_macro with storage lockdown:temp args
-execute unless score lockdown.macro_status lockdown.local matches 1 run tellraw @p {translate: "lockdown.messages.bug.macro.generic", color:"red", with: [{text: "lockdown:items/upgrade/apply/__durability_macro", color:"gray", underlined: true}]}
+execute unless score lockdown.macro_status lockdown.local matches 1 run tellraw @p[tag=lockdown.player_context] {translate: "lockdown.messages.bug.macro.generic", color:"red", with: [{text: "lockdown:items/upgrade/apply/__durability_macro", color:"gray", underlined: true}]}
