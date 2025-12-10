@@ -79,7 +79,7 @@ Items not covered under the GameTest system:
 
 # Version Support
 
-This datapack uses overlays to support versions 1.21.5-1.21.10.
+This datapack uses overlays to support versions 1.21.5-1.21.11.
 
 ## Older Versions
 

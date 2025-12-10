@@ -1,3 +1,9 @@
+# Release 3.1
+
+* Added support for 1.21.11
+* New textures for alarm lights
+
+
 # Release 3
 
 ## Changes
