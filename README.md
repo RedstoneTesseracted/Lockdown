@@ -90,12 +90,12 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 This datapack makes use of the following sound effects:
 
-|                           Name                             |    Author    |              Link               |       License      |
-| ---------------------------------------------------------- | ------------ | ------------------------------- | ------------------ |
-| alarm3.WAV                                                 | phantastonia | https://freesound.org/s/270640/ | Creative Commons 0 |
-| Permission Denied.wav                                      | ironcross32  | https://freesound.org/s/582632/ | Creative Commons 0 |
-| Beep Bad                                                   | unfa         | https://freesound.org/s/154888/ | Creative Commons 0 |
-| blaster shot 8_1(Sytrus,rsmpl,multiprcsng)single.wav       | newlocknew   | https://freesound.org/s/514058/ | Attribution 4.0    |
-| blaster shot 11_2(Sytrus,rsmpl,3lrs,multiprcsng)single.wav | newlocknew   | https://freesound.org/s/514050/ | Attribution 4.0    |
-| Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew   | https://freesound.org/s/557513/ | Attribution 4.0    |
-| Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew   | https://freesound.org/s/557514/ | Attribution 4.0    |
+|                           Name                             |    Author    |              Link               |                                License                                   |
+| ---------------------------------------------------------- | ------------ | ------------------------------- | ------------------------------------------------------------------------ |
+| alarm3.WAV                                                 | phantastonia | https://freesound.org/s/270640/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Permission Denied.wav                                      | ironcross32  | https://freesound.org/s/582632/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Beep Bad                                                   | unfa         | https://freesound.org/s/154888/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| blaster shot 8_1(Sytrus,rsmpl,multiprcsng)single.wav       | newlocknew   | https://freesound.org/s/514058/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| blaster shot 11_2(Sytrus,rsmpl,3lrs,multiprcsng)single.wav | newlocknew   | https://freesound.org/s/514050/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew   | https://freesound.org/s/557513/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew   | https://freesound.org/s/557514/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
