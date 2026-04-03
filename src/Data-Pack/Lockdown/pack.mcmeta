@@ -3,10 +3,10 @@
     "pack_format": 81,
     "supported_formats": {
       "min_inclusive": 71,
-      "max_inclusive": 81
+      "max_inclusive": 101
     },
     "min_format": 71,
-    "max_format": 94,
+    "max_format": 101,
     "description": [{"text":"Lockdown: ","color":"green"},{"text":"By Redstone⁴","color":"red"}]
   },
   "overlays": {
@@ -24,9 +24,9 @@
         "directory": "untested_version"
       },
       {
-        "min_format": 95,
+        "min_format": 102,
         "max_format": 1024,
-        "formats": [95, 1024],
+        "formats": [102, 1024],
         "directory": "untested_version"
       },
       {
@@ -40,6 +40,12 @@
         "max_format": 1024,
         "formats": [89, 1024],
         "directory": "1.21.11"
+      },
+      {
+        "min_format": 101,
+        "max_format": 1024,
+        "formats": [101, 1024],
+        "directory": "26.1"
       }
     ]
   }
