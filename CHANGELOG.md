@@ -1,3 +1,8 @@
+# Release 3.2
+
+* Added support for 26.1.x
+
+
 # Release 3.1
 
 * Added support for 1.21.11
