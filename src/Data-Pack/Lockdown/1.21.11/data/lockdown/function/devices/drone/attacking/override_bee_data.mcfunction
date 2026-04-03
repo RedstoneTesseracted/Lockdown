@@ -2,7 +2,7 @@
 
 # Force stung status
 data modify entity @s HasStung set value 0b
-data modify entity @s anger_end_tine set value 2147483647
+data modify entity @s anger_end_time set value 2147483647
 
 # Force target UUID
 data modify entity @s angry_at set from entity @s data.angry_at

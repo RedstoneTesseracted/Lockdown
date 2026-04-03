@@ -2,7 +2,7 @@
 
 # Target no-one
 data remove entity @s angry_at
-data modify entity @s anger_end_tine set value 0
+data modify entity @s anger_end_time set value 0
 data modify entity @s HasStung set value 0b
 
 # Freeze if needed

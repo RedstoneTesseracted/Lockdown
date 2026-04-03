@@ -7,7 +7,7 @@ execute unless score lockdown.uuid1 lockdown.local = lockdown.uuid2 lockdown.loc
 
 # Force stung status
 data modify entity @s HasStung set value 0b
-data modify entity @s anger_end_tine set value 2147483647
+data modify entity @s anger_end_time set value 2147483647
 
 # Force target UUID
 #tellraw @a [{text: "[1] AngryAt: "}, {nbt: "angry_at", entity: "@s"}, {text: ", data.angry_at: "}, {nbt: "data.angry_at", entity: "@s"}]
