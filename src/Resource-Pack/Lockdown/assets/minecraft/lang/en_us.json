@@ -77,7 +77,7 @@
   "item.lockdown.laser_blaster": "Laser Blaster",
   "item.lockdown.laser_blaster.hint": "Consumes redstone energy cells for power",
   "item.lockdown.redstone_energy_cell": "Redstone Energy Cell",
-  "item.lockdown.spray_paint": "Spray Paint",
+  "item.lockdown.spray_paint": "Spray Paint (%1$s)",
   "item.lockdown.spray_paint.hint": "Now with advanced color-mixing technology!",
   "item.lockdown.code.no_code": "No Code Assigned",
   "item.lockdown.channel.no_channel": "No Channel Assigned",

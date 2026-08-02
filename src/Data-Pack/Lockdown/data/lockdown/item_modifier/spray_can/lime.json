@@ -1,0 +1,15 @@
+{
+    "function": "minecraft:set_components",
+    "components": {
+        "minecraft:dyed_color": 8439583,
+        "minecraft:item_name": {
+            "translate": "item.lockdown.spray_paint",
+            "with": [
+                {
+                    "translate": "color.minecraft.lime",
+                    "color": "#80C71F"
+                }
+            ]
+        }
+    }
+}

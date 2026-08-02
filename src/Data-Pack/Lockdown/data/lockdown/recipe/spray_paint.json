@@ -28,7 +28,13 @@
         "id": "minecraft:carrot_on_a_stick",
         "components": {
             "minecraft:item_name": {
-                "translate": "item.lockdown.spray_paint"
+                "translate": "item.lockdown.spray_paint",
+                "with": [
+                    {
+                        "translate": "color.minecraft.white",
+                        "color": "white"
+                    }
+                ]
             },
             "minecraft:item_model": "lockdown:spray_paint",
             "minecraft:custom_data": {
@@ -37,7 +43,7 @@
                 }
             },
             "!minecraft:tool": {},
-            "minecraft:damage": 64,
+            "minecraft:damage": 0,
             "minecraft:max_damage": 64,
             "!minecraft:enchantable": {},
             "!minecraft:repairable": {},
@@ -51,7 +57,13 @@
                     "color": "gray",
                     "italic":false
                 }
-            ]
+            ],
+            "minecraft:dyed_color": 16383998,
+            "minecraft:tooltip_display": {
+                "hidden_components": [
+                    "minecraft:dyed_color"
+                ]
+            }
         }
     }
 }

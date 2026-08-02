@@ -1,0 +1,15 @@
+{
+    "function": "minecraft:set_components",
+    "components": {
+        "minecraft:dyed_color": 15961002,
+        "minecraft:item_name": {
+            "translate": "item.lockdown.spray_paint",
+            "with": [
+                {
+                    "translate": "color.minecraft.pink",
+                    "color": "#F38BAA"
+                }
+            ]
+        }
+    }
+}
