@@ -58,7 +58,31 @@
 	  "sounds": [
 		"lockdown:drone/confirm"
 	  ],
-	  "attribution": ""
+	  "attribution": "07-confirmation.wav by drzhnn -- https://freesound.org/s/199940/ -- License: Creative Commons 0"
+  },
+  "entity.drone.glitch": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.drone.glitch",
+	  "sounds": [
+		"lockdown:drone/glitch"
+	  ],
+	  "attribution": "allpass glitch 26 by deadrobotmusic -- https://freesound.org/s/662725/ -- License: Creative Commons 0"
+  },
+  "laser.click": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.laser_click",
+    "sounds": [
+      "lockdown:laser/click"
+    ],
+    "attribution": "Click (1).mp3 by 7778 -- https://freesound.org/s/202314/ -- License: Creative Commons 0"
+  },
+  "laser.overheat": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.laser_overheat",
+    "sounds": [
+      "lockdown:laser/overheat"
+    ],
+    "attribution": "minigun_Overheat.wav by Marregheriti -- https://freesound.org/s/266102/ -- License: Creative Commons 0"
   },
   "laser.quick": {
     "category": "neutral",

@@ -14,7 +14,43 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
+                    "value": "lockdown:item/laser_blaster"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
                     "value": "lockdown:item/legacy_wand"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:item/redstone_energy_cell"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:item/spray_paint"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:item/suspicious_thumb_drive"
                 }
             ]
         }

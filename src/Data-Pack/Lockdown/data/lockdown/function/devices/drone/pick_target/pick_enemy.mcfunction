@@ -8,6 +8,8 @@ execute store result score lockdown.drone.x lockdown.local run data get entity @
 execute store result score lockdown.drone.y lockdown.local run data get entity @s Pos[1]
 execute store result score lockdown.drone.z lockdown.local run data get entity @s Pos[2]
 scoreboard players set lockdown.highest_priority lockdown.local -2147483648
+scoreboard players set lockdown.is_berserker_drone lockdown.local 0
+execute if entity @s[tag=lockdown.behavior.berserker] run scoreboard players set lockdown.is_berserker_drone lockdown.local 1
 
 # Evaluate all entities within range
 data remove storage lockdown:temp args

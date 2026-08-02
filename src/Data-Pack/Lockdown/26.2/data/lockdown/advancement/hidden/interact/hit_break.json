@@ -25,7 +25,12 @@
                     }
                 ],
                 "entity": {
-                    "nbt": "{Tags:[\"lockdown.behavior.attack_to_destroy\",\"lockdown.block.hitbox\"]}"
+                    "minecraft:entity_tags": {
+                        "all_of": [
+                            "lockdown.behavior.attack_to_destroy",
+                            "lockdown.block.hitbox"
+                        ]
+                    }
                 }
             }
         }

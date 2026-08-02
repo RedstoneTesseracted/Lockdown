@@ -16,3 +16,9 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function l
 
 # Right-clickable items
 execute as @a[scores={lockdown.use_carrot_on_a_stick=1..}] at @s run function lockdown:items/click_callback
+
+# Re-logging
+execute as @a[scores={lockdown.leave_game=1..}] run function lockdown:player_rejoin
+
+# Decrement heat counter used by laser blaster
+execute as @a[scores={lockdown.laser_blaster.heat=1..}] run function lockdown:items/laser_blaster/update_heat

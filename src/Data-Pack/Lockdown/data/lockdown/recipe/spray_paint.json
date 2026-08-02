@@ -1,0 +1,57 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "trd",
+        "igi",
+        "ibi"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "r": [
+            "minecraft:red_dye"
+        ],
+        "g": [
+            "minecraft:green_dye"
+        ],
+        "b": [
+            "minecraft:blue_dye"
+        ],
+        "t": "#minecraft:buttons",
+        "d": [
+            "minecraft:dispenser"
+        ]
+    },
+    "result": {
+        "id": "minecraft:carrot_on_a_stick",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.spray_paint"
+            },
+            "minecraft:item_model": "lockdown:spray_paint",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "spray_paint"
+                }
+            },
+            "!minecraft:tool": {},
+            "minecraft:damage": 64,
+            "minecraft:max_damage": 64,
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {},
+            "!minecraft:attribute_modifiers": {},
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "common",
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.spray_paint.hint",
+                    "color": "gray",
+                    "italic":false
+                }
+            ]
+        }
+    }
+}

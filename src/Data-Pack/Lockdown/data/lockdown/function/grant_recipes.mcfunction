@@ -11,11 +11,14 @@ recipe give @s lockdown:force_field_projector
 recipe give @s lockdown:key
 recipe give @s lockdown:keycard_reader
 recipe give @s lockdown:klaxon
+recipe give @s lockdown:laser_blaster
 recipe give @s lockdown:laser_projector
 recipe give @s lockdown:legacy_wand
 recipe give @s lockdown:mob_detector
 recipe give @s lockdown:player_detector
 recipe give @s lockdown:range_upgrade
+recipe give @s lockdown:redstone_energy_cell
+recipe give @s lockdown:spray_paint
 recipe give @s lockdown:turret
 recipe give @s lockdown:wireless_receiver
 recipe give @s lockdown:wireless_transmitter

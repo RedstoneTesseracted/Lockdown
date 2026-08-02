@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:tools/suspicious_thumb_drive"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.suspicious_thumb_drive.title",
+            "fallback": "Advanced Menace"
+        },
+        "description": {
+            "translate": "advancement.lockdown.suspicious_thumb_drive.description",
+            "fallback": "Find a suspicious thumb drive in an abandoned bunker."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/drone",
+    "criteria": {
+        "suspicious_thumb_drive": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "wireless_transmitter"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

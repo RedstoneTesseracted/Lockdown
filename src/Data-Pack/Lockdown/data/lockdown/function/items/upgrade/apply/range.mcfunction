@@ -13,5 +13,6 @@ scoreboard players add @s lockdown.firing_exit_range 2
 scoreboard players add @s lockdown.pursuit_enter_range 2
 scoreboard players add @s lockdown.pursuit_exit_range 2
 execute at @s run particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 0.1 10
+execute at @s run playsound minecraft:block.anvil.use player @a ~ ~ ~ 1.0 2.0
 
 return 0

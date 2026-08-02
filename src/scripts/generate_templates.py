@@ -154,6 +154,59 @@ def dictcopy(dictionary: dict) -> dict:
     return loads(dumps(dictionary))
 
 
+def obtain_item_definitions():
+    """
+    Used by several generator functions to obtain all item definitions.
+    For most items, the recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
+    For uncraftable items, the loot tables under Lockdown/data/loot_table/uncraftable/ are treated as the canonical definitions.
+    """
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+
+    # Obtain craftable items from Lockdown/data/recipe/
+    craftables = []
+    recipe_dir = path.join(datapack_dir, 'recipe')
+    for dirpath, dirnames, filenames in os.walk(recipe_dir):
+        for file in filenames:
+            # Skip non-JSON files
+            if path.splitext(file)[1] != '.json':
+                continue
+
+            # Extract item components from recipe output
+            with open(path.join(dirpath, file), mode='r') as rf:
+                data = load(rf)
+            result = data['result']
+            result['relpath'] = dirpath.removeprefix(recipe_dir).removeprefix(path.sep)
+            result['file'] = file
+            craftables.append(data['result'])
+
+    # Obtain uncraftable items from Lockdown/data/loot_table/uncraftable/
+    uncraftables = []
+    uncraftables_dir = path.join(datapack_dir, 'loot_table', 'uncraftable')
+    for dirpath, dirnames, filenames in os.walk(uncraftables_dir):
+        for file in filenames:
+            # Skip non-JSON files
+            if path.splitext(file)[1] != '.json':
+                continue
+
+            # Extract item components from recipe output
+            with open(path.join(dirpath, file), mode='r') as rf:
+                data = load(rf)
+            result = data['pools'][0]['entries'][0]
+            base_id = result['name']
+            components = {}
+            for function in result['functions']:
+                if function['function'] != 'minecraft:set_components':
+                    continue
+                for key, value in function['components'].items():
+                    components[key] = value
+
+            uncraftables.append({'id': base_id,
+                                 'components': components,
+                                 'relpath': dirpath.removeprefix(uncraftables_dir).removeprefix(path.sep),
+                                 'file': file})
+
+    return craftables, uncraftables
+
 
 def generate_item_advancements():
     """
@@ -198,7 +251,7 @@ def _generate_items(variant):
     """
     Used by generate_items and generate_item_drops to generate both the "item" loot tables and the "dropped item" loot tables.
     Substitutes item definitions into all places that need to have the correct item components.
-    The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
+    The obtain_item_definitions function is used to obtain craftable and uncraftable item definitions.
     """
     with open(path.join('templates', 'item_loot_table_template.json'), mode='r') as rf:
         raw_template = rf.read()
@@ -206,30 +259,24 @@ def _generate_items(variant):
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
     loot_table_dir = path.join(datapack_dir, 'loot_table', variant)
-    for dirpath, dirnames, filenames in os.walk(recipe_dir):
-        for file in filenames:
-            # Skip non-JSON files
-            if path.splitext(file)[1] != '.json':
-                continue
 
-            # Extract item components from recipe output
-            with open(path.join(dirpath, file), mode='r') as rf:
-                data = load(rf)
-            base_id = data['result']['id']
+    craftables, uncraftables = obtain_item_definitions()
+    all_items = craftables + uncraftables
 
-            # Generate loot table that gives item
-            item_modifier_path = path.join(dirpath.removeprefix(recipe_dir).removeprefix(path.sep), file)
-            item_modifier = f'lockdown:{variant}/' + '/'.join(path.splitext(item_modifier_path)[0].split(path.sep))
-            template = loads(raw_template)
-            template['pools'][0]["entries"][0]['name'] = base_id
-            template['pools'][0]["entries"][0]['functions'][0]['name'] = item_modifier
+    for item in all_items:
+        # Generate loot table that gives item
+        item_modifier_path = path.join(item['relpath'], item['file'])
+        item_modifier = f'lockdown:{variant}/' + '/'.join(path.splitext(item_modifier_path)[0].split(path.sep))
+        template = loads(raw_template)
+        template['pools'][0]["entries"][0]['name'] = item['id']
+        template['pools'][0]["entries"][0]['functions'][0]['name'] = item_modifier
 
-            # Save to file.  Create parent directory if needed
-            loot_table_path = path.join(loot_table_dir, dirpath.removeprefix(recipe_dir).removeprefix(path.sep))
-            if not path.exists(loot_table_path):
-                os.mkdir(loot_table_path)
-            with open(path.join(loot_table_path, file), mode='w') as wf:
-                dump(template, wf, indent=4)
+        # Save to file.  Create parent directory if needed
+        loot_table_path = path.join(loot_table_dir, item['relpath'])
+        if not path.exists(loot_table_path):
+            os.mkdir(loot_table_path)
+        with open(path.join(loot_table_path, item['file']), mode='w') as wf:
+            dump(template, wf, indent=4)
 
 
 generate_items = lambda: _generate_items('item')
@@ -240,7 +287,7 @@ def _generate_item_modifiers(variant):
     """
     Used by generate_item_modifiers and generate_dropped_item_modifiers to generate both the "regular" and "dropped" item modifiers
     Generates all item modifiers used to set the components for a lockdown item.
-    The recipe outputs under Lockdown/data/recipe/ are treated as the canonical definitions.
+    The obtain_item_definitions function is used to obtain craftable and uncraftable item definitions.
     """
     with open(path.join('templates', 'item_modifier_template.json'), mode='r') as rf:
         raw_template = rf.read()
@@ -248,31 +295,24 @@ def _generate_item_modifiers(variant):
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
     item_modifier_dir = path.join(datapack_dir, 'item_modifier', variant)
-    for dirpath, dirnames, filenames in os.walk(recipe_dir):
-        for file in filenames:
-            # Skip non-JSON files
-            if path.splitext(file)[1] != '.json':
-                continue
+    
+    craftables, uncraftables = obtain_item_definitions()
+    all_items = craftables + uncraftables
 
-            # Extract item components from recipe output
-            with open(path.join(dirpath, file), mode='r') as rf:
-                data = load(rf)
-            base_id = data['result']['id']
-            components = data['result']['components']
+    for item in all_items:
+        # Generate loot table that gives item
+        if variant == 'drop':
+            components['minecraft:custom_data']['lockdown_data']['configure'] = True
+        template = loads(raw_template)
+        template[0]['components'] = item['components']
+        template[1]['item'] = item['id']
 
-            # Generate loot table that gives item
-            if variant == 'drop':
-                components['minecraft:custom_data']['lockdown_data']['configure'] = True
-            template = loads(raw_template)
-            template[0]['components'] = components
-            template[1]['item'] = base_id
-
-            # Save to file.  Create parent directory if needed
-            item_modifier_path = path.join(item_modifier_dir, dirpath.removeprefix(recipe_dir).removeprefix(path.sep))
-            if not path.exists(item_modifier_path):
-                os.mkdir(item_modifier_path)
-            with open(path.join(item_modifier_path, file), mode='w') as wf:
-                dump(template, wf, indent=4)
+        # Save to file.  Create parent directory if needed
+        item_modifier_path = path.join(item_modifier_dir, item['relpath'])
+        if not path.exists(item_modifier_path):
+            os.mkdir(item_modifier_path)
+        with open(path.join(item_modifier_path, item['file']), mode='w') as wf:
+            dump(template, wf, indent=4)
 
 
 generate_item_modifiers = lambda: _generate_item_modifiers('item')
@@ -320,46 +360,42 @@ def generate_code_channel_string_identifier():
     datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
     recipe_dir = path.join(datapack_dir, 'recipe')
     function_dir = path.join(datapack_dir, 'function')
-    for dirpath, dirnames, filenames in os.walk(recipe_dir):
-        for file in filenames:
-            # Skip non-JSON files
-            if path.splitext(file)[1] != '.json':
-                continue
 
-            # Extract item components from recipe output
-            with open(path.join(dirpath, file), mode='r') as rf:
-                data = load(rf)
-            components = data['result']['components']
-            lockdown_data = components.get('minecraft:custom_data', {}).get('lockdown_data', {})
-            lore_data = components.get('minecraft:lore', [''])
+    craftables, uncraftables = obtain_item_definitions()
+    all_items = craftables + uncraftables
 
-            # Skip non-encodable items
-            if not lockdown_data.get('encodable'):
-                continue
+    for item in all_items:
+        components = item['components']
+        lockdown_data = components.get('minecraft:custom_data', {}).get('lockdown_data', {})
+        lore_data = components.get('minecraft:lore', [''])
 
-            # Determine whether this should say "code" or "channel"
-            return_code = None
-            for lore_line in lore_data:
-                #if not isinstance(lore_line, dict): continue
-                if lore_line.get('translate') == 'item.lockdown.channel.no_channel':
-                    return_code = 0
-                    break
-                elif lore_line.get('translate') == 'item.lockdown.code.no_code':
-                    return_code = 1
-                    break
+        # Skip non-encodable items
+        if not lockdown_data.get('encodable'):
+            continue
 
-            if return_code is None:
-                continue
+        # Determine whether this should say "code" or "channel"
+        return_code = None
+        for lore_line in lore_data:
+            #if not isinstance(lore_line, dict): continue
+            if lore_line.get('translate') == 'item.lockdown.channel.no_channel':
+                return_code = 0
+                break
+            elif lore_line.get('translate') == 'item.lockdown.code.no_code':
+                return_code = 1
+                break
 
-            # Determine whether this is by group or by name
-            if 'group' in lockdown_data:
-                by_group[lockdown_data['group']] = return_code
+        if return_code is None:
+            continue
 
-            elif 'name' in lockdown_data:
-                by_name[lockdown_data['name']] = return_code
+        # Determine whether this is by group or by name
+        if 'group' in lockdown_data:
+            by_group[lockdown_data['group']] = return_code
 
-            else:
-                continue
+        elif 'name' in lockdown_data:
+            by_name[lockdown_data['name']] = return_code
+
+        else:
+            continue
     
     # Write function file used by the encoder
     with open(path.join(function_dir, 'devices', 'encoder', 'determine_lore.mcfunction'), mode='w') as wf:

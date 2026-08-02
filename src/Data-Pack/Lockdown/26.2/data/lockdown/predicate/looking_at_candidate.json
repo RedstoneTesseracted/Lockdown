@@ -4,7 +4,11 @@
     "predicate": {
         "minecraft:type_specific/player": {
             "looking_at": {
-                "nbt": "{Tags:[\"lockdown.candidate.current\"]}"
+                "minecraft:entity_tags": {
+                    "any_of": [
+                        "lockdown.candidate.current"
+                    ]
+                }
             }
         }
     }

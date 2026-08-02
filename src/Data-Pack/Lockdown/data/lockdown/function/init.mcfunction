@@ -64,6 +64,7 @@ scoreboard players set lockdown.default_drone_damage lockdown.constant 5
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
 scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
+scoreboard players set lockdown.laser_blaster.max_heat lockdown.constant 100
 execute unless score lockdown.legacy_hint lockdown.constant matches -2147483648.. run scoreboard players set lockdown.legacy_hint lockdown.constant 1
 
 # Numbers
@@ -83,8 +84,10 @@ scoreboard objectives add lockdown.firing_enter_range dummy
 scoreboard objectives add lockdown.firing_damage dummy
 scoreboard objectives add lockdown.firing_cooldown dummy
 scoreboard objectives add lockdown.use_carrot_on_a_stick minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add lockdown.leave_game minecraft.custom:minecraft.leave_game
 scoreboard objectives add lockdown.upgrades.range dummy
 scoreboard objectives add lockdown.upgrades.durability dummy
+scoreboard objectives add lockdown.laser_blaster.heat dummy
 
 # Triggers
 scoreboard objectives add lockdown.show_info trigger {text:"Show Info", color:"aqua"}
@@ -95,7 +98,7 @@ scoreboard objectives add lockdown.show_info trigger {text:"Show Info", color:"a
 
 scoreboard objectives add lockdown.creation_version.major dummy
 scoreboard objectives add lockdown.creation_version.minor dummy
-scoreboard players set lockdown.pack_version.major lockdown.constant 3
+scoreboard players set lockdown.pack_version.major lockdown.constant 4
 scoreboard players set lockdown.pack_version.minor lockdown.constant 0
 
 #tellraw @a {translate: "lockdown.messages.welcome.version", color: "green", with: [{text: "R3", color: "blue"}]}
@@ -119,6 +122,9 @@ execute as @e[tag=lockdown.block.display,tag=lockdown.turret,tag=!lockdown.turre
 scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.x 1000
 scoreboard players set @e[tag=lockdown.drone,tag=lockdown.block.display,type=minecraft:item_display] lockdown.drone.float.y 0
 
+
+#### Ensure Player Recipes Are Updated
+execute as @a run function lockdown:grant_recipes
 
 
 ######################### LEGACY #########################

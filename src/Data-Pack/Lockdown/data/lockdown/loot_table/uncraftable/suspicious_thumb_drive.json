@@ -1,0 +1,68 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot_on_a_stick",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "item.lockdown.suspicious_thumb_drive"
+                                },
+                                "minecraft:item_model": "lockdown:suspicious_thumb_drive",
+                                "minecraft:custom_data": {
+                                    "lockdown_data": {
+                                        "name": "suspicious_thumb_drive",
+                                        "group": "upgrade"
+                                    }
+                                },
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:rarity": "rare",
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "item.lockdown.suspicious_thumb_drive.hint",
+                                        "color": "light_purple",
+                                        "italic": false
+                                    },
+                                    "",
+                                    {
+                                        "translate": "item.lockdown.upgrade.lore_header",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    [
+                                        " ",
+                                        {
+                                            "translate": "item.lockdown.drone",
+                                            "color": "green",
+                                            "italic": false
+                                        }
+                                    ],
+                                    [
+                                        " ",
+                                        {
+                                            "translate": "item.lockdown.turret",
+                                            "color": "green",
+                                            "italic": false
+                                        }
+                                    ]
+                                ],
+                                "!minecraft:tool": {},
+                                "!minecraft:max_damage": {},
+                                "!minecraft:damage": {},
+                                "!minecraft:attribute_modifiers": {},
+                                "!minecraft:enchantable": {},
+                                "!minecraft:repairable": {},
+                                "!minecraft:repair_cost": {}
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

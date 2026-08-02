@@ -9,5 +9,6 @@ execute if function lockdown:items/upgrade/checks/max_control_tower_upgrades run
 # Note: context is ALWAYS the root block entity
 tag @s add lockdown.behavior.control_tower
 execute at @s run particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 0.1 10
+execute at @s run playsound minecraft:block.anvil.use player @a ~ ~ ~ 1.0 2.0
 
 return 0

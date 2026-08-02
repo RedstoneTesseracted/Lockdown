@@ -1,0 +1,7 @@
+{
+    "parent": "lockdown:item/laser_blaster/base",
+    "textures": {
+        "0": "lockdown:item/laser_blaster/overheat",
+        "particle": "lockdown:item/laser_blaster/overheat"
+    }
+}

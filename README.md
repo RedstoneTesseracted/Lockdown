@@ -44,6 +44,9 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Turret targeting and firing w/ codes           |      ✅      |
 | Chest key                                      |      ❓      |
 | Encoder dispensing prevention                  |      ✅      |
+| Berserker drones                               |      ❌      |
+| Spray paint                                    |      ❌      |
+| Laser Blaster                                  |      ❓      |
 
 > **Note**: Tests marked with "❓" involve a feature that *requires* player interaction.  As such, I'm not yet sure how to implement automated tests for them.
 
@@ -62,6 +65,12 @@ Items not covered under the GameTest system:
 
 
 # Near-Term TODO:
+
+* Berserker drone unit tests:
+    * Does not attack hostile mobs
+    * Attacks friendly mobs
+    * Does not attack other drones with same channel
+    * Attacks other drones with difference channel
 
 * Optimize drone AI
 * Set up github workflow to create multi-version data pack
@@ -90,12 +99,16 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 This datapack makes use of the following sound effects:
 
-|                           Name                             |    Author    |              Link               |                                License                                   |
-| ---------------------------------------------------------- | ------------ | ------------------------------- | ------------------------------------------------------------------------ |
-| alarm3.WAV                                                 | phantastonia | https://freesound.org/s/270640/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Permission Denied.wav                                      | ironcross32  | https://freesound.org/s/582632/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Beep Bad                                                   | unfa         | https://freesound.org/s/154888/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| blaster shot 8_1(Sytrus,rsmpl,multiprcsng)single.wav       | newlocknew   | https://freesound.org/s/514058/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
-| blaster shot 11_2(Sytrus,rsmpl,3lrs,multiprcsng)single.wav | newlocknew   | https://freesound.org/s/514050/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
-| Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew   | https://freesound.org/s/557513/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
-| Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew   | https://freesound.org/s/557514/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+|                           Name                             |    Author      |              Link               |                                License                                   |
+| ---------------------------------------------------------- | -------------- | ------------------------------- | ------------------------------------------------------------------------ |
+| alarm3.WAV                                                 | phantastonia   | https://freesound.org/s/270640/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Permission Denied.wav                                      | ironcross32    | https://freesound.org/s/582632/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Beep Bad                                                   | unfa           | https://freesound.org/s/154888/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| blaster shot 8_1(Sytrus,rsmpl,multiprcsng)single.wav       | newlocknew     | https://freesound.org/s/514058/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| blaster shot 11_2(Sytrus,rsmpl,3lrs,multiprcsng)single.wav | newlocknew     | https://freesound.org/s/514050/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew     | https://freesound.org/s/557513/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew     | https://freesound.org/s/557514/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| allpass glitch 26                                          | deadrobotmusic | https://freesound.org/s/662725/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| minigun_Overheat.wav                                       | Marregheriti   | https://freesound.org/s/266102/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Click (1).mp3                                              | 7778           | https://freesound.org/s/202314/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| error-sound                                                | WilliamRBX     | https://freesound.org/s/686727/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |

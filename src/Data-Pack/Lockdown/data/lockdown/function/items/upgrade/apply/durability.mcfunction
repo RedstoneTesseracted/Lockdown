@@ -24,5 +24,6 @@ execute on vehicle if entity @s[tag=lockdown.block.hitbox] store result score lo
 execute on vehicle on vehicle if entity @s[tag=lockdown.block.hitbox] store result score lockdown.macro_status lockdown.local run function lockdown:items/upgrade/apply/durability_macro
 
 execute at @s run particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 0.1 10
+execute at @s run playsound minecraft:block.anvil.use player @a ~ ~ ~ 1.0 2.0
 
 return 0

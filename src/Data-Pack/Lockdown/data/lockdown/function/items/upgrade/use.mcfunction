@@ -12,10 +12,10 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_dat
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"durability_upgrade"}}] as @e[tag=lockdown.context,limit=1] unless function lockdown:items/upgrade/apply/durability run scoreboard players set lockdown.success lockdown.local 1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"range_upgrade"}}] as @e[tag=lockdown.context,limit=1] unless function lockdown:items/upgrade/apply/range run scoreboard players set lockdown.success lockdown.local 1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"flamethrower_upgrade"}}] as @e[tag=lockdown.context,limit=1] unless function lockdown:items/upgrade/apply/flamethrower run scoreboard players set lockdown.success lockdown.local 1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"suspicious_thumb_drive"}}] as @e[tag=lockdown.context,limit=1] unless function lockdown:items/upgrade/apply/suspicious_thumb_drive run scoreboard players set lockdown.success lockdown.local 1
 
 tag @s remove lockdown.player_context
 tag @e[tag=lockdown.context] remove lockdown.context
 
-# Consume item if upgrade applied
-execute if score lockdown.success lockdown.local matches 1 run item modify entity @s weapon.mainhand lockdown:consume_item
-execute if score lockdown.success lockdown.local matches 1 run playsound minecraft:block.anvil.use player @a ~ ~ ~ 1.0 2.0
+# Consume item if upgrade applied, except for suspicious thumb drives
+execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name:"suspicious_thumb_drive"}}] if score lockdown.success lockdown.local matches 1 run item modify entity @s weapon.mainhand lockdown:consume_item

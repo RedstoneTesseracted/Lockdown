@@ -126,5 +126,12 @@
         "condition": {
             "name": "wireless_transmitter"
         }
+    },
+    "suspicious_thumb_drive": {
+        "item": "lockdown:tools/suspicious_thumb_drive",
+        "parent": "lockdown:lockdown/drone",
+        "condition": {
+            "name": "wireless_transmitter"
+        }
     }
 }

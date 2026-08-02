@@ -17,7 +17,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "nbt": "{Tags:[\"lockdown.behavior.code_hostile\"]}"
+                "minecraft:entity_tags": {
+                    "any_of": [
+                        "lockdown.behavior.code_hostile"
+                    ]
+                }
             }
         }
     ]

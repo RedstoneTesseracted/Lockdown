@@ -1,4 +1,5 @@
 # Function for first-time player setup
+# This is called using an advancement trigger as soon as the player joins the game
 
 # Scores
 execute store result score @s lockdown.uuid1 run data get entity @s UUID[0]

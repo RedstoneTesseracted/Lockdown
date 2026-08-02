@@ -1,0 +1,36 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.laser_blaster"
+            },
+            "minecraft:item_model": "lockdown:laser_blaster",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "laser_blaster"
+                }
+            },
+            "!minecraft:tool": {},
+            "!minecraft:damage": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {},
+            "!minecraft:attribute_modifiers": {},
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "uncommon",
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.laser_blaster.hint",
+                    "color": "gray",
+                    "italic": false
+                }
+            ]
+        }
+    },
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:carrot_on_a_stick"
+    }
+]
