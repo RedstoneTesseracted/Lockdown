@@ -102,6 +102,8 @@
   "subtitles.lockdown.laser": "Laser Fires",
   "subtitles.lockdown.laser_overheat": "Laser Overheats",
   "subtitles.lockdown.laser_click": "Laser Clicks",
+  "subtitles.lockdown.spray_can.spray": "Spray Can Hisses",
+  "subtitles.lockdown.spray_can.shake": "Spray Can Shakes",
   "advancement.lockdown.root.title": "Lockdown",
   "advancement.lockdown.root.description": "Welcome to Lockdown, the datapack for all your security needs!",
   "advancement.lockdown.encoder.title": "Encoding Station",

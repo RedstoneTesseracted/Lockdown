@@ -112,3 +112,6 @@ This datapack makes use of the following sound effects:
 | minigun_Overheat.wav                                       | Marregheriti   | https://freesound.org/s/266102/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | Click (1).mp3                                              | 7778           | https://freesound.org/s/202314/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | error-sound                                                | WilliamRBX     | https://freesound.org/s/686727/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| spraycan2.wav                                              | HerbertBoland  | https://freesound.org/s/28543/  | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| spraycan3.wav                                              | HerbertBoland  | https://freesound.org/s/28544/  | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
+| Spray Paint Shake Seven.wav                                | cbakos         | https://freesound.org/s/200377/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |

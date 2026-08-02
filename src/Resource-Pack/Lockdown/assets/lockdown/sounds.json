@@ -114,5 +114,22 @@
       "lockdown:laser/strong2"
     ],
     "attribution": "https://freesound.org/s/557513/,https://freesound.org/s/557514/ -- License: Attribution 4.0"
+  },
+  "spray_can": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.spray_can.spray",
+    "sounds": [
+      "lockdown:spray_can/spray2",
+      "lockdown:spray_can/spray3"
+    ],
+    "attribution": "https://freesound.org/s/28544/,https://freesound.org/s/28543/ by HerbertBoland -- License: Attribution 4.0"
+  },
+  "spray_can": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.spray_can.shake",
+    "sounds": [
+      "lockdown:spray_can/shake"
+    ],
+    "attribution": "Spray Paint Shake Seven.wav by cbakos -- https://freesound.org/s/200377/ -- License: Creative Commons 0"
   }
 }
