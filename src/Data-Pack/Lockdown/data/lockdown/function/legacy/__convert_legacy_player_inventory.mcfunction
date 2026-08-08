@@ -23,7 +23,7 @@ execute if score lockdown.slot lockdown.local matches 9.. run data modify storag
 execute if score lockdown.slot lockdown.local matches 9.. run scoreboard players remove lockdown.slot lockdown.local 9
 execute store result storage lockdown:temp args.slot int 1 run scoreboard players get lockdown.slot lockdown.local
 execute store result score lockdown.result lockdown.local run function lockdown:legacy/restore_slot_macro with storage lockdown:temp args
-execute if score lockdown.result lockdown.local matches 0 run title @p[tag=lockdown.legacy.context] actionbar {translate: "lockdown.messages.bug.macro.generic", color: "red", with: [{text: "lockdown:legacy/restore_slot_macro", underlined: true, color: "gray"}]}
+execute if score lockdown.result lockdown.local matches 0 run tellraw @p[tag=lockdown.legacy.context] {translate: "lockdown.messages.bug.macro.generic", color: "red", with: [{text: "lockdown:legacy/restore_slot_macro", underlined: true, color: "gray"}]}
 item replace entity @s container.0 with minecraft:air
 
 # Run again if entries remain
