@@ -53,9 +53,41 @@
             "minecraft:rarity": "common",
             "minecraft:lore": [
                 {
-                    "translate": "item.lockdown.spray_paint.hint",
+                    "translate": "item.lockdown.spray_paint.hint1",
                     "color": "gray",
-                    "italic":false
+                    "italic":false,
+                    "with": [
+                        {
+                            "translate": "item.lockdown.spray_paint.hint1.pre",
+                            "color": "gold"
+                        }
+                    ]
+                },
+                {
+                    "translate": "item.lockdown.spray_paint.hint2",
+                    "color": "gray",
+                    "italic":false,
+                    "with": [
+                        {
+                            "translate": "item.lockdown.spray_paint.hint2.pre",
+                            "color": "gold"
+                        }
+                    ]
+                },
+                {
+                    "translate": "item.lockdown.spray_paint.hint3",
+                    "color": "gray",
+                    "italic":false,
+                    "with": [
+                        {
+                            "keybind": "key.sneak",
+                            "color": "gold"
+                        },
+                        {
+                            "keybind": "key.use",
+                            "color": "gold"
+                        }
+                    ]
                 }
             ],
             "minecraft:dyed_color": 16383998,
