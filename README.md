@@ -73,17 +73,16 @@ Items not covered under the GameTest system:
     * Attacks other drones with difference channel
 
 * Optimize drone AI
-* Set up github workflow to create multi-version data pack
 * Auto-generate device-placing functions for use in unit tests
 * Make turrets remember approved entities similar to drones?
 
 # Future Plans:
 
 * Give drones the option to follow/guard
-* Make drones dyeable
-* Some way to configure drones
-* Laser blaster + redstone energy cells
-* Suspicious thumb drive
+* ~~Make drones dyeable~~
+* ❌Some way to configure drones
+* ~~Laser blaster + redstone energy cells~~
+* ~~Suspicious thumb drive~~
 * Air Defense Cannon
 
 # Version Support
@@ -109,7 +108,6 @@ This datapack makes use of the following sound effects:
 | Sci-fi rifle weapon shot_3 (14lrs,mltprcssng).wav          | newlocknew     | https://freesound.org/s/557513/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
 | Sci-fi rifle weapon shot_2-1 (17lrs,mltprcssng).wav        | newlocknew     | https://freesound.org/s/557514/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
 | allpass glitch 26                                          | deadrobotmusic | https://freesound.org/s/662725/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| minigun_Overheat.wav                                       | Marregheriti   | https://freesound.org/s/266102/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | Click (1).mp3                                              | 7778           | https://freesound.org/s/202314/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | error-sound                                                | WilliamRBX     | https://freesound.org/s/686727/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | spraycan2.wav                                              | HerbertBoland  | https://freesound.org/s/28543/  | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
