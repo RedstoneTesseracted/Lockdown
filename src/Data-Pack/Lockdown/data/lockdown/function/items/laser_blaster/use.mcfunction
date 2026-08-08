@@ -30,7 +30,12 @@ execute positioned 0.0 0.0 0.0 rotated as @s positioned ^ ^ ^2 summon minecraft:
 playsound lockdown:laser.quick player @a ~ ~ ~ 1.0 1.0
 
 # Summon laser projectile and activate projectile loop (if it isn't already running)
+execute store result score lockdown.uuid1 lockdown.local run data get entity @s UUID[0]
+execute store result score lockdown.uuid2 lockdown.local run data get entity @s UUID[1]
+execute store result score lockdown.uuid3 lockdown.local run data get entity @s UUID[2]
+execute store result score lockdown.uuid4 lockdown.local run data get entity @s UUID[3]
+
 tag @s add lockdown.player.context
-execute anchored eyes positioned ^ ^-0.5 ^ summon minecraft:armor_stand run function lockdown:items/laser_blaster/configure_laser
+execute anchored eyes positioned ^ ^-0.5 ^0.5 summon minecraft:armor_stand run function lockdown:items/laser_blaster/configure_laser
 tag @s remove lockdown.player.context
 schedule function lockdown:projectile/tick 1t replace
