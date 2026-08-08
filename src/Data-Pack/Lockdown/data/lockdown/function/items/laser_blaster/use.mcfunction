@@ -20,7 +20,7 @@ execute if score lockdown.has_fuel lockdown.local matches 0 run return 0
 scoreboard players operation lockdown.laser_blaster.next_heat lockdown.local = @s lockdown.laser_blaster.heat
 scoreboard players add lockdown.laser_blaster.next_heat lockdown.local 20
 execute if score lockdown.laser_blaster.next_heat lockdown.local > lockdown.laser_blaster.max_heat lockdown.constant unless score @s lockdown.laser_blaster.heat > lockdown.laser_blaster.max_heat lockdown.constant run scoreboard players add lockdown.laser_blaster.next_heat lockdown.local 20
-execute if score lockdown.laser_blaster.next_heat lockdown.local > lockdown.laser_blaster.max_heat lockdown.constant unless score @s lockdown.laser_blaster.heat > lockdown.laser_blaster.max_heat lockdown.constant run playsound lockdown:laser.overheat player @a ~ ~ ~ 1.0 1.0
+execute if score lockdown.laser_blaster.next_heat lockdown.local > lockdown.laser_blaster.max_heat lockdown.constant unless score @s lockdown.laser_blaster.heat > lockdown.laser_blaster.max_heat lockdown.constant run playsound lockdown:laser.overheat player @a ~ ~ ~ 2.0 1.0
 scoreboard players operation @s lockdown.laser_blaster.heat = lockdown.laser_blaster.next_heat lockdown.local
 
 # Get player look vector so we can set the laser velocity

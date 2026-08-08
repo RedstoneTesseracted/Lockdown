@@ -80,9 +80,8 @@
     "category": "neutral",
     "subtitle": "subtitles.lockdown.laser_overheat",
     "sounds": [
-      "lockdown:laser/overheat"
-    ],
-    "attribution": "minigun_Overheat.wav by Marregheriti -- https://freesound.org/s/266102/ -- License: Creative Commons 0"
+      "minecraft:random/fizz"
+    ]
   },
   "laser.quick": {
     "category": "neutral",
