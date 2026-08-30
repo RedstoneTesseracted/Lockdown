@@ -12,6 +12,7 @@ execute if entity @s[tag=lockdown.encoder] run return run function lockdown:devi
 execute if entity @s[tag=lockdown.force_field_projector] run return run function lockdown:devices/force_field_projector/destroy
 execute if entity @s[tag=lockdown.keycard_reader] run return run function lockdown:devices/keycard_reader/destroy
 execute if entity @s[tag=lockdown.klaxon] run return run function lockdown:devices/klaxon/destroy
+execute if entity @s[tag=lockdown.laser_cannon] run return run function lockdown:devices/laser_cannon/destroy
 execute if entity @s[tag=lockdown.laser_projector] run return run function lockdown:devices/laser_projector/destroy
 execute if entity @s[tag=lockdown.mob_detector] run return run function lockdown:devices/mob_detector/destroy
 execute if entity @s[tag=lockdown.player_detector] run return run function lockdown:devices/player_detector/destroy

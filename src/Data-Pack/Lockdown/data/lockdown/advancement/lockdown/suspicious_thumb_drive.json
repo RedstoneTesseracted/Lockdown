@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:paper",
             "components": {
-                "minecraft:item_model": "lockdown:tools/suspicious_thumb_drive"
+                "minecraft:item_model": "lockdown:suspicious_thumb_drive"
             }
         },
         "frame": "task",
@@ -28,7 +28,7 @@
                         "predicates": {
                             "minecraft:custom_data": {
                                 "lockdown_data": {
-                                    "name": "wireless_transmitter"
+                                    "name": "suspicious_thumb_drive"
                                 }
                             }
                         }

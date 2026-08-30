@@ -128,10 +128,32 @@
         }
     },
     "suspicious_thumb_drive": {
-        "item": "lockdown:tools/suspicious_thumb_drive",
+        "item": "lockdown:suspicious_thumb_drive",
         "parent": "lockdown:lockdown/drone",
         "condition": {
-            "name": "wireless_transmitter"
+            "name": "suspicious_thumb_drive"
+        }
+    },
+    "cannon_platform": {
+        "item": "lockdown:laser_cannon/base",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "cannon_platform"
+        }
+    },
+    "cannon_gantry": {
+        "item": "lockdown:laser_cannon/gantry",
+        "parent": "lockdown:lockdown/cannon_platform",
+        "condition": {
+            "name": "cannon_gantry"
+        }
+    },
+    "cannon_barrel": {
+        "item": "lockdown:laser_cannon/cannon",
+        "parent": "lockdown:lockdown/cannon_gantry",
+        "frame": "challenge",
+        "condition": {
+            "name": "cannon_barrel"
         }
     }
 }

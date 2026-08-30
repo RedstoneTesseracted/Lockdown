@@ -12,6 +12,7 @@ execute as @e[tag=lockdown.block.root,tag=lockdown.force_field_projector] at @s 
 execute as @e[tag=lockdown.block.root,tag=lockdown.drone] at @s run function lockdown:devices/drone/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.turret] at @s run function lockdown:devices/turret/root
 execute as @e[tag=lockdown.block.root,tag=lockdown.encoder] at @s run function lockdown:devices/encoder/root
+execute as @e[tag=lockdown.block.root,tag=lockdown.laser_cannon] at @s run function lockdown:devices/laser_cannon/root
 
 
 # Right-clickable items

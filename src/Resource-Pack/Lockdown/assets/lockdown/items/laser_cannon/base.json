@@ -5,12 +5,12 @@
         "tints": [
             {
                 "type": "minecraft:custom_model_data",
-                "index": 0,
+                "index": 1,
                 "default": [1.0, 1.0, 1.0]
             },
             {
                 "type": "minecraft:custom_model_data",
-                "index": 1,
+                "index": 2,
                 "default": [0.200, 0.604, 0.988]
             }
         ]

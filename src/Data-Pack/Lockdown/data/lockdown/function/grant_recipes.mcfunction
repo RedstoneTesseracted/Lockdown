@@ -3,6 +3,9 @@
 # lockdown:player_init calls this to grant players recipes
 # so they don't have to guess them.
 
+recipe give @s lockdown:cannon_barrel
+recipe give @s lockdown:cannon_gantry
+recipe give @s lockdown:cannon_platform
 recipe give @s lockdown:drone
 recipe give @s lockdown:durability_upgrade
 recipe give @s lockdown:encoding_station
