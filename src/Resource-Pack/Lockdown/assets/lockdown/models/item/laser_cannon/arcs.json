@@ -1,0 +1,185 @@
+{
+    "format_version": "1.21.11",
+    "credit": "Made with Blockbench",
+    "texture_size": [
+        4,
+        4
+    ],
+    "textures": {
+        "0": "lockdown:item/laser_cannon/base",
+        "1": "lockdown:item/laser_cannon/glow",
+        "2": "lockdown:item/laser_cannon/arcs",
+        "particle": "lockdown:item/laser_cannon/base"
+    },
+    "elements": [
+        {
+            "name": "arcs",
+            "from": [
+                8,
+                4.75,
+                -11.5
+            ],
+            "to": [
+                8,
+                7.75,
+                -9
+            ],
+            "rotation": {
+                "angle": 0,
+                "axis": "y",
+                "origin": [
+                    7,
+                    5,
+                    -12
+                ]
+            },
+            "faces": {
+                "east": {
+                    "uv": [
+                        0,
+                        0,
+                        10,
+                        12
+                    ],
+                    "texture": "#2",
+                    "tintindex": 1
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        0,
+                        10,
+                        12
+                    ],
+                    "texture": "#2",
+                    "tintindex": 1
+                }
+            }
+        }
+    ],
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                90,
+                0
+            ],
+            "translation": [
+                5.5,
+                0.25,
+                0
+            ],
+            "scale": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                0
+            ],
+            "translation": [
+                5.5,
+                0.25,
+                0
+            ],
+            "scale": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                15,
+                30,
+                8
+            ],
+            "translation": [
+                5.25,
+                2.5,
+                6.25
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                15,
+                30,
+                0
+            ],
+            "translation": [
+                5.25,
+                2.5,
+                6.25
+            ]
+        },
+        "ground": {
+            "translation": [
+                0,
+                -0.5,
+                11
+            ]
+        },
+        "gui": {
+            "rotation": [
+                30,
+                -135,
+                0
+            ],
+            "translation": [
+                -7.75,
+                6,
+                0
+            ]
+        },
+        "head": {
+            "translation": [
+                9.75,
+                1.25,
+                1.5
+            ]
+        },
+        "fixed": {
+            "rotation": [
+                90,
+                0,
+                -180
+            ],
+            "translation": [
+                0,
+                -11,
+                -2.25
+            ]
+        },
+        "on_shelf": {
+            "rotation": [
+                -125.75,
+                0,
+                0
+            ],
+            "translation": [
+                0,
+                0,
+                -7
+            ]
+        }
+    },
+    "groups": [
+        {
+            "name": "arcs",
+            "origin": [
+                8,
+                8,
+                8
+            ],
+            "scope": 0,
+            "color": 9,
+            "children": [
+                60
+            ]
+        }
+    ]
+}
