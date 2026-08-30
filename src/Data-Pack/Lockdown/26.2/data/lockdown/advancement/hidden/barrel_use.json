@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "lockdown_data": {
+                                "name": "cannon_barrel"
+                            }
+                        }
+                    }
+                },
+                "entity": {
+                    "minecraft:entity_tags": {
+                        "all_of": [
+                            "lockdown.laser_cannon.gantry",
+                            "lockdown.block.hitbox"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:devices/laser_cannon/mount/barrel_callback"
+    }
+}

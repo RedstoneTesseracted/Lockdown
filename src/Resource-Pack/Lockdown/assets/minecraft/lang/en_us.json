@@ -200,6 +200,8 @@
   "lockdown.messages.upgrade.max_upgraded": "Device already at max level for %1$s",
   "lockdown.messages.laser_blaster.heat": "Heat: %1$s",
   "lockdown.messages.laser_blaster.overheat": "Overheating: %1$s",
+  "lockdown.messages.laser_cannon.gantry_already_present": "Gantry already mounted",
+  "lockdown.messages.laser_cannon.barrel_already_present": "Barrel already mounted",
   "lockdown.info.header": "Lockdown Pack Information:",
   "lockdown.info.resource_pack": "Resource Pack: %s",
   "lockdown.info.resource_pack.enabled": "Enabled",

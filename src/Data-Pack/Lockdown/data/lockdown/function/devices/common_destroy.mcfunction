@@ -14,5 +14,6 @@ function lockdown:devices/common_upgrade_drop
 tag @s add lockdown.not_yet
 execute on vehicle on passengers run kill @s[tag=!lockdown.not_yet]
 execute on vehicle run kill @s[tag=lockdown.block]
+execute on passengers on passengers run kill @s[tag=lockdown.block]
 execute on passengers run kill @s[tag=lockdown.block]
 kill @s[tag=lockdown.block]

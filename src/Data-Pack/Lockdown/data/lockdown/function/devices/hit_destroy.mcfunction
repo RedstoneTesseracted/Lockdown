@@ -8,6 +8,7 @@ execute on attacker run tag @s add lockdown.destroy.source
 # Destroy the custom block
 execute if entity @s[tag=lockdown.block.root] run function lockdown:devices/universal_destroy
 execute unless entity @s[tag=lockdown.block.root] on vehicle if entity @s[tag=lockdown.block.root] run function lockdown:devices/universal_destroy
+execute unless entity @s[tag=lockdown.block.root] on vehicle unless entity @s[tag=lockdown.block.root] on vehicle if entity @s[tag=lockdown.block.root] run function lockdown:devices/universal_destroy
 
 # Clear source status
 tag @a[tag=lockdown.destroy.source] remove lockdown.destroy.source
