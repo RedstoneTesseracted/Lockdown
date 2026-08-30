@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:laser_cannon/base"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.cannon_platform.title",
+            "fallback": "Cannon Baseplate"
+        },
+        "description": {
+            "translate": "advancement.lockdown.cannon_platform.description",
+            "fallback": "Craft a baseplate: the first part of the air defense cannon."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "cannon_platform": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "cannon_platform"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

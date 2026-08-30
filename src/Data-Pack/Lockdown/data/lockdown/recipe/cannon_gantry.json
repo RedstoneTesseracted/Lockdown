@@ -1,0 +1,51 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "i  ",
+        "smb",
+        "iii"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "b": [
+            "minecraft:iron_block"
+        ],
+        "m": [
+            "minecraft:minecart"
+        ],
+        "s": "#minecraft:stone_buttons"
+    },
+    "result": {
+        "id": "minecraft:carrot_on_a_stick",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.cannon_gantry"
+            },
+            "minecraft:item_model": "lockdown:laser_cannon/gantry",
+            "minecraft:rarity": "common",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "cannon_gantry"
+                }
+            },
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.cannon_gantry.hint",
+                    "color": "gray",
+                    "italic":false
+                }
+            ],
+            "minecraft:max_stack_size": 8,
+            "!minecraft:tool": {},
+            "!minecraft:damage": {},
+            "!minecraft:max_damage": {},
+            "!minecraft:enchantable": {},
+            "!minecraft:repairable": {},
+            "!minecraft:repair_cost": {},
+            "!minecraft:attribute_modifiers": {}
+        }
+    }
+}

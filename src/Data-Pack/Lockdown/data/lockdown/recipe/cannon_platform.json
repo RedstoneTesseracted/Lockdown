@@ -1,0 +1,49 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "iii",
+        "bbb"
+    ],
+    "key": {
+        "i": [
+            "minecraft:iron_ingot"
+        ],
+        "b": [
+            "minecraft:iron_block"
+        ]
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": {
+                "translate": "item.lockdown.cannon_platform"
+            },
+            "minecraft:item_model": "lockdown:laser_cannon/base",
+            "minecraft:rarity": "common",
+            "minecraft:custom_data": {
+                "lockdown_data": {
+                    "name": "cannon_platform"
+                }
+            },
+            "minecraft:lore": [
+                {
+                    "translate": "item.lockdown.cannon_platform.hint",
+                    "color": "gray",
+                    "italic":false
+                }
+            ],
+            "minecraft:entity_data": {
+                "id": "minecraft:item_frame",
+                "Tags": [
+                    "lockdown.placer",
+                    "lockdown.placer.cannon_platform"
+                ],
+                "Invisible": true,
+                "CustomName": "If you can read this, something has gone wrong",
+                "CustomNameVisible": true
+            },
+            "minecraft:max_stack_size": 8
+        }
+    }
+}
