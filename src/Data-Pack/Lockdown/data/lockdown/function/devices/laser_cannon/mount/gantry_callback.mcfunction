@@ -20,5 +20,5 @@ execute if entity @e[tag=lockdown.context,tag=lockdown.laser_cannon.has_gantry] 
 execute as @e[tag=lockdown.context,limit=1,tag=lockdown.laser_cannon.base] at @s run function lockdown:devices/laser_cannon/mount/add_gantry
 
 # Remove item from player's hand unless they're in creative
-execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_gantry"}}] if score lockdown.success lockdown.local matches 1 run return run item modify entity @s weapon.mainhand lockdown:consume_item
-execute if items entity @s weapon.offhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_gantry"}}] if score lockdown.success lockdown.local matches 1 run return run item modify entity @s weapon.offhand lockdown:consume_item
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_gantry"}}] run return run item modify entity @s weapon.mainhand lockdown:consume_item
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_gantry"}}] run return run item modify entity @s weapon.offhand lockdown:consume_item
