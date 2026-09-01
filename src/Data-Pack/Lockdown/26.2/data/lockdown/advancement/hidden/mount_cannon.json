@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "minecraft:entity_tags": {
+                        "all_of": [
+                            "lockdown.behavior.rideable",
+                            "lockdown.laser_cannon"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:devices/laser_cannon/mount/ride_callback"
+    }
+}
