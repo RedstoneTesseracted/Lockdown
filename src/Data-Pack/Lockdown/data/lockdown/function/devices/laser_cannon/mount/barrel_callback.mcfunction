@@ -19,6 +19,9 @@ execute if entity @e[tag=lockdown.context,tag=lockdown.laser_cannon.has_barrel] 
 # Mount the barrel onto the platform
 execute as @e[tag=lockdown.context,limit=1,tag=lockdown.laser_cannon.base] at @s run function lockdown:devices/laser_cannon/mount/add_barrel
 
+# Clear state tags
+tag @e[tag=lockdown.context] remove lockdown.context
+
 # Remove item from player's hand unless they're in creative
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_barrel"}}] run return run item modify entity @s weapon.mainhand lockdown:consume_item
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{lockdown_data:{name: "cannon_barrel"}}] run return run item modify entity @s weapon.offhand lockdown:consume_item
