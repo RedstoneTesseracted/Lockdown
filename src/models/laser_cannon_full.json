@@ -393,6 +393,7 @@
 			}
 		},
 		{
+			"name": "left_axel",
 			"from": [5, 5.5, 2.25],
 			"to": [6, 7, 3.75],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 5.5, 1]},
@@ -405,6 +406,7 @@
 			}
 		},
 		{
+			"name": "right_axel",
 			"from": [10, 5.5, 2.25],
 			"to": [11, 7, 3.75],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 5.5, 1]},

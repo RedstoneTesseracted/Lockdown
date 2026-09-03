@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:entity_tags": {
+                "all_of": [
+                    "lockdown.laser_cannon"
+                ]
+            }
+        }
+    }
+}

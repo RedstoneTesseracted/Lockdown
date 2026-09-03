@@ -38,6 +38,9 @@ scoreboard objectives add lockdown.home.x dummy
 scoreboard objectives add lockdown.home.y dummy
 scoreboard objectives add lockdown.home.z dummy
 
+scoreboard objectives add lockdown.azimuth dummy
+scoreboard objectives add lockdown.pitch dummy
+
 # Global configuration scores
 # Turret
 scoreboard players set lockdown.turret_target_interval lockdown.constant 20
@@ -60,6 +63,13 @@ scoreboard players set lockdown.default_drone_pursuit_exit_range lockdown.consta
 scoreboard players set lockdown.default_drone_firing_enter_range lockdown.constant 6
 scoreboard players set lockdown.default_drone_firing_exit_range lockdown.constant 11
 scoreboard players set lockdown.default_drone_damage lockdown.constant 5
+# Laser cannon
+scoreboard players set lockdown.cannon_rotate_azimuth_max lockdown.constant 400
+scoreboard players set lockdown.cannon_rotate_azimuth_min lockdown.constant -400
+scoreboard players set lockdown.cannon_rotate_pitch_max lockdown.constant 400
+scoreboard players set lockdown.cannon_rotate_pitch_min lockdown.constant -400
+scoreboard players set lockdown.cannon_pitch_max lockdown.constant 1500
+scoreboard players set lockdown.cannon_pitch_min lockdown.constant -6000
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3

@@ -30,7 +30,7 @@ execute if predicate lockdown:platform_enough_space run fill ~-1 ~ ~-1 ~1 ~ ~1 m
 playsound minecraft:block.metal.place block @a ~ ~ ~ 1.0 1.0
 
 # Summon root entity
-execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {teleport_duration: 2, interpolation_duration: 1, transformation: {translation: [0.0f, 2.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [4.0f, 4.0f, 4.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.laser_cannon","lockdown.laser_cannon.base"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:laser_cannon/base","minecraft:custom_model_data":{strings:["idle"]}}}}
+execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {teleport_duration: 2, interpolation_duration: 2, transformation: {translation: [0.0f, 2.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [4.0f, 4.0f, 4.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.root","lockdown.block.root.new","lockdown.block.display","lockdown.block.display.new","lockdown.laser_cannon","lockdown.laser_cannon.base"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:laser_cannon/base","minecraft:custom_model_data":{strings:["idle"]}}}}
 
 # Summon and mount hitbox entity
 execute align xyz run summon minecraft:interaction ~0.5 ~ ~0.5 {NoGravity:1b, width: 2.5, height: 0.125, Tags: ["lockdown.block", "lockdown.laser_cannon", "lockdown.laser_cannon.base", "lockdown.block.hitbox", "lockdown.block.hitbox.new"]}
@@ -38,3 +38,7 @@ ride @n[tag=lockdown.block.hitbox.new] mount @n[tag=lockdown.block.root.new]
 
 # Behavior tags
 tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.attack_to_destroy
+
+# Assign scores
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.azimuth 0
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.pitch 0

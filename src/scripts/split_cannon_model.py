@@ -66,11 +66,44 @@ def get_group(name, model):
     return new_model
 
 
+def shift_model(model, x=0.0, y=0.0, z=0.0):
+    """
+    Shifts all elements in the model by the given vector.  Modifies a model in-place
+    """
+    for element in model['elements']:
+        element['from'][0] += x
+        element['from'][1] += y
+        element['from'][2] += z
+        element['to'][0] += x
+        element['to'][1] += y
+        element['to'][2] += z
+        if 'rotation' in element:
+            assert 'origin' in element['rotation']
+            element['rotation']['origin'][0] += x
+            element['rotation']['origin'][1] += y
+            element['rotation']['origin'][2] += z
+
+
 base_model = get_group('base', full_model)
 gantry_model = get_group('gantry', full_model)
 cannon_model = get_group('cannon', full_model)
 arcs_model = get_group('arcs', full_model)
 
+# Find axel axis in barrel model and use it to shift entire barrel
+left_axel = None
+right_axel = None
+for element in cannon_model['elements']:
+    if element.get('name') == 'left_axel':
+        left_axel = ((element['from'][0] + element['to'][0])/2,
+                     (element['from'][1] + element['to'][1])/2,
+                     (element['from'][2] + element['to'][2])/2)
+    elif element.get('name') == 'right_axel':
+        right_axel = ((element['from'][0] + element['to'][0])/2,
+                      (element['from'][1] + element['to'][1])/2,
+                      (element['from'][2] + element['to'][2])/2)
+dx, dy, dz = [8-(i+j)/2 for i, j in zip(left_axel, right_axel)]
+shift_model(cannon_model, x=dx, y=dy, z=dz)
+shift_model(arcs_model, x=dx, y=dy, z=dz)
 
 # Override display transformations
 base_model['display'] = {
@@ -152,43 +185,44 @@ gantry_model['display'] = {
 cannon_model['display'] = {
     "thirdperson_righthand": {
         "rotation": [0, 90, 0],
-        "translation": [5.5, 0.25, 0],
+        "translation": [3, -0.625, 0],
         "scale": [0.5, 0.5, 0.5]
     },
     "thirdperson_lefthand": {
         "rotation": [0, 90, 0],
-        "translation": [5.5, 0.25, 0],
+        "translation": [3, -0.625, 0],
         "scale": [0.5, 0.5, 0.5]
     },
     "firstperson_righthand": {
         "rotation": [15, 30, 8],
-        "translation": [5.25, 2.5, 6.25]
+        "translation": [2.75, 2.125, 1.75]
     },
     "firstperson_lefthand": {
         "rotation": [15, 30, 0],
-        "translation": [5.25, 2.5, 6.25]
+        "translation": [2.75, 2.125, 1.75]
     },
     "ground": {
-        "translation": [0, -0.5, 11]
+        "translation": [0, -2.25, 6]
     },
     "gui": {
         "rotation": [30, -135, 0],
-        "translation": [-7.75, 6, 0]
+        "translation": [-4.25, 2.75, -5]
     },
     "head": {
-        "translation": [9.75, 1.25, 1.5]
+        "translation": [9.75, -0.5, -3.5]
     },
     "fixed": {
         "rotation": [90, 0, -180],
-        "translation": [0, -11, -2.25]
+        "translation": [0, -6, -0.5]
     },
     "on_shelf": {
-        "rotation": [-125.75, 0, 0],
-        "translation": [0, 0, -7]
+        "rotation": [-90, 0, 0],
+        "translation": [0, 0, -2.5]
     }
 }
 
 arcs_model['display'] = deepcopy(cannon_model['display'])
+
 
 
 # Save models to files
