@@ -3,9 +3,12 @@
 
 # Apply to all paintable entities within this stack of passengers/vehicles
 scoreboard players set lockdown.success lockdown.local 0
-execute on vehicle if entity @s[tag=lockdown.block.display] if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
-execute if entity @s[tag=lockdown.block.display] if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
-execute on passengers if entity @s[tag=lockdown.block.display] if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute on vehicle if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute on passengers if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute on passengers on passengers if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute on vehicle on passengers if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
+execute on vehicle on passengers on passengers if function lockdown:items/spray_paint/is_paintable run function lockdown:items/spray_paint/apply_to_display
 
 # Show effects on successful painting
 execute unless score lockdown.success lockdown.local matches 1 run return 0

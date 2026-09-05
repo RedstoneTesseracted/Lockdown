@@ -26,6 +26,13 @@ scoreboard players operation @s lockdown.azimuth = lockdown.laser_cannon.azimuth
 execute on passengers if entity @s[tag=lockdown.laser_cannon.gantry] store result entity @s Rotation[0] float 0.01 run scoreboard players get lockdown.laser_cannon.azimuth lockdown.local
 execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] store result entity @s Rotation[0] float 0.01 run scoreboard players get lockdown.laser_cannon.azimuth lockdown.local
 
+#data modify storage lockdown:temp rotation set value {axis: [0.0, 1.0, 0.0], angle: 0.0}
+#execute store result storage lockdown:temp rotation.angle float -0.00017453292519943296 run scoreboard players get @s lockdown.azimuth
+#execute on passengers if entity @s[tag=lockdown.laser_cannon.gantry] run data modify entity @s transformation.right_rotation set from storage lockdown:temp rotation
+#execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] run data modify entity @s transformation.left_rotation set from storage lockdown:temp rotation
+
+#title @a actionbar [{score: {name: "lockdown.laser_cannon.azimuth", objective: "lockdown.local"}}, ", ", {nbt: "Rotation[0]", entity: "@n[tag=lockdown.laser_cannon.barrel]"}]
+
 # Move pitch similarly to azimuth
 scoreboard players operation lockdown.delta lockdown.local = lockdown.pitch lockdown.local
 scoreboard players operation lockdown.delta lockdown.local -= @s lockdown.pitch
@@ -38,5 +45,5 @@ scoreboard players operation @s lockdown.pitch < lockdown.cannon_pitch_max lockd
 # Update x-axis rotation of barrel
 data modify storage lockdown:temp rotation set value {axis: [1.0, 0.0, 0.0], angle: 0.0}
 execute store result storage lockdown:temp rotation.angle float 0.00017453292519943296 run scoreboard players get @s lockdown.pitch
-execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] run data modify entity @s transformation.left_rotation set from storage lockdown:temp rotation
+execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] run data modify entity @s transformation.right_rotation set from storage lockdown:temp rotation
 data remove storage lockdown:temp rotation

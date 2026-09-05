@@ -1,4 +1,8 @@
-# This function is called whenever the player uses a spray can
+# This function is called whenever the player uses a spray can.
+# Normally, this is called by lockdown:items/upgrade/use (the spray can is treated as a re-useable upgrade).
+# However, in the case of laser cannons, this can be called by lockdown:devices/laser_cannon/mount/ride_callback.
+# The latter technically skips setting the lockdown.player_context tag that gets set in lockdown:items/upgrade/use,
+# however the spray can doesn't make use of that, so it should be fine.
 
 # Shift-right-clicking cycles between color
 execute if predicate lockdown:sneaking run return run function lockdown:items/spray_paint/cycle_color
