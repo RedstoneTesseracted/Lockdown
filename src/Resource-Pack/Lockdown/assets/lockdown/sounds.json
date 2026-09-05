@@ -118,8 +118,8 @@
     "category": "neutral",
     "subtitle": "subtitles.lockdown.spray_can.spray",
     "sounds": [
-      "lockdown:spray_can/spray2",
-      "lockdown:spray_can/spray3"
+      "lockdown:spray_can/spray1",
+      "lockdown:spray_can/spray2"
     ],
     "attribution": "https://freesound.org/s/28544/,https://freesound.org/s/28543/ by HerbertBoland -- License: Attribution 4.0"
   },
