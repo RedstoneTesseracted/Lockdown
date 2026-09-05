@@ -31,4 +31,4 @@ tag @s remove lockdown.context.source
 # Clear state tags
 tag @e[tag=lockdown.context] remove lockdown.context
 
-execute if predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/zoom_out
+execute if predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/activate_player_mount

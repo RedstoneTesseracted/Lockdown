@@ -42,3 +42,4 @@ tag @n[tag=lockdown.block.hitbox.new] add lockdown.behavior.attack_to_destroy
 # Assign scores
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.azimuth 0
 scoreboard players set @n[tag=lockdown.block.root.new] lockdown.pitch 0
+scoreboard players set @n[tag=lockdown.block.root.new] lockdown.cannon.charge 0

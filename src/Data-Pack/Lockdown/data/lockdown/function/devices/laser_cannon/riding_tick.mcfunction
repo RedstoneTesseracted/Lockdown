@@ -2,5 +2,5 @@
 # This is mainly used to clear camera zoom out when a player unmounts a laser cannon
 # It keeps itself running using /schedule
 
-execute as @a[tag=lockdown.laser_cannon.zoom_out] unless predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/cancel_zoom_out
-execute if entity @a[tag=lockdown.laser_cannon.zoom_out] run schedule function lockdown:devices/laser_cannon/riding_tick 1t replace
+execute as @a[tag=lockdown.laser_cannon.is_riding] unless predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/deactivate_player_mount
+execute if entity @a[tag=lockdown.laser_cannon.is_riding] run schedule function lockdown:devices/laser_cannon/riding_tick 1t replace

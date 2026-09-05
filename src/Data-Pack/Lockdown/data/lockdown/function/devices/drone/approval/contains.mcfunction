@@ -13,6 +13,7 @@
 data modify storage lockdown:temp args set value {}
 data modify storage lockdown:temp args.UUID set from entity @s UUID
 
+scoreboard players set lockdown.result lockdown.local 0
 execute store result score lockdown.result lockdown.local run function lockdown:devices/drone/approval/__contains with storage lockdown:temp args
 
 execute if score lockdown.result lockdown.local matches -1 run return 0

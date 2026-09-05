@@ -78,6 +78,7 @@ Items not covered under the GameTest system:
     * Explosion model/animation
     * ~~Placement~~
     * ~~Movement controls~~
+    * ~~Spray-painting~~
     * Firing controls
 * Air defense cannon unit tests:
     * Requires 3x3 space (blocks + entities)
@@ -128,3 +129,4 @@ This datapack makes use of the following sound effects:
 | spraycan2.wav                                              | HerbertBoland  | https://freesound.org/s/28543/  | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
 | spraycan3.wav                                              | HerbertBoland  | https://freesound.org/s/28544/  | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |
 | Spray Paint Shake Seven.wav                                | cbakos         | https://freesound.org/s/200377/ | [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| Sci-fi rifle weapon shot. With charging sweep_3 (23lrs,mltprcssng).wav | newlocknew | https://freesound.org/s/557515/ | [Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)          |

@@ -1,6 +1,7 @@
 #### Declare scoreboards
 
 # Utility objectives
+scoreboard objectives add lockdown.global dummy
 scoreboard objectives add lockdown.local dummy
 scoreboard objectives add lockdown.time dummy
 scoreboard objectives add lockdown.press_time dummy
@@ -40,6 +41,7 @@ scoreboard objectives add lockdown.home.z dummy
 
 scoreboard objectives add lockdown.azimuth dummy
 scoreboard objectives add lockdown.pitch dummy
+scoreboard objectives add lockdown.cannon.charge dummy
 
 # Global configuration scores
 # Turret
@@ -64,12 +66,13 @@ scoreboard players set lockdown.default_drone_firing_enter_range lockdown.consta
 scoreboard players set lockdown.default_drone_firing_exit_range lockdown.constant 11
 scoreboard players set lockdown.default_drone_damage lockdown.constant 5
 # Laser cannon
-scoreboard players set lockdown.cannon_rotate_azimuth_max lockdown.constant 400
-scoreboard players set lockdown.cannon_rotate_azimuth_min lockdown.constant -400
-scoreboard players set lockdown.cannon_rotate_pitch_max lockdown.constant 400
-scoreboard players set lockdown.cannon_rotate_pitch_min lockdown.constant -400
+scoreboard players set lockdown.cannon_rotate_azimuth_max lockdown.constant 800
+scoreboard players set lockdown.cannon_rotate_azimuth_min lockdown.constant -800
+scoreboard players set lockdown.cannon_rotate_pitch_max lockdown.constant 800
+scoreboard players set lockdown.cannon_rotate_pitch_min lockdown.constant -800
 scoreboard players set lockdown.cannon_pitch_max lockdown.constant 1500
 scoreboard players set lockdown.cannon_pitch_min lockdown.constant -6000
+scoreboard players set lockdown.cannon_max_charge lockdown.constant 20
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
@@ -102,6 +105,9 @@ scoreboard objectives add lockdown.laser_blaster.heat dummy
 # Triggers
 scoreboard objectives add lockdown.show_info trigger {text:"Show Info", color:"aqua"}
 
+# Player IDs
+scoreboard objectives add lockdown.player_id dummy
+execute unless score lockdown.player_id_counter lockdown.global matches -2147483648.. run scoreboard players set lockdown.player_id_counter lockdown.global 0
 
 
 #### Versioning

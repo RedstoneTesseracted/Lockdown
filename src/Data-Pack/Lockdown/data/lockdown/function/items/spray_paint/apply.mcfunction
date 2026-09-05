@@ -14,7 +14,7 @@ execute on vehicle on passengers on passengers if function lockdown:items/spray_
 execute unless score lockdown.success lockdown.local matches 1 run return 0
 scoreboard players set lockdown.result lockdown.local 0
 execute store result score lockdown.result lockdown.local run function lockdown:items/spray_paint/particles with storage lockdown:temp paint
-execute if score lockdown.result lockdown.local matches 0 run tellraw @p {translate: "lockdown.messages.bug.macro.generic",color: "red", with: [{text: "lockdown:items/spray_paint/particles", color: "gray", underlined: true}]}
+execute unless score lockdown.result lockdown.local matches 1 run tellraw @p {translate: "lockdown.messages.bug.macro.generic",color: "red", with: [{text: "lockdown:items/spray_paint/particles", color: "gray", underlined: true}]}
 
 
 return 1

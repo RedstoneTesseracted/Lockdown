@@ -130,5 +130,22 @@
       "lockdown:spray_can/shake"
     ],
     "attribution": "Spray Paint Shake Seven.wav by cbakos -- https://freesound.org/s/200377/ -- License: Creative Commons 0"
+  },
+  "cannon.fire": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.cannon.fire",
+    "sounds": [
+      "lockdown:cannon/fire1",
+      "lockdown:cannon/fire2"
+    ],
+    "attribution": "https://freesound.org/s/557513/,https://freesound.org/s/557514/ -- License: Attribution 4.0"
+  },
+  "cannon.charge": {
+    "category": "neutral",
+    "subtitle": "subtitles.lockdown.cannon.charge",
+    "sounds": [
+      "lockdown:cannon/charge"
+    ],
+    "attribution": "Sci-fi rifle weapon shot. With charging sweep_3 (23lrs,mltprcssng).wav by newlocknew -- https://freesound.org/s/557515/ -- License: Attribution 4.0"
   }
 }

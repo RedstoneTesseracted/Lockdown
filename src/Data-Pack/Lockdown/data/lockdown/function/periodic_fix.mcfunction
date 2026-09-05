@@ -21,7 +21,7 @@ scoreboard players operation lockdown.threshold_timestamp lockdown.local -= lock
 execute as @e[tag=lockdown.drone.patrol_marker] if score @s lockdown.creation_timestamp < lockdown.threshold_timestamp lockdown.local run kill @s
 
 # Clear zoom-out status on players that are no longer riding cannon
-execute as @a[tag=lockdown.laser_cannon.zoom_out] unless predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/cancel_zoom_out
+execute as @a[tag=lockdown.laser_cannon.is_riding] unless predicate lockdown:is_riding_cannon run function lockdown:devices/laser_cannon/mount/deactivate_player_mount
 
 # Schedule this function to run again
 schedule function lockdown:periodic_fix 20s replace
