@@ -43,6 +43,8 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 **Defense Drone**: Patrols the surrounding area and attacks any hostile mobs it finds using its laser beam.  Will not attack players by default.  However, when assigned a code, it will attack any unrecognized player whose last held keycard does not match.  Optionally assign a code using the Encoding Station.
 
+**Air Defense Cannon**: A large, player-controllable cannon that fires explosive bolts of energy.
+
 
 ## Upgrades
 
@@ -51,6 +53,15 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 **Flamethrower Upgrade**: Allows drones to shoot fireballs and turrets to shoot bolts of fire instead of lasers.
 
 **Range Upgrade**: Increases the effective range of a drone or turret.
+
+**Suspicious Thumb Drive**: Causes drones and turrets to attacks players and friendly mobs.
+
+
+## Tools
+
+**Laser Blaster**: A ranged weapon that fires lasers at your enemies.  Be careful not to let it overheat!
+
+**Redstone Energy Cell**: Fuel for the laster blaster
 
 
 ## Redstone

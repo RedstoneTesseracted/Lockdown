@@ -71,6 +71,21 @@ Items not covered under the GameTest system:
     * Attacks friendly mobs
     * Does not attack other drones with same channel
     * Attacks other drones with difference channel
+* Air defense cannon
+    * Charging animation
+    * Charging particle
+    * Blast model
+    * Explosion model/animation
+    * ~~Placement~~
+    * ~~Movement controls~~
+    * Firing controls
+* Air defense cannon unit tests:
+    * Requires 3x3 space (blocks + entities)
+    * Breaks if central block is missing
+    * Drops platform, gantry, and barrel
+    * Mounting gantry onto platform
+    * Mounting barrel onto gantry
+    * Gantry cannot be mounted if one is already present
 
 * Optimize drone AI
 * Auto-generate device-placing functions for use in unit tests
@@ -80,10 +95,10 @@ Items not covered under the GameTest system:
 
 * Give drones the option to follow/guard
 * ~~Make drones dyeable~~
+* Make turrets dyable
 * ❌Some way to configure drones
 * ~~Laser blaster + redstone energy cells~~
 * ~~Suspicious thumb drive~~
-* Air Defense Cannon
 
 # Version Support
 
