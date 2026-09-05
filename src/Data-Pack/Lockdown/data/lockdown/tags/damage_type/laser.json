@@ -3,6 +3,7 @@
     "values": [
         "#lockdown:robot_laser",
         "lockdown:projector_laser",
-        "lockdown:player_laser"
+        "lockdown:player_laser",
+        "lockdown:cannon_laser"
     ]
 }

@@ -1,0 +1,7 @@
+{
+    "message_id": "lockdown.cannon",
+    "exhaustion": 0,
+    "scaling": "never",
+    "effects": "hurt",
+    "death_message_type": "default"
+}
