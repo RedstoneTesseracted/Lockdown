@@ -1121,7 +1121,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1184,7 +1185,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1247,7 +1249,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1572,7 +1575,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1605,7 +1609,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1638,7 +1643,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         },
         {
             "from": [
@@ -1671,7 +1677,8 @@
                     "texture": "#1",
                     "tintindex": 1
                 }
-            }
+            },
+            "light_emission": 15
         }
     ],
     "display": {
@@ -1795,10 +1802,10 @@
             "scope": 0,
             "color": 7,
             "children": [
-                31,
-                32,
-                33,
-                34,
+                0,
+                1,
+                2,
+                3,
                 {
                     "name": "axel",
                     "origin": [
@@ -1809,14 +1816,14 @@
                     "scope": 0,
                     "color": 7,
                     "children": [
-                        35,
-                        36
+                        4,
+                        5
                     ]
                 },
-                37,
-                38,
-                39,
-                40,
+                6,
+                7,
+                8,
+                9,
                 {
                     "name": "struts",
                     "origin": [
@@ -1827,14 +1834,14 @@
                     "scope": 0,
                     "color": 7,
                     "children": [
-                        41,
-                        42,
-                        43,
-                        44,
-                        45,
-                        46,
-                        47,
-                        48
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17
                     ]
                 },
                 {
@@ -1847,9 +1854,9 @@
                     "scope": 0,
                     "color": 7,
                     "children": [
-                        49,
-                        50,
-                        51
+                        18,
+                        19,
+                        20
                     ]
                 },
                 {
@@ -1862,10 +1869,10 @@
                     "scope": 0,
                     "color": 7,
                     "children": [
-                        52,
-                        53,
-                        54,
-                        55
+                        21,
+                        22,
+                        23,
+                        24
                     ]
                 },
                 {
@@ -1878,10 +1885,10 @@
                     "scope": 0,
                     "color": 7,
                     "children": [
-                        56,
-                        57,
-                        58,
-                        59
+                        25,
+                        26,
+                        27,
+                        28
                     ]
                 }
             ]

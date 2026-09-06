@@ -44,6 +44,35 @@ def recursive_get_indices(group):
     return result
 
 
+def find_group(group_list, name):
+    """
+    Recursively searches the given group list for a group of the given name.  Only returns the first group found.
+    """
+    for child in group_list:
+        if isinstance(child, int):
+            continue
+        elif child.get('name') == name:
+            return child
+        elif 'children' in child:
+            result = find_group(child['children'], name)
+            if result is not None:
+                return result
+
+
+def recursive_map_indices(group, index_map):
+    """
+    Recursively maps all element indices in a group and its child groups to new values.
+    Modifies the given group in-place.
+    """
+    for i, child in enumerate(group.get('children', [])):
+        if isinstance(child, int):
+            group['children'][i] = index_map[child]
+        elif 'children' in child:
+            recursive_map_indices(child, index_map)
+        else:
+            raise ValueError(f"Unhandled case for child: {child}")
+
+
 def get_group(name, model):
     """
     Filters a model down to elements belonging to a particular group
@@ -57,11 +86,14 @@ def get_group(name, model):
             else:
                 indices = recursive_get_indices(grp)
     new_elements = [model['elements'][i] for i in indices]
+    index_map = dict((j, i) for i, j in enumerate(indices))
 
     # Create new model with other elements/groups filtered out
     new_model = deepcopy(model)
     new_model['elements'] = new_elements
     new_model['groups'] = [i for i in new_model['groups'] if i['name'] == name]
+    for group in new_model['groups']:
+        recursive_map_indices(group, index_map)
 
     return new_model
 
@@ -88,6 +120,11 @@ base_model = get_group('base', full_model)
 gantry_model = get_group('gantry', full_model)
 cannon_model = get_group('cannon', full_model)
 arcs_model = get_group('arcs', full_model)
+
+# Make some elements in cannon emissive
+for group in ['core', 'shroud_glowy_bits']:
+    for i in find_group(cannon_model['groups'], group)['children']:
+        cannon_model['elements'][i]['light_emission'] = 15
 
 # Find axel axis in barrel model and use it to shift entire barrel
 left_axel = None
