@@ -74,11 +74,13 @@ Items not covered under the GameTest system:
 * Air defense cannon
     * ~~Charging animation~~
     * ~~Firing animation~~
-    * Explosion when destroyed
+    * ~~Explosion when destroyed~~
     * ~~Placement~~
     * ~~Movement controls~~
     * ~~Spray-painting~~
     * ~~Firing controls~~
+    * Add toggle for terrain destruction
+    * Tweak model so it doesn't block line of sight
     * Balancing
 * Air defense cannon unit tests:
     * Requires 3x3 space (blocks + entities)
