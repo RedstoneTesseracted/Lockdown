@@ -72,14 +72,14 @@ Items not covered under the GameTest system:
     * Does not attack other drones with same channel
     * Attacks other drones with difference channel
 * Air defense cannon
-    * Charging animation
-    * Charging particle
-    * Blast model
-    * Explosion model/animation
+    * ~~Charging animation~~
+    * ~~Firing animation~~
+    * Explosion when destroyed
     * ~~Placement~~
     * ~~Movement controls~~
     * ~~Spray-painting~~
-    * Firing controls
+    * ~~Firing controls~~
+    * Balancing
 * Air defense cannon unit tests:
     * Requires 3x3 space (blocks + entities)
     * Breaks if central block is missing

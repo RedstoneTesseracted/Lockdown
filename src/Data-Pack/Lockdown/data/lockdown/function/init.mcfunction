@@ -71,9 +71,10 @@ scoreboard players set lockdown.cannon_rotate_azimuth_max lockdown.constant 800
 scoreboard players set lockdown.cannon_rotate_azimuth_min lockdown.constant -800
 scoreboard players set lockdown.cannon_rotate_pitch_max lockdown.constant 800
 scoreboard players set lockdown.cannon_rotate_pitch_min lockdown.constant -800
-scoreboard players set lockdown.cannon_pitch_max lockdown.constant 1500
+scoreboard players set lockdown.cannon_pitch_max lockdown.constant 2500
 scoreboard players set lockdown.cannon_pitch_min lockdown.constant -6000
 scoreboard players set lockdown.cannon_max_charge lockdown.constant 20
+scoreboard players set lockdown.cannon_max_range lockdown.constant 50
 # Misc
 scoreboard players set lockdown.max_laser_distance lockdown.constant 10
 scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3

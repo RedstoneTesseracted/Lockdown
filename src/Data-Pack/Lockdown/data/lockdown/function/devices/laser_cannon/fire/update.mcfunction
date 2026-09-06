@@ -2,10 +2,14 @@
 # This is called every tick by lockdown:devices/laser_cannon/root while the cannon is firing.
 # This is run BY and AT the root cannon entity
 
-# On tick 1: interpolate beam to maximum size
+# On tick 2: interpolate beam to maximum size (found via raycast)
+execute if score @s lockdown.cannon.fire_state matches 2 run function lockdown:devices/laser_cannon/fire/distance_raycast
 execute if score @s lockdown.cannon.fire_state matches 2 on passengers if entity @s[tag=lockdown.laser_cannon.beam] run function lockdown:devices/laser_cannon/fire/expand_beam
 
-# On tick 3: shrink beam
+# On tick 3: apply damage
+execute if score @s lockdown.cannon.fire_state matches 2 run function lockdown:devices/laser_cannon/fire/damage_raycast
+
+# On tick 7: shrink beam
 execute if score @s lockdown.cannon.fire_state matches 7 on passengers if entity @s[tag=lockdown.laser_cannon.beam] run function lockdown:devices/laser_cannon/fire/shrink_beam
 
 # Advance firing state
