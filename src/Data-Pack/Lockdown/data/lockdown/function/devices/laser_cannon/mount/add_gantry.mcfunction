@@ -9,7 +9,7 @@ execute align xyz run summon minecraft:interaction ~0.5 ~ ~0.5 {NoGravity:1b, wi
 execute on passengers if entity @s[tag=lockdown.block.hitbox,tag=lockdown.laser_cannon.base] run ride @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.gantry] mount @s
 
 # Summon and mount health hitbox
-execute align xyz run summon minecraft:bee ~0.5 ~ ~0.5 {NoGravity:1b, NoAI:1b, Tags: ["lockdown.block", "lockdown.laser_cannon", "lockdown.laser_cannon.health_hitbox", "lockdown.block.hitbox", "lockdown.block.hitbox.new", "lockdown.behavior.regenerates"], active_effects: [{id: "minecraft:invisibility", duration: 2147483647, show_particles: false}, {id: "minecraft:regeneration", duration: 2147483647, show_particles: false, amplifier: 0}], attributes: [{id: "minecraft:max_health", base: 30.0}], Health: 30.0f}
+execute align xyz run summon minecraft:bee ~0.5 ~ ~0.5 {NoGravity:1b, NoAI:1b, Silent: 1b, Tags: ["lockdown.block", "lockdown.laser_cannon", "lockdown.laser_cannon.health_hitbox", "lockdown.block.hitbox", "lockdown.block.hitbox.new", "lockdown.behavior.regenerates"], active_effects: [{id: "minecraft:invisibility", duration: 2147483647, show_particles: false}, {id: "minecraft:regeneration", duration: 2147483647, show_particles: false, amplifier: 0}], attributes: [{id: "minecraft:max_health", base: 30.0}], Health: 30.0f}
 attribute @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.health_hitbox] minecraft:scale base set 0.5
 ride @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.health_hitbox] mount @s
 
