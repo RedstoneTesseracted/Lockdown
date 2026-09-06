@@ -42,6 +42,7 @@ scoreboard objectives add lockdown.home.z dummy
 scoreboard objectives add lockdown.azimuth dummy
 scoreboard objectives add lockdown.pitch dummy
 scoreboard objectives add lockdown.cannon.charge dummy
+scoreboard objectives add lockdown.cannon.fire_state dummy
 
 # Global configuration scores
 # Turret

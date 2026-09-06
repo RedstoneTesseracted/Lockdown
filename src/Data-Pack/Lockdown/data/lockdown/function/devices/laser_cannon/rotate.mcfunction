@@ -21,10 +21,11 @@ scoreboard players operation lockdown.delta lockdown.local > lockdown.cannon_rot
 scoreboard players operation lockdown.delta lockdown.local < lockdown.cannon_rotate_azimuth_max lockdown.constant
 scoreboard players operation lockdown.laser_cannon.azimuth lockdown.local += lockdown.delta lockdown.local
 
-# Update y-axis rotation of gantry and barrel
+# Update y-axis rotation of gantry, barrel, and beam (if it exists)
 scoreboard players operation @s lockdown.azimuth = lockdown.laser_cannon.azimuth lockdown.local
 execute on passengers if entity @s[tag=lockdown.laser_cannon.gantry] store result entity @s Rotation[0] float 0.01 run scoreboard players get lockdown.laser_cannon.azimuth lockdown.local
 execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] store result entity @s Rotation[0] float 0.01 run scoreboard players get lockdown.laser_cannon.azimuth lockdown.local
+execute on passengers if entity @s[tag=lockdown.laser_cannon.beam] store result entity @s Rotation[0] float 0.01 run scoreboard players get lockdown.laser_cannon.azimuth lockdown.local
 
 #data modify storage lockdown:temp rotation set value {axis: [0.0, 1.0, 0.0], angle: 0.0}
 #execute store result storage lockdown:temp rotation.angle float -0.00017453292519943296 run scoreboard players get @s lockdown.azimuth
@@ -42,8 +43,9 @@ scoreboard players operation @s lockdown.pitch += lockdown.delta lockdown.local
 scoreboard players operation @s lockdown.pitch > lockdown.cannon_pitch_min lockdown.constant
 scoreboard players operation @s lockdown.pitch < lockdown.cannon_pitch_max lockdown.constant
 
-# Update x-axis rotation of barrel
+# Update x-axis rotation of barrel and beam (if it exists)
 data modify storage lockdown:temp rotation set value {axis: [1.0, 0.0, 0.0], angle: 0.0}
 execute store result storage lockdown:temp rotation.angle float 0.00017453292519943296 run scoreboard players get @s lockdown.pitch
 execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] run data modify entity @s transformation.right_rotation set from storage lockdown:temp rotation
+execute on passengers if entity @s[tag=lockdown.laser_cannon.beam] run data modify entity @s transformation.left_rotation set from storage lockdown:temp rotation
 data remove storage lockdown:temp rotation

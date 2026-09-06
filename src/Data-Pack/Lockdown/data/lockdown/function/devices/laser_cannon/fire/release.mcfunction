@@ -8,7 +8,7 @@ execute if score @s lockdown.cannon.charge >= lockdown.cannon_max_charge lockdow
 execute if score @s lockdown.cannon.charge < lockdown.cannon_max_charge lockdown.constant run playsound lockdown:cannon.fire neutral @a ~ ~ ~ 0.5 0.9
 #playsound lockdown:cannon.fire neutral @a ~ ~ ~ 1.0 1.0
 
-say cannon fires
+function lockdown:devices/laser_cannon/fire/summon_beam
 
 # Reset charge counter
 scoreboard players set @s lockdown.cannon.charge 0

@@ -1,17 +1,15 @@
-# Progress the charge counter if the player is holding down "space".
+# This function progresses the cannon firing state.
+# This is called every tick by lockdown:devices/laser_cannon/root while the cannon is firing.
 # This is run BY and AT the root cannon entity
 
-# Check whether pilot is charging cannon
-execute store result score lockdown.result lockdown.local run function lockdown:devices/laser_cannon/fire/passenger_is_charging
+# On tick 1: interpolate beam to maximum size
+execute if score @s lockdown.cannon.fire_state matches 2 on passengers if entity @s[tag=lockdown.laser_cannon.beam] run function lockdown:devices/laser_cannon/fire/expand_beam
 
-# Progress charging
-execute if score lockdown.result lockdown.local matches 1 run function lockdown:devices/laser_cannon/fire/charge
+# On tick 3: shrink beam
+execute if score @s lockdown.cannon.fire_state matches 7 on passengers if entity @s[tag=lockdown.laser_cannon.beam] run function lockdown:devices/laser_cannon/fire/shrink_beam
 
-# Release charge
-execute if score lockdown.result lockdown.local matches 0 if score @s lockdown.cannon.charge matches 1.. run function lockdown:devices/laser_cannon/fire/release
+# Advance firing state
+scoreboard players add @s lockdown.cannon.fire_state 1
 
-# Update progress bar
-data modify storage lockdown:temp args set value {id: 0}
-execute on passengers if entity @s[tag=lockdown.laser_cannon.seat] on passengers store result storage lockdown:temp args.id int 1 run scoreboard players get @s lockdown.player_id
-execute store result score lockdown.macro_result lockdown.local run function lockdown:devices/laser_cannon/fire/__update with storage lockdown:temp args
-execute unless score lockdown.macro_result lockdown.local matches 1 run tellraw @p {translate: "lockdown.messages.bug.macro.generic", color: "red", with: [{text: "lockdown:devices/laser_cannon/fire/__update", color:"gray", underlined: true}]}
+# End firing animation
+execute if score @s lockdown.cannon.fire_state matches 10.. run function lockdown:devices/laser_cannon/fire/stop

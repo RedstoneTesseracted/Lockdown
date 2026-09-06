@@ -517,7 +517,21 @@ def generate_beam_models():
             model['display']['head']['scale'][0] = 0.9/c
             model['display']['head']['scale'][1] = 0.9/c
             model['display']['head']['rotation'] = rotation
-            sub_item_model_def['model']['entries'].append({"threshold": c, "model": {"type":"minecraft:model", "model": f"lockdown:item/beams/{direction}/{model_name}"}})
+            sub_item_model_entry = {
+                "threshold": c,
+                "model": {
+                    "type":"minecraft:model",
+                    "model": f"lockdown:item/beams/{direction}/{model_name}",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 0.0, 0.0]
+                        }
+                    ]
+                }
+            }
+            sub_item_model_def['model']['entries'].append(sub_item_model_entry)
             with open(path.join(direction_specific_dir, model_name + '.json'), mode='w') as wf:
                 dump(model, wf, indent=4)
 

@@ -15,140 +15,360 @@
                     "threshold": 0.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_5"
+                        "model": "lockdown:item/beams/unset/beam_5",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 1.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_10"
+                        "model": "lockdown:item/beams/unset/beam_10",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 1.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_15"
+                        "model": "lockdown:item/beams/unset/beam_15",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 2.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_20"
+                        "model": "lockdown:item/beams/unset/beam_20",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 2.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_25"
+                        "model": "lockdown:item/beams/unset/beam_25",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 3.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_30"
+                        "model": "lockdown:item/beams/unset/beam_30",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 3.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_35"
+                        "model": "lockdown:item/beams/unset/beam_35",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 4.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_40"
+                        "model": "lockdown:item/beams/unset/beam_40",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 4.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_45"
+                        "model": "lockdown:item/beams/unset/beam_45",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 5.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_50"
+                        "model": "lockdown:item/beams/unset/beam_50",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 5.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_55"
+                        "model": "lockdown:item/beams/unset/beam_55",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 6.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_60"
+                        "model": "lockdown:item/beams/unset/beam_60",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 6.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_65"
+                        "model": "lockdown:item/beams/unset/beam_65",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 7.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_70"
+                        "model": "lockdown:item/beams/unset/beam_70",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 7.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_75"
+                        "model": "lockdown:item/beams/unset/beam_75",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 8.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_80"
+                        "model": "lockdown:item/beams/unset/beam_80",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 8.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_85"
+                        "model": "lockdown:item/beams/unset/beam_85",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 9.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_90"
+                        "model": "lockdown:item/beams/unset/beam_90",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 9.5,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_95"
+                        "model": "lockdown:item/beams/unset/beam_95",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 },
                 {
                     "threshold": 10.0,
                     "model": {
                         "type": "minecraft:model",
-                        "model": "lockdown:item/beams/unset/beam_100"
+                        "model": "lockdown:item/beams/unset/beam_100",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        ]
                     }
                 }
             ]
@@ -167,140 +387,360 @@
                             "threshold": 0.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_5"
+                                "model": "lockdown:item/beams/north/beam_5",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 1.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_10"
+                                "model": "lockdown:item/beams/north/beam_10",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 1.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_15"
+                                "model": "lockdown:item/beams/north/beam_15",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 2.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_20"
+                                "model": "lockdown:item/beams/north/beam_20",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 2.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_25"
+                                "model": "lockdown:item/beams/north/beam_25",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 3.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_30"
+                                "model": "lockdown:item/beams/north/beam_30",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 3.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_35"
+                                "model": "lockdown:item/beams/north/beam_35",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 4.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_40"
+                                "model": "lockdown:item/beams/north/beam_40",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 4.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_45"
+                                "model": "lockdown:item/beams/north/beam_45",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 5.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_50"
+                                "model": "lockdown:item/beams/north/beam_50",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 5.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_55"
+                                "model": "lockdown:item/beams/north/beam_55",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 6.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_60"
+                                "model": "lockdown:item/beams/north/beam_60",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 6.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_65"
+                                "model": "lockdown:item/beams/north/beam_65",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 7.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_70"
+                                "model": "lockdown:item/beams/north/beam_70",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 7.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_75"
+                                "model": "lockdown:item/beams/north/beam_75",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 8.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_80"
+                                "model": "lockdown:item/beams/north/beam_80",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 8.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_85"
+                                "model": "lockdown:item/beams/north/beam_85",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 9.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_90"
+                                "model": "lockdown:item/beams/north/beam_90",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 9.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_95"
+                                "model": "lockdown:item/beams/north/beam_95",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 10.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/north/beam_100"
+                                "model": "lockdown:item/beams/north/beam_100",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -320,140 +760,360 @@
                             "threshold": 0.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_5"
+                                "model": "lockdown:item/beams/south/beam_5",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 1.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_10"
+                                "model": "lockdown:item/beams/south/beam_10",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 1.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_15"
+                                "model": "lockdown:item/beams/south/beam_15",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 2.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_20"
+                                "model": "lockdown:item/beams/south/beam_20",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 2.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_25"
+                                "model": "lockdown:item/beams/south/beam_25",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 3.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_30"
+                                "model": "lockdown:item/beams/south/beam_30",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 3.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_35"
+                                "model": "lockdown:item/beams/south/beam_35",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 4.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_40"
+                                "model": "lockdown:item/beams/south/beam_40",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 4.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_45"
+                                "model": "lockdown:item/beams/south/beam_45",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 5.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_50"
+                                "model": "lockdown:item/beams/south/beam_50",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 5.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_55"
+                                "model": "lockdown:item/beams/south/beam_55",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 6.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_60"
+                                "model": "lockdown:item/beams/south/beam_60",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 6.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_65"
+                                "model": "lockdown:item/beams/south/beam_65",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 7.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_70"
+                                "model": "lockdown:item/beams/south/beam_70",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 7.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_75"
+                                "model": "lockdown:item/beams/south/beam_75",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 8.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_80"
+                                "model": "lockdown:item/beams/south/beam_80",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 8.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_85"
+                                "model": "lockdown:item/beams/south/beam_85",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 9.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_90"
+                                "model": "lockdown:item/beams/south/beam_90",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 9.5,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_95"
+                                "model": "lockdown:item/beams/south/beam_95",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         },
                         {
                             "threshold": 10.0,
                             "model": {
                                 "type": "minecraft:model",
-                                "model": "lockdown:item/beams/south/beam_100"
+                                "model": "lockdown:item/beams/south/beam_100",
+                                "tints": [
+                                    {
+                                        "type": "minecraft:custom_model_data",
+                                        "index": 0,
+                                        "default": [
+                                            1.0,
+                                            0.0,
+                                            0.0
+                                        ]
+                                    }
+                                ]
                             }
                         }
                     ]
