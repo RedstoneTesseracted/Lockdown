@@ -47,7 +47,7 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Berserker drones                               |      ✅      |
 | Spray paint                                    |      ❌      |
 | Laser blaster                                  |      ❓      |
-| Air defense cannon                             |      ❌      |
+| Air defense cannon                             |      ✅      |
 
 > **Note**: Tests marked with "❓" involve a feature that *requires* player interaction.  As such, I'm not yet sure how to implement automated tests for them.
 
@@ -92,7 +92,6 @@ Items not covered under the GameTest system:
     * ~~Drops platform, gantry, and barrel~~
     * ~~Mounting gantry onto platform~~
     * ~~Mounting barrel onto gantry~~
-    * Gantry cannot be mounted if one is already present
     * ~~Explodes if hidden bee is killed~~
 * Make turrets dyable
 
