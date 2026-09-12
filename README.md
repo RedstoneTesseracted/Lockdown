@@ -87,12 +87,13 @@ Items not covered under the GameTest system:
     * Balancing
         * Require redstone energy cells to fire?
 * Air defense cannon unit tests:
-    * Requires 3x3 space (blocks + entities)
+    * ~~Platform obstructed if block or entity within 3x3 space~~
     * Breaks if central block is missing
     * Drops platform, gantry, and barrel
     * Mounting gantry onto platform
     * Mounting barrel onto gantry
     * Gantry cannot be mounted if one is already present
+    * Explodes if hidden bee is killed
 * Make turrets dyable
 
 * Optimize drone AI

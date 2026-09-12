@@ -19,8 +19,8 @@
 ###### END INFO BLOCK ######
 
 # Prevent overlap with an existing block/entity
-execute unless predicate lockdown:platform_enough_space run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", dropper: "lockdown:drop/cannon_platform"}
-execute align xyz positioned ~-1 ~ ~-1 if entity @e[dx=1.1, dy=0.1, dz=1.1,type=#lockdown:blocks_nonsolid_placement,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", dropper: "lockdown:drop/cannon_platform"}
+execute unless predicate lockdown:platform_enough_space run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", dropper: "lockdown:drop/laser_cannon"}
+execute align xyz positioned ~-1 ~ ~-1 if entity @e[dx=1.1, dy=0.1, dz=1.1,type=#lockdown:blocks_nonsolid_placement,tag=!lockdown.placer] run return run function lockdown:place_block/reject/generic {msg: "lockdown.placer.reject.not_enough_space", dropper: "lockdown:drop/laser_cannon"}
 
 # Clear replaceable blocks
 execute if predicate lockdown:platform_enough_space run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air destroy 
