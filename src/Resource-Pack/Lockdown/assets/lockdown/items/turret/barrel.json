@@ -12,42 +12,114 @@
                 "when": "up",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/up"
+                    "model": "lockdown:item/turret/barrel/up",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             },
             {
                 "when": "down",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/down"
+                    "model": "lockdown:item/turret/barrel/down",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             },
             {
                 "when": "north",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/north"
+                    "model": "lockdown:item/turret/barrel/north",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             },
             {
                 "when": "south",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/south"
+                    "model": "lockdown:item/turret/barrel/south",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             },
             {
                 "when": "east",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/east"
+                    "model": "lockdown:item/turret/barrel/east",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             },
             {
                 "when": "west",
                 "model": {
                     "type": "minecraft:model",
-                    "model": "lockdown:item/turret/barrel/west"
+                    "model": "lockdown:item/turret/barrel/west",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
                 }
             }
         ]

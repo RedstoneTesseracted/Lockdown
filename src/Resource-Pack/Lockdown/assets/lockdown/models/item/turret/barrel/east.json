@@ -1,8 +1,10 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"texture_size": [48, 48],
 	"textures": {
 		"0": "lockdown:block/turret",
+		"1": "lockdown:block/turret_overlay",
 		"particle": "lockdown:block/turret"
 	},
 	"elements": [
@@ -12,13 +14,23 @@
 			"to": [10, 11, 10],
 			"rotation": {"angle": 0, "axis": "z", "origin": [8, 8, 8]},
 			"faces": {
-				"north": {"uv": [0, 8, 2, 9.33333], "rotation": 90, "texture": "#0"},
-				"east": {"uv": [9.33333, 1.33333, 8, 3.33333], "texture": "#0"},
-				"south": {"uv": [8, 0, 10, 1.33333], "rotation": 270, "texture": "#0"},
-				"west": {"uv": [3.33333, 10, 2, 8], "rotation": 180, "texture": "#0"},
-				"up": {"uv": [8.66667, 7.33333, 10, 8.66667], "rotation": 270, "texture": "#0"},
-				"down": {"uv": [8.66667, 6, 10, 7.33333], "rotation": 270, "texture": "#0"}
+				"north": {"uv": [0, 8, 2, 9.33333], "rotation": 90, "texture": "#0", "tintindex": 0},
+				"east": {"uv": [9.33333, 1.33333, 8, 3.33333], "texture": "#0", "tintindex": 0},
+				"south": {"uv": [8, 0, 10, 1.33333], "rotation": 270, "texture": "#0", "tintindex": 0},
+				"west": {"uv": [3.33333, 10, 2, 8], "rotation": 180, "texture": "#0", "tintindex": 0},
+				"up": {"uv": [8.66667, 7.33333, 10, 8.66667], "rotation": 270, "texture": "#0", "tintindex": 0},
+				"down": {"uv": [8.66667, 6, 10, 7.33333], "rotation": 270, "texture": "#0", "tintindex": 0}
 			}
+		},
+		{
+			"name": "head_core_overlay",
+			"from": [7, 5, 6],
+			"to": [9, 6, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [2, 8, 3, 10], "rotation": 90, "texture": "#1"}
+			},
+            "light_emission": 15
 		},
 		{
 			"name": "joint1",
@@ -26,12 +38,12 @@
 			"to": [9, 14, 9],
 			"rotation": {"angle": 0, "axis": "z", "origin": [8, 8, 8]},
 			"faces": {
-				"north": {"uv": [6, 5.33333, 10, 6], "rotation": 90, "texture": "#0"},
-				"east": {"uv": [4.66667, 8.66667, 4, 12.66667], "texture": "#0"},
-				"south": {"uv": [8, 3.33333, 12, 4], "rotation": 270, "texture": "#0"},
-				"west": {"uv": [4, 12.66667, 3.33333, 8.66667], "rotation": 180, "texture": "#0"},
-				"up": {"uv": [10.33333, 6.66667, 11, 7.33333], "rotation": 270, "texture": "#0"},
-				"down": {"uv": [1.33333, 9.33333, 2, 10], "rotation": 270, "texture": "#0"}
+				"north": {"uv": [6, 5.33333, 10, 6], "rotation": 90, "texture": "#0", "tintindex": 0},
+				"east": {"uv": [4.66667, 8.66667, 4, 12.66667], "texture": "#0", "tintindex": 0},
+				"south": {"uv": [8, 3.33333, 12, 4], "rotation": 270, "texture": "#0", "tintindex": 0},
+				"west": {"uv": [4, 12.66667, 3.33333, 8.66667], "rotation": 180, "texture": "#0", "tintindex": 0},
+				"up": {"uv": [10.33333, 6.66667, 11, 7.33333], "rotation": 270, "texture": "#0", "tintindex": 0},
+				"down": {"uv": [1.33333, 9.33333, 2, 10], "rotation": 270, "texture": "#0", "tintindex": 0}
 			}
 		},
 		{
@@ -63,6 +75,19 @@
 			}
 		},
 		{
+			"name": "pewpew_overlay",
+			"from": [7, 7, 2],
+			"to": [9, 9, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [0, 10, 1, 12], "texture": "#1", "tintindex": 1},
+				"west": {"uv": [0, 8, 1, 10], "rotation": 270, "texture": "#1", "tintindex": 1},
+				"up": {"uv": [1, 8, 2, 10], "rotation": 270, "texture": "#1", "tintindex": 1},
+				"down": {"uv": [1, 10, 2, 12], "rotation": 270, "texture": "#1", "tintindex": 1}
+			},
+            "light_emission": 15
+		},
+		{
 			"name": "counterweight",
 			"from": [6, 6, 11],
 			"to": [10, 10, 14],
@@ -75,6 +100,21 @@
 				"up": {"uv": [1.33333, 10, 2.33333, 11.33333], "rotation": 270, "texture": "#0"},
 				"down": {"uv": [2.33333, 6.66667, 3.33333, 8], "rotation": 270, "texture": "#0"}
 			}
+		},
+		{
+			"name": "counterweight_overlay",
+			"from": [6, 6, 11],
+			"to": [10, 10, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "rotation": 90, "texture": "#1", "tintindex": 1},
+				"east": {"uv": [7, 6, 11, 3], "rotation": 90, "texture": "#1", "tintindex": 1},
+				"south": {"uv": [0, 4, 4, 8], "rotation": 270, "texture": "#1", "tintindex": 1},
+				"west": {"uv": [7, 8, 4, 4], "rotation": 180, "texture": "#1", "tintindex": 1},
+				"up": {"uv": [4, 0, 7, 4], "rotation": 270, "texture": "#1", "tintindex": 1},
+				"down": {"uv": [7, 0, 11, 3], "rotation": 180, "texture": "#1", "tintindex": 1}
+			},
+            "light_emission": 15
 		},
 		{
 			"name": "eye",
@@ -100,7 +140,7 @@
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [30, 225, 0],
+			"rotation": [30, -135, 0],
 			"translation": [-1.5, 0, 0],
 			"scale": [0.875, 0.875, 0.875]
 		},
