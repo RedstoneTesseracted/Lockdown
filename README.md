@@ -44,9 +44,10 @@ A list of all mechanics that should be tested using the [GameTest](https://minec
 | Turret targeting and firing w/ codes           |      ✅      |
 | Chest key                                      |      ❓      |
 | Encoder dispensing prevention                  |      ✅      |
-| Berserker drones                               |      ❌      |
+| Berserker drones                               |      ✅      |
 | Spray paint                                    |      ❌      |
-| Laser Blaster                                  |      ❓      |
+| Laser blaster                                  |      ❓      |
+| Air defense cannon                             |      ❌      |
 
 > **Note**: Tests marked with "❓" involve a feature that *requires* player interaction.  As such, I'm not yet sure how to implement automated tests for them.
 
@@ -66,11 +67,11 @@ Items not covered under the GameTest system:
 
 # Near-Term TODO:
 
-* Berserker drone unit tests:
-    * Does not attack hostile mobs
-    * Attacks friendly mobs
-    * Does not attack other drones with same channel
-    * Attacks other drones with difference channel
+* ~~Berserker drone unit tests~~:
+    * ~~Does not attack hostile mobs~~
+    * ~~Attacks friendly mobs~~
+    * ~~Does not attack other drones with same channel~~
+    * ~~Attacks other drones with different channel~~
 * Air defense cannon
     * ~~Charging animation~~
     * ~~Firing animation~~
@@ -81,7 +82,10 @@ Items not covered under the GameTest system:
     * ~~Firing controls~~
     * Add toggle for terrain destruction
     * Tweak model so it doesn't block line of sight
+    * Tweak sound effects
+    * ~~Fix berserker drones targeting cannons~~
     * Balancing
+        * Require redstone energy cells to fire?
 * Air defense cannon unit tests:
     * Requires 3x3 space (blocks + entities)
     * Breaks if central block is missing
@@ -89,6 +93,7 @@ Items not covered under the GameTest system:
     * Mounting gantry onto platform
     * Mounting barrel onto gantry
     * Gantry cannot be mounted if one is already present
+* Make turrets dyable
 
 * Optimize drone AI
 * Auto-generate device-placing functions for use in unit tests
@@ -98,7 +103,6 @@ Items not covered under the GameTest system:
 
 * Give drones the option to follow/guard
 * ~~Make drones dyeable~~
-* Make turrets dyable
 * ❌Some way to configure drones
 * ~~Laser blaster + redstone energy cells~~
 * ~~Suspicious thumb drive~~
