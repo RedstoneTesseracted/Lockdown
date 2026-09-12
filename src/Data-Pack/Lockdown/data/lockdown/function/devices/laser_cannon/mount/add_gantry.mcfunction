@@ -1,5 +1,8 @@
 # This function mounts a gantry onto the cannon base that called it
 
+# This *SHOULDN'T* ever run, since gantry_callback should catch attempts to double-mount a gantry.  But... better safe than sorry
+execute if entity @s[tag=lockdown.laser_cannon.has_gantry] run return fail
+
 # Summon and mount new item display
 execute align xyz run summon minecraft:item_display ~0.5 ~ ~0.5 {teleport_duration: 2, interpolation_duration: 2, transformation: {translation: [0.0f, 2.0f, 0.0f], left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [4.0f, 4.0f, 4.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f]}, Tags:["lockdown.block","lockdown.block.display","lockdown.block.display.new","lockdown.laser_cannon","lockdown.laser_cannon.gantry"],item:{id: "minecraft:paper",count:1b,components:{"minecraft:item_model":"lockdown:laser_cannon/gantry","minecraft:custom_model_data":{strings:["idle"]}}}}
 ride @n[tag=lockdown.block.display.new,tag=lockdown.laser_cannon.gantry] mount @s
