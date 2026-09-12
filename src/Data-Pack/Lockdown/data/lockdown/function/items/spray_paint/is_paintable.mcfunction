@@ -2,4 +2,5 @@
 
 execute if entity @s[type=minecraft:item_display,tag=lockdown.drone] run return 1
 execute if entity @s[type=minecraft:item_display,tag=lockdown.laser_cannon] run return 1
+execute if entity @s[type=minecraft:item_display,tag=lockdown.turret] run return 1
 return 0
