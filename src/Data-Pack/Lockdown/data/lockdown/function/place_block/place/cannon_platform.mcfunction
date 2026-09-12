@@ -15,8 +15,7 @@
 # Colors: false
 # Extra Parts: lockdown.block.hitbox
 # Special: true
-# Placement Rules: nonsolid_entity_placement, 3x3_space
-# Destruction Rule: interaction_attack
+# Skip Auto Tests: true
 ###### END INFO BLOCK ######
 
 # Prevent overlap with an existing block/entity

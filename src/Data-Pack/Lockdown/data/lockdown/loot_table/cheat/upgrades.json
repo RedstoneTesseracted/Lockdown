@@ -26,6 +26,15 @@
                     "value": "lockdown:item/range_upgrade"
                 }
             ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:item/suspicious_thumb_drive"
+                }
+            ]
         }
     ]
 }

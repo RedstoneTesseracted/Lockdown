@@ -5,24 +5,6 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "lockdown:item/cannon_barrel"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "value": "lockdown:item/cannon_gantry"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
                     "value": "lockdown:item/key"
                 }
             ]
@@ -60,15 +42,6 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "lockdown:item/spray_paint"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "value": "lockdown:item/suspicious_thumb_drive"
                 }
             ]
         }

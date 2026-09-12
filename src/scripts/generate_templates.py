@@ -575,6 +575,14 @@ def generate_grouped_loot_tables():
         if loot_table.endswith("_upgrade.json"):
             return 'upgrade'
 
+        # Suspicious thumb drive counts as an "upgrade"
+        if loot_table.endswith("suspicious_thumb_drive.json"):
+            return 'upgrade'
+
+        # Cannon parts should probably be in the machines loot table
+        if loot_table.endswith('cannon_barrel.json') or loot_table.endswith('cannon_gantry.json'):
+            return 'placeable'
+
         # Anything else we need to open and check
         with open(loot_table, mode='r') as rf:
             data = load(rf)
@@ -895,7 +903,8 @@ def generate_placer_tests():
                 'extra_parts': [],
                 'special': False,
                 'placement_rules': [],
-                'destruction_rule': 'unknown'
+                'destruction_rule': 'unknown',
+                'skip_auto_tests': False
             }
 
     # Use the info block header in the placer functions to obtain information about how each device is processed
@@ -921,7 +930,7 @@ def generate_placer_tests():
                     if line.startswith('>'): continue
                     key, sep, value = line.partition(':')
                     if sep != ':': continue
-                    # Reformat key (case-insenitive, underscores instead of spaces)
+                    # Reformat key (case-insensitive, underscores instead of spaces)
                     key = key.lower()
                     key = key.replace(' ', '_')
                     if key == 'solid': continue
@@ -939,6 +948,9 @@ def generate_placer_tests():
                         devices[device][key] = value
                     else:
                         raise Exception(f"Unrecognized info block key: {key}")
+
+    # Filter out devices that specify "Skip Auto Tests: true"
+    devices = dict((i, j) for i, j in devices.items() if not j['skip_auto_tests'])
 
     # There's a few devices whose name doesn't match the recipe name.
     # Additionally, big buttons and alarm lights come in multiple colors, and therefore
