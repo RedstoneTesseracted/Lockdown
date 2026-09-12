@@ -86,14 +86,14 @@ Items not covered under the GameTest system:
     * ~~Fix berserker drones targeting cannons~~
     * Balancing
         * Require redstone energy cells to fire?
-* Air defense cannon unit tests:
+* ~~Air defense cannon unit tests~~:
     * ~~Platform obstructed if block or entity within 3x3 space~~
     * ~~Breaks if central block is missing~~
     * ~~Drops platform, gantry, and barrel~~
     * ~~Mounting gantry onto platform~~
     * ~~Mounting barrel onto gantry~~
     * ~~Explodes if hidden bee is killed~~
-* Make turrets dyable
+* ~~Make turrets dyable~~
 
 * Optimize drone AI
 * Auto-generate device-placing functions for use in unit tests
