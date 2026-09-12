@@ -8,7 +8,7 @@ import pytest
 from json import load
 import os
 from os import path
-from common import recipes_dir, test_instance_dir, data_pack_dir, recursive_key_find, resolve_structure_path, resolve_loot_table_path, resolve_item_modifier_path
+from common import recipes_dir, uncraftables_dir, test_instance_dir, data_pack_dir, recursive_key_find, resolve_structure_path, resolve_loot_table_path, resolve_item_modifier_path
 import nbtlib
 import re
 
@@ -31,6 +31,20 @@ def test_items_unchanged_test_is_complete():
             for value in recursive_key_find(components, 'lockdown_data'):
                 if 'name' not in value: continue
                 custom_items.add(value['name'])
+
+    # Look for additional uncraftable items
+    for dirpath, dirnames, filenames in os.walk(uncraftables_dir):
+        for file in filenames:
+            if path.splitext(file)[-1] != '.json': continue
+            with open(path.join(dirpath, file), mode='r') as rf:
+                loot_table = load(rf)
+            components = loot_table['pools'][0]['entries'][0]['functions'][0].get('components')
+            
+            if components is None: continue
+            for value in recursive_key_find(components, 'lockdown_data'):
+                if 'name' not in value: continue
+                custom_items.add(value['name'])
+
 
     # Obtain the path to the structure file using the test instance
     with open(path.join(test_instance_dir, 'misc', 'items_unchanged.json'), mode='r') as rf:

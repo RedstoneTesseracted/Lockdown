@@ -12,6 +12,7 @@ data_pack_dir = path.join('src', 'Data-Pack', 'Lockdown')
 recipes_dir = path.join(data_pack_dir, 'data', 'lockdown', 'recipe')
 item_modifiers_dir = path.join(data_pack_dir, 'data', 'lockdown', 'item_modifier')
 test_instance_dir = path.join(data_pack_dir, 'data', 'lockdown', 'test_instance')
+uncraftables_dir = path.join(data_pack_dir, 'data', 'lockdown', 'loot_table', 'uncraftable')
 
 resource_pack_dir = path.join('src', 'Resource-Pack', 'Lockdown')
 lang_dir = path.join(resource_pack_dir, 'assets', 'minecraft', 'lang')

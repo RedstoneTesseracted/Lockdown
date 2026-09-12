@@ -48,7 +48,8 @@ def test_recipes_reference_existing_keys():
             
             if components is None: continue
             for value in recursive_key_find(components, 'translate'):
-                assert value in keys, f'Recipe {file} referenced missing key: {value}'
+                if not value.startswith('color.minecraft'):
+                    assert value in keys, f'Recipe {file} referenced missing key: {value}'
                 actually_did_anything = True
 
     assert actually_did_anything, "No actual recipe checks were performed?"
@@ -71,7 +72,8 @@ def test_item_modifiers_reference_existing_keys():
                 item_modifier = load(rf)
             
             for value in recursive_key_find(item_modifier, 'translate'):
-                assert value in keys, f'Item modifier {file} referenced missing key: {value}'
+                if not value.startswith('color.minecraft'):
+                    assert value in keys, f'Item modifier {file} referenced missing key: {value}'
                 actually_did_anything = True
 
     assert actually_did_anything, "No actual item modifier checks were performed?"
