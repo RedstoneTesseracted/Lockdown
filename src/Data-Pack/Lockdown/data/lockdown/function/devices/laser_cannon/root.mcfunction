@@ -4,7 +4,7 @@ execute if function lockdown:devices/laser_cannon/has_passenger run function loc
 execute if score @s lockdown.cannon.fire_state matches 1.. run function lockdown:devices/laser_cannon/fire/update
 
 # A missing block underneath the cannon causes it to break
-execute if block ~ ~-1 ~ #minecraft:air run function lockdown:devices/laser_cannon/destroy
+execute if block ~ ~-1 ~ #minecraft:air run return run function lockdown:devices/laser_cannon/destroy
 
 # Missing the damage detection armor stand causes the cannon to explode.
 # This only applies when the laser cannon has a gantry
