@@ -13,7 +13,7 @@ execute align xyz run summon minecraft:bee ~0.5 ~ ~0.5 {NoGravity:1b, NoAI:1b, S
 attribute @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.health_hitbox] minecraft:scale base set 0.5
 ride @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.health_hitbox] mount @s
 
-# Manually some functions from the placer logic
+# Manually run some functions from the placer logic
 function lockdown:place_block/place/common_version
 function lockdown:place_block/place/common_new_clear
 

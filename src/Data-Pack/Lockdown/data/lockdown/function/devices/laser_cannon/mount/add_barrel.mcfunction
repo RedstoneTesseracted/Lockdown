@@ -12,7 +12,7 @@ ride @n[tag=lockdown.block.hitbox.new,tag=lockdown.laser_cannon.seat] mount @s
 execute on passengers if entity @s[tag=lockdown.laser_cannon.base,tag=lockdown.block.hitbox] run data modify entity @s height set from entity @s width
 execute on passengers if entity @s[tag=lockdown.laser_cannon.base,tag=lockdown.block.hitbox] run tag @s add lockdown.behavior.rideable
 
-# Manually some functions from the placer logic
+# Manually run some functions from the placer logic
 function lockdown:place_block/place/common_version
 function lockdown:place_block/place/common_new_clear
 
