@@ -1,0 +1,72 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:laser_cannon/base"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.cannon_parts.title",
+            "fallback": "Some Assembly Required"
+        },
+        "description": {
+            "translate": "advancement.lockdown.cannon_parts.description",
+            "fallback": "Craft a cannon baseplate, gantry, and barrel.  Then, place them down to assemble the air defense cannon."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/root",
+    "criteria": {
+        "cannon_platform": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "cannon_platform"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "cannon_gantry": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "cannon_gantry"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "cannon_barrel": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "cannon_barrel"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -29,7 +29,6 @@ in_file = path.join(path.split(__file__)[0],
 with open(in_file, mode='r') as rf:
     full_model = json.load(rf)
 
-
 # Separate out model parts
 def recursive_get_indices(group):
     """
@@ -90,7 +89,7 @@ def get_group(name, model):
 
     # Create new model with other elements/groups filtered out
     new_model = deepcopy(model)
-    new_model['elements'] = new_elements
+    new_model['elements'] = deepcopy(new_elements)
     new_model['groups'] = [i for i in new_model['groups'] if i['name'] == name]
     for group in new_model['groups']:
         recursive_map_indices(group, index_map)
@@ -275,6 +274,7 @@ with open(path.join(out_dir, 'cannon.json'), mode='w') as wf:
 with open(path.join(out_dir, 'arcs.json'), mode='w') as wf:
     json.dump(arcs_model, wf, indent=4)
 
-
-
+# We also save the fully-assembled cannon model for the advancement preview
+with open(path.join(out_dir, 'preview.json'), mode='w') as wf:
+    json.dump(full_model, wf, indent=4)
 

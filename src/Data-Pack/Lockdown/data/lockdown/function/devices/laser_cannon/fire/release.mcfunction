@@ -1,6 +1,9 @@
 # This function runs whenever the pilot fires the cannon.
 # This is run BY and AT the root cannon entity
 
+# Grant advancement to the pilot
+execute on passengers if entity @s[tag=lockdown.laser_cannon.seat] on passengers run advancement grant @s only lockdown:lockdown/cannon_fire
+
 # Visuals: update model and play sound effects
 execute on passengers if entity @s[tag=lockdown.laser_cannon.gantry] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "idle"
 execute on passengers if entity @s[tag=lockdown.laser_cannon.barrel] run data modify entity @s item.components."minecraft:custom_model_data".strings[0] set value "idle"

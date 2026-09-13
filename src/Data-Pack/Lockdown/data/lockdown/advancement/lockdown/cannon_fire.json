@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:laser_cannon/preview"
+            }
+        },
+        "frame": "challenge",
+        "title": {
+            "translate": "advancement.lockdown.cannon_fire.title",
+            "fallback": "BFG 900"
+        },
+        "description": {
+            "translate": "advancement.lockdown.cannon_fire.description",
+            "fallback": "Fire an air defense cannon"
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/cannon_parts",
+    "criteria": {
+        "cannon_barrel": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
