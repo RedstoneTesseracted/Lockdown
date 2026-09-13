@@ -94,6 +94,8 @@ Items not covered under the GameTest system:
     * ~~Mounting barrel onto gantry~~
     * ~~Explodes if hidden bee is killed~~
 * ~~Make turrets dyable~~
+* ~~Make the "drone attacks X" game tests more reliable~~
+* Tweak cannon advancements
 
 * Optimize drone AI
 * Auto-generate device-placing functions for use in unit tests
