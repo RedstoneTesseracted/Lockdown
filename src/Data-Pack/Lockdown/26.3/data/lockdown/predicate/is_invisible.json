@@ -1,0 +1,100 @@
+{
+    "terms": [
+        {
+            "entity": "this",
+            "predicate": {
+                "effects": {
+                    "minecraft:invisibility": {}
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "term": {
+                "terms": [
+                    {
+                        "entity": "this",
+                        "predicate": {
+                            "slots": {
+                                "armor.*": {
+                                    "count": {
+                                        "min": 1
+                                    }
+                                }
+                            }
+                        },
+                        "type": "minecraft:entity_properties"
+                    },
+                    {
+                        "entity": "this",
+                        "predicate": {
+                            "slots": {
+                                "weapon.*": {
+                                    "count": {
+                                        "min": 1
+                                    }
+                                }
+                            }
+                        },
+                        "type": "minecraft:entity_properties"
+                    }
+                ],
+                "type": "minecraft:any_of"
+            },
+            "type": "minecraft:inverted"
+        },
+        {
+            "terms": [
+                {
+                    "term": {
+                        "entity": "this",
+                        "predicate": {
+                            "passenger": {}
+                        },
+                        "type": "minecraft:entity_properties"
+                    },
+                    "type": "minecraft:inverted"
+                },
+                {
+                    "entity": "this",
+                    "predicate": {
+                        "passenger": {
+                            "effects": {
+                                "minecraft:invisibility": {}
+                            }
+                        }
+                    },
+                    "type": "minecraft:entity_properties"
+                }
+            ],
+            "type": "minecraft:any_of"
+        },
+        {
+            "terms": [
+                {
+                    "term": {
+                        "entity": "this",
+                        "predicate": {
+                            "vehicle": {}
+                        },
+                        "type": "minecraft:entity_properties"
+                    },
+                    "type": "minecraft:inverted"
+                },
+                {
+                    "entity": "this",
+                    "predicate": {
+                        "vehicle": {
+                            "effects": {
+                                "minecraft:invisibility": {}
+                            }
+                        }
+                    },
+                    "type": "minecraft:entity_properties"
+                }
+            ],
+            "type": "minecraft:any_of"
+        }
+    ],
+    "type": "minecraft:all_of"
+}

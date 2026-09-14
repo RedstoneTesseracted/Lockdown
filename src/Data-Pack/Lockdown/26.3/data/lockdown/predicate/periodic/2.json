@@ -1,0 +1,7 @@
+{
+    "entity": "this",
+    "predicate": {
+        "periodic_tick": 2
+    },
+    "type": "minecraft:entity_properties"
+}

@@ -1,0 +1,24 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot_on_a_stick",
+                    "modifier": [
+                        "lockdown:item/range_upgrade",
+                        {
+                            "count": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "lockdown.upgrades.range"
+                            },
+                            "type": "minecraft:set_count"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

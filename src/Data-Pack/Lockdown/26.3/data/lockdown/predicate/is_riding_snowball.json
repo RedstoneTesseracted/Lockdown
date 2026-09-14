@@ -1,0 +1,9 @@
+{
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "minecraft:entity_type": "minecraft:snowball"
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

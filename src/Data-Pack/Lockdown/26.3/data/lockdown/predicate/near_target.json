@@ -1,0 +1,16 @@
+{
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "targeted_entity": {
+                "distance": {
+                    "absolute": {
+                        "min": 0,
+                        "max": 3
+                    }
+                }
+            }
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

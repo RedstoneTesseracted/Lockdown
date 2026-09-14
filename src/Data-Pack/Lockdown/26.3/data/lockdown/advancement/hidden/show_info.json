@@ -1,0 +1,22 @@
+{
+    "parent": "lockdown:hidden/root",
+    "criteria": {
+        "punch_hitbox": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "entity": "this",
+                    "scores": {
+                        "lockdown.show_info": {
+                            "min": 1
+                        }
+                    },
+                    "type": "minecraft:entity_scores"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:show_info"
+    }
+}

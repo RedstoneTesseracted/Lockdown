@@ -1,0 +1,20 @@
+{
+    "parent": "lockdown:hidden/root",
+    "criteria": {
+        "keycard": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "terms": [
+                        "lockdown:keycard_mainhand",
+                        "lockdown:keycard_offhand"
+                    ],
+                    "type": "minecraft:any_of"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:items/keycard/hold_callback"
+    }
+}

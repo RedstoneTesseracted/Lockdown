@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.big_button_purple",
+                    "fallback": "Big Purple Button",
+                    "color": "dark_purple"
+                },
+                "minecraft:item_model": "lockdown:button/purple_button_off",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "purple_big_button",
+                        "group": "buttons",
+                        "encodable": true
+                    }
+                },
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.channel.no_channel",
+                        "color": "red",
+                        "italic": false
+                    }
+                ],
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "data": {
+                        "lockdown_data": {
+                            "channel": 0
+                        }
+                    },
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.big_button",
+                        "lockdown.color.purple"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

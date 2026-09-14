@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.player_detector"
+                },
+                "minecraft:item_model": "lockdown:machine/player_detector_off",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "player_detector"
+                    }
+                },
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.player_detector"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

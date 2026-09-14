@@ -1,0 +1,17 @@
+{
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "offhand": {
+                "predicates": {
+                    "minecraft:custom_data": {
+                        "lockdown_data": {
+                            "group": "keycards"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

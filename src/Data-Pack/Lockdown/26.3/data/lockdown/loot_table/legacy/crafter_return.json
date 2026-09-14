@@ -1,0 +1,49 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_ingot",
+                    "modifier": [
+                        {
+                            "count": 4,
+                            "type": "minecraft:set_count"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_bars",
+                    "modifier": [
+                        {
+                            "count": 4,
+                            "type": "minecraft:set_count"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:crafting_table",
+                    "modifier": [
+                        {
+                            "count": 1,
+                            "type": "minecraft:set_count"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

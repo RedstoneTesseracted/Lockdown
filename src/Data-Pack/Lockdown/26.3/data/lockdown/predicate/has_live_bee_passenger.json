@@ -1,0 +1,26 @@
+{
+    "terms": [
+        {
+            "entity": "this",
+            "predicate": {
+                "passenger": {
+                    "minecraft:entity_type": "minecraft:bee"
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "term": {
+                "entity": "this",
+                "predicate": {
+                    "passenger": {
+                        "nbt": "{Health:0.0f}"
+                    }
+                },
+                "type": "minecraft:entity_properties"
+            },
+            "type": "minecraft:inverted"
+        }
+    ],
+    "type": "minecraft:all_of"
+}

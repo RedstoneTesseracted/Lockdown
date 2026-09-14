@@ -64,6 +64,8 @@ Items not covered under the GameTest system:
 
 # Known Bugs
 
+* Drones don't target players properly after entering berserker mode
+
 
 # Near-Term TODO:
 
@@ -97,18 +99,10 @@ Items not covered under the GameTest system:
 * ~~Make the "drone attacks X" game tests more reliable~~
 * ~~Tweak cannon advancements~~
 * Make suspicious thumb drive obtainable
+* ~~Test in 26.3~~
 
-* Optimize drone AI
-* Auto-generate device-placing functions for use in unit tests
 * Make turrets remember approved entities similar to drones?
 
-# Future Plans:
-
-* Give drones the option to follow/guard
-* ~~Make drones dyeable~~
-* ❌Some way to configure drones
-* ~~Laser blaster + redstone energy cells~~
-* ~~Suspicious thumb drive~~
 
 # Version Support
 

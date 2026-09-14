@@ -1,0 +1,16 @@
+{
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "targeted_entity": {
+                "minecraft:type_specific/player": {
+                    "gamemode": [
+                        "creative",
+                        "spectator"
+                    ]
+                }
+            }
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

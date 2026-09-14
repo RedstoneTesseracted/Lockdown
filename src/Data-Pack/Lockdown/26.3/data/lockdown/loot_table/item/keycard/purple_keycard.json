@@ -1,0 +1,16 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "modifier": [
+                        "lockdown:item/keycard/purple_keycard"
+                    ]
+                }
+            ]
+        }
+    ]
+}

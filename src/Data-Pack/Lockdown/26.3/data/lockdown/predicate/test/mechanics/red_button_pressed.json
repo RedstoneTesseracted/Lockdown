@@ -1,0 +1,7 @@
+{
+    "entity": "this",
+    "predicate": {
+        "nbt": "{item:{components:{\"minecraft:custom_model_data\": {strings: [\"red\"], flags: [1b]}, \"minecraft:item_model\": \"lockdown:button/button\"}}}"
+    },
+    "type": "minecraft:entity_properties"
+}

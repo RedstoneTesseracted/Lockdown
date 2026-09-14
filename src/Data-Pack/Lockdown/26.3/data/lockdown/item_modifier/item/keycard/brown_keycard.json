@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.keycard_brown",
+                    "fallback": "Brown Keycard"
+                },
+                "minecraft:item_model": "lockdown:keycard",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "brown_keycard",
+                        "group": "keycards",
+                        "encodable": true
+                    }
+                },
+                "minecraft:max_stack_size": 1,
+                "minecraft:rarity": "rare",
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.code.no_code",
+                        "color": "red",
+                        "italic": false
+                    }
+                ],
+                "minecraft:dyed_color": 9069126,
+                "minecraft:tooltip_display": {
+                    "hidden_components": [
+                        "minecraft:dyed_color"
+                    ]
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:paper",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

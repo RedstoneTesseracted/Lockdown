@@ -1,0 +1,39 @@
+{
+    "terms": [
+        {
+            "entity": "this",
+            "predicate": {
+                "flags": {
+                    "is_sprinting": true
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "entity": "this",
+            "predicate": {
+                "flags": {
+                    "is_on_fire": true
+                },
+                "movement": {
+                    "speed": {
+                        "min": 2.0
+                    }
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "entity": "this",
+            "predicate": {
+                "movement": {
+                    "speed": {
+                        "min": 4.0
+                    }
+                }
+            },
+            "type": "minecraft:entity_properties"
+        }
+    ],
+    "type": "minecraft:any_of"
+}

@@ -1,0 +1,47 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "player": {
+                    "term": {
+                        "entity": "this",
+                        "predicate": {
+                            "minecraft:type_specific/player": {
+                                "gamemode": [
+                                    "creative"
+                                ]
+                            },
+                            "equipment": {
+                                "mainhand": {
+                                    "items": "#minecraft:swords"
+                                }
+                            }
+                        },
+                        "type": "minecraft:entity_properties"
+                    },
+                    "type": "minecraft:inverted"
+                },
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {
+                            "type": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "all_of": [
+                                    "lockdown.behavior.attack_to_destroy",
+                                    "lockdown.block.hitbox"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:devices/hit_destroy_callback"
+    }
+}

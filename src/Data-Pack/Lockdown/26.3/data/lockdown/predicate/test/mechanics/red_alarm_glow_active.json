@@ -1,0 +1,9 @@
+{
+    "entity": "this",
+    "predicate": {
+        "passenger": {
+            "nbt": "{item:{components:{\"minecraft:custom_model_data\":{strings:[\"red\"],flags:[1b]},\"minecraft:item_model\": \"lockdown:glow\"}}}"
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

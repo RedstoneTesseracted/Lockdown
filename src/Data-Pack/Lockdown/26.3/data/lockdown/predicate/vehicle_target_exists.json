@@ -1,0 +1,9 @@
+{
+    "entity": "this",
+    "predicate": {
+        "vehicle": {
+            "targeted_entity": {}
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

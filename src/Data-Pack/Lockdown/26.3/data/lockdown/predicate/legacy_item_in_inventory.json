@@ -1,0 +1,35 @@
+{
+    "terms": [
+        {
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "inventory.*": {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "LockdownItem": true
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "hotbar.*": {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "LockdownItem": true
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "minecraft:entity_properties"
+        }
+    ],
+    "type": "minecraft:any_of"
+}

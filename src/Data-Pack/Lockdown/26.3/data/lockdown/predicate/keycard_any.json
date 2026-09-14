@@ -1,0 +1,7 @@
+{
+    "terms": [
+        "lockdown:keycard_mainhand",
+        "lockdown:keycard_offhand"
+    ],
+    "type": "minecraft:any_of"
+}

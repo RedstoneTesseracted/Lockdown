@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.wireless_transmitter"
+                },
+                "minecraft:item_model": "lockdown:machine/transmitter_off",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "wireless_transmitter",
+                        "encodable": true
+                    }
+                },
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "data": {
+                        "lockdown_data": {
+                            "channel": 0
+                        }
+                    },
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.wireless_transmitter"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                },
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.channel.no_channel",
+                        "color": "red",
+                        "italic": false
+                    }
+                ]
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

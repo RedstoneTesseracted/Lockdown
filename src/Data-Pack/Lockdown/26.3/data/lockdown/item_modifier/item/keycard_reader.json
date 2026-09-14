@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.keycard_reader"
+                },
+                "minecraft:item_model": "lockdown:machine/keycard_reader_off",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "keycard_reader",
+                        "encodable": true
+                    }
+                },
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.code.no_code",
+                        "color": "red",
+                        "italic": false
+                    }
+                ],
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "data": {
+                        "lockdown_data": {
+                            "channel": 0
+                        }
+                    },
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.keycard_reader"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

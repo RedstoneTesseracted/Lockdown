@@ -1,0 +1,14 @@
+{
+    "entity": "this",
+    "predicate": {
+        "targeted_entity": {
+            "distance": {
+                "absolute": {
+                    "min": 16,
+                    "max": 18
+                }
+            }
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

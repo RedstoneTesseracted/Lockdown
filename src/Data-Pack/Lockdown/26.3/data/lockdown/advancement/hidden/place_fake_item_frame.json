@@ -1,0 +1,24 @@
+{
+    "parent": "lockdown:hidden/root",
+    "criteria": {
+        "place": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": {
+                    "predicate": {
+                        "items": "minecraft:item_frame",
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {}
+                            }
+                        }
+                    },
+                    "type": "minecraft:match_tool"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lockdown:place_block/place_frame_callback"
+    }
+}

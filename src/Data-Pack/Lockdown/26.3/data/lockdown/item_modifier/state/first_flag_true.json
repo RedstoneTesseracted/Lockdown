@@ -1,0 +1,10 @@
+{
+    "flags": {
+        "values": [
+            true
+        ],
+        "mode": "replace_section",
+        "offset": 0
+    },
+    "type": "minecraft:set_custom_model_data"
+}

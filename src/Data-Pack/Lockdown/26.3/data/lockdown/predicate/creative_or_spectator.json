@@ -1,0 +1,12 @@
+{
+    "entity": "this",
+    "predicate": {
+        "minecraft:type_specific/player": {
+            "gamemode": [
+                "creative",
+                "spectator"
+            ]
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

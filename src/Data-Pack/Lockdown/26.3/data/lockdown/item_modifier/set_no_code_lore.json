@@ -1,0 +1,12 @@
+{
+    "lore": [
+        {
+            "translate": "item.lockdown.code.no_code",
+            "color": "red",
+            "italic": false
+        }
+    ],
+    "mode": "replace_section",
+    "offset": 0,
+    "type": "minecraft:set_lore"
+}

@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.cannon_barrel"
+                },
+                "minecraft:item_model": "lockdown:laser_cannon/cannon",
+                "minecraft:rarity": "common",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "cannon_barrel"
+                    }
+                },
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.cannon_barrel.hint",
+                        "color": "gray",
+                        "italic": false
+                    }
+                ],
+                "minecraft:max_stack_size": 8,
+                "!minecraft:tool": {},
+                "!minecraft:damage": {},
+                "!minecraft:max_damage": {},
+                "!minecraft:enchantable": {},
+                "!minecraft:repairable": {},
+                "!minecraft:repair_cost": {},
+                "!minecraft:attribute_modifiers": {}
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:carrot_on_a_stick",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

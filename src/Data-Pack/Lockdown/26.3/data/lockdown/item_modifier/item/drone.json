@@ -1,0 +1,52 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.drone"
+                },
+                "minecraft:item_model": "lockdown:drone/normal",
+                "minecraft:rarity": "uncommon",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "drone",
+                        "encodable": true
+                    }
+                },
+                "minecraft:lore": [
+                    {
+                        "translate": "item.lockdown.code.no_code",
+                        "color": "red",
+                        "italic": false
+                    },
+                    {
+                        "translate": "item.lockdown.turret.mob_hint",
+                        "color": "green",
+                        "italic": false
+                    }
+                ],
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "data": {
+                        "lockdown_data": {
+                            "channel": 0
+                        }
+                    },
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.drone"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

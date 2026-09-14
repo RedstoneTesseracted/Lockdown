@@ -1,0 +1,16 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "modifier": [
+                        "lockdown:item/button/orange_button"
+                    ]
+                }
+            ]
+        }
+    ]
+}

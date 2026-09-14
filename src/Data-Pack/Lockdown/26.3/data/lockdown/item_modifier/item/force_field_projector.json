@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.force_field_projector"
+                },
+                "minecraft:item_model": "lockdown:machine/force_field_projector_off",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "force_field_projector"
+                    }
+                },
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.force_field_projector"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                },
+                "minecraft:rarity": "rare"
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}

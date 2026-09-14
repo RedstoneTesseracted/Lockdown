@@ -1,0 +1,28 @@
+{
+    "terms": [
+        {
+            "entity": "this",
+            "predicate": {
+                "minecraft:type_specific/player": {
+                    "gamemode": [
+                        "survival",
+                        "adventure"
+                    ]
+                }
+            },
+            "type": "minecraft:entity_properties"
+        },
+        {
+            "entity": "this",
+            "predicate": {
+                "minecraft:entity_tags": {
+                    "any_of": [
+                        "lockdown.behavior.code_hostile"
+                    ]
+                }
+            },
+            "type": "minecraft:entity_properties"
+        }
+    ],
+    "type": "minecraft:any_of"
+}

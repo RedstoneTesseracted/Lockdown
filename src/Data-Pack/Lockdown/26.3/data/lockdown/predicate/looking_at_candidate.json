@@ -1,0 +1,15 @@
+{
+    "entity": "this",
+    "predicate": {
+        "minecraft:type_specific/player": {
+            "looking_at": {
+                "minecraft:entity_tags": {
+                    "any_of": [
+                        "lockdown.candidate.current"
+                    ]
+                }
+            }
+        }
+    },
+    "type": "minecraft:entity_properties"
+}

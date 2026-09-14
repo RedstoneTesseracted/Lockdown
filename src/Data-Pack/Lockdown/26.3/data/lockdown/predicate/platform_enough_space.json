@@ -1,0 +1,95 @@
+{
+    "terms": [
+        {
+            "offsetX": -1,
+            "offsetZ": -1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": -1,
+            "offsetZ": 0,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": -1,
+            "offsetZ": 1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 0,
+            "offsetZ": -1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 0,
+            "offsetZ": 1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 1,
+            "offsetZ": -1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 1,
+            "offsetZ": 0,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        },
+        {
+            "offsetX": 1,
+            "offsetZ": 1,
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            },
+            "type": "minecraft:location_check"
+        }
+    ],
+    "type": "minecraft:all_of"
+}

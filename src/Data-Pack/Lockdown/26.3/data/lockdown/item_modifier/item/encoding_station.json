@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "components": {
+                "minecraft:item_name": {
+                    "translate": "item.lockdown.encoding_station"
+                },
+                "minecraft:item_model": "lockdown:machine/encoding_station",
+                "minecraft:custom_data": {
+                    "lockdown_data": {
+                        "name": "encoding_station"
+                    }
+                },
+                "minecraft:entity_data": {
+                    "id": "minecraft:item_frame",
+                    "Tags": [
+                        "lockdown.placer",
+                        "lockdown.placer.encoder"
+                    ],
+                    "Invisible": true,
+                    "CustomName": "If you can read this, something has gone wrong",
+                    "CustomNameVisible": true
+                }
+            },
+            "type": "minecraft:set_components"
+        },
+        {
+            "item": "minecraft:item_frame",
+            "type": "minecraft:set_item"
+        }
+    ]
+}
