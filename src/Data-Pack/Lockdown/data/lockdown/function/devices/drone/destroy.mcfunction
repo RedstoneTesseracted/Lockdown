@@ -9,7 +9,8 @@ execute on vehicle run data modify entity @s[type=minecraft:bee] DeathTime set v
 
 # Spawn the dropped item
 scoreboard players operation lockdown.channel lockdown.local = @s lockdown.channel
-function lockdown:drop/drone
+execute unless entity @s[tag=lockdown.behavior.fragile] run function lockdown:drop/drone
+execute if entity @s[tag=lockdown.behavior.fragile] run function lockdown:drop/drone_fragile
 
 # Common block removal functionality
 function lockdown:devices/common_destroy

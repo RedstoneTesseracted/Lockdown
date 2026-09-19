@@ -3,7 +3,8 @@
 
 # Drop the item
 scoreboard players operation lockdown.channel lockdown.local = @s lockdown.channel
-function lockdown:drop/turret
+execute unless entity @s[tag=lockdown.behavior.fragile] run function lockdown:drop/turret
+execute if entity @s[tag=lockdown.behavior.fragile] run function lockdown:drop/turret_fragile
 
 # Team no bees
 execute on passengers run data modify entity @s[type=minecraft:bee] DeathTime set value 20s
