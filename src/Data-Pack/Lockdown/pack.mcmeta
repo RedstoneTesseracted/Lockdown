@@ -24,7 +24,7 @@
         "directory": "untested_version"
       },
       {
-        "min_format": 108,
+        "min_format": 122,
         "max_format": 1024,
         "formats": [122, 1024],
         "directory": "untested_version"
