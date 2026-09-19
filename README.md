@@ -64,8 +64,6 @@ Items not covered under the GameTest system:
 
 # Known Bugs
 
-* Drones don't target players properly after entering berserker mode
-
 
 # Near-Term TODO:
 
@@ -100,6 +98,7 @@ Items not covered under the GameTest system:
 * ~~Tweak cannon advancements~~
 * Make suspicious thumb drive obtainable
 * ~~Test in 26.3~~
+* Update wiki
 
 * Make turrets remember approved entities similar to drones?
 
