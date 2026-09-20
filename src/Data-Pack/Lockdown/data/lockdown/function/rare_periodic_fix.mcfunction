@@ -9,5 +9,8 @@ effect give @e[type=minecraft:bee,tag=lockdown.behavior.regenerates] minecraft:r
 execute as @e[type=minecraft:bee,tag=lockdown.block.hitbox] run data modify entity @s CannotEnterHiveTicks set value 2147483647
 execute as @e[type=minecraft:bee,tag=lockdown.block.hitbox] run data modify entity @s TicksSincePollination set value 2147483647
 
+# Maintain persistent arrows (used in bunkers)
+execute as @e[type=minecraft:arrow,tag=lockdown.persistent_arrow] run data modify entity @s life set value -32768s
+
 # Schedule this function to run again
 schedule function lockdown:rare_periodic_fix 0.5d replace
