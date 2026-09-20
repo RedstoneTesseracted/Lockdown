@@ -1,5 +1,6 @@
-# This function contains various fixes for unlikely problems that could conceivably happen
-# The necessity of this is questionable, but we check anyways just to be safe.
+# This function contains various fixes for unlikely problems that could conceivably happen.
+# The necessity of some of these are questionable, but we check anyways just to be safe.
+# This function runs every 20 seconds using /schedule
 
 # You shouldn't have those
 function lockdown:clear_forbidden

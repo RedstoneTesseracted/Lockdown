@@ -81,6 +81,7 @@ scoreboard players set lockdown.max_durability_upgrades lockdown.constant 3
 scoreboard players set lockdown.max_range_upgrades lockdown.constant 3
 scoreboard players set lockdown.laser_blaster.max_heat lockdown.constant 100
 execute unless score lockdown.legacy_hint lockdown.constant matches -2147483648.. run scoreboard players set lockdown.legacy_hint lockdown.constant 1
+execute unless score lockdown.block_structure_placers lockdown.constant matches -2147483648.. run scoreboard players set lockdown.block_structure_placers lockdown.constant 0
 
 # Numbers
 scoreboard objectives add lockdown.number dummy
@@ -127,6 +128,7 @@ execute if score lockdown.legacy_hint lockdown.constant matches 1 if score $ld_v
 function lockdown:periodic_fix
 function lockdown:rare_periodic_fix
 function lockdown:periodic_break_check
+function lockdown:periodic_structure_placers
 function lockdown:lazy_tick
 
 
