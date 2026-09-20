@@ -8,6 +8,6 @@
 # these special structure places in the original creative world where they were built.
 # 
 
-execute if score lockdown.block_structure_placers lockdown.local matches 1 run return 1
+execute if score lockdown.block_structure_placers lockdown.constant matches 1 run return 1
 execute as @e[tag=lockdown.placer,tag=lockdown.structure_placer] at @s run function lockdown:place_block/placer
 return 1
