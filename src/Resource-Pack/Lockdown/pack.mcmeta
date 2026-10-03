@@ -8,5 +8,15 @@
     "min_format": 46,
     "max_format": 97,
     "description": [{"text":"Lockdown: ","color":"green"},{"text":"By Redstone⁴","color":"red"}]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "min_format": 1,
+        "max_format": 69,
+        "formats": [1, 69],
+        "directory": "pre-1.21.11-cannon"
+      }
+    ]
   }
 }

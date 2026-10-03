@@ -4,6 +4,7 @@ This script splits the full laser cannon model into three separate parts.
 Author: Redstone⁴
 """
 import json
+import os
 from os import path
 from copy import deepcopy
 
@@ -277,4 +278,57 @@ with open(path.join(out_dir, 'arcs.json'), mode='w') as wf:
 # We also save the fully-assembled cannon model for the advancement preview
 with open(path.join(out_dir, 'preview.json'), mode='w') as wf:
     json.dump(full_model, wf, indent=4)
+
+
+# Generate pre-1.21.11 compatibility models
+def single_axis_rotation_compat(model):
+    """
+    Elements in models prior to 1.21.11 couldn't be rotated around more than one axis.
+    However, the laser cannon has elements that rotate around two axes, so we need to patch it in older versions
+    """
+    new_model = deepcopy(model)
+    for element in new_model['elements']:
+        rotation = element.get('rotation')
+        if rotation is None:
+            continue
+        if 'axis' in rotation:
+            continue
+        x = rotation.get('x', 0)
+        y = rotation.get('y', 0)
+        z = rotation.get('z', 0)
+        if abs(x) >= abs(y) and abs(x) >= abs(z):
+            rotation['angle'] = x
+            rotation['axis'] = 'x'
+        elif abs(y) >= abs(x) and abs(y) >= abs(z):
+            rotation['angle'] = y
+            rotation['axis'] = 'y'
+        elif abs(z) >= abs(x) and abs(z) >= abs(y):
+            rotation['angle'] = z
+            rotation['axis'] = 'z'
+        else:
+            raise Exception("This should not occur")
+        element['rotation'] = {i: j for i, j in rotation.items() if i not in ['x', 'y', 'z']}
+
+    return new_model
+
+overlay_dir = path.join(path.split(__file__)[0],
+                        path.pardir,
+                        'Resource-Pack',
+                        'Lockdown',
+                        'pre-1.21.11-cannon',
+                        'assets',
+                        'lockdown',
+                        'models',
+                        'item',
+                        'laser_cannon')
+
+os.makedirs(overlay_dir, exist_ok=True)
+
+with open(path.join(overlay_dir, 'gantry.json'), mode='w') as wf:
+    json.dump(single_axis_rotation_compat(gantry_model), wf, indent=4)
+
+with open(path.join(overlay_dir, 'preview.json'), mode='w') as wf:
+    json.dump(single_axis_rotation_compat(full_model), wf, indent=4)
+
+
 
