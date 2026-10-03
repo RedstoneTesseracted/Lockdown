@@ -98,7 +98,8 @@ Items not covered under the GameTest system:
 * ~~Tweak cannon advancements~~
 * ~~Make suspicious thumb drive obtainable in survival~~
 * ~~Add abandoned bunker structure~~
-* Add durability to laser blaster
+* ~~Add durability to laser blaster~~
+* Make redstone energy cells use copper instead
 * ~~Test in 26.3~~
 * Update wiki
 

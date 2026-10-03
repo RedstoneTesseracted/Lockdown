@@ -13,8 +13,8 @@
                     }
                 },
                 "!minecraft:tool": {},
-                "!minecraft:damage": {},
-                "!minecraft:max_damage": {},
+                "minecraft:damage": 0,
+                "minecraft:max_damage": 250,
                 "!minecraft:enchantable": {},
                 "!minecraft:repairable": {},
                 "!minecraft:repair_cost": {},

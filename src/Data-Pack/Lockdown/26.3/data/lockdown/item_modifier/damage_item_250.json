@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "damage": -0.006,
+            "add": true,
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "term": {
+                            "entity": "this",
+                            "predicate": {
+                                "minecraft:type_specific/player": {
+                                    "gamemode": [
+                                        "creative",
+                                        "spectator"
+                                    ]
+                                }
+                            },
+                            "type": "minecraft:entity_properties"
+                        },
+                        "type": "minecraft:inverted"
+                    }
+                ]
+            },
+            "type": "minecraft:set_damage"
+        }
+    ]
+}

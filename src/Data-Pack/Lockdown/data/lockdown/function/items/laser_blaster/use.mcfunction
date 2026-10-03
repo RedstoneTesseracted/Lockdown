@@ -35,6 +35,10 @@ execute store result score lockdown.uuid2 lockdown.local run data get entity @s 
 execute store result score lockdown.uuid3 lockdown.local run data get entity @s UUID[2]
 execute store result score lockdown.uuid4 lockdown.local run data get entity @s UUID[3]
 
+# Damage the held item
+item modify entity @s weapon.mainhand lockdown:damage_item_250
+execute if items entity @s[gamemode=!creative,gamemode=!spectator] weapon.mainhand *[minecraft:damage=250] run function lockdown:items/laser_blaster/break
+
 tag @s add lockdown.player.context
 execute anchored eyes positioned ^ ^-0.5 ^0.5 summon minecraft:armor_stand run function lockdown:items/laser_blaster/configure_laser
 tag @s remove lockdown.player.context

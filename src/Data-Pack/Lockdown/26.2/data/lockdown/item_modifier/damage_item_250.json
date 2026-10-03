@@ -1,0 +1,24 @@
+[
+    {
+        "function": "minecraft:set_damage",
+        "damage": -0.006,
+        "add": true,
+        "conditions": [
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:type_specific/player": {
+                            "gamemode": [
+                                "creative",
+                                "spectator"
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]
