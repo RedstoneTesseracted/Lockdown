@@ -1,0 +1,33 @@
+{
+    "name": "lockdown:bunker/side_rooms/research_lab",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/research_lab/sculk_overgrown",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/research_lab/cult",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/research_lab/anomaly",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}

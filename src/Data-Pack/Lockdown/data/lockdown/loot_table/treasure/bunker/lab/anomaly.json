@@ -1,0 +1,66 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "lockdown:treasure/bunker/misc_parts"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 1,
+                    "quality": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                            "translate": "lockdown.misc.bunker.lab_book_contents.2",
+                                            "with": [
+                                                {
+                                                    "translate": "lockdown.misc.bunker.lab_book_contents.2.word1",
+                                                    "color": "black",
+                                                    "obfuscated": false
+                                                },
+                                                {
+                                                    "translate": "lockdown.misc.bunker.lab_book_contents.2.word2",
+                                                    "color": "black",
+                                                    "obfuscated": false
+                                                },
+                                                {
+                                                    "translate": "lockdown.misc.bunker.lab_book_contents.2.word3",
+                                                    "color": "black",
+                                                    "obfuscated": false
+                                                },
+                                                {
+                                                    "translate": "lockdown.misc.bunker.lab_book_contents.2.word4",
+                                                    "color": "black",
+                                                    "obfuscated": false
+                                                }
+                                            ],
+                                            "color": "gray",
+                                            "obfuscated": true
+                                        }
+                                    ],
+                                    "title": "Research Notes",
+                                    "author": "???",
+                                    "generation": 3,
+                                    "resolved": false
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

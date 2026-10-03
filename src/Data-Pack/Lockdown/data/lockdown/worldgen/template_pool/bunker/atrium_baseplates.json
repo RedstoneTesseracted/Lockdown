@@ -1,0 +1,60 @@
+{
+    "name": "lockdown:bunker/atriums",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/1",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/2",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/3",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/4",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/5",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium_baseplates/6",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}

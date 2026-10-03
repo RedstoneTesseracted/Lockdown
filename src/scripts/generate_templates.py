@@ -30,6 +30,7 @@ from nbtlib import String, Compound
 import re
 from typing import Union
 import random
+from itertools import product
 
 
 def recursive_key_find(searchable: Union[dict, list], search_key: str) -> list:
@@ -1124,9 +1125,194 @@ def generate_recipe_giver():
 """)
         for recipe in recipes:
             wf.write(f'recipe give @s {recipe}\n')
-    
+
+
+def generate_generic_age_processor(conversions, probability):
+    """
+    Takes a list of simplified conversion rules and generates a processor list.
+    Used by generate_age_deepslate_processor.
+    """
+    rules = []
+    for conversion in conversions:
+        if 'states' not in conversion:
+            rule = {
+                "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                },
+                "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": conversion['input'],
+                    "probability": probability
+                },
+                "output_state": {
+                    "Name": conversion['output']
+                }
+            }
+        else:
+            keys = conversion['states'].keys()
+            values = conversion['states'].values()
+            for property_set in product(*values):
+                properties = dict(zip(keys, property_set))
+                rule = {
+                    "location_predicate": {
+                        "predicate_type": "minecraft:always_true"
+                    },
+                    "input_predicate": {
+                        "predicate_type": "minecraft:random_blockstate_match",
+                        "block_state": {
+                            "Name": conversion['input'],
+                            "Properties": properties
+                        },
+                        "probability": probability
+                    },
+                    "output_state": {
+                        "Name": conversion['output'],
+                        "Properties": properties
+                    }
+                }
+                rules.append(rule)
+
+    return {
+        "processors": [
+            {
+                "processor_type": "minecraft:rule",
+                "rules": rules
+            }
+        ]
+    }
     
 
+def generate_age_deepslate_processor():
+    """
+    Generates the deepslate aging processor list used in bunker structures
+    """
+    conversions = [
+        {
+            "input": "minecraft:polished_deepslate_slab",
+            "output": "minecraft:polished_deepslate_slab",
+            "states": {
+                "type": ["top", "double", "bottom"]
+            }
+        },
+        {
+            "input": "minecraft:polished_deepslate",
+            "output": "minecraft:cobbled_deepslate"
+        },
+        {
+            "input": "minecraft:polished_deepslate_stairs",
+            "output": "minecraft:cobbled_deepslate_stairs",
+            "states": {
+                "facing": ["north", "east", "south", "west"],
+                "half": ["top", "bottom"],
+                "shape": ["inner_left", "inner_right", "outer_left", "outer_right", "straight"]
+            }
+        },
+        {
+            "input": "minecraft:polished_deepslate_wall",
+            "output": "minecraft:cobbled_deepslate_wall",
+            "states": {
+                "north": ["none", "low", "tall"],
+                "south": ["none", "low", "tall"],
+                "east": ["none", "low", "tall"],
+                "west": ["none", "low", "tall"],
+                "up": ["true", "false"]
+            }
+        }
+    ]
+
+    return generate_generic_age_processor(conversions, 0.15)
+
+
+def generate_age_basalt_processor():
+    """
+    Generate the basalt aging processor list used in bunker structures
+    """
+    conversions = [
+        {
+            "input": "minecraft:polished_basalt",
+            "output": "minecraft:basalt",
+            "states": {
+                "axis": ["x", "y", "z"]
+            }
+        }
+    ]
+
+    result = generate_generic_age_processor(conversions, 0.15)
+
+    # Append extra rule
+    result['processors'][0]['rules'].append({
+        "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "minecraft:smooth_basalt",
+            "probability": 0.15
+        },
+        "output_state": {
+            "Name": "minecraft:basalt"
+        }
+    })
+
+    return result
+
+def generate_age_bunker_processor():
+    """
+    Generates the combined bunker aging processor
+    """
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    processor_list_dir = path.join(datapack_dir, 'worldgen', 'processor_list')
+
+    age_basalt = generate_age_basalt_processor()['processors']
+    age_deepslate = generate_age_deepslate_processor()['processors']
+    age_quartz_processor = {
+        "processor_type": "minecraft:rule",
+        "rules": [
+            {
+                "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                },
+                "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:smooth_quartz",
+                    "probability": 0.3
+                },
+                "output_state": {
+                    "id": "minecraft:quartz_block"
+                }
+            },
+            {
+                "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                },
+                "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:smooth_quartz",
+                    "probability": 0.075
+                },
+                "output_state": {
+                    "id": "minecraft:calcite"
+                }
+            },
+            {
+                "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                },
+                "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:quartz_block",
+                    "probability": 0.075
+                },
+                "output_state": {
+                    "id": "minecraft:calcite"
+                }
+            }
+        ]
+    }
+
+    combined_processor_list = {"processors": [age_quartz_processor] + age_basalt + age_deepslate}
+    with open(path.join(processor_list_dir, 'age_bunker.json'), mode='w') as wf:
+        dump(combined_processor_list, wf, indent=4)
 
 
 
@@ -1144,6 +1330,7 @@ def main():
     generate_placer_tests()
     generate_drone_distance_lookup_table(2)
     generate_recipe_giver()
+    generate_age_bunker_processor()
 
 
 if __name__ == "__main__":

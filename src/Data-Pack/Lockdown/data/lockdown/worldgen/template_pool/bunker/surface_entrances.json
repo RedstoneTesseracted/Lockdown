@@ -1,0 +1,15 @@
+{
+    "name": "lockdown:bunker/surface_entrances",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/surface_entrance/normal",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}

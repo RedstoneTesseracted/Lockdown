@@ -1,0 +1,69 @@
+{
+    "name": "lockdown:bunker/side_rooms/barracks/details",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/barrel",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/cactus",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/candles",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/cobweb",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/jukebox",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/open_barrel",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/details/sculk",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}

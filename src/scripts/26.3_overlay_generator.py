@@ -17,6 +17,7 @@ advancements_dir = path.join(datapack_dir, 'data', 'lockdown', 'advancement')
 predicates_dir = path.join(datapack_dir, 'data', 'lockdown', 'predicate')
 item_modifiers_dir = path.join(datapack_dir, 'data', 'lockdown', 'item_modifier')
 loot_tables_dir = path.join(datapack_dir, 'data', 'lockdown', 'loot_table')
+processor_list_dir = path.join(datapack_dir, 'data', 'lockdown', 'worldgen', 'processor_list')
 new_dir = path.join(datapack_dir, '26.3')
 
 
@@ -261,6 +262,19 @@ def fix_loot_table_inline_modifiers(loot_table: dict) -> dict:
                     modifier[i] = fix_item_modifier_convert_function_to_type(item_modifier)
     return loot_table
 
+def fix_processor_list_block_state(processor_list: dict) -> dict:
+    for matched in recursive_key_sequence_find(processor_list, ('block_state',)):
+        if 'Name' in matched:
+            matched['id'] = matched.pop('Name')
+        if 'Properties' in matched:
+            matched['properties'] = matched.pop('Properties')
+    for matched in recursive_key_sequence_find(processor_list, ('output_state',)):
+        if 'Name' in matched:
+            matched['id'] = matched.pop('Name')
+        if 'Properties' in matched:
+            matched['properties'] = matched.pop('Properties')
+    return processor_list
+
 
 for dirpath, dirnames, filenames in os.walk(advancements_dir):
     for file in filenames:
@@ -336,3 +350,22 @@ for dirpath, dirnames, filenames in os.walk(loot_tables_dir):
             continue
         with open(new_version_path, mode='w') as wf:
             json.dump(loot_table, wf, indent=4)
+
+
+for dirpath, dirnames, filenames in os.walk(processor_list_dir):
+    for file in filenames:
+        if path.splitext(file)[-1].lower() != '.json':
+            continue
+        latest_version_path = find_latest_version(path.join(dirpath, file))
+        new_version_path = path.join(datapack_dir, '26.3', path.realpath(path.join(dirpath, file)).removeprefix(path.realpath(datapack_dir)).removeprefix(path.sep))
+        with open(latest_version_path, mode='r') as rf:
+            processor_list = json.load(rf)
+        before = json.dumps(processor_list)
+        processor_list = recursive_fix_condition_reference(processor_list)
+        assert isinstance(processor_list, dict)
+        processor_list = fix_processor_list_block_state(processor_list)
+        after = json.dumps(processor_list)
+        if before == after:
+            continue
+        with open(new_version_path, mode='w') as wf:
+            json.dump(processor_list, wf, indent=4)

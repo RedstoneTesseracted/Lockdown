@@ -10,4 +10,5 @@
 
 execute if score lockdown.block_structure_placers lockdown.constant matches 1 run return 1
 execute as @e[tag=lockdown.placer,tag=lockdown.structure_placer] at @s run function lockdown:place_block/placer
+execute as @e[tag=lockdown.bunker.clone,type=minecraft:mannequin,tag=!lockdown.bunker.clone.configured] at @s run function lockdown:player_clone
 return 1

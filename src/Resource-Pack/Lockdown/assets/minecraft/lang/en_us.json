@@ -210,5 +210,11 @@
   "lockdown.info.header": "Lockdown Pack Information:",
   "lockdown.info.resource_pack": "Resource Pack: %s",
   "lockdown.info.resource_pack.enabled": "Enabled",
-  "lockdown.info.version": "Feature Release: %s"
+  "lockdown.info.version": "Feature Release: %s",
+  "lockdown.misc.bunker.lab_book_contents.1": "Mass: 0.0 g\nSpectrogram: Inconclusive\nElectric Charge: 0.0 C\nMagnetic Dipole Moment: 0.0 J/T",
+  "lockdown.misc.bunker.lab_book_contents.2": "What, you though you'd be able to read the book by looking at the language files or item component?  %1$s.  That'd be too easy!  %2$s.  Instead, I'm going to pad this out while interspersing it %3$s with random words. %4$s",
+  "lockdown.misc.bunker.lab_book_contents.2.word1": "SEE",
+  "lockdown.misc.bunker.lab_book_contents.2.word2": "increasingly volatile",
+  "lockdown.misc.bunker.lab_book_contents.2.word3": "OUTSIDE",
+  "lockdown.misc.bunker.lab_book_contents.2.word4": "destroyed"
 }

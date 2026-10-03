@@ -1,0 +1,33 @@
+{
+    "name": "lockdown:bunker/atriums",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium/normal",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium/collapsed",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/atrium/sculk_infected",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}
