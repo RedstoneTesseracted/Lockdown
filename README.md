@@ -96,11 +96,11 @@ Items not covered under the GameTest system:
 * ~~Make turrets dyable~~
 * ~~Make the "drone attacks X" game tests more reliable~~
 * ~~Tweak cannon advancements~~
-* Make suspicious thumb drive obtainable
+* Make suspicious thumb drive obtainable in survival
+* Add abandoned bunker structure
+* Add durability to laser blaster
 * ~~Test in 26.3~~
 * Update wiki
-
-* Make turrets remember approved entities similar to drones?
 
 
 # Version Support
