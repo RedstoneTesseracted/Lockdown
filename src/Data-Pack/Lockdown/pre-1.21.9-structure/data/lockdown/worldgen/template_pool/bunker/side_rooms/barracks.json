@@ -1,0 +1,24 @@
+{
+    "name": "lockdown:bunker/side_rooms/barracks",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/struggle",
+                "processors": "lockdown:age_bunker"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "location": "lockdown:bunker/barracks/cult",
+                "processors": "lockdown:age_bunker"
+            }
+        }
+    ]
+}

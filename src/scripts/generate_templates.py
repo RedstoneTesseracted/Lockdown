@@ -1278,7 +1278,7 @@ def generate_age_bunker_processor():
                     "probability": 0.3
                 },
                 "output_state": {
-                    "id": "minecraft:quartz_block"
+                    "Name": "minecraft:quartz_block"
                 }
             },
             {
@@ -1291,7 +1291,7 @@ def generate_age_bunker_processor():
                     "probability": 0.075
                 },
                 "output_state": {
-                    "id": "minecraft:calcite"
+                    "Name": "minecraft:calcite"
                 }
             },
             {
@@ -1304,7 +1304,7 @@ def generate_age_bunker_processor():
                     "probability": 0.075
                 },
                 "output_state": {
-                    "id": "minecraft:calcite"
+                    "Name": "minecraft:calcite"
                 }
             }
         ]
@@ -1314,6 +1314,44 @@ def generate_age_bunker_processor():
     with open(path.join(processor_list_dir, 'age_bunker.json'), mode='w') as wf:
         dump(combined_processor_list, wf, indent=4)
 
+
+def generate_pre_1_21_9_overlay():
+    """
+    Normally, the bunker structure uses copper bars and mannequins, which didn't exist before 1.21.9.
+    Since this pack still officially supports versions down to 1.21.6, we need to generate a modified
+    version of the bunker that's compatible with those older versions.  This is done via scripting
+    instead of manually to make things easier to maintain.
+    """
+    datapack_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'data', 'lockdown')
+    overlay_dir = path.join(path.pardir, 'Data-Pack', 'Lockdown', 'pre-1.21.9-structure', 'data', 'lockdown')
+
+    # Remove clone bay from barracks template pool
+    barracks_part_path = path.join('worldgen', 'template_pool', 'bunker', 'side_rooms', 'barracks.json')
+    with open(path.join(datapack_dir, barracks_part_path), mode='r') as rf:
+        barracks_pool = load(rf)
+    barracks_pool['elements'] = [i for i in barracks_pool['elements'] if i.get('element', {}).get('location') != 'lockdown:bunker/barracks/clone_bay']
+    with open(path.join(overlay_dir, barracks_part_path), mode='r') as rf:
+        barracks_pool = load(rf)
+
+    # Replace forbidden blocks with an alternative
+    replace_blocks = {
+        'minecraft:waxed_exposed_copper_bars': 'minecraft:iron_bars'
+    }
+    for dirpath, dirnames, files in os.walk(path.join(datapack_dir, 'structure')):
+        for file in files:
+            if path.splitext(file)[-1] != '.nbt':
+                continue
+            changed = False
+            structure = nbtlib.load(path.join(dirpath, file), gzipped=True)
+            for block in structure['palette']:
+                name = str(block['Name'])
+                if name in replace_blocks:
+                    block['Name'] = nbtlib.String(replace_blocks[name])
+                    changed = True
+            rel_dir = path.abspath(dirpath).removeprefix(path.abspath(datapack_dir)).replace(path.sep, '/').removeprefix('/')
+            if changed:
+                os.makedirs(path.join(overlay_dir, rel_dir), exist_ok=True)
+                structure.save(path.join(overlay_dir, rel_dir, file), gzipped=True)
 
 
 def main():
@@ -1331,6 +1369,7 @@ def main():
     generate_drone_distance_lookup_table(2)
     generate_recipe_giver()
     generate_age_bunker_processor()
+    generate_pre_1_21_9_overlay()
 
 
 if __name__ == "__main__":

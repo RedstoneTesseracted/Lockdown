@@ -13,7 +13,7 @@
                         "probability": 0.3
                     },
                     "output_state": {
-                        "id": "minecraft:quartz_block"
+                        "Name": "minecraft:quartz_block"
                     }
                 },
                 {
@@ -26,7 +26,7 @@
                         "probability": 0.075
                     },
                     "output_state": {
-                        "id": "minecraft:calcite"
+                        "Name": "minecraft:calcite"
                     }
                 },
                 {
@@ -39,7 +39,7 @@
                         "probability": 0.075
                     },
                     "output_state": {
-                        "id": "minecraft:calcite"
+                        "Name": "minecraft:calcite"
                     }
                 }
             ]
