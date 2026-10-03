@@ -8,7 +8,7 @@ import pytest
 from json import load
 import os
 from os import path
-from common import recipes_dir, item_modifiers_dir, lang_dir, en_us_path, recursive_key_find
+from common import recipes_dir, item_modifiers_dir, loot_table_dir, lang_dir, en_us_path, recursive_key_find
 
 
 
@@ -29,52 +29,45 @@ def test_all_languages_have_keys():
         assert len(other_keys - keys) == 0, f'{file} contains additional keys: {other_keys - keys}'
 
 
-def test_recipes_reference_existing_keys():
+def existing_keys_helper(directory):
     """
-    Confirm that all custom items defined using recipe outputs reference translation keys that actually exist
+    Used by several functions below to test that files within the datapack reference translation keys that actually exist
     """
     # Load en_us as a reference
     with open(en_us_path, mode='r') as rf:
         keys = set(load(rf).keys())
 
-    # Check the output of every recipe file
     actually_did_anything = False
-    for dirpath, dirnames, filenames in os.walk(recipes_dir):
+    for dirpath, dirnames, filenames in os.walk(directory):
         for file in filenames:
             if path.splitext(file)[-1] != '.json': continue
             with open(path.join(dirpath, file), mode='r') as rf:
-                recipe = load(rf)
-            components = recipe['result'].get('components')
+                resource = load(rf)
             
-            if components is None: continue
-            for value in recursive_key_find(components, 'translate'):
+            for value in recursive_key_find(resource, 'translate'):
                 if not value.startswith('color.minecraft'):
-                    assert value in keys, f'Recipe {file} referenced missing key: {value}'
+                    assert value in keys, f'Item modifier {file} referenced missing key: {value}'
                 actually_did_anything = True
 
-    assert actually_did_anything, "No actual recipe checks were performed?"
+    assert actually_did_anything, "No actual checks were performed... was the directory empty or not use translation keys?"
+
+
+def test_recipes_reference_existing_keys():
+    """
+    Confirm that all custom items defined using recipe outputs reference translation keys that actually exist
+    """
+    existing_keys_helper(recipes_dir)
 
 
 def test_item_modifiers_reference_existing_keys():
     """
     Confirm that all item modifiers reference translation keys that actually exist
     """
-    # Load en_us as a reference
-    with open(en_us_path, mode='r') as rf:
-        keys = set(load(rf).keys())
+    existing_keys_helper(item_modifiers_dir)
 
-    # Check all item modifiers
-    actually_did_anything = False
-    for dirpath, dirnames, filenames in os.walk(item_modifiers_dir):
-        for file in filenames:
-            if path.splitext(file)[-1] != '.json': continue
-            with open(path.join(dirpath, file), mode='r') as rf:
-                item_modifier = load(rf)
-            
-            for value in recursive_key_find(item_modifier, 'translate'):
-                if not value.startswith('color.minecraft'):
-                    assert value in keys, f'Item modifier {file} referenced missing key: {value}'
-                actually_did_anything = True
 
-    assert actually_did_anything, "No actual item modifier checks were performed?"
-
+def test_loot_tables_reference_existing_keys():
+    """
+    Confirm that all loot tables reference translation keys that actually exist
+    """
+    existing_keys_helper(loot_table_dir)
