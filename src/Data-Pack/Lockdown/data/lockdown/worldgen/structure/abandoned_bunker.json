@@ -6,10 +6,11 @@
     "size": 6,
     "spawn_overrides": {},
     "start_height": {
-        "absolute": -10
+        "absolute": -11
     },
     "start_pool": "lockdown:bunker/surface_entrances",
     "step": "underground_structures",
     "terrain_adaptation": "bury",
-    "use_expansion_hack": false
+    "use_expansion_hack": false,
+    "liquid_settings": "ignore_waterlogging"
 }

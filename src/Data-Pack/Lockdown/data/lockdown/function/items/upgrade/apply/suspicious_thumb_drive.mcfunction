@@ -9,7 +9,7 @@ execute if function lockdown:items/upgrade/checks/max_berserker_upgrades run ret
 tag @s add lockdown.behavior.berserker
 execute at @s run particle minecraft:dust{color:[1.0,0.0,0.0],scale:1.0} ~ ~ ~ 0.25 0.25 0.25 0.1 10
 execute at @s run playsound lockdown:entity.drone.glitch player @a ~ ~ ~ 1.0 1.0
-rotate @s ~45 ~
+rotate @s[tag=lockdown.drone] ~45 ~
 
 # Clear approved entities list on drones
 execute if entity @s[tag=lockdown.drone] run data modify entity @s data.approved set value []
