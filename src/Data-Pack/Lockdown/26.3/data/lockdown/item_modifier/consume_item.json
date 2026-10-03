@@ -4,23 +4,26 @@
         {
             "count": -1,
             "add": true,
-            "conditions": [
-                {
-                    "condition": "minecraft:inverted",
-                    "term": {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:type_specific/player": {
-                                "gamemode": [
-                                    "creative",
-                                    "spectator"
-                                ]
-                            }
-                        }
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "term": {
+                            "entity": "this",
+                            "predicate": {
+                                "minecraft:type_specific/player": {
+                                    "gamemode": [
+                                        "creative",
+                                        "spectator"
+                                    ]
+                                }
+                            },
+                            "type": "minecraft:entity_properties"
+                        },
+                        "type": "minecraft:inverted"
                     }
-                }
-            ],
+                ]
+            },
             "type": "minecraft:set_count"
         }
     ]

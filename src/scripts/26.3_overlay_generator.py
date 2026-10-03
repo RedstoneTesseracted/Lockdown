@@ -230,6 +230,24 @@ def fix_item_modifier_no_root_list(item_modifier: Union[dict, list]) -> dict:
         raise ValueError(f"Unhandled type: {type(item_modifier)}")
 
 
+def fix_item_modifier_conditions(item_modifier: dict) -> dict:
+    """
+    The conditions format has changed between versions
+    """
+    if 'functions' in item_modifier:
+        modifiers = item_modifier['functions']
+    elif 'modifiers' in item_modifier:
+        modifiers = item_modifier['modifiers']
+    else:
+        return item_modifier
+    for modifier in modifiers:
+        if 'conditions' in modifier:
+            modifier['condition'] = {
+                "type": "minecraft:all_of",
+                "terms": recursive_convert_condition_to_type(modifier.pop('conditions'))
+            }
+    return item_modifier
+
 def fix_item_modifier_convert_function_to_type(item_modifier: dict) -> dict:
     if 'functions' not in item_modifier:
         item_modifier['type'] = item_modifier.pop('function')
@@ -324,6 +342,7 @@ for dirpath, dirnames, filenames in os.walk(item_modifiers_dir):
             item_modifier = json.load(rf)
         before = json.dumps(item_modifier)
         item_modifier = fix_item_modifier_no_root_list(item_modifier)
+        item_modifier = fix_item_modifier_conditions(item_modifier)
         item_modifier = fix_item_modifier_convert_function_to_type(item_modifier)
         after = json.dumps(item_modifier)
         if before == after:
