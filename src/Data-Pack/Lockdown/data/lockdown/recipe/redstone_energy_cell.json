@@ -2,13 +2,13 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-        "grg",
-        "grg",
-        "ggg"
+        "crc",
+        "crc",
+        "ccc"
     ],
     "key": {
         "g": [
-            "minecraft:gold_nugget"
+            "minecraft:copper_ingot"
         ],
         "r": [
             "minecraft:redstone"
@@ -35,6 +35,7 @@
             "!minecraft:attribute_modifiers": {},
             "minecraft:max_stack_size": 64,
             "minecraft:rarity": "common"
-        }
+        },
+        "count": 8
     }
 }
