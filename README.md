@@ -103,14 +103,9 @@ Items not covered under the GameTest system:
 * Update wiki
 
 
-## Future TODO:
-
-* Switch redstone energy cells to copper after dropping versions below 1.21.9
-
-
 # Version Support
 
-This datapack uses overlays to support versions 1.21.5-26.2.
+This datapack uses overlays to support versions 1.21.5-26.3.
 
 ## Older Versions
 

@@ -1,3 +1,20 @@
+# Release 4
+
+## Changes
+
+* Added abandoned bunker structure
+* Added laser blaster weapon
+* Added player-controllable air defense cannon
+* Added spray can to colorize drones, turrets, and air defense cannons
+* Added suspicious thumb drive
+* Added support for 26.3
+
+
+## Bug Fixes
+
+* Fixed keycards not working in offhand
+
+
 # Release 3.3
 
 * Added support for 26.2

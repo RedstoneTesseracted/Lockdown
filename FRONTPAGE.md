@@ -12,7 +12,7 @@ This datapack uses overlays to support multiple versions of the game with a sing
 
 |  Game Version  | Data Pack Version |
 | -------------- | ----------------- |
-| 1.21.5-26.2    | R3.3              |
+| 1.21.5-26.3    | R3.3              |
 
 # Older Versions
 
@@ -62,6 +62,8 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 **Laser Blaster**: A ranged weapon that fires lasers at your enemies.  Be careful not to let it overheat!
 
 **Redstone Energy Cell**: Fuel for the laster blaster
+
+**Spray Can**: Applies colors to turrets, drones, and cannons.  Right-click in main-hand to apply primary color, and right-click in off-hand to apply secondary color.  Cycle between colors with sneak + right-click.
 
 
 ## Redstone
