@@ -40,6 +40,7 @@ item modify entity @s weapon.mainhand lockdown:damage_item_250
 execute if items entity @s[gamemode=!creative,gamemode=!spectator] weapon.mainhand *[minecraft:damage=250] run function lockdown:items/laser_blaster/break
 
 tag @s add lockdown.player.context
+scoreboard players operation lockdown.damage lockdown.local = lockdown.laser_blaster.damage lockdown.constant
 execute anchored eyes positioned ^ ^-0.5 ^0.5 summon minecraft:armor_stand run function lockdown:items/laser_blaster/configure_laser
 tag @s remove lockdown.player.context
 schedule function lockdown:projectile/tick 1t replace
