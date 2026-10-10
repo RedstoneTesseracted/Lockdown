@@ -4,6 +4,7 @@
 
 * Added abandoned bunker structure
 * Added laser blaster weapon
+* Added redstone energy cells as fuel for the laser blaster
 * Added player-controllable air defense cannon
 * Added spray can to colorize drones, turrets, and air defense cannons
 * Added suspicious thumb drive
