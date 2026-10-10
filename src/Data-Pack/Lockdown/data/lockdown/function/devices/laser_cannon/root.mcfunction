@@ -3,6 +3,9 @@ execute if function lockdown:devices/laser_cannon/has_passenger run function loc
 execute if function lockdown:devices/laser_cannon/has_passenger run function lockdown:devices/laser_cannon/charge/update
 execute if score @s lockdown.cannon.fire_state matches 1.. run function lockdown:devices/laser_cannon/fire/update
 
+# Update cannon state if player unmounted
+execute if entity @s[tag=lockdown.laser_cannon.translucency] unless function lockdown:devices/laser_cannon/has_passenger run function lockdown:devices/laser_cannon/mount/cannon_unmount_state
+
 # A missing block underneath the cannon causes it to break
 execute if block ~ ~-1 ~ #minecraft:air run return run function lockdown:devices/laser_cannon/destroy
 

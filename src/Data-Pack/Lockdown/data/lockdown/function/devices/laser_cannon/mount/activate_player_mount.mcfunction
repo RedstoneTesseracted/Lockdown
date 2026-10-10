@@ -13,7 +13,7 @@ execute store result score lockdown.result lockdown.local run function lockdown:
 execute unless score lockdown.result lockdown.local matches 1 run tellraw @s {translate: "lockdown.messages.bug.macro.generic", color: "red", with: [{text: "lockdown:devices/laser_cannon/mount/__activate_player_mount", color:"gray", underlined: true}]}
 
 # Show help text
-title @s actionbar {translate: "lockdown.messages.laser_cannon.control_hint", with: [{keybind: "key.jump", color: "gold"}]}
+title @s actionbar {translate: "lockdown.messages.laser_cannon.control_hint", with: [{keybind: "key.jump", color: "gold"}, {keybind: "key.forward", color: "gold"}]}
 
 # Add state tag for tracking which players might need this state cleared later
 tag @s add lockdown.laser_cannon.is_riding

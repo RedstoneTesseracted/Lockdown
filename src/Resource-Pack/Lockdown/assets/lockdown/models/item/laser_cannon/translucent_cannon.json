@@ -1,0 +1,9 @@
+{
+    "parent": "lockdown:item/laser_cannon/cannon",
+    "textures": {
+        "0": "lockdown:item/laser_cannon/base_translucent",
+        "1": "lockdown:item/laser_cannon/glow_translucent",
+        "2": "lockdown:item/laser_cannon/arcs",
+        "particle": "lockdown:item/laser_cannon/base"
+    }
+}

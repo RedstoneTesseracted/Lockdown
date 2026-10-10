@@ -206,7 +206,7 @@
   "lockdown.messages.laser_blaster.overheat": "Overheating: %1$s",
   "lockdown.messages.laser_cannon.gantry_already_present": "Gantry already mounted",
   "lockdown.messages.laser_cannon.barrel_already_present": "Barrel already mounted",
-  "lockdown.messages.laser_cannon.control_hint": "Press %1$s to charge",
+  "lockdown.messages.laser_cannon.control_hint": "Hold %1$s to charge, %2$s to enable translucency",
   "lockdown.info.header": "Lockdown Pack Information:",
   "lockdown.info.resource_pack": "Resource Pack: %s",
   "lockdown.info.resource_pack.enabled": "Enabled",

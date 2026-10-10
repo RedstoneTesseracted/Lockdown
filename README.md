@@ -81,7 +81,7 @@ Items not covered under the GameTest system:
     * ~~Spray-painting~~
     * ~~Firing controls~~
     * Add toggle for terrain destruction
-    * Tweak model so it doesn't block line of sight
+    * ~~Tweak model so it doesn't block line of sight~~
     * Tweak sound effects
     * ~~Fix berserker drones targeting cannons~~
     * Balancing

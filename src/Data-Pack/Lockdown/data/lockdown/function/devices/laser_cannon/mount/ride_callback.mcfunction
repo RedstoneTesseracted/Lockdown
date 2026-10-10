@@ -28,6 +28,8 @@ tag @s add lockdown.context.source
 execute as @n[tag=lockdown.context] on passengers if entity @s[tag=lockdown.laser_cannon.seat] run ride @p[tag=lockdown.context.source] mount @s
 tag @s remove lockdown.context.source
 
+execute as @n[tag=lockdown.context] run function lockdown:devices/laser_cannon/mount/cannon_mount_state
+
 # Clear state tags
 tag @e[tag=lockdown.context] remove lockdown.context
 

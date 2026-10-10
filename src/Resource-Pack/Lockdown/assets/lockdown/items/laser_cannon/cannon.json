@@ -3,20 +3,62 @@
         "type": "minecraft:composite",
         "models": [
             {
-                "type": "minecraft:model",
-                "model": "lockdown:item/laser_cannon/cannon",
-                "tints": [
-                    {
-                        "type": "minecraft:custom_model_data",
-                        "index": 0,
-                        "default": [1.0, 1.0, 1.0]
+                "type": "minecraft:condition",
+                "property": "minecraft:custom_model_data",
+                "index": 0,
+                "on_false": {
+                    "type": "minecraft:model",
+                    "model": "lockdown:item/laser_cannon/cannon",
+                    "tints": [
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 0,
+                            "default": [1.0, 1.0, 1.0]
+                        },
+                        {
+                            "type": "minecraft:custom_model_data",
+                            "index": 1,
+                            "default": [0.200, 0.604, 0.988]
+                        }
+                    ]
+                },
+                "on_true": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:keybind_down",
+                    "keybind": "key.forward",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/laser_cannon/cannon",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [1.0, 1.0, 1.0]
+                            },
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 1,
+                                "default": [0.200, 0.604, 0.988]
+                            }
+                        ]
                     },
-                    {
-                        "type": "minecraft:custom_model_data",
-                        "index": 1,
-                        "default": [0.200, 0.604, 0.988]
+                    "on_true": {
+                        "type": "minecraft:model",
+                        "model": "lockdown:item/laser_cannon/translucent_cannon",
+                        "tints": [
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 0,
+                                "default": [1.0, 1.0, 1.0]
+                            },
+                            {
+                                "type": "minecraft:custom_model_data",
+                                "index": 1,
+                                "default": [0.200, 0.604, 0.988]
+                            }
+                        ]
                     }
-                ]
+                }
             },
             {
                 "type": "minecraft:select",
