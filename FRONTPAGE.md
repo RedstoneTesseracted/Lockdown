@@ -12,7 +12,8 @@ This datapack uses overlays to support multiple versions of the game with a sing
 
 |  Game Version  | Data Pack Version |
 | -------------- | ----------------- |
-| 1.21.5-26.3    | R3.3              |
+| 1.21.5-26.2    | R3.3              |
+| 1.21.5-26.3    | R4                |
 
 # Older Versions
 
@@ -54,7 +55,7 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 **Range Upgrade**: Increases the effective range of a drone or turret.
 
-**Suspicious Thumb Drive**: Causes drones and turrets to attacks players and friendly mobs.
+**Suspicious Thumb Drive**: Causes drones and turrets to attacks players and friendly mobs.  Found in abandoned bunkers.
 
 
 ## Tools
@@ -77,6 +78,12 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 **Mob Detector**: Outputs a redstone signal when it detects a mob within a five-block radius.
 
 **Big Buttons**: Similar to a regular button, except more imposing!  Can optionally be assigned a channel to broadcast to using the Encoding Station.
+
+
+## Structures
+
+**Abandoned Bunker**: An uncommon, partially-buried structure.  Whoever built them is long gone, but the defenses they left behind sure aren't!
+
 
 ---
 
