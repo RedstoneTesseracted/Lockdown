@@ -72,7 +72,7 @@ Items not covered under the GameTest system:
     * ~~Attacks friendly mobs~~
     * ~~Does not attack other drones with same channel~~
     * ~~Attacks other drones with different channel~~
-* Air defense cannon
+* ~~Air defense cannon~~
     * ~~Charging animation~~
     * ~~Firing animation~~
     * ~~Explosion when destroyed~~
@@ -80,12 +80,8 @@ Items not covered under the GameTest system:
     * ~~Movement controls~~
     * ~~Spray-painting~~
     * ~~Firing controls~~
-    * Add toggle for terrain destruction
     * ~~Tweak model so it doesn't block line of sight~~
-    * Tweak sound effects
     * ~~Fix berserker drones targeting cannons~~
-    * Balancing
-        * Require redstone energy cells to fire?
 * ~~Air defense cannon unit tests~~:
     * ~~Platform obstructed if block or entity within 3x3 space~~
     * ~~Breaks if central block is missing~~
@@ -100,7 +96,8 @@ Items not covered under the GameTest system:
 * ~~Add abandoned bunker structure~~
 * ~~Add durability to laser blaster~~
 * ~~Test in 26.3~~
-* Update wiki
+* ~~Update wiki~~
+* Final testing
 
 
 # Version Support
