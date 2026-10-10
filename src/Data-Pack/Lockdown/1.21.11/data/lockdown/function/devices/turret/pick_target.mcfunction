@@ -5,15 +5,20 @@
 # 1. Candidates must be within firing range
 # 2. If this turret has an assigned code:
 #      Candidates include:
-#      1. Hostile mobs
+#      1. Hostile mobs (invert this for berserker turrets)
 #      2. Players with non-matching code
 #      3. Drones with non-matching code
 #      4. Turrets with non-matching code
 #    Otherwise:
 #      Candidates include:
-#      1. Hostile mobs
+#      1. Hostile mobs (invert this for berserker turrets)
 # 3. Clear line of sight between turret and candidate
 # 4. Nearest candidate is selected
+
+# Copy values to temporary scores
+scoreboard players operation lockdown.channel lockdown.local = @s lockdown.channel
+scoreboard players set lockdown.is_berserker lockdown.local 0
+execute if entity @s[tag=lockdown.behavior.berserker] run scoreboard players set lockdown.is_berserker lockdown.local 1
 
 # Select all entities within range
 execute store result storage lockdown:temp args.range int 1 run scoreboard players get @s lockdown.firing_range
