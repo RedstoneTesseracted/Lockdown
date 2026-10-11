@@ -9,5 +9,8 @@ execute if entity @s[tag=lockdown.behavior.code_hostile] if predicate lockdown:l
 # Cannons are not targetable
 execute if entity @s[tag=lockdown.laser_cannon] run return 0
 
+# Do not target bunker clones
+execute if entity @s[tag=lockdown.bunker.clone] run return 0
+
 # Assume targetable
 return 1
