@@ -98,6 +98,7 @@ Items not covered under the GameTest system:
 * ~~Test in 26.3~~
 * ~~Update wiki~~
 * ~~Prevent laser projectiles from phasing through mobs~~
+* ~~Add advancements for key, laser blaster, and spray can~~
 * Final testing
 
 

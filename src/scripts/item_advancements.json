@@ -130,8 +130,30 @@
     "suspicious_thumb_drive": {
         "item": "lockdown:suspicious_thumb_drive",
         "parent": "lockdown:lockdown/drone",
+        "frame": "challenge",
         "condition": {
             "name": "suspicious_thumb_drive"
+        }
+    },
+    "laser_blaster": {
+        "item": "lockdown:laser_blaster",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "laser_blaster"
+        }
+    },
+    "spray_paint": {
+        "item": "lockdown:spray_paint",
+        "parent": "lockdown:lockdown/root",
+        "condition": {
+            "name": "spray_paint"
+        }
+    },
+    "key": {
+        "item": "lockdown:key",
+        "parent": "lockdown:lockdown/encoder",
+        "condition": {
+            "name": "key"
         }
     }
 }

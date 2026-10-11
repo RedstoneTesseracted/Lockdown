@@ -6,7 +6,7 @@
                 "minecraft:item_model": "lockdown:suspicious_thumb_drive"
             }
         },
-        "frame": "task",
+        "frame": "challenge",
         "title": {
             "translate": "advancement.lockdown.suspicious_thumb_drive.title",
             "fallback": "Advanced Menace"

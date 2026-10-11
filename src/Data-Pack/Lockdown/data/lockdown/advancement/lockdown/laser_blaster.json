@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:paper",
+            "components": {
+                "minecraft:item_model": "lockdown:laser_blaster"
+            }
+        },
+        "frame": "task",
+        "title": {
+            "translate": "advancement.lockdown.laser_blaster.title",
+            "fallback": "Laser Blaster"
+        },
+        "description": {
+            "translate": "advancement.lockdown.laser_blaster.description",
+            "fallback": "Craft a laser blaster to vaporize your foes.  Requires redstone energy cells as fuel."
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "lockdown:lockdown/encoder",
+    "criteria": {
+        "laser_blaster": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "lockdown_data": {
+                                    "name": "laser_blaster"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
