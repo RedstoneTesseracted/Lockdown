@@ -16,3 +16,8 @@ execute if function lockdown:projectile/laser/is_entity_colliding run function l
 # Destroy entity if impacting surface
 # execute if function lockdown:projectile/laser/is_surface_blocked run say collided with surface
 execute if function lockdown:projectile/laser/is_surface_blocked on vehicle at @s run function lockdown:projectile/common/surface_impact
+
+# Update previous position (multiplied by factor of 71.5 to increase precision while staying under integer limit within world border)
+execute on vehicle store result score @s lockdown.last_x run data get entity @s Pos[0] 71.5
+execute on vehicle store result score @s lockdown.last_y run data get entity @s Pos[1] 71.5
+execute on vehicle store result score @s lockdown.last_z run data get entity @s Pos[2] 71.5

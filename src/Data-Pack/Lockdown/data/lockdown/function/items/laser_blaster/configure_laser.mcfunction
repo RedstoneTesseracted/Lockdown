@@ -57,6 +57,11 @@ execute store result storage lockdown:temp origin[3] int 1 run scoreboard player
 execute on passengers if entity @s[tag=lockdown.projectile.root] run data modify entity @s data.projectile_args.origin set from storage lockdown:temp origin
 data remove storage lockdown:temp origin
 
+# Initialize last position scores
+execute store result score @s lockdown.last_x run data get entity @s Pos[0] 71.5
+execute store result score @s lockdown.last_y run data get entity @s Pos[1] 71.5
+execute store result score @s lockdown.last_z run data get entity @s Pos[2] 71.5
+
 # Save motion data for use in subsequent ticks
 execute store result score @s lockdown.motion.x run data get storage lockdown:temp pos.x 10000.0
 execute store result score @s lockdown.motion.y run data get storage lockdown:temp pos.y 10000.0

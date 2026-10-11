@@ -1,0 +1,56 @@
+{
+    "type": "minecraft:mul",
+    "inputs": [
+        5,
+        {
+            "type": "minecraft:length",
+            "inputs": [
+                {
+                    "type": "minecraft:sub",
+                    "left": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.x2",
+                        "fallback": 0
+                    },
+                    "right": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.x1",
+                        "fallback": 0
+                    }
+                },
+                {
+                    "type": "minecraft:sub",
+                    "left": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.y2",
+                        "fallback": 0
+                    },
+                    "right": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.y1",
+                        "fallback": 0
+                    }
+                },
+                {
+                    "type": "minecraft:sub",
+                    "left": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.z2",
+                        "fallback": 0
+                    },
+                    "right": {
+                        "type": "minecraft:storage",
+                        "storage": "lockdown:temp",
+                        "path": "args.z1",
+                        "fallback": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

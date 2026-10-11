@@ -18,6 +18,10 @@ scoreboard objectives add lockdown.motion.x dummy
 scoreboard objectives add lockdown.motion.y dummy
 scoreboard objectives add lockdown.motion.z dummy
 
+scoreboard objectives add lockdown.last_x dummy
+scoreboard objectives add lockdown.last_y dummy
+scoreboard objectives add lockdown.last_z dummy
+
 scoreboard objectives add lockdown.origin_uuid1 dummy
 scoreboard objectives add lockdown.origin_uuid2 dummy
 scoreboard objectives add lockdown.origin_uuid3 dummy
@@ -90,6 +94,7 @@ scoreboard players set -1 lockdown.number -1
 scoreboard players set 2 lockdown.number 2
 scoreboard players set 10 lockdown.number 10
 scoreboard players set 16 lockdown.number 16
+scoreboard players set 2000 lockdown.number 2000
 
 # Mechanic objectives
 scoreboard objectives add lockdown.channel dummy

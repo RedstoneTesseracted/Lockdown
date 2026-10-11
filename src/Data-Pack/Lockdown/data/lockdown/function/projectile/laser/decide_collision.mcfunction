@@ -4,7 +4,7 @@
 execute if entity @s[tag=lockdown.exclude] run return 0
 
 # Origin is not viable if we haven't left it yet
-execute if score lockdown.left_origin lockdown.local matches 0 if function lockdown:projectile/laser/is_origin run return run scoreboard players set lockdown.collided_with_origin lockdown.local 1
+execute if score lockdown.left_origin lockdown.local matches ..1 if function lockdown:projectile/laser/is_origin run return run scoreboard players set lockdown.collided_with_origin lockdown.local 1
 
 # Must not be a spectator
 execute if entity @s[gamemode=spectator] run return 0

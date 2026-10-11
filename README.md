@@ -97,6 +97,7 @@ Items not covered under the GameTest system:
 * ~~Add durability to laser blaster~~
 * ~~Test in 26.3~~
 * ~~Update wiki~~
+* ~~Prevent laser projectiles from phasing through mobs~~
 * Final testing
 
 
