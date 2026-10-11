@@ -1,8 +1,7 @@
 # Release 4.1
 
-## Bug Fixes
-
 * Fixed pack metadata still marking 1.21.5 as supported
+* Warning message is now shown when running pack in 1.21.5
 
 
 # Release 4
