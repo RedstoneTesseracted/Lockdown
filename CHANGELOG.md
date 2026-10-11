@@ -1,3 +1,10 @@
+# Release 4.1
+
+## Bug Fixes
+
+* Fixed pack metadata still marking 1.21.5 as supported
+
+
 # Release 4
 
 ## Changes
