@@ -15,6 +15,7 @@
 
 * Fixed keycards not working in offhand
 * Fixed laser projectiles sometimes passing through entities
+* Fixed laser projectiles sliding around when hitting a block above them
 
 
 # Release 3.3
