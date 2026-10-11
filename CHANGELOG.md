@@ -14,6 +14,7 @@
 ## Bug Fixes
 
 * Fixed keycards not working in offhand
+* Fixed laser projectiles sometimes passing through entities
 
 
 # Release 3.3
