@@ -21,8 +21,9 @@ execute if entity @s[tag=lockdown.placer.turret] run function lockdown:place_blo
 execute if entity @s[tag=lockdown.placer.encoder] run function lockdown:place_block/place/encoder
 execute if entity @s[tag=lockdown.placer.cannon_platform] run function lockdown:place_block/place/cannon_platform
 
-# Apply berserker status
+# Apply special traits
 execute if entity @s[tag=lockdown.placer_trait.add_berserker] as @n[tag=lockdown.block.root.new] run function lockdown:items/upgrade/apply/suspicious_thumb_drive
+execute if entity @s[tag=lockdown.placer_trait.fragile] as @n[tag=lockdown.block.root.new] run tag @s add lockdown.behavior.fragile
 
 # Set pack version at creation
 function lockdown:place_block/place/common_version
