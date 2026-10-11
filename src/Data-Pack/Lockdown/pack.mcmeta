@@ -2,10 +2,10 @@
   "pack": {
     "pack_format": 81,
     "supported_formats": {
-      "min_inclusive": 71,
+      "min_inclusive": 80,
       "max_inclusive": 121
     },
-    "min_format": 71,
+    "min_format": 80,
     "max_format": 121,
     "description": [{"text":"Lockdown: ","color":"green"},{"text":"By Redstone⁴","color":"red"}]
   },
@@ -19,8 +19,8 @@
       },
       {
         "min_format": 62,
-        "max_format": 70,
-        "formats": [62, 70],
+        "max_format": 79,
+        "formats": [62, 79],
         "directory": "untested_version"
       },
       {

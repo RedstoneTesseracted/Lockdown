@@ -13,7 +13,7 @@ This datapack uses overlays to support multiple versions of the game with a sing
 |  Game Version  | Data Pack Version |
 | -------------- | ----------------- |
 | 1.21.5-26.2    | R3.3              |
-| 1.21.5-26.3    | R4                |
+| 1.21.6-26.3    | R4                |
 
 # Older Versions
 

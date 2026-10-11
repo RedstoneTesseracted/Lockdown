@@ -65,46 +65,9 @@ Items not covered under the GameTest system:
 # Known Bugs
 
 
-# Near-Term TODO:
-
-* ~~Berserker drone unit tests~~:
-    * ~~Does not attack hostile mobs~~
-    * ~~Attacks friendly mobs~~
-    * ~~Does not attack other drones with same channel~~
-    * ~~Attacks other drones with different channel~~
-* ~~Air defense cannon~~
-    * ~~Charging animation~~
-    * ~~Firing animation~~
-    * ~~Explosion when destroyed~~
-    * ~~Placement~~
-    * ~~Movement controls~~
-    * ~~Spray-painting~~
-    * ~~Firing controls~~
-    * ~~Tweak model so it doesn't block line of sight~~
-    * ~~Fix berserker drones targeting cannons~~
-* ~~Air defense cannon unit tests~~:
-    * ~~Platform obstructed if block or entity within 3x3 space~~
-    * ~~Breaks if central block is missing~~
-    * ~~Drops platform, gantry, and barrel~~
-    * ~~Mounting gantry onto platform~~
-    * ~~Mounting barrel onto gantry~~
-    * ~~Explodes if hidden bee is killed~~
-* ~~Make turrets dyable~~
-* ~~Make the "drone attacks X" game tests more reliable~~
-* ~~Tweak cannon advancements~~
-* ~~Make suspicious thumb drive obtainable in survival~~
-* ~~Add abandoned bunker structure~~
-* ~~Add durability to laser blaster~~
-* ~~Test in 26.3~~
-* ~~Update wiki~~
-* ~~Prevent laser projectiles from phasing through mobs~~
-* ~~Add advancements for key, laser blaster, and spray can~~
-* Final testing
-
-
 # Version Support
 
-This datapack uses overlays to support versions 1.21.5-26.3.
+This datapack uses overlays to support versions 1.21.6-26.3.
 
 ## Older Versions
 

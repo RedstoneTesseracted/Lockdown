@@ -9,6 +9,7 @@
 * Added spray can to colorize drones, turrets, and air defense cannons
 * Added suspicious thumb drive
 * Added support for 26.3
+* Dropped support for 1.21.5
 
 
 ## Bug Fixes
