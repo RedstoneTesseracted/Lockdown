@@ -44,7 +44,7 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 **Defense Drone**: Patrols the surrounding area and attacks any hostile mobs it finds using its laser beam.  Will not attack players by default.  However, when assigned a code, it will attack any unrecognized player whose last held keycard does not match.  Optionally assign a code using the Encoding Station.
 
-**Air Defense Cannon**: A large, player-controllable cannon that fires explosive bolts of energy.
+**Air Defense Cannon**: A large, player-controllable cannon that fires bolts of energy.
 
 
 ## Upgrades
@@ -55,14 +55,16 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 **Range Upgrade**: Increases the effective range of a drone or turret.
 
-**Suspicious Thumb Drive**: Causes drones and turrets to attacks players and friendly mobs.  Found in abandoned bunkers.
+**Suspicious Thumb Drive**: Causes drones and turrets to attack players and friendly mobs.  Found in abandoned bunkers.
 
 
 ## Tools
 
+**Key**: Allows you to lock containers.  Add a unique code in the encoder, then shift + right-click on a container to add or remove the lock.
+
 **Laser Blaster**: A ranged weapon that fires lasers at your enemies.  Be careful not to let it overheat!
 
-**Redstone Energy Cell**: Fuel for the laster blaster
+**Redstone Energy Cell**: Fuel for the laster blaster.
 
 **Spray Can**: Applies colors to turrets, drones, and cannons.  Right-click in main-hand to apply primary color, and right-click in off-hand to apply secondary color.  Cycle between colors with sneak + right-click.
 
@@ -82,7 +84,7 @@ Old 1.16, 1.17, and 1.20.1 versions are available on the project's GitHub page [
 
 ## Structures
 
-**Abandoned Bunker**: An uncommon, partially-buried structure.  Whoever built them is long gone, but the defenses they left behind sure aren't!
+**Abandoned Bunker**: An uncommon, partially-buried structure abandoned by an unknown faction.  Whoever built them is long gone, but the defenses they left behind sure aren't!
 
 
 ---
